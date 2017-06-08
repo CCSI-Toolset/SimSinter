@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Outputs from Simple Units Conversion Sinter Test",
+    "description": "Outputs from Simple Units Conversion Sinter Test",
+    "aspenfile": "unitstest.xlsm",
+    "author": "Jim Leek",
+    "date": "2012-11-14",
+    "filetype": "sinteroutputs",
+    "version": 0.2,
+    "inputs": {
+      "in.boil.celsius": {
+        "value": 212.0,
+        "units": "degF"
+      },
+      "in.boil.fahrenheit": {
+        "value": 100.0,
+        "units": "degC"
+      },
+      "in.misc.kelvin": {
+        "value": [
+          -273.15,
+          0.0,
+          100.0
+        ],
+        "units": "degC"
+      }
+    },
+    "outputs": {
+      "out.boil.celsius": {
+        "value": 100.00000000000004,
+        "units": "degC"
+      },
+      "out.boil.fahrenheit": {
+        "value": 211.99999999999986,
+        "units": "degF"
+      },
+      "out.misc.kelvin": {
+        "value": [
+          0.0,
+          273.15,
+          373.15
+        ],
+        "units": "K"
+      },
+      "status": {
+        "units": "",
+        "value": 0
+      }
+    }
+  }
+]

@@ -1,0 +1,39 @@
+# Some simulation information
+#
+file|         unitstest.xlsm
+title|        Simple Units Conversion Sinter Test
+author|       Jim Leek
+date|         2012-11-14
+description|  A simple test for testing unit conversion, it just puts in 2 values and gets them out again in the correct units
+
+# Input Setup
+#
+#name|                        mode|    type|        description|                                                               FindNodeString
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
+in.boil.celsius        |     input|  double   |        Input the boiling point of water in Celsius     |                          temp$B$2
+in.boil.fahrenheit     |     input|  double   |        Input the boiling point of water in Fahrenheit  |                          temp$B$3
+in.misc.kelvin         |     input|  double[3]|        Abs zero, Freezing water, boiling water         |                          temp$B$5
+
+out.boil.celsius       |    output|  double   |        Input the boiling point of water in Celsius     |                          temp$B$2
+out.boil.fahrenheit    |    output|  double   |        Input the boiling point of water in Fahrenheit  |                          temp$B$3
+out.misc.kelvin        |    output|  double[3]|        Abs zero, Freezing water, boiling water         |                          temp$B$5
+
+
+#fake defaults
+default | in.boil.celsius    | 532  
+default | in.boil.fahrenheit | 532  
+default | in.misc.kelvin     | 22
+                               431
+                               532
+
+limits  | in.boil.celsius      | 70.0   | 130.0
+limits  | in.boil.fahrenheit   | 200.0  | 240.0
+
+min     | in.misc.kelvin | 0    
+                           12    
+                           35    
+max     | in.misc.kelvin | 100    
+                           200    
+                           300    
+
+

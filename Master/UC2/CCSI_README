@@ -1,0 +1,14 @@
+UC2 is a Microsoft COM wrapper for UDUnits2 (which includes an XML
+parser named expat). UDUnits2 is originally came from here:
+http://www.unidata.ucar.edu/software/udunits/
+
+For CCSI purposes, we ported it to Windows and created a CMake
+(http://cmake.org) build for it. Because it rarely changes since this
+initial port, we haven't integrated its build into the normal CCSI
+Jenkins process.  We checked in the binaries and XML files needed for
+the COM wrapper.
+
+The modified UDUnits2 code and CMake build files are in the udunits2
+subdirectory here. Typically, one runs CMake on the CMakeLists.txt
+file to produce a Microsoft Visual Studio file that is then used to
+build the DLL and LIB files.

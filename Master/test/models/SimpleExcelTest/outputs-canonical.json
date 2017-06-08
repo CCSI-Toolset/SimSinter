@@ -1,0 +1,81 @@
+{
+  "title": "Outputs from Simple Excel Sinter Test",
+  "description": "Outputs from Simple Excel Sinter Test",
+  "aspenfile": "exceltest.xlsm",
+  "author": "Jim Leek",
+  "date": "2012-06-22",
+  "filetype": "sinteroutputs",
+  "version": 0.2,
+  "inputs": {
+    "macro": {
+      "value": "RunSinter",
+      "units": null
+    },
+    "height.jim": {
+      "value": 74.0,
+      "units": null
+    },
+    "weight.jim": {
+      "value": 167.0,
+      "units": null
+    },
+    "height.joe": {
+      "value": 24.0,
+      "units": null
+    },
+    "weight.joe": {
+      "value": 100.0,
+      "units": null
+    },
+    "height.mama": {
+      "value": 63.0,
+      "units": null
+    },
+    "weight.mama": {
+      "value": 200.0,
+      "units": null
+    },
+    "height.vector": {
+      "value": [
+        30.0,
+        4.0,
+        5.0
+      ],
+      "units": null
+    },
+    "weight.vector": {
+      "value": [
+        5.0,
+        6.0,
+        7.0
+      ],
+      "units": null
+    }
+  },
+  "outputs": {
+    "BMI.jim": {
+      "value": 21.439189189189189,
+      "units": null
+    },
+    "BMI.joe": {
+      "value": 122.0486111111111,
+      "units": null
+    },
+    "BMI.mama": {
+      "value": 35.424540186444951,
+      "units": null
+    },
+    "BMI.vector": {
+      "value": [
+        150.0,
+        24.0,
+        35.0
+      ],
+      "units": null
+    },
+    "status": {
+      "units": "",
+      "value": 0
+    }
+  }
+}

@@ -1,0 +1,39 @@
+  {
+    "title": "DynamicACMTest inputs",
+    "description": "Inputs to a simple dynamic ACM test",
+    "spreadsheet": "unitstest.xlsm",
+    "author": "Jim Leek",
+    "date": "2014-12-29",
+    "filetype" : "sinterinputs",
+    "version"  : 0.2,
+    "inputs": {
+      "homotopy" : { 
+        "value" : 0,
+        "units" : ""
+      },
+      "RunMode" : {
+	"value" : "Dynamic",
+        "units" : ""
+      },
+      "Snapshot" : {
+        "value" : "TestSnap1",
+        "units" : ""
+      },
+      "TimeSeries" : {
+        "value" : [106.4, 110.4, 115.4, 120],
+        "units" : ""
+      },
+      "printlevel" : {
+        "value" : 0,
+        "units" : ""
+      },
+      "ADSB.fw" : {
+        "value" : 0.2,
+        "units" : ""
+      },
+      "ADSA.Sorbin.F" : {
+        "value" : [0.90, 0.95, 1.05, 1.1],
+        "units" : ""
+      }
+    }
+  }

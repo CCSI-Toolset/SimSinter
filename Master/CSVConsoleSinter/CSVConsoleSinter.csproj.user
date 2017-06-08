@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <StartArguments>C:\SimSinterFiles\Aspen_Plus_Install_Test\Flash_Example_AP.json C:\SimSinterFiles\CSVConsoleSinter_Tutorial\Flash_Example_Input.csv C:\SimSinterFiles\CSVConsoleSinter_Tutorial\Flash_Example_Output.csv</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PublishUrlHistory>C:\Users\leek2-a\Desktop\</PublishUrlHistory>
+    <InstallUrlHistory />
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <StartArguments>C:\SimSinterFiles\ACM_Install_Test\Flash_Example_ACM.json C:\SimSinterFiles\CSVConsoleSinter_Tutorial\Flash_Example_Input.csv C:\SimSinterFiles\CSVConsoleSinter_Tutorial\Flash_Example_Output.csv N</StartArguments>
+  </PropertyGroup>
+</Project>

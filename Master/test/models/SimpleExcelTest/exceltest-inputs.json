@@ -1,0 +1,19 @@
+{
+  "macro": "RunSinter",
+  "height.jim": 74.0,
+  "weight.jim": 167.0,
+  "height.joe": 24.0,
+  "weight.joe": 100.0,
+  "height.mama": 63.0,
+  "weight.mama": 200.0,
+  "height.vector": [
+    30,
+    4.0,
+    5.0
+  ],
+  "weight.vector": [
+    5.0,
+    6.0,
+    7.0
+  ]
+}

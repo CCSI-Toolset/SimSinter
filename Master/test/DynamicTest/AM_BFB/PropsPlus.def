@@ -1,0 +1,10 @@
+INPUT: PropsPlus.inm
+MODNAME: apmain
+RUNID: PropsPlus
+NEW_RUNID: PropsPlus
+OLD_RUNID: PropsPlus
+PDF: PropsPlus.aprpdf
+USERNAME: leek2
+XMOD: C:\Program Files (x86)\AspenTech\Aspen Properties V8.8\Engine\xeq\APropMain
+SPONLY:
+DBCONN: _1542dzk.ads

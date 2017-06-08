@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<CalculationResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gORUN_output.xsd" jobId="XI5-332123" jobTime="2013-11-08T14:24:00Z" startTime="2013-11-08T19:49:12Z" endTime="2013-11-08T19:49:34Z" version="1">
+  <Simulation resultType="final">
+    <ReportVariable pathName="Flowsheet.Efficiency" value="29.6989"/>
+  </Simulation>
+</CalculationResult>

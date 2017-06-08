@@ -1,0 +1,9 @@
+{
+    "homotopy": 0,
+    "RunMode" : "Dynamic",
+    "Snapshot" : "TestSnap1",
+    "TimeSeries" : [106.4, 110.4, 115.4, 120],
+    "printlevel": 0,
+    "ADSB.fw": 0.2,
+    "ADSA.Sorbin.F": [0.90, 0.95, 1.05, 1.1]
+}

@@ -1,0 +1,10 @@
+﻿<Application x:Class="SinterConfigGUI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Exit="Application_Onexit"
+             ShutdownMode="OnLastWindowClose"
+             StartupUri="SplashWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

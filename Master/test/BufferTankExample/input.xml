@@ -1,0 +1,39 @@
+<Calculation  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       xsi:noNamespaceSchemaLocation="gORUN_input.xsd"	
+  jobId='Job1' user='josh' time='2012-06-01T09:04:00Z' version='2'>    
+
+	 <Model fileName='SimulateTank' 
+
+	 	processName='SimulateTank' 
+
+	 	  password='testing123'/>
+
+    <Simulation>
+
+        <ModelSpecification name='AlphaFO'>
+
+            <RealValue>10.0</RealValue>
+
+        </ModelSpecification>
+
+        <ModelSpecification name='FlowInFO'>
+
+            <RealValue>20.0</RealValue>
+
+        </ModelSpecification>
+
+        <ModelSpecification name='HeightFO'>
+
+            <RealValue>2.1</RealValue>
+
+        </ModelSpecification>
+
+        <ReportVariable pathName='T101.HEIGHT'/>
+
+        <ReportVariable pathName='T101.HoldUp'/>
+
+        <ReportVariable pathName='T101.FlowOut'/>
+
+    </Simulation>
+
+</Calculation>
+

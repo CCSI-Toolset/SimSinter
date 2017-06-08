@@ -1,0 +1,129 @@
+{
+  "title": "Dynamic Test",
+  "config-version": "0.1",
+  "description": "This is a model of the Bubbling Fluidized Bed we use for testing the ACM Dynamic features",
+  "model": {
+    "file": "BFB.acmf",
+    "DigestValue": "7ee7b5c2df5f3fef5fa1d0901ea88e2412ac0ee2",
+    "SignatureMethodAlgorithm": "sha1"
+  },
+  "input-files": [
+    {
+      "file": "AM_BFB\\snapshot.bak",
+      "DigestValue": "1e558b7328428907b572ee13d0684b75832e2bce",
+      "SignatureMethodAlgorithm": "sha1"
+    },
+    {
+      "file": "AM_BFB\\tasksnap.bak",
+      "DigestValue": "7554617594ef7e2f7efb7dd4b8f9bdfce5e03466",
+      "SignatureMethodAlgorithm": "sha1"
+    }
+  ],
+  "author": "Jinliang Ma",
+  "date": "1/15/2015",
+  "filetype": "sinterconfig",
+  "filetype-version": 0.3,
+  "application": {
+    "name": "Aspen Custom Modeler",
+    "version": "34.0",
+    "constraint": "AT-LEAST"
+  },
+  "settings": {
+    "Script": {
+      "type": "string",
+      "default": "",
+      "description": "Simulation specific setting: Script"
+    },
+    "homotopy": {
+      "type": "int",
+      "default": 0,
+      "description": "Simulation specific setting: homotopy"
+    },
+    "printlevel": {
+      "type": "int",
+      "default": 0,
+      "description": "Simulation specific setting: printlevel"
+    },
+    "RunMode": {
+      "type": "string",
+      "default": "Dynamic",
+      "description": "Simulation specific setting: RunMode"
+    },
+    "Snapshot": {
+      "type": "string",
+      "default": "",
+      "description": "Simulation specific setting: Snapshot"
+    },
+    "TimeSeries": {
+      "type": "double[4]",
+      "default": [
+        106.4,
+        110.4,
+        115.4,
+        120.0
+      ],
+      "description": "Simulation specific setting: TimeSeries"
+    },
+    "MinStepSize": {
+      "type": "double",
+      "default": 0.001,
+      "description": "Simulation specific setting: MinStepSize"
+    },
+    "TimeUnits": {
+      "type": "string",
+      "default": "Seconds",
+      "description": "Simulation specific setting: TimeUnits"
+    }
+  },
+  "inputs": {
+    "ADSB.fw": {
+      "path": [
+        "ADSB.fw"
+      ],
+      "type": "double",
+      "default": 0.2,
+      "description": "",
+      "units": ""
+    }
+  },
+  "dynamic-inputs": {
+    "ADSA.Sorbin.F": {
+      "path": [
+        "ADSA.SorbIn.F"
+      ],
+      "type": "double",
+      "default": 0.93,
+      "description": "",
+      "units": ""
+    }
+  },
+  "dynamic-outputs": {
+    "ADSA.SorbOut.F": {
+      "path": [
+        "ADSA.SorbOut.F"
+      ],
+      "type": "double",
+      "default": 0.0,
+      "description": "Sorbent Flowing out of the top of the BFB",
+      "units": ""
+    },
+    "ADSA.GasOut.F": {
+      "path": [
+        "ADSA.GasOut.F"
+      ],
+      "type": "double",
+      "default": 0.0,
+      "description": "Fluegas outflow rate",
+      "units": "kmol/hr"
+    },
+    "CO2Removal": {
+      "path": [
+        "CO2Removal"
+      ],
+      "type": "double",
+      "default": 0.0,
+      "description": "Carbon Capture percentage",
+      "units": ""
+    }
+  }
+}

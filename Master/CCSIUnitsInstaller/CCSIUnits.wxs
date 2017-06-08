@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:sql="http://schemas.microsoft.com/wix/SqlExtension"
+     xmlns:iis="http://schemas.microsoft.com/wix/IIsExtension">
+  
+	<Product Id="*" Name="CCSIUnits" Language="1033" Version="1.1.0.0" Manufacturer="Lawrence Livermore Laboratory" UpgradeCode="a2da4772-e988-4fa4-bc87-5f15d5c43961">
+		<Package InstallerVersion="405" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes"/>
+
+    <Feature Id="CCSIUnits" Title="CCSIUnits 1.0" Description="Unit Conversion Library for the Carbon Capture Simulation Initiative."
+             Display="expand" Level="1" ConfigurableDirectory="DIR.BIN.CCSIUNITS" AllowAdvertise='no' InstallDefault='local'>
+      <MergeRef Id="VCRedist"/>
+      <MergeRef Id="ALTRedist"/>
+      <ComponentGroupRef Id="CG.CCSIUnits"/>
+      <ComponentGroupRef Id="CG.CCSIUnitsCOM"/>
+    </Feature>
+
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+    <UIRef Id="WixUI_Mondo" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+    <WixVariable Id="WixUILicenseRtf" Value="..\UC2\CCSI_TE_LICENSEandUC2.rtf" />
+
+  </Product>
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="DIR.CCSI" Name="CCSI">
+          <Directory Id="DIR.CCSIUnits" Name="CCSIUnits">
+            <Directory Id="DIR.BIN.CCSIUNITS"/>
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  
+</Wix>

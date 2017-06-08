@@ -1,0 +1,98 @@
+# Some simulation information
+#
+file|         mea.bkp
+title|        MEA Carbon Capture Process
+author|       John Eslick
+date|         December 2, 2010
+description|  An Aspen simulation of an MEA process
+
+# IO Setup
+#
+#name|            mode|    type|        description|                                                    FindNodeString
+#------------------------------------------------------------------------------------------------------------------------------------------------
+P_abs_top|        input|  double|       pressure at the top, stage 1, of the absorber (psia)|           \Data\Blocks\ABSORBER\Input\PRES1
+abs_ht_wash|      input|  double|       absorber wash section packing height (ft)|                      \Data\Blocks\ABSORBER\Subobjects\Pack Rating\1\Input\PR_PACK_HT\1
+abs_ht_mid|       input|  double|       absorber middle (before IC) section packing height (ft)|        \Data\Blocks\ABSORBER\Subobjects\Pack Rating\1\Input\PR_PACK_HT\2
+abs_ic_dT|        input|  double|       temerature change in absorber intercooler (F)|                  \Data\Blocks\ABSORBER\Input\CS_DELT\P-1
+P_sol_pump|       input|  double|       solvent pump discharge pressure (psia)|                         \Data\Blocks\SOL-PUMP\Input\PRES
+
+lean_load|        input|  double|       lean loading (mol CO2/mol MEA)|                                 \Data\Blocks\REGEN\Input\VALUE\2
+P_regen_top|      input|  double|       regenerator pressure at the condenser (psia)|                   \Data\Blocks\REGEN\Input\PRES1
+cond_T_regen|     input|  double|       regenerator condenser temperature (F)|                          \Data\Blocks\REGEN\Input\VALUE\1
+ 
+ht_regen|         input|  double|       regenerator packing height in feet (ft)|                        \Data\Blocks\REGEN\Input\PR_PACK_HT\1
+
+slv_cool_01|      input|  double|       the temperature of the solvent cooler outlet (F)|               \Data\Blocks\LEANCOOL\Input\TEMP
+lr_rich_T|        input|  double|       outlet rich solvent temperature from lean-rich exchanger (F)|   \Data\Blocks\LR-HXC\Input\TEMP
+
+input_s|          input|  table[3,16]|  input stream conditions|                                        \Data\Streams\%r\Input\%c
+  
+abs_ic_duty|      output| double|       absorber intercooler heat duty (Btu/hr)|                        \Data\Blocks\ABSORBER\Subobjects\Pumparounds\P-1\Output\DUTY4\P-1
+abs_1_fracc|      output| double|       fractional capacity of absorber wash section|                   \Data\Blocks\ABSORBER\Subobjects\Pumparounds\P-1\Output\FLOOD_FAC2\1
+abs_2_fracc|      output| double|       fractional capacity of absorber mid section|                    \Data\Blocks\ABSORBER\Subobjects\Pumparounds\P-1\Output\FLOOD_FAC2\2
+abs_dia|          output| double|       absorber diameter (ft) |                                        \Data\Blocks\ABSORBER\Subobjects\Pack Rating\2\Output\DIAM\2
+sol_pump_pow|     output| double|       solvent pump power (hp)|                                        \Data\Blocks\SOL-PUMP\Output\BRAKE_POWER                                     
+
+rblr_T_regen_o|   output| double|       regenerator reboiler temperature (F)|                           \Data\Blocks\REGEN\Output\BOTTOM_TEMP                         
+cond_T_regen_o|   output| double|       regenerator condenser temperature (F)|                          \Data\Blocks\REGEN\Output\TOP_TEMP
+rblr_duty_regen|  output| double|       regenerator reboiler duty (Btu/hr)|                             \Data\Blocks\REGEN\Output\REB_DUTY
+cond_duty_regen|  output| double|       regenerator condneser duty (Btu/hr)|                            \Data\Blocks\REGEN\Output\COND_DUTY
+rich_T_regen|     output| double|       temperature of rich solvent into regenerator (F)|               \Data\Streams\RICH-03\Output\STR_MAIN\TEMP\MIXED
+solvent_cl_duty|  output| double|       heat duty of lean solvent cooler (F)|                           \Data\Blocks\LEANCOOL\Output\QCALC
+lr_hx_Q|          output| double|       heat duty of lean-rich heat exchanger (Btu/lb)|                 \Data\Blocks\LR-HXC\Output\QCALC
+regen_fracc|      output| double|       fractional capacity of regenerator|                             \Data\Blocks\REGEN\Output\FLOOD_FAC2\1
+regen_dia|        output| double|       regenerator diameter (ft)|                                      \Data\Blocks\REGEN\Subobjects\Pack Rating\1\Output\DIAM\1
+
+output_s|         output| table[11,16] | output stream conditions|                                       \Data\Streams\%r\Output\STR_MAIN\%c
+abs_profile|      output| table[34,3]  |  absorber profiles|                                              \Data\Blocks\ABSORBER\Output\%c\%r
+regen_profile|    output| table[22,3]  |  regenerator profiles|                                           \Data\Blocks\REGEN\Output\%c\%r
+mole_flow|        output| table[11,14] |  steam molar flow rates and mole fractions|                     \Data\Streams\%r\Output\STR_MAIN\%c
+
+abs_co2_profile|  output| table[34,2]  |  absorber profiles|                                              \Data\Blocks\ABSORBER\Subobjects\Pumparounds\P-1\Output\Y\%r\%c
+reg_co2_profile|  output| table[22,2]  |  regen profiles|                                                 \Data\Blocks\REGEN\Output\Y\%r\%c
+
+eq_par|           input|  table[5, 4]  |  Equalibrium constant paramters|                                 \Data\Reactions\Chemistry\EMEA\Input\%c\%r
+
+
+rLabels|  input_s | Flue Gas to Abs | Lean Solvent     | Wash Water MEA rec. 
+rStrings| input_s | FG-01           | LEAN-00A         | WASH-01
+cLabels|  input_s | T (F)           | P (psia)         | m (lb/hr)     | x H20 (mass frac) | x MEA (mass frac) | x H2S mass (frac) | x CO2 (mass frac) | x HCO3- (mass frac) | x MEACOO- (mass frac) | x MEA+ (mass frac) | x CO3-2 (mass frac) | x HS- (mass frac) | x S-2 (mass frac) | x H3O+ (mass frac) | x OH- (mass frac) | x N2 (mass frac)
+cStrings| input_s | TEMP\MIXED      | PRES\MIXED       | TOTFLOW\MIXED | FLOW\MIXED\H2O    | FLOW\MIXED\MEA    | FLOW\MIXED\H2S  | FLOW\MIXED\CO2  | FLOW\MIXED\HCO3-  | FLOW\MIXED\MEACOO-  | FLOW\MIXED\MEA+  | FLOW\MIXED\CO3-2  | FLOW\MIXED\HS-  | FLOW\MIXED\S-2  | FLOW\MIXED\H3O+  | FLOW\MIXED\OH-  | FLOW\MIXED\N2  
+
+
+rLabels|  regen_profile | cond | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 |reboiler
+rStrings| regen_profile | 1   | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22
+cLabels|  regen_profile | Liq T (F) | Vap T (F) | P (psia)
+cStrings| regen_profile | B_TEMP    | TVAP      | B_PRES
+
+
+rLabels|  output_s | LEAN-00A | FG-01 | WASH-01 | FG-02 | RICH-01 | RICH-02 | RICH-03 | LEAN-02 | LEAN-03 | LEAN-04 | CO2
+rStrings| output_s | LEAN-00A | FG-01 | WASH-01 | FG-02 | RICH-01 | RICH-02 | RICH-03 | LEAN-02 | LEAN-03 | LEAN-04 | CO2
+cLabels|  output_s | T (F)           | P (psia)         | m (lb/hr)     | x H20 (mass frac) | x MEA (mass frac) | x H2S mass (frac) | x CO2 (mass frac) | x HCO3- (mass frac) | x MEACOO- (mass frac) | x MEA+ (mass frac) | x CO3-2 (mass frac)  | x HS- (mass frac)  | x S-2 (mass frac) | x H3O+ (mass frac) | x OH- (mass frac) | x N2 (mass frac)  
+cStrings| output_s | TEMP\MIXED      | PRES\MIXED       | MASSFLMX\MIXED| MASSFRAC\MIXED\H2O| MASSFRAC\MIXED\MEA| MASSFRAC\MIXED\H2S| MASSFRAC\MIXED\CO2| MASSFRAC\MIXED\HCO3-| MASSFRAC\MIXED\MEACOO-| MASSFRAC\MIXED\MEA+| MASSFRAC\MIXED\CO3-2 | MASSFRAC\MIXED\HS- | MASSFRAC\MIXED\S-2| MASSFRAC\MIXED\H3O+| MASSFRAC\MIXED\OH-| MASSFRAC\MIXED\N2
+
+rLabels|  abs_profile | top | 2 | 3 | 4 | mid | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | bottom | 26 | 27 | 28 | 29 | 30 |31 | 32 | 33 | 34
+rStrings| abs_profile | 1   | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 |31 | 32 | 33 | 34
+cLabels|  abs_profile | Liq T (F) | Vap T (F) | P (psia)
+cStrings| abs_profile | B_TEMP    | TVAP      | B_PRES
+
+rLabels|  mole_flow | LEAN-00A | FG-01 | WASH-01 | FG-02 | RICH-01 | RICH-02 | RICH-03 | LEAN-02 | LEAN-03 | LEAN-04 | CO2
+rStrings| mole_flow | LEAN-00A | FG-01 | WASH-01 | FG-02 | RICH-01 | RICH-02 | RICH-03 | LEAN-02 | LEAN-03 | LEAN-04 | CO2
+cLabels|  mole_flow | mol (lbmol/hr)   | x H20 (mole frac) | x MEA (mole frac) | x H2S mole (frac) | x CO2 (mole frac) | x HCO3- (mole frac) | x MEACOO- (mole frac) | x MEA+ (mole frac) | x CO3-2 (mole frac)  | x HS- (mole frac)  | x S-2 (mole frac) | x H3O+ (mole frac) | x OH- (mole frac) | x N2 (mole frac)  
+cStrings| mole_flow | MOLEFLMX\MIXED| MOLEFRAC\MIXED\H2O| MOLEFRAC\MIXED\MEA| MOLEFRAC\MIXED\H2S| MOLEFRAC\MIXED\CO2| MOLEFRAC\MIXED\HCO3-| MOLEFRAC\MIXED\MEACOO-| MOLEFRAC\MIXED\MEA+| MOLEFRAC\MIXED\CO3-2 | MOLEFRAC\MIXED\HS- | MOLEFRAC\MIXED\S-2| MOLEFRAC\MIXED\H3O+| MOLEFRAC\MIXED\OH-| MOLEFRAC\MIXED\N2
+
+
+rLabels|  abs_co2_profile | top | 2 | 3 | 4 | mid | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | bottom | 26 | 27 | 28 | 29 | 30 |31 | 32 | 33 | 34
+rStrings| abs_co2_profile | 1   | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 |31 | 32 | 33 | 34
+cLabels|  abs_co2_profile | y co2  | y H2O
+cStrings| abs_co2_profile | CO2 | H2O
+
+rLabels|  reg_co2_profile | condenser | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | reboiler
+rStrings| reg_co2_profile | 1   | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22
+cLabels|  reg_co2_profile | y co2 | y H2O
+cStrings| reg_co2_profile | CO2 | H2O
+
+rLabels|  eq_par| 1 | 2 | 3 | 4 | 5
+rStrings| eq_par| 1 | 2 | 3 | 4 | 5
+cLables|  eq_par| A | B | C | D
+cStrings| eq_par| A | B | C | D1"

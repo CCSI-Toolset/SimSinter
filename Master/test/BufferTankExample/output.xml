@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<CalculationResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gORUN_output.xsd" jobId="Job1" jobTime="2012-06-01T09:04:00Z" startTime="2013-03-12T17:13:01Z" endTime="2013-03-12T17:13:01Z" version="1">
+  <Simulation resultType="final">
+    <ReportVariable pathName="T101.HEIGHT" value="0"/>
+    <ReportVariable pathName="T101.HoldUp" value="0"/>
+    <ReportVariable pathName="T101.FlowOut" value="0"/>
+  </Simulation>
+</CalculationResult>

@@ -1,0 +1,41 @@
+# Some simulation information
+#
+file|         Flash_Example.acmf
+title|        Flash Example
+author|       John Eslick
+date|         Aug 2012
+description|  Simple ethanol/water flash calcultion
+
+#name                        | mode   | type       | description                                   | Path
+#----------------------------+--------+------------+-----------------------------------------------+---------------------------------------------
+feed.T                       | input  | double     | Feed temperature (F)                          | Flash.i_port.Connection("Feed").T
+feed.P                       | input  | double     | Feed pressure (psia)                          | Flash.i_port.Connection("Feed").P
+feed.F                       | input  | double     | Feed flow rate (lbmol/hr)                     | Flash.i_port.Connection("Feed").F
+feed.etOH.molefrac           | input  | double     | Feed ethanol mole fraction (lbmol/lbmol)      | Flash.i_port.Connection("Feed").z("ETHANOL")
+feed.H2O.molefrac            | input  | double     | Feed water mole fraction (lbmol/lbmol)        | Flash.i_port.Connection("Feed").z("WATER")
+flash.T                      | input  | double     | Flash block temperature (F)                   | Flash.o_port_liq.T
+flash.P                      | input  | double     | Flash block pressure (psia)                   | Flash.o_port_liq.P
+vapor.F                      | output | double     | Vapor stream flow (lbmol/hr)                  | Flash.o_port_vap.F
+vapor.etOH.molefrac          | output | double     | Vapor ethanol mole fraction (lbmol/lbmol)     | Flash.o_port_vap.z("ETHANOL")
+vapor.H2O.molefrac           | output | double     | Vapor water mole fraction (lbmol/lbmol)       | Flash.o_port_vap.z("WATER")
+liquid.F                     | output | double     | Liquid stream flow (lbmol/hr)                 | Flash.o_port_liq.F
+liquid.etOH.molefrac         | output | double     | Liquid ethanol mole fraction (lbmol/lbmol)    | Flash.o_port_liq.z("ETHANOL")
+liquid.CO2.molefrac          | output | double     | Liquid water mole fraction (lbmol/lbmol)      | Flash.o_port_liq.z("WATER")
+
+
+default | feed.T             | 100.0       
+default | feed.P             |  50.0        
+default | feed.F             |  48.748       
+default | feed.etOH.molefrac |   0.08905     
+default | feed.H2O.molefrac  |   0.91095      
+default | flash.T            | 150.0        
+default | flash.P            |  20.0     
+
+limits  | feed.T             | 80.0    | 120.0       
+limits  | feed.P             | 40.0    | 60.0        
+limits  | feed.F             | 39.0    | 58.68
+limits  | feed.etOH.molefrac | 0.07124 | 0.10686   
+limits  | feed.H2O.molefrac  | 0.72876 | 1.09314    
+limits  | flash.T            | 120.0   | 180    
+limits  | flash.P            |  16.0   | 24.0 
+

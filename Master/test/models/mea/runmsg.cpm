@@ -1,0 +1,244 @@
+
+<< Run reinitialized 09:05:06 Wed Apr 27, 2011>>
+
+
+
+->Processing input specifications ...
+
+      INFORMATION
+      THERE ARE HENRY COMPONENTS DEFINED IN THIS CASE, THE BINARY DATABANK
+      WILL BE SEARCHED AUTOMATICALLY FOR ANY AVAILABLE HENRY CONSTANTS.
+
+      THE PAIR PARAMETERS FOR ELECNRTL OPTION SET HAS BEEN RETRIEVED FROM
+      DATABANK ENRTL-RK.
+
+      INFORMATION
+      PURE COMPONENT PARAMETERS FOR SOME COMPONENTS ARE RETRIEVED FROM
+      DATABANK.  THESE PARAMETERS ARE USED WITH THE ELECNRTL OPTION SET
+      UNLESS YOU ENTER YOUR OWN PARAMETERS IN PROP-DATA PARAGRAPHS.
+      PARAMETER DHFORM RETRIEVED FOR COMPONENT MEA
+
+
+
+  Flowsheet Analysis :
+
+ COMPUTATION ORDER FOR THE FLOWSHEET:
+ ABSORBER SOL-PUMP LR-HXC REGEN LR-HXH LEANCOOL
+
+->Calculations begin ...
+
+
+   Block: ABSORBER Model: RADFRAC
+
+       Convergence iterations:
+         OL   ML   IL     Err/Tol
+          1    1    2      250.45
+          2    1    2      171.89
+          3    1    2      54.866
+          4    1    1      64.961
+          5    1    1      60.164
+          6    1    1      39.264
+          7    1    2      30.447
+          8    1    2      30.584
+          9    1    2      109.57
+         10    1    1      44.633
+         11    1    1      24.055
+         12    1    1      16.346
+         13    1    1      11.714
+         14    1    1      11.406
+         15    1    1      42.495
+         16    1    1      13.161
+         17    1    1      7.8643
+         18    1    2      5.0014
+         19    1    2      3.9845
+         20    1    2      3.0821
+         21    1    2      3.3473
+         22    1    2      3.6879
+         23    1    2      2.4806
+         24    1    2      1.5415
+         25    1    2      1.1435
+         26    1    2      1.0492
+         27    1    2      1.1524
+         28    1    2     0.70564
+  *   WARNING IN PHYSICAL PROPERTY SYSTEM
+      ELECTROLYTE THERMAL CONDUCTIVITY MODEL KL2RDL HAS MISSING PARAMETERS:
+      IONRDL (DATA SET 1) MISSING FOR COMPONENT MEACOO- . VALUE OF ZERO USED
+
+  *   WARNING IN PHYSICAL PROPERTY SYSTEM
+      IONRDL (DATA SET 1) MISSING FOR COMPONENT MEA+    . VALUE OF ZERO USED
+
+
+       RateSep convergence iterations: ABSORBER
+           Iter     Err/Tol
+
+          HOMOTOPY PARAMETER =   3.0000
+  *   WARNING IN PHYSICAL PROPERTY SYSTEM
+      ELECTROLYTE DIFFUSION COEFFICIENT MODEL DL0NST HAS MISSING PARAMETERS:
+      IONMOB (DATA SET 1) MISSING FOR COMPONENT MEACOO- . NOMINAL VALUE USED
+
+  *   WARNING IN PHYSICAL PROPERTY SYSTEM
+      IONMOB (DATA SET 1) MISSING FOR COMPONENT MEA+    . NOMINAL VALUE USED
+
+              0      18.834
+              1      2.1416
+              2      2.3983
+              3      1.8582
+              4     0.25628
+              5     0.24062
+              6     0.23115
+              7     0.20121
+              8     0.14309
+              9     0.15242E-01
+             10     0.18055E-01
+             11     0.13133E-01
+             12     0.27117E-02
+
+          HOMOTOPY PARAMETER =   2.0801
+              0      4.3014
+              1     0.28998
+              2     0.21693
+              3     0.41184E-01
+              4     0.33270E-01
+              5     0.15092E-01
+              6     0.22167E-01
+              7     0.46877E-02
+
+          HOMOTOPY PARAMETER =   1.4422
+              0      3.9348
+              1     0.49085
+              2     0.51831
+              3     0.23259
+              4     0.37406E-01
+              5     0.48764E-01
+              6     0.18333E-01
+              7     0.48769E-02
+
+          HOMOTOPY PARAMETER =   1.0000
+              0      3.5210
+              1     0.68443
+              2     0.24410
+              3     0.10631
+              4     0.22775E-01
+              5     0.54091E-02
+
+   Block: SOL-PUMP Model: PUMP
+
+   Block: LR-HXC   Model: HEATER
+
+   Block: REGEN    Model: RADFRAC
+
+       Convergence iterations:
+         OL   ML   IL     Err/Tol
+          1    1    5      1809.4
+          2    1    2      504.47
+          3    6   15      315.16
+          4    7   18      535.72
+          5    4   11      289.08
+          6    3    7      82.270
+          7    3    6      29.998
+          8    3    6      3.2231
+          9    3    6      1.3882
+         10    3    6     0.96037
+  **  ERROR
+      DESIGN SPEC IS NOT SATISFIED BECAUSE ONE OR MORE MANIPULATED
+      VARIABLE IS AT ITS BOUND.
+
+
+       RateSep convergence iterations: REGEN
+           Iter     Err/Tol
+
+          HOMOTOPY PARAMETER =  0.16660
+              0      509.96
+              1      311.50
+              2      174.78
+              3      119.88
+              4      18.128
+              5     0.10635E-01
+              6     0.11000E-05
+
+          HOMOTOPY PARAMETER =  0.22459
+              0      21.656
+              1      22.869
+              2     0.28239E-01
+              3     0.55118E-05
+
+          HOMOTOPY PARAMETER =  0.30277
+              0      24.281
+              1      14.662
+              2     0.26689E-01
+              3     0.34396E-05
+
+          HOMOTOPY PARAMETER =  0.40817
+              0      26.569
+              1      8.5551
+              2     0.36150E-01
+              3     0.69178E-05
+
+          HOMOTOPY PARAMETER =  0.55025
+              0      28.661
+              1      7.2648
+              2     0.45848E-01
+              3     0.11180E-04
+
+          HOMOTOPY PARAMETER =  0.74179
+              0      31.001
+              1      6.0557
+              2     0.43699E-01
+              3     0.32165E-05
+
+          HOMOTOPY PARAMETER =   1.0000
+              0      34.008
+              1      5.0158
+              2     0.35543E-01
+              3     0.28066E-05
+
+   Block: LR-HXH   Model: HEATER
+
+   Block: LEANCOOL Model: HEATER
+
+->Generating block results ...
+
+    Block: SOL-PUMP Model: PUMP
+
+->Simulation calculations completed ...
+
+
+
+  ***  No Warnings were issued during Input Translation ***
+
+
+               ***  Summary of Simulation Errors  ***
+
+                   Physical
+                   Property         System        Simulation
+  Terminal Errors      0               0               0
+    Severe Errors      0               0               0
+           Errors      0               0               1
+         Warnings      4               0               0
+
+->Generating results ...
+
+      INFORMATION WHILE GENERATING REPORT FOR UNIT OPERATIONS BLOCK: "ABSORBER"
+      (MODEL: "RADFRAC")
+      TPSAR MESSAGE:    80.11%   FLOOD IN COLUMN ABSORBER, SECTION   2
+                       EXCEEDS 80%.
+
+      INFORMATION WHILE GENERATING REPORT FOR UNIT OPERATIONS BLOCK: "REGEN"
+      (MODEL: "RADFRAC")
+      TPSAR MESSAGE:    82.35%   FLOOD IN COLUMN REGEN   , SECTION   1
+                       EXCEEDS 80%.
+
+->Generating report ...
+      INFORMATION WHILE GENERATING REPORT FOR UNIT OPERATIONS BLOCK: "ABSORBER"
+      (MODEL: "RADFRAC")
+      TPSAR MESSAGE:    80.11%   FLOOD IN COLUMN ABSORBER, SECTION   2
+                       EXCEEDS 80%.
+
+      INFORMATION WHILE GENERATING REPORT FOR UNIT OPERATIONS BLOCK: "REGEN"
+      (MODEL: "RADFRAC")
+      TPSAR MESSAGE:    82.35%   FLOOD IN COLUMN REGEN   , SECTION   1
+                       EXCEEDS 80%.
+
+
+<< Report exported 09:05:57 Wed Apr 27, 2011>>
+

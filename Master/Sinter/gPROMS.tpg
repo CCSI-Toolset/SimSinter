@@ -1,0 +1,539 @@
+// This grammar was written by Jim Leek for parsing the portions of a gPRvMS .gPJ 
+// file SimSinter is interested in. This is two major sections:
+//  1. Models, their UNIT, VARIABLE, PARAMETER, and SELECTOR sections  (basically, variable declerations) 
+//  2. Processes and their SET, ASSIGN, INITIAL sections  (also UNIT)  (basically, variable initial value assignment)
+//
+//  It parses these into variableDecleration and variableAssignment objects, and puts them into a List<Object>
+//  really the two should never appear in the same list.
+
+//
+// STYLE NOTES:
+//  I try to keep the referencing of any $[terminal] type expression to a single reference per code block.  
+//  The reason is that each time one of those is referenced, the resulting parser does a full parse call.
+//  The repeated parsings of the same rule were making it a pain to debug.
+
+// The scanner and parser classes were generated with:
+// Tiny Parser Generator v1.3
+// Copyright © Herre Kuijpers 2008-2012
+
+
+<% @TinyPG Namespace="sinter.PSE" Language="C#" 
+           OutputPath="C:\aspenfiles\SimSinter\Master\Sinter" %>
+
+EOF -> @"^$";
+[Skip] WHITESPACE -> @"\s+";
+[Skip][IgnoreCase] PARAMETER -> "PARAMETER";
+[Skip][IgnoreCase] VARIABLE -> "VARIABLE";
+[Skip][IgnoreCase] SET -> "SET";
+[Skip][IgnoreCase] ASSIGN -> "ASSIGN";
+[Skip][IgnoreCase] BOUNDRY -> "BOUNDRY";
+[Skip][IgnoreCase] DISTRIBUTION_DOMAIN -> "DISTRIBUTION_DOMAIN";
+[Skip][IgnoreCase] EQUATION -> "EQUATION";
+[Skip][IgnoreCase] INITIAL  -> "INITIAL";
+[Skip][IgnoreCase] INITIALISATION_PROCEDURE -> "INITIALISATION_PROCEDURE";
+[Skip][IgnoreCase] INITIALIZATION_PROCEDURE -> "INITIALIZATION_PROCEDURE";
+[Skip][IgnoreCase] INITIALSELECTOR -> "INITIALSELECTOR";
+[Skip][IgnoreCase] MONITOR -> "MONITOR";
+[Skip][IgnoreCase] PORT -> "PORT";
+[Skip][IgnoreCase] PORTSET -> "PORTSET";
+[Skip][IgnoreCase] PRESET -> "PRESET";
+[Skip][IgnoreCase] SCHEDULE -> "SCHEDULE";
+[Skip][IgnoreCase] SELECTOR -> "SELECTOR";
+[Skip][IgnoreCase] SOLUTIONPARAMETERS -> "SOLUTIONPARAMETERS";
+[Skip][IgnoreCase] TOPOLOGY -> "TOPOLOGY";
+[Skip][IgnoreCase] UNIT -> "UNIT";
+[Skip][IgnoreCase] STEADY_STATE -> "STEADY_STATE";  //Keyword used in the initial section.  Just ignore
+
+[IgnoreCase] AS -> "AS";
+[IgnoreCase] FOREIGN_OBJECT -> "FOREIGN_OBJECT";
+[IgnoreCase] REAL -> "REAL";
+[IgnoreCase] INTEGER -> "INTEGER";
+[IgnoreCase] BOOLEAN -> "LOGICAL";
+[IgnoreCase] ARRAY -> "ARRAY";
+[IgnoreCase] OF -> "OF";
+[IgnoreCase] WITHIN -> "WITHIN";
+[IgnoreCase] DO -> "DO";
+[IgnoreCase] TO -> "TO";
+[IgnoreCase] END -> "END";
+[IgnoreCase] FOR -> "FOR";
+[IgnoreCase] WHILE -> "WHILE";
+[IgnoreCase] DEFAULT -> "DEFAULT";
+LPAREN -> @"\(";
+RPAREN -> @"\)";
+NUMBER -> @"[-+]?([0-9]*\.[0-9]+(E[-+]?[0-9]+)?|[0-9]+)"; //Now include scientific numbers [-+]?([0-9]*\.[0-9]+ |[0-9]+)
+STRING -> @"""[^""\\]*(?:\\.[^""\\]*)*""";
+[IgnoreCase] IDENTIFIER -> @"(?!END)[a-zA-Z_][a-zA-Z0-9_\.]*";
+SELECTORSTRING -> @"[A-Za-z0-9_]*";
+COMMA -> ",";
+SEMICOLON -> ";";
+ASSIGNOP -> "(:=|=)"; //I don't know what the difference is between := and =, except '=' appears in INITIAL and nowhere else
+[Color(0, 0, 255)] 	PLUSMINUS 	-> @"(\+|-)";
+[Color(0, 0, 255)] 	MULTDIV 	-> @"\*|/";
+[Color(0, 0, 255)] 	EXPONENT      -> @"\^";
+
+
+[Skip] COMMENT -> @"#.*\n";
+[Skip] MULTILINE_COMMENT -> @"{[^}]*}";
+
+SectionKeywords -> PARAMETER | VARIABLE | SET | ASSIGN | INITIAL | SELECTOR | INITIALSELECTOR;
+
+//////////////////////////////////////////////////////////
+//TYPES
+//////////////////////////////////////////////////////////
+UserType -> IDENTIFIER
+{
+  return $IDENTIFIER;
+};
+
+TypeName -> REAL | INTEGER | BOOLEAN | FOREIGN_OBJECT | UserType
+{
+  Object real = $REAL;
+  if(real != null)
+    return real;
+
+  Object usertype = $UserType;
+  if(usertype != null)
+    return usertype;
+
+  Object integer = $INTEGER;
+  if(integer != null)
+    return integer;
+
+  Object fo = $FOREIGN_OBJECT;
+  if(fo != null)
+    return fo;
+  else 
+    return $BOOLEAN;
+};
+
+////////////////////////////////////////////////////////////////
+// These are definitions in PARAMETER SELECTOR or VARIABLE blocks.
+// The follow the AS keyword
+////////////////////////////////////////////////////////////////
+
+SelectorDef -> LPAREN SELECTORSTRING (COMMA SELECTORSTRING) * RPAREN
+{
+  return "STRING";
+};
+
+ArrayDef ->  ARRAY LPAREN AddExpr (COMMA AddExpr)* RPAREN OF ( TypeName | SelectorDef)
+{
+  String type = ""; 
+  String typename = (String) $TypeName;
+  if(typename != null) {
+    type = typename;
+  } else {
+    type = (String) $SelectorDef;
+  }
+  //We can only handle 1D vectors with pure numbers, so otherwise we pass ArrayLen = 0
+  int arrayLen = 0;
+  if($AddExpr[1] == null) {
+     Object maybe_arrayLen = $AddExpr;
+      if(!(maybe_arrayLen is String)) { //If AddExpr returns a string, we can't use it, otherwise it should return some kind of number
+        arrayLen = Convert.ToInt32($AddExpr);
+      }
+  } 
+  sinter.PSE.variableDecleration varDef = 
+	new sinter.PSE.variableDecleration("unknown", type, arrayLen);
+
+  return varDef;
+};
+
+ScalarDef -> ( TypeName | SelectorDef) 
+{ 
+  String type = ""; 
+  String typename = (String) $TypeName;
+  if(typename != null) {
+    type = typename;
+  } else {
+    type = (String) $SelectorDef;
+  }
+  sinter.PSE.variableDecleration varDef = 
+	new sinter.PSE.variableDecleration("unknown", type, -1);
+
+  return varDef;
+
+}; 
+
+////////////////////////////////////////////////////////////////
+// VariableDef is where the parser learns we're looking at a definition.  (It sees the 'AS' Keyword)
+////////////////////////////////////////////////////////////////
+VariableDef -> AS (ArrayDef | ScalarDef) (DEFAULT AddExpr)?
+{
+  Object arrayDef = $ArrayDef;
+  sinter.PSE.variableDecleration varDef = null;
+  if(arrayDef != null) {
+    varDef = (sinter.PSE.variableDecleration) arrayDef;
+  } else {
+    varDef = (sinter.PSE.variableDecleration) $ScalarDef;
+  }
+  if($DEFAULT != null) {
+    Object addexpr = $AddExpr;
+    if(varDef.type == sinter_Variable.sinter_IOType.si_INTEGER || varDef.type == sinter_Variable.sinter_IOType.si_INTEGER_VEC) {
+      if(addexpr is String) { 
+        varDef.dfault = 0;
+      } else {
+        varDef.dfault = Convert.ToInt32($AddExpr);
+      }
+    } else if(varDef.type == sinter_Variable.sinter_IOType.si_DOUBLE || varDef.type == sinter_Variable.sinter_IOType.si_DOUBLE_VEC) {
+      if(addexpr is String) { 
+        varDef.dfault = 0;
+      } else {
+        varDef.dfault = (double) $AddExpr;  //AddExpr should always return a string or a double
+      }
+    } else if(varDef.type == sinter_Variable.sinter_IOType.si_STRING || varDef.type == sinter_Variable.sinter_IOType.si_STRING_VEC) {
+      if(addexpr is String) { 
+        varDef.dfault = (String) $AddExpr;  //AddExpr should always return a string or a double
+      } else {
+        varDef.dfault = "";
+      }      
+    } 
+  }
+  return varDef;  //varDef = (sinter.PSE.variableDecleration) $ArrayDef;
+};
+
+////////////////////////////////////////////////////////////////
+// Assignments appear in the SET, INITIAL, and ASSIGN blocks.
+// Assignment is where we learn we are looking at an assignment, not a variableDef (we see an ASSIGNOP, ie = or := )
+// We are only interested in these as a method to allow us to discover input variables.  If we can tell in the parser
+// that it won't be an input variable, we are free to completely ignore the assignment
+////////////////////////////////////////////////////////////////
+
+Assignment -> ASSIGNOP ( NUMBER | STRING | IDENTIFIER (LPAREN (IDENTIFIER)? RPAREN)?  ) SEMICOLON {
+
+  String value;
+  String number = (String)$NUMBER;
+  String str = (String)$STRING;
+  bool isVec = false;
+  if(number != null) {
+    value = number;  
+  } else if(str != null) {
+    value = str; //Maybe we need a type afterall?
+  } else {
+    value = (String)$IDENTIFIER;
+    if($LPAREN != null) {
+	String insideParensID = (String) $IDENTIFIER[1];
+       if(insideParensID != null) {
+         value += "(" + insideParensID + ")"; 
+         isVec = true;
+       } else {
+         value += "()";
+       }
+    }
+  }
+
+  //OK, I don't know the path yet, that's in the one up from here, value is determined, and this should never be an array reference 
+  //(by my arbitrary assumption that array references should only happen in for loops.)
+  sinter.PSE.variableAssignment varAssign = new sinter.PSE.variableAssignment("", value, isVec);
+   return varAssign;
+
+};
+
+////////////////////////////////////////////////////////////////
+// On the left side of a variableDef or Assignment is a variableRef
+// they may be a plain scalar name (IDENTIFIER) or an Array reference IDENTIFER( num / string)
+////////////////////////////////////////////////////////////////
+
+ArrayIndex -> ( STRING | AddExpr) {
+  String ss = (String) $STRING;  //Note, a STRING is a QUOTED string.  We can't use that really.
+  if(ss != null) {
+    return "**invalid**";
+  } else {
+    Object addex = $AddExpr;
+    if(addex is String) {
+      return addex;  //We can only do things with plain identifiers
+    } else {
+      return "**invalid**";  //Even numbers can't be used.
+    }
+  }
+};
+
+
+ArrayIndexBlock -> LPAREN ArrayIndex (COMMA ArrayIndex)* RPAREN {
+  if($COMMA != null) {
+    return "**invalid**";  //SimSinter doesn't support multidimensional arrays, so this is an invalid case
+  }
+  return $ArrayIndex;
+};
+
+
+//VariableRef returns a Tuple<string, bool> which is (varname, isVec)
+//The information that needs to be returned is just the name of variable, and if it's and array reference.
+VariableRef -> IDENTIFIER (ArrayIndexBlock)? {
+
+  String varname = (String) $IDENTIFIER;
+  String aib = (String) $ArrayIndexBlock;
+  if(aib != null) {
+    return new System.Tuple<String, bool>(varname, true);
+  }
+  return new System.Tuple<String, bool>(varname, false);
+};
+
+////////////////////////////////////////////////////////////////
+//  VariableExpr is a line that may contain either an assignement or a definition
+////////////////////////////////////////////////////////////////
+VariableExpr -> VariableRef (COMMA VariableRef)* (Assignment | VariableDef) 
+{
+  List<Object> varList = new List<Object>();
+  Object maybeVarDef = $VariableDef;
+  if(maybeVarDef != null) {  
+    //First we have a canonical variableDecl from the first VariableDef, then we clone that for any others.  
+    sinter.PSE.variableDecleration varDef = (sinter.PSE.variableDecleration) maybeVarDef;
+    System.Tuple<String, bool> varref = (System.Tuple<String, bool>) $VariableRef;
+    if((bool)varref.Item2 == false) {  //We can't use an array reference here, just ignore any array ref
+      varDef.name = (String)varref.Item1;
+      varList.Add(varDef);
+    }
+    int ii = 1;
+    varref = (System.Tuple<String, bool>) $VariableRef[ii];
+    while(varref != null) {
+      sinter.PSE.variableDecleration thisVarDef = (sinter.PSE.variableDecleration) varDef.Clone();
+      if((bool)varref.Item2 == false) {  //We can't use an array reference here, just ignore any array ref
+        thisVarDef.name = (String)varref.Item1;
+        varList.Add(thisVarDef);
+      }
+      ii++;
+      varref = (System.Tuple<String, bool>) $VariableRef[ii];
+    }
+  } else {
+    sinter.PSE.variableAssignment varAssign = (sinter.PSE.variableAssignment) $Assignment;
+    System.Tuple<String, bool> varRef = (System.Tuple<String, bool>) $VariableRef;
+    varAssign.gPROMSPath = (String)varRef.Item1;
+    varList.Add(varAssign);
+//    if((bool)varRef.Item2 == false) {  //We can't use an array reference here, just ignore any array ref
+//    }
+    int ii = 1;
+    varRef = (System.Tuple<String, bool>) $VariableRef[ii];
+    while(varRef != null) {
+      sinter.PSE.variableAssignment thisVarAssign = (sinter.PSE.variableAssignment) varAssign.Clone();
+      thisVarAssign.gPROMSPath = (String)varRef.Item1;
+      varList.Add(thisVarAssign);
+      ii++;
+      varRef = (System.Tuple<String, bool>) $VariableRef[ii];
+    }
+
+  }
+  return varList;
+};
+
+////////////////////////////////////////////////////////////////
+// For Blocks are general loops, but hopefully we only see them in ASSIGN, SET, or INITIAL block
+// used for setting all the items in an array.  ANY OTHER EXPRESSIONS will be thrown away because they can't be normal input variables.
+// This is the only way we can parse an array reference and find an input variable.  
+////////////////////////////////////////////////////////////////
+
+ForBlock -> FOR IDENTIFIER ASSIGNOP AddExpr TO AddExpr DO VariableExpr* END {
+   List<Object> exprlist = 	new List<Object>();
+   int ii = 0;
+   List<Object> currentVarExpr = (List<Object>) $VariableExpr[ii]; 
+   while(currentVarExpr != null) {
+     foreach(Object thisObj in currentVarExpr) {
+       if(thisObj is sinter.PSE.variableAssignment) {  //Declerations shouldn't even exist, we certainly can't do anything with them
+         sinter.PSE.variableAssignment thisAssign = (sinter.PSE.variableAssignment) thisObj;
+         if(thisAssign.isVec && thisAssign.gPROMSPath != "**invalid**") {  //Has to be a vector with an understandable path and id
+           exprlist.Add(thisAssign);
+         }
+       }
+     }
+     ++ii;
+     currentVarExpr = (List<Object>)  $VariableExpr[ii];
+   }
+   return exprlist; 
+};
+
+////////////////////////////////////////////////////////////////
+// Within blocks can apparently be anywhere.  They add a new name on the front of any variable references inside them.
+////////////////////////////////////////////////////////////////
+WithinBlock -> WITHIN IDENTIFIER DO  Expr* END
+{
+   List<Object> exprlist = 	new List<Object>();
+   String id = (String) $IDENTIFIER;
+   int ii = 0;
+   Object currentExpr = $Expr[ii]; 
+   while(currentExpr != null) {
+     //Expr returns a list of variable declerations.  We need to add the within block
+     //identifier to each of those, and return that new list.
+     List<Object> withinExprs = (List<Object>) currentExpr;
+     for(int jj = 0;  jj < withinExprs.Count; ++jj) {
+ 	Object thisExpr = withinExprs[jj];
+       if(thisExpr is sinter.PSE.variableDecleration) {
+         sinter.PSE.variableDecleration thisDecl = (sinter.PSE.variableDecleration) withinExprs[jj++];
+         thisDecl.name = id + "." + thisDecl.name;
+       } else if (thisExpr is sinter.PSE.variableAssignment) {
+         sinter.PSE.variableAssignment thisAssign = (sinter.PSE.variableAssignment) withinExprs[jj++];
+         if(thisAssign.gPROMSPath !=  "**invalid**") {  //Don't modify the sentinal value
+           thisAssign.gPROMSPath = id + "." + thisAssign.gPROMSPath;     
+         }
+       }
+     }
+     exprlist.AddRange(withinExprs);
+     ii++;
+     currentExpr = $Expr[ii];
+   }
+   return exprlist; 
+};
+
+
+Expr -> VariableExpr | WithinBlock | ForBlock
+{
+  List<Object> varExpr = (List<Object>) $VariableExpr; 
+  if(varExpr != null) {
+    List<Object> retList = new List<Object>();
+    foreach(Object expr in varExpr) {
+      //If it's a variableAssignement, we check to make sure it's not an array reference, if it's a decleration, it's good just return it.
+      if(expr is sinter.PSE.variableAssignment) {
+         sinter.PSE.variableAssignment varAssign = (sinter.PSE.variableAssignment) expr;
+         if(!varAssign.isVec) {  //VariableExpr here is not a ForBlock, so we just ignore any array references.
+           retList.Add(expr);
+         }
+      } else {
+         retList.Add(expr);         
+      }
+    } 
+    //If VariableDef returns a list of variable declerations
+    //so just return that list.
+    return retList;
+  }
+  
+  Object forBlock = $ForBlock;
+  if(forBlock != null) {
+    return forBlock;
+  } else {
+    //Within Block also returns a list a varaible declerations, 
+    //so just return that list.
+    return $WithinBlock;
+  }
+};
+
+
+Start   -> (Expr)* EOF 
+{
+   //Expr returns a list of variable declerations.  Need to merge those
+   //all into a big flat list of all variable declerations.
+   //(Start with the list from the first Expr rather than a new list)
+   List<Object> exprlist = (List<Object>) $Expr[0];
+   int ii = 1;
+   Object currentExpr = $Expr[ii]; 
+   while(currentExpr != null) {
+     List<Object> exprs = (List<Object>) currentExpr;
+     exprlist.AddRange(exprs);
+     ii++;
+     currentExpr = $Expr[ii];
+   }
+
+   if(exprlist == null) {
+      exprlist = new List<Object>();
+   }
+   return exprlist; 
+
+};
+
+////////////////////////////////////////////////////////////////
+// The section below is all about parsing arithmatic expressions.
+// It may return a double (correctly parsed) or a string if the arithmatic
+// expression contained a variable or method we don't know how to interpret.
+////////////////////////////////////////////////////////////////
+
+//Below is arithmatic stuff for doing defaults used in gPROMS.  
+BadId -> IDENTIFIER ( LPAREN (BadId | NUMBER)? (COMMA (BadId | NUMBER))* RPAREN)?
+{
+  //OK, the identifier could be a selector (string) default.  We don't know yet as we don't know the decleration type yet.
+  //But we really don't handle identifiers as part of defaults anyway, so the string type can tell us this arithmatic
+  //expression is crap.
+  if($LPAREN == null) {
+    return $IDENTIFIER;
+  } else {
+    return "**invalid**";  //We can't do anything with array refs or function calls.  Sentinal value to show that it wasn't a useful ID.
+  }
+};
+
+//We're still trying to deal with the selector default problem. If we got a string anywhere, just return that as either
+//a selector default, OR as a message that if default is crap (ie, an aritmatic expression that has stuff we can't evaluate.)
+AddExpr -> MultExpr (PLUSMINUS MultExpr)*
+{ 
+       Object multexpr1 = $MultExpr;
+       if(multexpr1 is String) {
+         return multexpr1;
+       }
+	double Value = (double) multexpr1; //Must be a double if it's not a string
+
+	int i = 1;
+       Object thismult = $MultExpr[i]; 
+	while (thismult != null)
+	{
+              if(thismult is String) {
+                return thismult;
+              }
+		string sign = $PLUSMINUS[i-1].ToString();
+		if (sign == "+")
+			Value += (double) thismult; //Convert.ToDouble($MultExpr[i++]);
+		else 
+			Value -= (double) thismult; //Convert.ToDouble($MultExpr[i++]);
+              ++i;
+              thismult = $MultExpr[i];
+	}
+
+	return Value; 
+};
+
+//We're still trying to deal with the selector default problem. If we got a string anywhere, just return that as either
+//a selector default, OR as a message that if default is crap (ie, an aritmatic expression that has stuff we can't evaluate.)
+MultExpr -> ExponentExpr (MULTDIV ExponentExpr)*
+{  
+       Object atom1 = $ExponentExpr;
+       if(atom1 is String) {
+         return atom1;
+       }
+	double Value = (double) atom1; //Must be a double if it's not a string
+	int i = 1;
+       Object thisAtom = $ExponentExpr[i]; 
+	while (thisAtom != null)
+	{
+              if(thisAtom is String) {
+                return thisAtom;
+              }
+		string sign = $MULTDIV[i-1].ToString();
+		if (sign == "*") {
+			Value *= (double) thisAtom; 
+		} else {
+			Value /= (double) thisAtom; 
+              }
+              ++i;
+              thisAtom = $ExponentExpr[i];
+	}
+	return Value; 
+};
+
+ExponentExpr -> Atom (EXPONENT Atom)?
+{
+       Object atom1 = $Atom;
+       if(atom1 is String) {
+         return atom1;
+       }
+	double Base = (double) atom1; //Must be a double if it's not a string
+       Object Atom2 = $Atom[1]; 
+       if(Atom2 == null) {  //No exponent case
+         return Base;
+       }
+       if(Atom2 is String) { //Exponent is calculateable case
+          return Atom2;  
+       }
+       double Exponent = (double) Atom2; //Convert.ToDouble($Atom[i++]);
+	
+       return Math.Pow(Base,Exponent);
+};
+
+
+//This rule should always return a double, if it returns a string it got a BadId.  Which could also be a selector (string) default;
+Atom -> NUMBER | BadId | LPAREN AddExpr RPAREN
+{
+       Object number = $NUMBER;
+	if (number != null) { 
+         return Convert.ToDouble(number);
+       } 
+       Object addexpr = $AddExpr;
+       if (addexpr != null) {
+         return addexpr;
+       }
+       return $BadId;
+};

@@ -1,0 +1,84 @@
+[
+  {
+    "title": "Outputs from Dynamic Test",
+    "description": "Outputs from Dynamic Test",
+    "aspenfile": "BFB.acmf",
+    "author": "Jinliang Ma",
+    "date": "2014-12-26",
+    "filetype": "sinteroutputs",
+    "version": 0.2,
+    "inputs": {
+      "homotopy": {
+        "value": 0,
+        "units": null
+      },
+      "printlevel": {
+        "value": 0,
+        "units": null
+      },
+      "RunMode": {
+        "value": "Dynamic",
+        "units": null
+      },
+      "TimeSeries": {
+        "value": [
+          106.4,
+          110.4,
+          115.4,
+          120.0
+        ],
+        "units": null
+      },
+      "Snapshot": {
+        "value": "TestSnap1",
+        "units": null
+      },
+      "ADSB.fw": {
+        "value": 0.2,
+        "units": ""
+      },
+      "ADSA.Sorbin.F": {
+        "value": [
+          0.9,
+          0.95,
+          1.05,
+          1.1
+        ],
+        "units": ""
+      }
+    },
+    "outputs": {
+      "ADSA.SorbOut.F": {
+        "value": [
+          1.4642343006444065,
+          1.4620824420669591,
+          1.4617699255696879,
+          1.4615548181093649
+        ],
+        "units": ""
+      },
+      "CO2Removal": {
+        "value": [
+          0.87764539519694984,
+          0.87764615854602845,
+          0.87764688671231628,
+          0.87764759194540543
+        ],
+        "units": ""
+      },
+      "ADSA.GasOut.F": {
+        "value": [
+          5683.051821346844,
+          5683.0304300172338,
+          5683.024147260915,
+          5683.0222676524127
+        ],
+        "units": "kmol/hr"
+      },
+      "status": {
+        "units": "",
+        "value": 0
+      }
+    }
+  }
+]

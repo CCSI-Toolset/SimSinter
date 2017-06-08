@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7AA14B52-B1B5-4B84-A884-48F0E6710AC4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sinter</RootNamespace>
+    <AssemblyName>Sinter</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Sinter.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.Happ">
+      <HintPath>$(MSBuildProgramFiles32)\AspenTech\AprSystem V8.4\GUI\Xeq\Interop.Happ.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SinterConstraintException.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="ParseTree.cs" />
+    <Compile Include="Scanner.cs" />
+    <Compile Include="SinterFormatException.cs" />
+    <Compile Include="sinter_simGPROMSconfig.cs" />
+    <Compile Include="sinter_DynamicVector.cs" />
+    <Compile Include="sinter_DynamicScalar.cs" />
+    <Compile Include="sinter_IDynamicVariable.cs" />
+    <Compile Include="sinter_Sim.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SinterProcess.cs" />
+    <Compile Include="sinter_Factory.cs" />
+    <Compile Include="sinter_HelperFunctions.cs" />
+    <Compile Include="sinter_ISimulation.cs" />
+    <Compile Include="sinter_IVariable.cs" />
+    <Compile Include="sinter_JsonSetupFile.cs" />
+    <Compile Include="sinter_SetupFile.cs" />
+    <Compile Include="sinter_InteractiveSim.cs" />
+    <Compile Include="sinter_SimACM.cs" />
+    <Compile Include="sinter_SimAspen.cs" />
+    <Compile Include="sinter_SimExcel.cs" />
+    <Compile Include="sinter_simGPROMS.cs" />
+    <Compile Include="sinter_SimulationException.cs" />
+    <Compile Include="sinter_StaticCOMWrapper.cs" />
+    <Compile Include="sinter_stringLabel.cs" />
+    <Compile Include="sinter_Table.cs" />
+    <Compile Include="sinter_TextSetupFile.cs" />
+    <Compile Include="sinter_Variable.cs" />
+    <Compile Include="sinter_Vector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AspenCustomModelerLibrary">
+      <Guid>{E85043BB-0E9D-11D3-82C4-00104B468DE2}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="UC2Lib">
+      <Guid>{C4F6DD36-142F-4150-BE99-D03A157E4CF7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Sinter.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VariableTree\VariableTree.csproj">
+      <Project>{91A832D4-F4D3-463A-AE9B-86EA66A7E94A}</Project>
+      <Name>VariableTree</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"$(FrameworkSdkDir)\bin\NETFX 4.0 Tools\tlbexp.exe" Sinter.dll Sinter.tlb</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

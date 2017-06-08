@@ -1,0 +1,32 @@
+[
+{ "inputs" :
+  {
+    "title": "UnitTest1 Inputs",
+    "description": "Inputs to Simple Units Conversion Sinter Test",
+    "aspenfile": "unitstest.xlsm",
+    "author": "Jim Leek",
+    "date": "2012-11-14",
+    "filetype": "sinterinputs",
+    "version": 0.2,
+    "inputs": {
+      "in.boil.celsius": {
+        "value": 212.0,
+        "units": "degF"
+      },
+      "in.boil.fahrenheit": {
+        "value": 100.0,
+        "units": "degC"
+      },
+      "in.misc.kelvin": {
+        "value": [
+          -273.15,
+          0,
+          100
+        ],
+        "units": "degC"
+      }
+ 
+    }
+  }
+}
+]

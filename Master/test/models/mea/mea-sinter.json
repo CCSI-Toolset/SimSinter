@@ -1,0 +1,22 @@
+{
+  "title": "MEA Carbon Capture Process",
+  "description": "An Aspen simulation of an MEA process",
+  "aspenfile": "mea.bkp",
+  "author": "John Eslick",
+  "date": "December 2, 2010",
+  "filetype": "sinterconfig",
+  "version": 0.2,
+  "inputs": {
+  },
+  "outputs": {
+    "abs_ic_duty": {
+      "path": [
+        "\\Data\\Blocks\\ABSORBER\\Subobjects\\Pumparounds\\P-1\\Output\\DUTY4\\P-1"
+      ],
+      "type": "double",
+      "default": 0.0,
+      "description": "absorber intercooler heat duty (Btu/hr)",
+      "units": null
+    }
+  }
+}

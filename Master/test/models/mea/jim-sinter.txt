@@ -1,0 +1,20 @@
+# Some simulation information
+#
+file|         mea.bkp
+title|        VBA script for Sinter Test
+author|       Jim Leek
+date|         April 29, 2011
+description|  An Aspen simulation of an MEA process
+
+# IO Setup
+#
+#name|            mode|    type|        description|                                                    FindNodeString
+#------------------------------------------------------------------------------------------------------------------------------------------------
+P_abs_top|        input|  double|       pressure at the top, stage 1, of the absorber (psia)|           \Data\Blocks\ABSORBER\Input\PRES1
+abs_ht_wash|      input|  double|       absorber wash section packing height (ft)|                      \Data\Blocks\ABSORBER\Subobjects\Pack Rating\1\Input\PR_PACK_HT\1
+abs_ht_mid|       input|  double|       absorber middle (before IC) section packing height (ft)|        \Data\Blocks\ABSORBER\Subobjects\Pack Rating\1\Input\PR_PACK_HT\2
+               
+abs_ic_duty|      output| double|       absorber intercooler heat duty (Btu/hr)|                        \Data\Blocks\ABSORBER\Subobjects\Pumparounds\P-1\Output\DUTY4\P-1
+abs_1_fracc|      output| double|       fractional capacity of absorber wash section|                   \Data\Blocks\ABSORBER\Subobjects\Pumparounds\P-1\Output\FLOOD_FAC2\1
+abs_2_fracc|      output| double|       fractional capacity of absorber mid section|                    \Data\Blocks\ABSORBER\Subobjects\Pumparounds\P-1\Output\FLOOD_FAC2\2
+cond_T_regen_o|   output| double|       regenerator condenser temperature (F)|                          \Data\Blocks\REGEN\Output\TOP_TEMP

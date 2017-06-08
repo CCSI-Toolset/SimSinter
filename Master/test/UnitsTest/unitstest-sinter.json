@@ -1,0 +1,89 @@
+{
+  "title": "Simple Units Conversion Sinter Test",
+  "description": "A simple test for testing unit conversion, it just puts in 2 values and gets them out again in the correct units",
+  "aspenfile": "unitstest.xlsm",
+  "author": "Jim Leek",
+  "date": "2012-11-14",
+  "filetype": "sinterconfig",
+  "version": 0.2,
+  "inputs": {
+    "in.boil.celsius": {
+      "path": [
+        "temp$B$2"
+      ],
+      "type": "double",
+      "default": 666.0,
+      "description": "Input the boiling point of water in Celsius",
+      "units": "degC",
+      "min": 70.0,
+      "max": 130.0
+    },
+    "in.boil.fahrenheit": {
+      "path": [
+        "temp$B$3"
+      ],
+      "type": "double",
+      "default": 666.0,
+      "description": "Input the boiling point of water in Fahrenheit",
+      "units": "degF",
+      "min": 200.0,
+      "max": 240.0
+    },
+    "in.misc.kelvin": {
+      "path": [
+        "temp$B$5"
+      ],
+      "type": "double[3]",
+      "default": [
+        22.0,
+        41.0,
+        5312.0
+      ],
+      "description": "Abs zero, Freezing water, boiling water",
+      "units": "K",
+      "min": [
+        0.0,
+        12.0,
+        35.0
+      ],
+      "max": [
+        100.0,
+        200.0,
+        300.0
+      ]
+    }
+  },
+  "outputs": {
+    "out.boil.celsius": {
+      "path": [
+        "temp$B$2"
+      ],
+      "type": "double",
+      "default": 666.0,
+      "description": "Input the boiling point of water in Celsius",
+      "units": "degC"
+    },
+    "out.boil.fahrenheit": {
+      "path": [
+        "temp$B$3"
+      ],
+      "type": "double",
+      "default": 666.0,
+      "description": "Input the boiling point of water in Fahrenheit",
+      "units": "degF"
+    },
+    "out.misc.kelvin": {
+      "path": [
+        "temp$B$5"
+      ],
+      "type": "double[3]",
+      "default": [
+        22.0,
+        41.0,
+        5312.0
+      ],
+      "description": "Abs zero, Freezing water, boiling water",
+      "units": "K"
+    }
+  }
+}

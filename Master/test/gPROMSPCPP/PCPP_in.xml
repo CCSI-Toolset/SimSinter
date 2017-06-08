@@ -1,0 +1,25 @@
+<Calculation 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="gORUN_input.xsd"
+	jobId='XI5-332123' user='PSE' 
+    time='2013-11-08T14:24:00Z' version='2'>
+    <Model 
+       fileName='PCPP' 
+       processName='CS' 
+       password='my_pass'/>
+    <Simulation robust='true'>
+        <ModelSpecification name='Tcwin'>
+            <RealValue>288.15</RealValue>
+        </ModelSpecification>
+        <ModelSpecification name='Pelecnet'>
+            <RealValue>492.0</RealValue>
+        </ModelSpecification>
+        <ModelSpecification name='phi'>
+            <RealValue>59.999</RealValue>
+        </ModelSpecification>
+        <ModelSpecification name='Tin'>
+            <RealValue>288.15</RealValue>
+        </ModelSpecification>
+        <ReportVariable pathName='Flowsheet.Efficiency'/>
+    </Simulation>
+</Calculation>

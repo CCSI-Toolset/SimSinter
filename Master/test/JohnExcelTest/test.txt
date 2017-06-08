@@ -1,0 +1,18 @@
+# Some simulation information
+#
+file|         test.xlsx
+title|        excel sinter test
+author|       John Eslick
+date|         May 2012
+description|  adds two numbers
+
+#name                        | mode   | type       | description                                                               | FindNodeString
+#----------------------------+--------+------------+---------------------------------------------------------------------------+---------------------------------------------
+macro                        | input  | string     | macro to run                                                              | setting(macro)
+y                            | input  | double     | y variable                                                                | Sheet1$C$6
+x                            | input  | double     | x variable                                                                | Sheet1$C$7
+sum                          | output | double     | sum of x and y                                                            | Sheet1$C$8 
+
+#default | macro | runSim
+default | x     | 2
+default | y     | 2

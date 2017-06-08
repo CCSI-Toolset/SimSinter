@@ -1,0 +1,101 @@
+﻿<Window x:Class="SinterConfigGUI.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sinter Config GUI" Height="400" Width="500" Icon="Resources/SimSinterIcon.png" WindowStyle="None" AllowsTransparency="True"  WindowStartupLocation="CenterScreen"
+        MouseLeftButtonDown="Grid_close">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="10" />
+
+        </Grid.RowDefinitions>
+
+        <Image Stretch="Fill" Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="1" Source="/SinterConfigGUI;component/Resources/SimSinterHeader_white.png"/>
+        <Border BorderBrush="DodgerBlue" BorderThickness="10" Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="0" Grid.RowSpan="7"/>
+
+                       
+            
+        <RichTextBox  MouseLeftButtonDown="Grid_close" Background="White" HorizontalAlignment="Stretch" Margin="0,0,0,0" Name="Instructions" VerticalAlignment="Stretch" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="2" Grid.RowSpan="3" FontSize="12" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <FlowDocument>
+                <Paragraph>
+                    This Material was produced under the DOE Carbon Capture Simulation Initiative (CCSI), and copyright is held by the software owners: ORISE, LANS, LLNS, LBL, PNNL, CMU, WVU, et al. The software owners and/or the U.S. Government retain ownership of all rights in the CCSI software and the copyright and patents subsisting therein. Any distribution or dissemination is governed under the terms and conditions of the CCSI Test and Evaluation License, CCSI Master Non-Disclosure Agreement, and the CCSI Intellectual Property Management Plan. No rights are granted except as expressly recited in one of the aforementioned agreements.
+                </Paragraph>
+
+                <Table>
+                    <Table.Columns>
+                        <TableColumn Width="100"/>
+                        <TableColumn />
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    Version:
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    2015.10.rc, September 2015
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    License:
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    CCSI Testing and Evaluation License
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    URL:
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    https://www.acceleratecarboncapture.org/drupal
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    Support:
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    ccsi-support@acceleratecarboncapture.org
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+
+                    </TableRowGroup>
+                </Table>
+
+            </FlowDocument>
+        </RichTextBox>
+
+        <TextBlock Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="4" FontSize="16" TextAlignment="Center"> Click to Proceed </TextBlock>
+    </Grid>
+
+</Window>

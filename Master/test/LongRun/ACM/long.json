@@ -1,0 +1,41 @@
+{
+  "title": "Long Run ACM",
+  "description": "This simulation should run for about 5 minutes before failing.",
+  "aspenfile": "long.acmf",
+  "author": "John Eslick",
+  "date": "12/2/2014",
+  "filetype": "sinterconfig",
+  "version": 0.2,
+  "settings": {
+    "homotopy": {
+      "type": "int",
+      "default": 1,
+      "description": "Simulation specific setting: homotopy"
+    },
+    "printlevel": {
+      "type": "int",
+      "default": 0,
+      "description": "Simulation specific setting: printlevel"
+    }
+  },
+  "inputs": {
+    "Fm": {
+      "path": [
+        "BFBadsT.SolidIn.Fm"
+      ],
+      "type": "double",
+      "default": 600000.0,
+      "description": "Mass Flowrate (kg/hr)",
+      "units": "kg/hr"
+    },
+    "adsN": {
+      "path": [
+        "adsN"
+      ],
+      "type": "double",
+      "default": 15.0,
+      "description": "Number of parallel adsorption trains",
+      "units": ""
+    }
+  }
+}

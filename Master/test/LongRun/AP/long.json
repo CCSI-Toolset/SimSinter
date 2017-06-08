@@ -1,0 +1,9 @@
+{
+  "title": "Long Aspen Plus run",
+  "description": "This Aspen Plus run should run for 20 minutes before converging.  It shoulnd't fail.",
+  "aspenfile": "long.bkp",
+  "author": "John Eslick",
+  "date": "12/2/2014",
+  "filetype": "sinterconfig",
+  "version": 0.2
+}

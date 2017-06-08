@@ -1,0 +1,76 @@
+﻿<Window x:Class="SinterConfigGUI.VectorInitPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:w="clr-namespace:SinterConfigGUI"
+        Title="SinterConfigGUI Vector Default Initialization" 
+        Height="400" Width="600" Background="WhiteSmoke"
+        Icon="Resources/SimSinterIcon.png">
+    
+    <Window.InputBindings>
+        <KeyBinding Command="ApplicationCommands.Save" Key="S" Modifiers="Ctrl"/>
+        <KeyBinding Command="ApplicationCommands.SaveAs" Key="F12"/>
+        <KeyBinding Command="w:Command.GotoVariablesPage" Key="Back"/>
+        <KeyBinding Command="w:Command.SaveAndQuit" Key="Back" Modifiers="Shift"/>
+        <KeyBinding Command="w:Command.GotoVariablesPage" Key="Left" Modifiers="Alt"/>
+        <KeyBinding Command="w:Command.SaveAndQuit" Key="Right" Modifiers="Alt"/>
+        <KeyBinding Command="w:Command.UploadToDMF" Key="U" Modifiers="Control"/>
+    </Window.InputBindings>
+
+    <Grid Name="ButtonGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="1" />
+            <RowDefinition Height="27" />
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Name="NameScrollViewer" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="True" HorizontalAlignment="Stretch">
+
+            <Grid Name="MainGrid" ScrollViewer.VerticalScrollBarVisibility="Auto" FlowDirection="LeftToRight">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width=".3*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <GridSplitter Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Center" Width="2" Background="Gray"/>
+                <GridSplitter Grid.Column="3" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Center" Width="2" Background="Gray"/>
+
+                <StackPanel Name="NameStackPanel" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FlowDirection="LeftToRight">
+                    <TextBlock FontSize="14" FontWeight="Bold"  Margin="2,0,2,0">Vector Name</TextBlock>
+                    <Border BorderThickness="1" BorderBrush="Black"></Border>
+                </StackPanel>
+                <StackPanel Name="SizeStackPanel" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FlowDirection="LeftToRight">
+                    <TextBlock FontSize="14" FontWeight="Bold"  Margin="2,0,2,0">Size</TextBlock>
+                    <Border BorderThickness="1" BorderBrush="Black"></Border>
+                </StackPanel>
+
+                <StackPanel Name="DataGridStackPanel" Grid.Column="4" Grid.ColumnSpan="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <TextBlock FontSize="14" FontWeight="Bold" Margin="5,0,0,0">Vector Data</TextBlock>
+                    <Border BorderThickness="1" BorderBrush="Black"></Border>
+
+                    <!--            <DataGrid Height="35" ScrollViewer.HorizontalScrollBarVisibility="Visible" HeadersVisibility="None">
+                <DataGrid.Columns>
+                    <DataGridTextColumn/>
+                    <DataGridTextColumn/>
+                    <DataGridTextColumn/>
+                </DataGrid.Columns>
+            </DataGrid>
+-->
+                </StackPanel>
+
+            </Grid>
+        </ScrollViewer>
+        <Border Height="1" Background="Black" Grid.Row="1" HorizontalAlignment="Stretch" />
+        <Button Content="Finish" ToolTip="Save and Quit." ToolTipService.ShowOnDisabled="True" Grid.Column="1" Grid.Row="2" Height="20" Width="80" Margin="0,0,5,2" Name="SaveButton" HorizontalAlignment="Right" VerticalAlignment="Bottom" Command="w:Command.SaveAndQuit" />
+        <Button Content="DMF Upload" ToolTip="Upload this simulation, and related files, to the DMF." ToolTipService.ShowOnDisabled="True" Grid.Column="1" Grid.Row="2" Height="20" Width="80" Margin="0,0,90,2" Name="Upload" HorizontalAlignment="Right" VerticalAlignment="Bottom" Command="w:Command.UploadToDMF" />
+        <Button Content="&lt; Back" ToolTip="Back to the Variable Selection page." ToolTipService.ShowOnDisabled="True" Grid.Column="1" Grid.Row="2" Height="20" Width="80" HorizontalAlignment="Right" Margin="0,0,175,2" Name="BackButton" VerticalAlignment="Bottom"   Command="w:Command.GotoVariablesPage" />
+
+    </Grid>
+</Window>

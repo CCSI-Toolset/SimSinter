@@ -1,0 +1,114 @@
+
+
+
+                                     +
+                                   + + +
+                                   + + +
+                                   + + +
+                             +     + + +     +
+                           + + +   + + +   + + +
+                           + + +   + + +   + + +
+                           + + +   + + +   + + +
+                     +     + + +   + + +   + + +     +
+                   + + +   + + +   + + +   + + +   + + +
+                   + + +   + + +   + + +   + + +   + + +
+                   + + +   + + +   + + +   + + +   + + +
+             +     + + +   + + +   + + +   + + +   + + +     +
+           + + +   + + +   + + +   + + +   + + +   + + +   + + +
+           + + +   + + +   + + +   + + +   + + +   + + +   + + +
+           + + +   + + +   + + +   + + +   + + +   + + +   + + +
+           + + +   + + +   + + +   + + +   + + +   + + +   + + +
+           + + +   + + +   + + +   + + +   + + +   + + +   + + +
+           + + +   + + +   + + +   + + +   + + +   + + +   + + +
+           + + +   + + +   + + +   + + +   + + +   + + +   + + +
+           + + +   + + +   + + +   + + +   + + +   + + +   + + +
+             +     + + +   + + +   + + +   + + +   + + +     +
+                   + + +   + + +   + + +   + + +   + + +
+                   + + +   + + +   + + +   + + +   + + +
+                   + + +   + + +   + + +   + + +   + + +
+                     +       +     + + +     +       +
+                                   + + +
+                                   + + +
+                                   + + +
+ ASPENTECH                         + + +
+                                   + + +
+ PROPERTY CALCULATIONS             + + +
+ FOR THE PROCESS INDUSTRIES        + + +
+                                     +
+
+
+
+ ASPEN PROPERTIES IS A TRADEMARK OF     HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 781/221-6400                           EUROPE (44) 1189-226555
+
+ PLATFORM: WINDOWS                                       MARCH 23, 2016      
+ VERSION: 34.0   Build 109                               WEDNESDAY   
+ INSTALLATION:                                           4:15:59 P.M.        
+
+ THIS COPY OF ASPEN PROPERTIES LICENSED TO                                 
+
+
+      ASPEN PROPERTIES (TM) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, 
+      INC. (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 20 CROSBY DRIVE,
+      BEDFORD, MA 01730.
+ *** INPUT SUMMARY ***
+
+ >>CURRENT RUN
+
+   ORIGINAL RUN                           MARCH 23, 2016      
+   4:15:59 P.M.                           WEDNESDAY   
+   INPUT FILE: _1542dzk.inm
+   RUN ID : _1542dzk
+          1    ;
+          2    ;Input file created by Aspen Properties Rel. 34.0 at 16:15:59 Wed Mar 23, 2016
+          3    ;Directory C:\aspenfiles\SimSinter\Master\test\DynamicTest\AM_BFB  Runid PROPSPLUS
+          4    ;
+          5
+          6
+          7    PROP
+          8
+          9
+         10    IN-UNITS MET
+         11
+         12    DATABANKS 'APV88 PURE24' / 'APV88 AQUEOUS' / 'APV88 SOLIDS' /  &
+         13            'APV88 INORGANIC' / NOASPENPCD
+         14
+         15    PROP-SOURCES 'APV88 PURE24' / 'APV88 AQUEOUS' / 'APV88 SOLIDS' &
+         16             / 'APV88 INORGANIC'
+         17
+         18    COMPONENTS
+         19        CO2 CO2 /
+         20        H2O H2O /
+         21        N2 N2
+         22
+         23    PROPERTIES PR-BM
+         24
+         25    PROP-DATA PRKBV-1
+         26        IN-UNITS MET
+         27        PROP-LIST PRKBV
+         28        BPVAL CO2 H2O .1200000000 0.0 0.0 0.0 1000.000000
+         29        BPVAL H2O CO2 .1200000000 0.0 0.0 0.0 1000.000000
+         30        BPVAL CO2 N2 -.0170000000 0.0 0.0 0.0 1000.000000
+         31        BPVAL N2 CO2 -.0170000000 0.0 0.0 0.0 1000.000000
+         32    ;
+         33    ;
+         34    ;
+         35    ;
+         36    ;
+ *** INPUT TRANSLATOR MESSAGES ***
+
+  *** THIS RUN USES THE PROPERTIES ENTERPRISE DATABASE ***
+      SQLLOCALDB.APEOSV88 : (DATAVERSION - 34.0.0.18)                         
+      SQLLOCALDB.APV88 : (DATAVERSION - 34.0.0.27)                            
+      SQLLOCALDB.FACTV88 : (DATAVERSION - 34.0.0.8)                           
+      SQLLOCALDB.NISTV88 : (DATAVERSION - 34.0.0.27)                          
+
+ PDF updated                                                                      TIME =      1.11

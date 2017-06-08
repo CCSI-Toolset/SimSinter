@@ -1,0 +1,67 @@
+# Some simulation information
+#
+file|         exceltest.xlsm
+title|        Simple Excel Sinter Test
+author|       Jim Leek
+date|         2012-05-04
+description|  A simple test for Excel Sinter.  It calculates BMI.
+
+# Input Setup
+#
+#name|                        mode|    type|        description|                                                               FindNodeString
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
+macro                  |     input|  string|        The name of the macro to run                    |                          setting(macro)
+height.jim             |     input|  double|        Jim's Height in inches                          |                          height$C$2
+weight.jim             |     input|  double|        Jim's Weight in pounds                          |                          weight$C$2 | weight$F$6
+
+BMI.jim                |    output|  double|        Jim's BMI                                       |                          BMI$C$2
+
+height.joe             |     input|  double|        Joe's Height in inches                          |                          height$C$3
+weight.joe             |     input|  double|        Joe's Weight in pounds                          |                          weight$C$3
+BMI.joe                |    output|  double|        Joe's BMI                                       |                          BMI$C$3
+
+height.mama            |     input|  double|        Yo Mama's Height in inches                      |                          height$C$4
+weight.mama            |     input|  double|        Yo Mama's Weight in pounds                      |                          weight$C$4
+BMI.mama               |    output|  double|        Yo Mama's BMI                                   |                          BMI$C$4
+
+height.vector          |     input| double[3] |     Just 3 numbers to multiply                      |                          height$A$6  
+weight.vector          |     input| double[3] |     Just 3 numbers to multiply                      |                          weight$A$6  
+BMI.vector             |    output| double[3] |     The result of multiplication                    |                          BMI$A$6  
+
+default | macro         | RunSinter
+default | height.jim    | 74.0
+default | weight.jim    | 167.0
+default | height.joe    | 24.0
+default | weight.joe    | 100.0
+default | height.mama   | 63.0
+default | weight.mama   | 200.0
+default | height.vector | 2.0
+                          3.0
+                          4.0
+default | weight.vector | 1.0
+                          3.0
+                          5.0
+
+
+limits  | height.jim    | 70.0   | 78.0
+limits  | weight.jim    | 160.0  | 170.0
+limits  | height.joe    | 20.0   | 30.0
+limits  | weight.joe    | 80.0   | 200.0
+limits  | height.mama   | 60.0   | 70.0
+limits  | weight.mama   | 160.0  | 240.0
+min     | height.vector | 1.0    
+                          1.0    
+                          1.0    
+max     | height.vector | 5.0    
+                          5.0    
+                          5.0    
+
+
+min     | weight.vector | 1.0    
+                          1.0    
+                          1.0   
+
+max     | weight.vector | 5
+                          5
+                          5
+

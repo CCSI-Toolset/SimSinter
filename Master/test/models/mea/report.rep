@@ -1,0 +1,2553 @@
+
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + +   + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + +   + +       + +   + + + + + + + + + + + + + +
+ + + + + + + + + + + + + +       +       +       + + + + + + + + + + + + +
+ + + + + + + + + + + + + +       +       +       + + + + + + + + + + + + +
+ + + + + + + + + + + + + +       +       +       + + + + + + + + + + + + +
+ + + + + + + + + + +   + +       +       +       + +   + + + + + + + + + +
+ + + + + + + + + +       +       +       +       +       + + + + + + + + +
+ + + + + + + + + +       +       +       +       +       + + + + + + + + +
+ + + + + + + + + +       +       +       +       +       + + + + + + + + +
+ + + + + + +   + +       +       +       +       +       + +   + + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + + +   + +       +       +       +       +       + +   + + + + + +
+ + + + + + + + + +       +       +       +       +       + + + + + + + + +
+ + + + + + + + + +       +       +       +       +       + + + + + + + + +
+ + + + + + + + + +       +       +       +       +       + + + + + + + + +
+ + + + + + + + + + +   + + +   + +       + +   + + +   + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + +   + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+                                                                        TM
+ AAAAA   SSSSS   PPPPP   EEEEE   NN    N   PPPPP   L       U   U   SSSSS
+ A   A   S       P   P   E       N N   N   P   P   L       U   U   S    
+ AAAAA   SSSSS   PPPPP   EEEEE   N   N N   PPPPP   L       U   U   SSSSS
+ A   A       S   P       E       N    NN   P       L       U   U       S
+ A   A   SSSSS   P       EEEEE   N     N   P       LLLLL   UUUUU   SSSSS
+
+ ASPEN PLUS IS A TRADEMARK OF           HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 200 WHEELER ROAD                       EUROPE (44) 1189-226555
+ BURLINGTON, MASSACHUSETTS 01803                             
+ 781/221-6400
+
+ PLATFORM: WIN32                                         APRIL 27, 2011      
+ VERSION: 24.0   Build 63                                WEDNESDAY   
+ INSTALLATION:                                           9:05:07 A.M.        
+
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE    I
+                      MEA - WATER - H2S -  CO2    INSERT                        
+
+
+
+      ASPEN PLUS (R) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, INC.
+      (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 200 WHEELER ROAD,
+      BURLINGTON, MA 01803.
+                               TABLE OF CONTENTS                                
+
+
+            RUN CONTROL SECTION....................................  1
+                 RUN CONTROL INFORMATION...........................  1
+                 DESCRIPTION.......................................  1
+
+            FLOWSHEET SECTION......................................  2
+                 FLOWSHEET CONNECTIVITY BY STREAMS.................  2
+                 FLOWSHEET CONNECTIVITY BY BLOCKS..................  2
+                 COMPUTATIONAL SEQUENCE............................  2
+                 OVERALL FLOWSHEET BALANCE.........................  2
+
+            PHYSICAL PROPERTIES SECTION............................  3
+                 COMPONENTS........................................  3
+
+            U-O-S BLOCK SECTION....................................  4
+                 BLOCK:  ABSORBER MODEL: RADFRAC...................  4
+                 BLOCK:  LEANCOOL MODEL: HEATER.................... 28
+                 BLOCK:  LR-HXC   MODEL: HEATER.................... 29
+                 BLOCK:  LR-HXH   MODEL: HEATER.................... 30
+                 BLOCK:  REGEN    MODEL: RADFRAC................... 31
+                 BLOCK:  SOL-PUMP MODEL: PUMP...................... 42
+
+            STREAM SECTION......................................... 44
+                 CO2 FG-01 FG-02 LEAN-00A LEAN-02.................. 44
+                 LEAN-03 LEAN-04 RICH-01 RICH-02 RICH-03........... 46
+                 WASH-01........................................... 48
+                 LR-HXQ............................................ 50
+
+            PROBLEM STATUS SECTION................................. 51
+                 BLOCK STATUS...................................... 51
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 1   
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              RUN CONTROL SECTION                               
+
+ RUN CONTROL INFORMATION                 
+ -----------------------
+
+ THIS COPY OF ASPEN PLUS LICENSED TO US DEPARTMENT OF ENERGY         
+
+ TYPE OF RUN: NEW 
+
+ INPUT FILE NAME: _5828hpc.inm
+
+ OUTPUT PROBLEM DATA FILE NAME: _5828hpc 
+ LOCATED IN:                    
+
+
+ PDF SIZE USED FOR INPUT TRANSLATION:
+   NUMBER OF FILE RECORDS (PSIZE) =     0
+   NUMBER OF IN-CORE RECORDS      =   256
+ PSIZE NEEDED FOR SIMULATION    =   256
+
+ CALLING PROGRAM NAME:          apmain  
+ LOCATED IN:                    C:\PROGRA~1\ASPENT~1\ASPENP~2.2\Engine\xeq
+
+ SIMULATION REQUESTED FOR ENTIRE FLOWSHEET
+
+ DESCRIPTION                             
+ -----------
+
+        H2O-MEA-H2S-CO2. PROPERTY METHOD: ELECNRTL. TEMPERATURE: UP TO      
+        120 C. MEA CONCENTRATION: UP TO 50 WT.% This is a modified          
+        insert, which includes new parameters and Henry's constant for      
+        CO2 in MEA to improve the calculation of heat duty . Parameters     
+        have been tested against real life plant data for few cases. The    
+        old parameters for this system are still available in the           
+        KMEA.BKP file in the elecins folder.                                
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 2   
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                               FLOWSHEET SECTION                                
+
+ FLOWSHEET CONNECTIVITY BY STREAMS       
+ ---------------------------------
+
+   STREAM     SOURCE     DEST           STREAM     SOURCE     DEST
+   LEAN-00A   ----       ABSORBER       FG-01      ----       ABSORBER
+   WASH-01    ----       ABSORBER       FG-02      ABSORBER   ----    
+   RICH-01    ABSORBER   SOL-PUMP       RICH-02    SOL-PUMP   LR-HXC  
+   LEAN-03    LR-HXH     LEANCOOL       RICH-03    LR-HXC     REGEN   
+   LR-HXQ     LR-HXC     LR-HXH         LEAN-04    LEANCOOL   ----    
+   CO2        REGEN      ----           LEAN-02    REGEN      LR-HXH  
+
+ FLOWSHEET CONNECTIVITY BY BLOCKS        
+ --------------------------------
+
+   BLOCK        INLETS                         OUTLETS
+   ABSORBER     WASH-01 FG-01 LEAN-00A         FG-02 RICH-01               
+   SOL-PUMP     RICH-01                        RICH-02                     
+   LR-HXH       LEAN-02 LR-HXQ                 LEAN-03                     
+   LR-HXC       RICH-02                        RICH-03 LR-HXQ              
+   LEANCOOL     LEAN-03                        LEAN-04                     
+   REGEN        RICH-03                        CO2 LEAN-02                 
+
+ COMPUTATIONAL SEQUENCE                  
+ ----------------------
+
+ SEQUENCE USED WAS:
+    ABSORBER SOL-PUMP LR-HXC REGEN LR-HXH LEANCOOL                         
+
+ OVERALL FLOWSHEET BALANCE               
+ -------------------------
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                              IN          OUT       GENERATION   RELATIVE DIFF.
+   CONVENTIONAL COMPONENTS  
+           (LBMOL/HR)
+      H2O                 162965.       162967.      -254.458     -0.157233E-02
+      MEA                 9692.16       9691.21      -2067.90     -0.213260    
+      H2S                 0.00000       0.00000       198.007       0.00000    
+      CO2                 4600.51       4600.51      -1472.39     -0.320050    
+      HCO3-               61.4447       60.4805       281.644       4.59939    
+      MEACOO-             5100.10       5101.79       786.438      0.153818    
+      MEA+                5272.78       5272.04       1363.82      0.258793    
+      CO3-2               55.3245       54.5976       8.30816      0.163310    
+      HS-                 0.00000       0.00000      0.120235E-01   0.00000    
+      S-2                 0.00000       0.00000       0.00000       0.00000    
+      H3O+               0.467997E-05  0.239712E-05 -0.225024E-04  -4.32045    
+      OH-                0.590371      0.576098     -0.258289     -0.413326    
+      N2                  24593.8       24593.8     -0.720662E-14  0.303514E-05
+   TOTAL BALANCE
+   MOLE(LBMOL/HR)         212342.       212342.      -1156.79     -0.544777E-02
+   MASS(LB/HR   )        0.528464E+07  0.528460E+07                0.683996E-05
+   ENTHALPY(BTU/HR  )   -0.240110E+11 -0.239420E+11               -0.287509E-02
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 3   
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                          PHYSICAL PROPERTIES SECTION                           
+
+ COMPONENTS                              
+ ----------
+
+  ID       TYPE  FORMULA        NAME OR ALIAS                      REPORT NAME
+   H2O      C     H2O            H2O                                H2O     
+   MEA      C     C2H7NO         C2H7NO                             MEA     
+   H2S      C     H2S            H2S                                H2S     
+   CO2      C     CO2            CO2                                CO2     
+   HCO3-    C     HCO3-          HCO3-                              HCO3-   
+   MEACOO-  C     MISSING        MISSING                            MEACOO- 
+   MEA+     C     MISSING        MISSING                            MEA+    
+   CO3-2    C     CO3-2          CO3-2                              CO3-2   
+   HS-      C     HS-            HS-                                HS-     
+   S-2      C     S-2            S-2                                S-2     
+   H3O+     C     H3O+           H3O+                               H3O+    
+   OH-      C     OH-            OH-                                OH-     
+   N2       C     N2             N2                                 N2      
+
+  LISTID         SUPERCRITICAL COMPONENT LIST
+   EMEA           CO2 H2S 
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 4   
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC         
+ -------------------------------
+    INLETS   - WASH-01  STAGE   1
+               FG-01    STAGE  34
+               LEAN-00A STAGE   5
+    OUTLETS  - FG-02    STAGE   1
+               RICH-01  STAGE  34
+   PROPERTY OPTION SET:   ELECNRTL  ELECTROLYTE NRTL / REDLICH-KWONG            
+   HENRY-COMPS ID:        EMEA    
+   CHEMISTRY ID:          EMEA     - TRUE SPECIES
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                              IN          OUT       GENERATION   RELATIVE DIFF.
+   TOTAL BALANCE
+   MOLE(LBMOL/HR)         212342.       208146.      -4193.37      0.122326E-04
+   MASS(LB/HR   )        0.528464E+07  0.528458E+07                0.117484E-04
+   ENTHALPY(BTU/HR  )   -0.240110E+11 -0.240698E+11                0.244230E-02
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 5   
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+
+
+                         **********************
+                         ****  INPUT DATA  ****
+                         **********************
+
+   ****   INPUT PARAMETERS   ****
+
+    CALCULATION MODE                                      RIGOROUS RATE-BASED 
+    NUMBER OF STAGES                                        34
+    TOTAL NUMBER OF RATE-BASED STAGES                       34
+    TOTAL NUMBER OF EQUILIBRIUM STAGES                       0
+    MAXIMUM NUMBER OF FLASH ITERATIONS                     100
+    FLASH TOLERANCE                                          0.00100000 
+    HYDRAULIC PARAMETER CALCULATIONS                      NO      
+    DESIGN SPECIFICATION METHOD                           NESTED  
+
+    EQUILIBRIUM (INITIALIZATION) PARAMETERS
+    ---------------------------------------
+    ALGORITHM OPTION                                      STANDARD    
+    INITIALIZATION OPTION                                 STANDARD    
+    INSIDE LOOP CONVERGENCE METHOD                        NEWTON  
+    MAXIMUM NO. OF OUTSIDE LOOP ITERATIONS                 200
+    MAXIMUM NO. OF INSIDE LOOP ITERATIONS                   10
+    OUTSIDE LOOP CONVERGENCE TOLERANCE                       0.000100000
+
+    RATE-BASED PARAMETERS
+    ---------------------
+    RATESEP CONVERGENCE TOLERANCE                            0.000100000
+    MAXIMUM NUMBER OF RATESEP ITERATIONS                   100
+    STABILIZATION METHOD                                  LINE-SEARCH 
+    NUMBER OF STABILIZATION ITERATIONS                      50
+    CONTINUATION/HOMOTOPY ITERATION                          3
+    CONTINUATION/HOMOTOPY PARAMETER                          3.00000    
+    CHILTON-COLBURN AVERAGING PARAMETER                      0.000100000
+    REACTION CONDITION FACTOR                                0.90000    
+
+   ****   COL-SPECS   ****
+
+    MOLAR VAPOR DIST / TOTAL DIST                            1.00000    
+    CONDENSER DUTY (W/O SUBCOOL)   BTU/HR                    0.0        
+    REBOILER DUTY                  BTU/HR                    0.0        
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 6   
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+   **** REAC-STAGES SPECIFICATIONS ****
+
+    STAGE  TO  STAGE            REACTIONS/CHEMISTRY ID
+      1         34                     EMEA    
+
+   **** HOLD-UP SPECIFICATIONS ****
+
+    STAGE  TO  STAGE     LIQUID HOLDUP        VAPOR HOLDUP
+      1         34        1.3500-02 CUFT         MISSING         
+
+
+        *****  CHEMISTRY PARAGRAPH EMEA    *****
+
+
+          ****  REACTION PARAMETERS  ****
+
+   RXN NO. TYPE         PHASE      CONC.    TEMP APP TO EQUIL    CONVERSION
+                                   BASIS            F               
+      1    EQUILIBRIUM  LIQUID     MOLE-GAMMA      0.0000    
+      2    EQUILIBRIUM  LIQUID     MOLE-GAMMA      0.0000    
+      3    EQUILIBRIUM  LIQUID     MOLE-GAMMA      0.0000    
+      4    EQUILIBRIUM  LIQUID     MOLE-GAMMA      0.0000    
+      5    EQUILIBRIUM  LIQUID     MOLE-GAMMA      0.0000    
+      6    EQUILIBRIUM  LIQUID     MOLE-GAMMA      0.0000    
+      7    EQUILIBRIUM  LIQUID     MOLE-GAMMA      0.0000    
+
+        **  STOICHIOMETRIC COEFFICIENTS  **
+
+   RXN NO.    H2O          MEA          CO2          HCO3-        MEACOO- 
+      1      -1.000        1.000        0.000        0.000        0.000    
+      2       0.000        0.000       -1.000        1.000        0.000    
+      3      -1.000        0.000        0.000       -1.000        0.000    
+      4      -1.000        1.000        0.000        1.000       -1.000    
+      5      -2.000        0.000        0.000        0.000        0.000    
+      6      -1.000        0.000        0.000        0.000        0.000    
+      7      -1.000        0.000        0.000        0.000        0.000    
+
+   RXN NO.    MEA+         CO3-2        H3O+         OH-          N2      
+      1      -1.000        0.000        1.000        0.000        0.000    
+      2       0.000        0.000        0.000       -1.000        0.000    
+      3       0.000        1.000        1.000        0.000        0.000    
+      4       0.000        0.000        0.000        0.000        0.000    
+      5       0.000        0.000        1.000        1.000        0.000    
+      6       0.000        0.000        1.000        0.000        0.000    
+      7       0.000        0.000        1.000        0.000        0.000    
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 7   
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+        **  COEFFICIENTS OF EQUILIBRIUM CONSTANT EXPRESSION  **
+
+   RXN NO.     A              B              C              D
+      1    0.79960        -8094.8         0.0000       -0.74840E-02
+      2     98.566         1353.8        -14.304         0.0000    
+      3     216.05        -12432.        -35.482         0.0000    
+      4     1.2826        -3456.2         0.0000         0.0000    
+      5     132.90        -13446.        -22.477         0.0000    
+      6     214.58        -12995.        -33.547         0.0000    
+      7    -9.7420        -8585.5         0.0000         0.0000    
+
+   ****    PROFILES   ****
+
+    P-SPEC          STAGE   1  PRES, PSIA                   15.0000     
+
+    TEMP-EST        STAGE   1  TEMP, F                     145.404      
+                            2                              145.505      
+                            3                              145.539      
+                            4                              145.834      
+                            5                              135.405      
+                            6                              144.490      
+                            7                              152.428      
+                            8                              158.567      
+                            9                              162.761      
+                           10                              165.284      
+                           11                              166.562      
+                           12                              166.987      
+                           13                              166.848      
+                           14                              166.339      
+                           15                              165.579      
+                           16                              164.641      
+                           17                              163.566      
+                           18                              162.377      
+                           19                              161.083      
+                           20                              159.688      
+                           21                              158.188      
+                           22                              156.574      
+                           23                              154.832      
+                           24                              152.942      
+                           25                              150.880      
+                           26                              148.609      
+                           27                              146.084      
+                           28                              131.596      
+                           29                              133.559      
+                           30                              134.515      
+                           31                              134.782      
+                           32                              134.566      
+                           33                              133.993      
+                           34                              133.135      
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 8   
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+   X-EST
+   STAGE       H2O         MEA         CO2         HCO3-       MEACOO-     MEA+    
+      1         0.9991   9.5471-15   4.1201-06   1.9668-07   2.3851-18   4.7108-11
+      2         0.9991   6.4180-10   4.1529-06   8.1866-07   6.6482-13   7.7145-07
+      3         0.9989   1.0609-05   4.1122-06   1.0894-04   1.4642-06   1.1148-04
+      4         0.9914   1.6394-03   4.1488-06   9.7950-04   1.9789-03   3.0950-03
+      5         0.8878   5.0841-02   5.1393-07   4.5450-04   2.9586-02   3.0619-02
+      6         0.8883   4.8445-02   1.0033-06   5.7480-04   3.0349-02   3.1457-02
+      7         0.8887   4.5951-02   1.8646-06   7.1844-04   3.1224-02   3.2442-02
+      8         0.8890   4.3579-02   3.1413-06   8.7212-04   3.2128-02   3.3480-02
+      9         0.8891   4.1465-02   4.7125-06   1.0208-03   3.3000-02   3.4491-02
+     10         0.8891   3.9626-02   6.3717-06   1.1557-03   3.3819-02   3.5443-02
+     11         0.8889   3.8014-02   7.9596-06   1.2755-03   3.4586-02   3.6337-02
+     12         0.8887   3.6562-02   9.4153-06   1.3830-03   3.5316-02   3.7184-02
+     13         0.8884   3.5220-02   1.0743-05   1.4824-03   3.6020-02   3.8000-02
+     14         0.8881   3.3948-02   1.1975-05   1.5772-03   3.6706-02   3.8796-02
+     15         0.8878   3.2724-02   1.3142-05   1.6701-03   3.7380-02   3.9579-02
+     16         0.8874   3.1532-02   1.4272-05   1.7629-03   3.8044-02   4.0354-02
+     17         0.8870   3.0363-02   1.5381-05   1.8570-03   3.8701-02   4.1125-02
+     18         0.8866   2.9211-02   1.6480-05   1.9533-03   3.9354-02   4.1895-02
+     19         0.8862   2.8071-02   1.7572-05   2.0525-03   4.0003-02   4.2665-02
+     20         0.8858   2.6940-02   1.8657-05   2.1552-03   4.0649-02   4.3438-02
+     21         0.8854   2.5814-02   1.9735-05   2.2621-03   4.1296-02   4.4217-02
+     22         0.8849   2.4689-02   2.0798-05   2.3738-03   4.1945-02   4.5005-02
+     23         0.8845   2.3561-02   2.1842-05   2.4912-03   4.2598-02   4.5805-02
+     24         0.8840   2.2423-02   2.2856-05   2.6152-03   4.3259-02   4.6623-02
+     25         0.8834   2.1271-02   2.3826-05   2.7471-03   4.3932-02   4.7464-02
+     26         0.8829   2.0097-02   2.4735-05   2.8883-03   4.4621-02   4.8335-02
+     27         0.8822   1.8893-02   2.5557-05   3.0410-03   4.5333-02   4.9244-02
+     28         0.8821   1.5990-02   1.7163-05   3.0336-03   4.6640-02   5.0757-02
+     29         0.8816   1.4508-02   2.4005-05   3.5191-03   4.7129-02   5.1734-02
+     30         0.8812   1.3504-02   2.9799-05   3.8899-03   4.7459-02   5.2444-02
+     31         0.8808   1.2783-02   3.4221-05   4.1683-03   4.7712-02   5.2988-02
+     32         0.8805   1.2223-02   3.7381-05   4.3808-03   4.7930-02   5.3434-02
+     33         0.8802   1.1754-02   3.9545-05   4.5503-03   4.8137-02   5.3830-02
+     34         0.8799   1.1327-02   4.0974-05   4.6943-03   4.8348-02   5.4207-02
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 9   
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+   X-EST
+   STAGE       CO3-2       H3O+        OH-         N2      
+      1      1.3338-12   1.9682-07   1.8342-10   8.5102-04
+      2      2.3098-11   4.8017-08   7.5949-10   8.5752-04
+      3      4.8741-07   4.2172-10   1.0221-07   8.5788-04
+      4      6.7815-05   7.9972-11   9.3447-07   8.5472-04
+      5      2.8809-04   2.1791-11   2.8991-06   4.2526-04
+      6      2.6523-04   3.2913-11   2.6127-06   6.2472-04
+      7      2.4864-04   4.7911-11   2.3414-06   6.9526-04
+      8      2.3850-04   6.5395-11   2.1080-06   7.0046-04
+      9      2.3392-04   8.3014-11   1.9192-06   6.7944-04
+     10      2.3359-04   9.8892-11   1.7689-06   6.5317-04
+     11      2.3655-04   1.1217-10   1.6472-06   6.3094-04
+     12      2.4153-04   1.2317-10   1.5447-06   6.1565-04
+     13      2.4799-04   1.3236-10   1.4554-06   6.0719-04
+     14      2.5554-04   1.4025-10   1.3750-06   6.0447-04
+     15      2.6393-04   1.4725-10   1.3013-06   6.0621-04
+     16      2.7305-04   1.5362-10   1.2325-06   6.1133-04
+     17      2.8285-04   1.5954-10   1.1677-06   6.1902-04
+
+   X-EST
+   STAGE       CO3-2       H3O+        OH-         N2      
+     18      2.9330-04   1.6511-10   1.1063-06   6.2871-04
+     19      3.0445-04   1.7037-10   1.0477-06   6.4005-04
+     20      3.1635-04   1.7536-10   9.9170-07   6.5284-04
+     21      3.2911-04   1.8007-10   9.3780-07   6.6699-04
+     22      3.4285-04   1.8448-10   8.8572-07   6.8250-04
+     23      3.5775-04   1.8856-10   8.3517-07   6.9946-04
+     24      3.7402-04   1.9227-10   7.8582-07   7.1803-04
+     25      3.9199-04   1.9555-10   7.3738-07   7.3845-04
+     26      4.1204-04   1.9830-10   6.8951-07   7.6105-04
+     27      4.3474-04   2.0039-10   6.4187-07   7.8630-04
+     28      5.4104-04   1.5222-10   5.4663-07   8.7410-04
+     29      5.4285-04   1.8610-10   4.9145-07   9.1207-04
+     30      5.4712-04   2.1177-10   4.5545-07   9.2673-04
+     31      5.5336-04   2.2986-10   4.3017-07   9.3203-04
+     32      5.6130-04   2.4197-10   4.1087-07   9.3491-04
+     33      5.7087-04   2.4970-10   3.9478-07   9.3864-04
+     34      5.8216-04   2.5433-10   3.8025-07   9.4468-04
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 10  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+   Y-EST
+   STAGE       H2O         MEA         CO2         HCO3-       MEACOO-     MEA+    
+      1         0.2227   1.2254-17   1.4439-02     MISSING     MISSING     MISSING
+      2         0.2230   8.3609-13   1.4433-02     MISSING     MISSING     MISSING
+      3         0.2230   1.3692-08   1.4433-02     MISSING     MISSING     MISSING
+      4         0.2229   2.1762-06   1.4437-02     MISSING     MISSING     MISSING
+      5         0.2210   1.0287-04   1.4514-02     MISSING     MISSING     MISSING
+      6         0.2507   1.1188-04   1.8672-02     MISSING     MISSING     MISSING
+      7         0.2762   1.1837-04   2.3475-02     MISSING     MISSING     MISSING
+      8         0.2952   1.2170-04   2.8613-02     MISSING     MISSING     MISSING
+      9         0.3071   1.2175-04   3.3694-02     MISSING     MISSING     MISSING
+     10         0.3127   1.1895-04   3.8465-02     MISSING     MISSING     MISSING
+     11         0.3134   1.1405-04   4.2883-02     MISSING     MISSING     MISSING
+     12         0.3106   1.0779-04   4.7019-02     MISSING     MISSING     MISSING
+     13         0.3056   1.0078-04   5.0971-02     MISSING     MISSING     MISSING
+     14         0.2990   9.3428-05   5.4820-02     MISSING     MISSING     MISSING
+
+   Y-EST
+   STAGE       H2O         MEA         CO2         HCO3-       MEACOO-     MEA+    
+     15         0.2914   8.6008-05   5.8624-02     MISSING     MISSING     MISSING
+     16         0.2831   7.8677-05   6.2421-02     MISSING     MISSING     MISSING
+     17         0.2741   7.1527-05   6.6237-02     MISSING     MISSING     MISSING
+     18         0.2647   6.4610-05   7.0090-02     MISSING     MISSING     MISSING
+     19         0.2548   5.7950-05   7.3997-02     MISSING     MISSING     MISSING
+     20         0.2444   5.1562-05   7.7970-02     MISSING     MISSING     MISSING
+     21         0.2335   4.5447-05   8.2027-02     MISSING     MISSING     MISSING
+     22         0.2222   3.9606-05   8.6188-02     MISSING     MISSING     MISSING
+     23         0.2102   3.4036-05   9.0477-02     MISSING     MISSING     MISSING
+     24         0.1975   2.8732-05   9.4924-02     MISSING     MISSING     MISSING
+     25         0.1839   2.3690-05   9.9568-02     MISSING     MISSING     MISSING
+     26         0.1693   1.8904-05      0.1045     MISSING     MISSING     MISSING
+     27         0.1534   1.4364-05      0.1097     MISSING     MISSING     MISSING
+     28         0.1358   1.0058-05      0.1153     MISSING     MISSING     MISSING
+     29         0.1377   9.5721-06      0.1216     MISSING     MISSING     MISSING
+     30         0.1374   8.7345-06      0.1261     MISSING     MISSING     MISSING
+     31         0.1353   7.5853-06      0.1295     MISSING     MISSING     MISSING
+     32         0.1319   6.1482-06      0.1323     MISSING     MISSING     MISSING
+     33         0.1273   4.4240-06      0.1348     MISSING     MISSING     MISSING
+     34         0.1216   2.3900-06      0.1371     MISSING     MISSING     MISSING
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 11  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+   Y-EST
+   STAGE       CO3-2       H3O+        OH-         N2      
+      1        MISSING     MISSING     MISSING      0.7629
+      2        MISSING     MISSING     MISSING      0.7626
+      3        MISSING     MISSING     MISSING      0.7626
+      4        MISSING     MISSING     MISSING      0.7627
+      5        MISSING     MISSING     MISSING      0.7644
+      6        MISSING     MISSING     MISSING      0.7305
+      7        MISSING     MISSING     MISSING      0.7002
+      8        MISSING     MISSING     MISSING      0.6761
+      9        MISSING     MISSING     MISSING      0.6591
+     10        MISSING     MISSING     MISSING      0.6488
+     11        MISSING     MISSING     MISSING      0.6436
+     12        MISSING     MISSING     MISSING      0.6422
+     13        MISSING     MISSING     MISSING      0.6433
+     14        MISSING     MISSING     MISSING      0.6460
+
+   Y-EST
+   STAGE       CO3-2       H3O+        OH-         N2      
+     15        MISSING     MISSING     MISSING      0.6499
+     16        MISSING     MISSING     MISSING      0.6544
+     17        MISSING     MISSING     MISSING      0.6596
+     18        MISSING     MISSING     MISSING      0.6652
+     19        MISSING     MISSING     MISSING      0.6712
+     20        MISSING     MISSING     MISSING      0.6776
+     21        MISSING     MISSING     MISSING      0.6844
+     22        MISSING     MISSING     MISSING      0.6916
+     23        MISSING     MISSING     MISSING      0.6993
+     24        MISSING     MISSING     MISSING      0.7076
+     25        MISSING     MISSING     MISSING      0.7165
+     26        MISSING     MISSING     MISSING      0.7262
+     27        MISSING     MISSING     MISSING      0.7369
+     28        MISSING     MISSING     MISSING      0.7489
+     29        MISSING     MISSING     MISSING      0.7407
+     30        MISSING     MISSING     MISSING      0.7365
+     31        MISSING     MISSING     MISSING      0.7352
+     32        MISSING     MISSING     MISSING      0.7358
+     33        MISSING     MISSING     MISSING      0.7379
+     34        MISSING     MISSING     MISSING      0.7413
+
+                          *******************
+                          ****  RESULTS  ****
+                          *******************
+
+
+   ***   COMPONENT SPLIT FRACTIONS   ***
+
+                             OUTLET STREAMS 
+                             --------------
+                  FG-02        RICH-01 
+    COMPONENT:
+    H2O         .44199E-01   .95580    
+    MEA         0.0000       1.0000    
+    CO2         .98265       .17348E-01
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 12  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+   ***   COMPONENT SPLIT FRACTIONS   ***
+
+                             OUTLET STREAMS 
+                             --------------
+                  FG-02        RICH-01 
+    COMPONENT:
+    HCO3-       0.0000       1.0000    
+    MEACOO-     0.0000       1.0000    
+    MEA+        0.0000       1.0000    
+    CO3-2       0.0000       1.0000    
+    H3O+        0.0000       1.0000    
+    OH-         0.0000       1.0000    
+    N2          .99329       .67064E-02
+
+ 
+   ***    SUMMARY OF KEY RESULTS    ***
+
+    TOP STAGE LIQ. TEMPERATURE     F                       145.651      
+    TOP STAGE VAP. TEMPERATURE     F                       145.667      
+    BOTTOM STAGE LIQ. TEMPERATURE  F                       133.620      
+    BOTTOM STAGE VAP. TEMPERATURE  F                       134.116      
+    TOP STAGE LIQUID FLOW          LBMOL/HR                568.716      
+    BOTTOM STAGE LIQUID FLOW       LBMOL/HR            176,151.         
+    TOP STAGE VAPOR FLOW           LBMOL/HR             31,994.3        
+    BOILUP VAPOR FLOW              LBMOL/HR             33,194.1        
+    CONDENSER DUTY (W/O SUBCOOL)   BTU/HR                    0.0        
+    REBOILER DUTY                  BTU/HR                    0.0        
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 13  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+   ****    PROFILES   ****
+
+   **NOTE** REPORTED VALUES FOR STAGE LIQUID AND VAPOR RATES ARE THE FLOWS
+            FROM THE STAGE INCLUDING ANY SIDE PRODUCT.
+
+ STAGE     TEMPERATURE           PRESSURE          ENTHALPY            HEAT DUTY
+                F                PSIA              BTU/LBMOL           BTU/HR  
+       LIQUID       VAPOR                     LIQUID       VAPOR
+
+   1   145.65       145.67       15.000     -0.12154E+06  -24903.               
+   2   145.74       145.74       15.005     -0.12154E+06  -24934.               
+   3   145.76       145.76       15.010     -0.12157E+06  -24934.               
+   4   146.05       146.05       15.015     -0.12214E+06  -24922.               
+   5   135.29       151.48       15.020     -0.12730E+06  -24707.               
+   6   144.33       156.95       15.022     -0.12725E+06  -28431.               
+   9   163.06       165.60       15.031     -0.12747E+06  -36864.               
+  10   165.82       166.36       15.035     -0.12761E+06  -38322.               
+  11   167.29       166.45       15.040     -0.12777E+06  -39213.               
+  12   167.86       166.08       15.045     -0.12794E+06  -39692.               
+  13   167.83       165.39       15.050     -0.12812E+06  -39887.               
+  26   149.43       141.23       15.107     -0.13065E+06  -34934.               
+  27   146.87       137.91       15.110     -0.13088E+06  -34169.               
+  28   132.42       134.26       15.113     -0.13143E+06  -33302.     -.58778+08
+  29   134.38       134.85       15.116     -0.13159E+06  -34573.               
+  33   134.57       134.23       15.129     -0.13202E+06  -35673.               
+  34   133.62       134.12       15.132     -0.13212E+06  -35452.               
+
+ STAGE     FLOW RATE                  FEED RATE               PRODUCT RATE
+            LBMOL/HR                   LBMOL/HR                 LBMOL/HR
+       LIQUID     VAPOR       LIQUID    VAPOR    MIXED      LIQUID    VAPOR
+   1  568.7     0.3199E+05   555.0843                                .31994+05
+   2  568.5     0.3201E+05                                                    
+   3  564.5     0.3201E+05                                                    
+   4  490.9     0.3200E+05                                                    
+   5 0.1807E+06 0.3193E+05  .17881+06                                         
+   6 0.1821E+06 0.3352E+05                                                    
+   9 0.1845E+06 0.3734E+05                                                    
+  10 0.1846E+06 0.3798E+05                                                    
+  11 0.1846E+06 0.3832E+05                                                    
+  12 0.1844E+06 0.3843E+05                                                    
+  13 0.1841E+06 0.3838E+05                                                    
+  26 0.1776E+06 0.3392E+05                                                    
+  27 0.1769E+06 0.3342E+05                                 .17689+06          
+  28 0.1770E+06 0.3287E+05  .17689+06                                         
+  29 0.1770E+06 0.3326E+05                                                    
+  33 0.1764E+06 0.3336E+05                                                    
+  34 0.1762E+06 0.3319E+05                      .32976+05  .17615+06          
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 14  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+    ****  MASS FLOW PROFILES  ****
+
+ STAGE     FLOW RATE                  FEED RATE               PRODUCT RATE
+            LB/HR                      LB/HR                    LB/HR   
+       LIQUID     VAPOR       LIQUID    VAPOR    MIXED      LIQUID    VAPOR
+   1 0.1025E+05 0.8310E+06  .10000+05                                .83096+06
+   2 0.1025E+05 0.8312E+06                                                    
+   3 0.1018E+05 0.8312E+06                                                    
+   4  9067.     0.8311E+06                                                    
+   5 0.4357E+07 0.8300E+06  .43150+07                                         
+   6 0.4389E+07 0.8631E+06                                                    
+   9 0.4458E+07 0.9471E+06                                                    
+  10 0.4468E+07 0.9636E+06                                                    
+  11 0.4475E+07 0.9743E+06                                                    
+  12 0.4478E+07 0.9805E+06                                                    
+  13 0.4479E+07 0.9836E+06                                                    
+  26 0.4436E+07 0.9474E+06                                                    
+  27 0.4429E+07 0.9417E+06                                 .44294+07          
+  28 0.4443E+07 0.9354E+06  .44295+07                                         
+  29 0.4452E+07 0.9493E+06                                                    
+  33 0.4456E+07 0.9634E+06                                                    
+  34 0.4454E+07 0.9620E+06                      .95955+06  .44536+07          
+
+                         ****   MOLE-X-PROFILE     ****
+   STAGE     H2O           MEA           CO2           HCO3-         MEACOO- 
+      1    0.99914       0.23098E-13   0.35443E-05   0.18238E-06   0.53464E-17
+      2    0.99914       0.14385E-08   0.35657E-05   0.11154E-05   0.20025E-11
+      3    0.99888       0.14923E-04   0.35494E-05   0.11966E-03   0.22553E-05
+      4    0.99099       0.18523E-02   0.35993E-05   0.92893E-03   0.21114E-02
+      5    0.88783       0.52164E-01   0.45389E-06   0.42615E-03   0.28937E-01
+      6    0.88837       0.50008E-01   0.86204E-06   0.53198E-03   0.29575E-01
+      9    0.88935       0.43435E-01   0.39478E-05   0.92873E-03   0.31995E-01
+     10    0.88935       0.41591E-01   0.53861E-05   0.10536E-02   0.32807E-01
+     11    0.88923       0.39932E-01   0.68082E-05   0.11671E-02   0.33593E-01
+     12    0.88902       0.38409E-01   0.81538E-05   0.12713E-02   0.34357E-01
+     13    0.88875       0.36978E-01   0.94179E-05   0.13693E-02   0.35105E-01
+     26    0.88303       0.20774E-01   0.23696E-04   0.27924E-02   0.44314E-01
+     27    0.88240       0.19517E-01   0.24545E-04   0.29449E-02   0.45058E-01
+     28    0.88230       0.16552E-01   0.16544E-04   0.29401E-02   0.46398E-01
+     29    0.88179       0.15013E-01   0.23209E-04   0.34163E-02   0.46923E-01
+     33    0.88029       0.12095E-01   0.38400E-04   0.44426E-02   0.48033E-01
+     34    0.87995       0.11628E-01   0.39841E-04   0.45923E-02   0.48268E-01
+
+                         ****   MOLE-X-PROFILE     ****
+   STAGE     MEA+          CO3-2         H3O+          OH-           N2      
+      1    0.10553E-09   0.13333E-11   0.18247E-06   0.19920E-09   0.85140E-03
+      2    0.10863E-05   0.50062E-10   0.30358E-07   0.12137E-08   0.85624E-03
+      3    0.12343E-03   0.69217E-06   0.33208E-09   0.13096E-06   0.85637E-03
+      4    0.31841E-02   0.71344E-04   0.72929E-10   0.10293E-05   0.85277E-03
+      5    0.29931E-01   0.28251E-03   0.20263E-10   0.30548E-05   0.42534E-03
+      6    0.30630E-01   0.25973E-03   0.30073E-10   0.27830E-05   0.62482E-03
+      9    0.33379E-01   0.22658E-03   0.74791E-10   0.20843E-05   0.67700E-03
+     10    0.34314E-01   0.22561E-03   0.89600E-10   0.19220E-05   0.64903E-03
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 15  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+                         ****   MOLE-X-PROFILE     ****
+   STAGE     MEA+          CO3-2         H3O+          OH-           N2      
+     11    0.35217E-01   0.22784E-03   0.10247E-09   0.17871E-05   0.62510E-03
+     12    0.36094E-01   0.23232E-03   0.11343E-09   0.16719E-05   0.60826E-03
+     13    0.36952E-01   0.23839E-03   0.12286E-09   0.15702E-05   0.59855E-03
+     26    0.47914E-01   0.40322E-03   0.19397E-09   0.71584E-06   0.75086E-03
+     27    0.48856E-01   0.42603E-03   0.19626E-09   0.66537E-06   0.77635E-03
+     28    0.50400E-01   0.53056E-03   0.14946E-09   0.56727E-06   0.86393E-03
+     29    0.51405E-01   0.53274E-03   0.18297E-09   0.50920E-06   0.90160E-03
+     33    0.53603E-01   0.56333E-03   0.24579E-09   0.40587E-06   0.92944E-03
+     34    0.54012E-01   0.57555E-03   0.25045E-09   0.38984E-06   0.93634E-03
+
+                         ****   MOLE-Y-PROFILE     ****
+   STAGE     H2O           MEA           CO2           HCO3-         MEACOO- 
+      1    0.22404       0.29818E-16   0.12425E-01    0.0000        0.0000    
+      2    0.22435       0.18758E-11   0.12420E-01    0.0000        0.0000    
+      3    0.22435       0.19321E-07   0.12420E-01    0.0000        0.0000    
+      4    0.22425       0.24803E-05   0.12423E-01    0.0000        0.0000    
+      5    0.22234       0.10990E-03   0.12497E-01    0.0000        0.0000    
+      6    0.25272       0.11995E-03   0.16086E-01    0.0000        0.0000    
+      9    0.31258       0.13196E-03   0.29561E-01    0.0000        0.0000    
+     10    0.31924       0.12925E-03   0.34123E-01    0.0000        0.0000    
+     11    0.32076       0.12413E-03   0.38478E-01    0.0000        0.0000    
+     12    0.31854       0.11739E-03   0.42657E-01    0.0000        0.0000    
+     13    0.31376       0.10974E-03   0.46724E-01    0.0000        0.0000    
+     26    0.17290       0.20171E-04   0.10299        0.0000        0.0000    
+     27    0.15657       0.15322E-04   0.10836        0.0000        0.0000    
+     28    0.13859       0.10735E-04   0.11413        0.0000        0.0000    
+     29    0.14033       0.10190E-04   0.12060        0.0000        0.0000    
+     33    0.12844       0.46443E-05   0.13439        0.0000        0.0000    
+     34    0.12220       0.24993E-05   0.13692        0.0000        0.0000    
+
+                         ****   MOLE-Y-PROFILE     ****
+   STAGE     MEA+          CO3-2         H3O+          OH-           N2      
+      1     0.0000        0.0000        0.0000        0.0000       0.76354    
+      2     0.0000        0.0000        0.0000        0.0000       0.76323    
+      3     0.0000        0.0000        0.0000        0.0000       0.76323    
+      4     0.0000        0.0000        0.0000        0.0000       0.76333    
+      5     0.0000        0.0000        0.0000        0.0000       0.76505    
+      6     0.0000        0.0000        0.0000        0.0000       0.73107    
+      9     0.0000        0.0000        0.0000        0.0000       0.65773    
+     10     0.0000        0.0000        0.0000        0.0000       0.64650    
+     11     0.0000        0.0000        0.0000        0.0000       0.64064    
+     12     0.0000        0.0000        0.0000        0.0000       0.63868    
+     13     0.0000        0.0000        0.0000        0.0000       0.63941    
+     26     0.0000        0.0000        0.0000        0.0000       0.72409    
+     27     0.0000        0.0000        0.0000        0.0000       0.73505    
+     28     0.0000        0.0000        0.0000        0.0000       0.74727    
+     29     0.0000        0.0000        0.0000        0.0000       0.73905    
+     33     0.0000        0.0000        0.0000        0.0000       0.73716    
+     34     0.0000        0.0000        0.0000        0.0000       0.74088    
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 16  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+                         ****   K-VALUES           ****
+   STAGE     H2O           MEA           CO2           HCO3-         MEACOO- 
+      1    0.22423       0.12800E-02    3482.5       0.26692-143   0.26692-143
+      2    0.22455       0.12829E-02    3483.5       0.26692-143   0.26692-143
+      3    0.22460       0.12841E-02    3482.2       0.26692-143   0.26692-143
+      4    0.22631       0.13303E-02    3449.0       0.26692-143   0.26692-143
+      5    0.17141       0.13541E-02    2886.0       0.26692-143   0.26692-143
+      6    0.21584       0.18881E-02    2959.4       0.26692-143   0.26692-143
+      9    0.33577       0.35533E-02    3026.4       0.26692-143   0.26692-143
+     10    0.35640       0.38638E-02    3019.6       0.26692-143   0.26692-143
+     11    0.36740       0.40271E-02    3007.5       0.26692-143   0.26692-143
+     12    0.37123       0.40771E-02    2992.5       0.26692-143   0.26692-143
+     13    0.37012       0.40484E-02    2976.0       0.26692-143   0.26692-143
+     26    0.23459       0.20115E-02    2783.6       0.26692-143   0.26692-143
+     27    0.21979       0.18233E-02    2772.1       0.26692-143   0.26692-143
+     28    0.15380       0.10557E-02    2747.3       0.26692-143   0.26692-143
+     29    0.16134       0.11326E-02    2749.8       0.26692-143   0.26692-143
+     33    0.16099       0.11271E-02    2745.6       0.26692-143   0.26692-143
+     34    0.15686       0.10840E-02    2742.9       0.26692-143   0.26692-143
+
+                         ****   K-VALUES           ****
+   STAGE     MEA+          CO3-2         H3O+          OH-           N2      
+      1    0.26692-143   0.26692-143   0.26692-143   0.26692-143    891.08    
+      2    0.26692-143   0.26692-143   0.26692-143   0.26692-143    891.33    
+      3    0.26692-143   0.26692-143   0.26692-143   0.26692-143    891.23    
+      4    0.26692-143   0.26692-143   0.26692-143   0.26692-143    895.16    
+      5    0.26692-143   0.26692-143   0.26692-143   0.26692-143    842.05    
+      6    0.26692-143   0.26692-143   0.26692-143   0.26692-143    910.06    
+      9    0.26692-143   0.26692-143   0.26692-143   0.26692-143    1055.7    
+     10    0.26692-143   0.26692-143   0.26692-143   0.26692-143    1076.2    
+     11    0.26692-143   0.26692-143   0.26692-143   0.26692-143    1085.9    
+     12    0.26692-143   0.26692-143   0.26692-143   0.26692-143    1087.9    
+     13    0.26692-143   0.26692-143   0.26692-143   0.26692-143    1084.8    
+     26    0.26692-143   0.26692-143   0.26692-143   0.26692-143    900.65    
+     27    0.26692-143   0.26692-143   0.26692-143   0.26692-143    878.36    
+     28    0.26692-143   0.26692-143   0.26692-143   0.26692-143    769.83    
+     29    0.26692-143   0.26692-143   0.26692-143   0.26692-143    782.72    
+     33    0.26692-143   0.26692-143   0.26692-143   0.26692-143    780.76    
+     34    0.26692-143   0.26692-143   0.26692-143   0.26692-143    773.16    
+
+                         ****   MASS-X-PROFILE     ****
+   STAGE     H2O           MEA           CO2           HCO3-         MEACOO- 
+      1    0.99867       0.78279E-13   0.86544E-05   0.61742E-06   0.30874E-16
+      2    0.99865       0.48753E-08   0.87066E-05   0.37760E-05   0.11564E-10
+      3    0.99777       0.50542E-04   0.86613E-05   0.40483E-03   0.13015E-04
+      4    0.96667       0.61264E-02   0.85770E-05   0.30690E-02   0.11899E-01
+      5    0.66351       0.13218       0.82865E-06   0.10787E-02   0.12494    
+      6    0.66395       0.12673       0.15739E-05   0.13466E-02   0.12771    
+      9    0.66297       0.10978       0.71892E-05   0.23449E-02   0.13779    
+     10    0.66196       0.10497       0.97934E-05   0.26561E-02   0.14108    
+     11    0.66075       0.10061       0.12359E-04   0.29374E-02   0.14421    
+     12    0.65942       0.96598E-01   0.14775E-04   0.31939E-02   0.14723    
+     13    0.65800       0.92828E-01   0.17034E-04   0.34338E-02   0.15016    
+     26    0.63681       0.50797E-01   0.41746E-04   0.68208E-02   0.18464    
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 17  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+                         ****   MASS-X-PROFILE     ****
+   STAGE     H2O           MEA           CO2           HCO3-         MEACOO- 
+     27    0.63485       0.47610E-01   0.43139E-04   0.71761E-02   0.18729    
+     28    0.63325       0.40280E-01   0.29007E-04   0.71471E-02   0.19240    
+     29    0.63176       0.36470E-01   0.40621E-04   0.82901E-02   0.19423    
+     33    0.62788       0.29252E-01   0.66909E-04   0.10733E-01   0.19794    
+     34    0.62701       0.28093E-01   0.69350E-04   0.11083E-01   0.19871    
+
+                         ****   MASS-X-PROFILE     ****
+   STAGE     MEA+          CO3-2         H3O+          OH-           N2      
+      1    0.36354E-09   0.44391E-11   0.19259E-06   0.18797E-09   0.13233E-02
+      2    0.37422E-05   0.16668E-09   0.32040E-07   0.11452E-08   0.13308E-02
+      3    0.42491E-03   0.23031E-05   0.35026E-09   0.12350E-06   0.13302E-02
+      4    0.10704E-01   0.23182E-03   0.75117E-10   0.94787E-06   0.12935E-02
+      5    0.77092E-01   0.70328E-03   0.15990E-10   0.21553E-05   0.49428E-03
+      6    0.78896E-01   0.64662E-03   0.23733E-10   0.19636E-05   0.72615E-03
+      9    0.85754E-01   0.56263E-03   0.58871E-10   0.14668E-05   0.78475E-03
+     10    0.88022E-01   0.55938E-03   0.70420E-10   0.13506E-05   0.75119E-03
+     11    0.90188E-01   0.56394E-03   0.80400E-10   0.12537E-05   0.72227E-03
+     12    0.92269E-01   0.57400E-03   0.88839E-10   0.11707E-05   0.70157E-03
+     13    0.94288E-01   0.58792E-03   0.96046E-10   0.10975E-05   0.68908E-03
+     26    0.11909       0.96864E-03   0.14771E-09   0.48737E-06   0.84201E-03
+     27    0.12114       0.10210E-02   0.14909E-09   0.45194E-06   0.86854E-03
+     28    0.12467       0.12685E-02   0.11327E-09   0.38438E-06   0.96419E-03
+     29    0.12693       0.12714E-02   0.13842E-09   0.34442E-06   0.10045E-02
+     33    0.13177       0.13384E-02   0.18511E-09   0.27330E-06   0.10309E-02
+     34    0.13264       0.13661E-02   0.18844E-09   0.26225E-06   0.10375E-02
+
+                         ****   MASS-Y-PROFILE     ****
+   STAGE     H2O           MEA           CO2           HCO3-         MEACOO- 
+      1    0.15540       0.70129E-16   0.21054E-01    0.0000        0.0000    
+      2    0.15564       0.44123E-11   0.21048E-01    0.0000        0.0000    
+      3    0.15563       0.45445E-07   0.21048E-01    0.0000        0.0000    
+      4    0.15556       0.58338E-05   0.21053E-01    0.0000        0.0000    
+      5    0.15410       0.25825E-03   0.21159E-01    0.0000        0.0000    
+      6    0.17682       0.28456E-03   0.27494E-01    0.0000        0.0000    
+      9    0.22200       0.31777E-03   0.51290E-01    0.0000        0.0000    
+     10    0.22668       0.31119E-03   0.59190E-01    0.0000        0.0000    
+     11    0.22727       0.29820E-03   0.66601E-01    0.0000        0.0000    
+     12    0.22491       0.28104E-03   0.73577E-01    0.0000        0.0000    
+     13    0.22056       0.26156E-03   0.80239E-01    0.0000        0.0000    
+     26    0.11151       0.44109E-04   0.16227        0.0000        0.0000    
+     27    0.10009       0.33209E-04   0.16922        0.0000        0.0000    
+     28    0.87749E-01   0.23045E-04   0.17652        0.0000        0.0000    
+     29    0.88584E-01   0.21811E-04   0.18597        0.0000        0.0000    
+     33    0.80125E-01   0.98234E-05   0.20480        0.0000        0.0000    
+     34    0.75959E-01   0.52677E-05   0.20791        0.0000        0.0000    
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 18  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+                         ****   MASS-Y-PROFILE     ****
+   STAGE     MEA+          CO3-2         H3O+          OH-           N2      
+      1     0.0000        0.0000        0.0000        0.0000       0.82355    
+      2     0.0000        0.0000        0.0000        0.0000       0.82331    
+      3     0.0000        0.0000        0.0000        0.0000       0.82332    
+      4     0.0000        0.0000        0.0000        0.0000       0.82338    
+      5     0.0000        0.0000        0.0000        0.0000       0.82449    
+      6     0.0000        0.0000        0.0000        0.0000       0.79540    
+      9     0.0000        0.0000        0.0000        0.0000       0.72639    
+     10     0.0000        0.0000        0.0000        0.0000       0.71382    
+     11     0.0000        0.0000        0.0000        0.0000       0.70583    
+     12     0.0000        0.0000        0.0000        0.0000       0.70123    
+     13     0.0000        0.0000        0.0000        0.0000       0.69894    
+     26     0.0000        0.0000        0.0000        0.0000       0.72617    
+     27     0.0000        0.0000        0.0000        0.0000       0.73066    
+     28     0.0000        0.0000        0.0000        0.0000       0.73571    
+     29     0.0000        0.0000        0.0000        0.0000       0.72542    
+     33     0.0000        0.0000        0.0000        0.0000       0.71506    
+     34     0.0000        0.0000        0.0000        0.0000       0.71612    
+
+         ****   TOTAL LIQUID REACTION RATES, LBMOL/HR       ****
+
+   STAGE     H2O           MEA           CO2           HCO3-         MEACOO- 
+      1   -0.20312E-03  -0.60018E-07  -0.10372E-03   0.10372E-03   0.30405E-14
+      2   -0.44444E-03  -0.61751E-03  -0.53038E-03   0.53036E-03   0.11384E-08
+      3   -0.67364E-01  -0.70336E-01  -0.68581E-01   0.66917E-01   0.12732E-02
+      4   -0.42357       -2.5288       -1.4585       0.38850        1.0353    
+      5    -10.670       -265.04       -140.09        15.111        129.38    
+      6    -16.032       -322.73       -171.31        19.845        155.23    
+      9    -24.244       -358.77       -191.98        25.157        167.70    
+     10    -23.034       -333.16       -178.20        23.205        155.13    
+     11    -21.269       -308.21       -164.56        20.895        143.27    
+     12    -19.728       -288.59       -153.79        18.969        134.04    
+     13    -18.693       -274.51       -146.10        17.663        127.38    
+     26    -26.772       -231.99       -127.72        23.436        100.93    
+     27    -28.843       -236.14       -130.62        25.089        101.77    
+     28    -103.99       -412.60       -258.39        104.15        154.38    
+     29    -84.732       -272.15       -178.25        84.349        93.511    
+     33    -31.184       -92.574       -61.030        29.483        29.843    
+     34    -27.141       -85.625       -55.386        25.145        28.242    
+
+   STAGE     MEA+          CO3-2         H3O+          OH-           N2      
+      1    0.60018E-07   0.75825E-09   0.10153E-03  -0.21338E-05    0.0000    
+      2    0.61751E-03   0.27701E-07  -0.86518E-04   0.57666E-06    0.0000    
+      3    0.69062E-01   0.39073E-03  -0.17071E-04   0.73245E-04    0.0000    
+      4     1.4935       0.34635E-01  -0.15167E-06   0.43138E-03    0.0000    
+      5     135.65       -4.4004       0.11892E-05  -0.39907E-01    0.0000    
+      6     167.50       -3.7672       0.18138E-05  -0.45385E-01    0.0000    
+      9     191.07      -0.87717       0.29775E-05  -0.35460E-01    0.0000    
+     10     178.03      -0.14180       0.27461E-05  -0.29629E-01    0.0000    
+     11     164.94       0.39825       0.23705E-05  -0.24988E-01    0.0000    
+     12     154.55       0.77988       0.19996E-05  -0.21615E-01    0.0000    
+     13     147.13        1.0486       0.17013E-05  -0.19214E-01    0.0000    
+     26     131.05        3.3449       0.40205E-06  -0.95330E-02    0.0000    
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 19  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+   STAGE     MEA+          CO3-2         H3O+          OH-           N2      
+     27     134.37        3.7636       0.27303E-06  -0.94089E-02    0.0000    
+     28     258.22      -0.14753       0.70430E-05  -0.16587E-01    0.0000    
+     29     178.64       0.39292       0.59340E-05  -0.10273E-01    0.0000    
+     33     62.730        1.7035       0.13011E-05  -0.31909E-02    0.0000    
+     34     57.383        1.9996       0.75481E-06  -0.29336E-02  -0.73142E-14
+
+         ****   PACKING HETP, FT         ****
+
+   STAGE
+      1    0.25118E-02
+      2    0.25188E-02
+      3    0.26423E-02
+      4    0.37386E-02
+      5     1.1115    
+      6     1.1248    
+      7     1.1379    
+      8     1.1499    
+      9     1.1597    
+     10     1.1669    
+     11     1.1718    
+     12     1.1749    
+     13     1.1767    
+     14     1.1778    
+     15     1.1785    
+     16     1.1788    
+     17     1.1790    
+     18     1.1792    
+     19     1.1792    
+     20     1.1794    
+     21     1.1795    
+     22     1.1797    
+     23     1.1801    
+     24     1.1806    
+     25     1.1813    
+     26     1.1824    
+     27     1.1838    
+     28     1.1956    
+     29     1.2002    
+     30     1.2032    
+     31     1.2051    
+     32     1.2065    
+     33     1.2076    
+     34     1.2084    
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 20  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+
+   ****   PUMPAROUND STREAM CONDITIONS (AT HEATER/COOLER OUTLET)   **** 
+
+          SOURCE   DRAW   DESTINATION
+ STREAM   STAGE   PHASE      STAGE        PRESSURE    VFRAC
+                                          PSIA    
+ P-1        27      L         28          15.1101       0.0     
+
+
+ STREAM     MOLE-FLOW   TEMPERATURE      DUTY
+             LBMOL/HR     F            BTU/HR  
+ P-1       1.7689+05     128.9663     -5.8778+07  
+
+
+
+
+
+
+                    ********************************
+                    ***** HYDRAULIC PARAMETERS *****
+                    ********************************
+
+
+       *** DEFINITIONS ***
+
+        MARANGONI INDEX = SIGMA - SIGMATO
+        FLOW PARAM = (ML/MV)*SQRT(RHOV/RHOL)
+        QR = QV*SQRT(RHOV/(RHOL-RHOV))
+        F FACTOR = QV*SQRT(RHOV)
+          WHERE:
+          SIGMA IS THE SURFACE TENSION OF LIQUID FROM THE STAGE
+          SIGMATO IS THE SURFACE TENSION OF LIQUID TO THE STAGE
+          ML IS THE MASS FLOW OF LIQUID FROM THE STAGE
+          MV IS THE MASS FLOW OF VAPOR TO THE STAGE
+          RHOL IS THE MASS DENSITY OF LIQUID FROM THE STAGE
+          RHOV IS THE MASS DENSITY OF VAPOR TO THE STAGE
+          QV IS THE VOLUMETRIC FLOW RATE OF VAPOR TO THE STAGE
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 21  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+
+                     TEMPERATURE
+                         F   
+ STAGE       LIQUID FROM       VAPOR TO
+    1         145.65            145.74    
+    2         145.74            145.76    
+    3         145.76            146.05    
+    4         146.05            151.48    
+    5         135.29            156.95    
+    6         144.33            161.10    
+    9         163.06            166.36    
+   10         165.82            166.45    
+   11         167.29            166.08    
+   12         167.86            165.39    
+   13         167.83            164.46    
+   26         149.43            137.91    
+   27         146.87            134.26    
+   28         132.42            134.85    
+   29         134.38            134.97    
+   33         134.57            134.12    
+   34         133.62            134.36    
+
+
+             MASS FLOW                VOLUME FLOW         MOLECULAR WEIGHT
+              LB/HR                    CUFT/HR 
+ STAGE LIQUID FROM  VAPOR TO   LIQUID FROM  VAPOR TO   LIQUID FROM  VAPOR TO
+    1   10250.     0.83121E+06  167.76     0.13838E+08  18.024      25.969    
+    2   10246.     0.83121E+06  167.70     0.13834E+08  18.024      25.969    
+    3   10182.     0.83115E+06  166.66     0.13835E+08  18.035      25.970    
+    4   9067.0     0.83003E+06  148.22     0.13923E+08  18.469      25.994    
+    5  0.43572E+07 0.86308E+06  69881.     0.14742E+08  24.106      25.748    
+    6  0.43894E+07 0.89529E+06  70803.     0.15509E+08  24.104      25.551    
+    9  0.44577E+07 0.96359E+06  72975.     0.16935E+08  24.167      25.372    
+   10  0.44684E+07 0.97430E+06  73396.     0.17084E+08  24.204      25.426    
+   11  0.44746E+07 0.98052E+06  73698.     0.17117E+08  24.245      25.515    
+   12  0.44777E+07 0.98361E+06  73914.     0.17071E+08  24.288      25.627    
+   13  0.44787E+07 0.98461E+06  74072.     0.16972E+08  24.333      25.757    
+   26  0.44358E+07 0.94172E+06  74526.     0.14162E+08  24.981      28.182    
+   27  0.44295E+07 0.93540E+06  74484.     0.13846E+08  25.040      28.454    
+   28  0.44433E+07 0.94927E+06  74662.     0.14020E+08  25.101      28.540    
+   29  0.44515E+07 0.95748E+06  74969.     0.14101E+08  25.145      28.621    
+   33  0.44561E+07 0.96203E+06  75291.     0.13960E+08  25.258      28.982    
+   34  0.44536E+07 0.95955E+06  75271.     0.13874E+08  25.283      29.099    
+
+
+               DENSITY                  VISCOSITY         SURFACE TENSION
+               LB/CUFT                   CP                  DYNE/CM 
+ STAGE LIQUID FROM  VAPOR TO     LIQUID FROM  VAPOR TO      LIQUID FROM
+    1   61.102      0.60066E-01  0.44969      0.18733E-01    65.263    
+    2   61.099      0.60083E-01  0.44936      0.18734E-01    65.254    
+    3   61.094      0.60076E-01  0.44929      0.18742E-01    65.270    
+    4   61.174      0.59614E-01  0.45161      0.18884E-01    65.504    
+    5   62.351      0.58545E-01  0.79840      0.18863E-01    67.526    
+    6   61.994      0.57727E-01  0.73441      0.18815E-01    66.703    
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 22  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+
+               DENSITY                  VISCOSITY         SURFACE TENSION
+               LB/CUFT                   CP                  DYNE/CM 
+ STAGE LIQUID FROM  VAPOR TO     LIQUID FROM  VAPOR TO      LIQUID FROM
+    9   61.085      0.56898E-01  0.63762      0.18670E-01    65.152    
+   10   60.880      0.57030E-01  0.63009      0.18648E-01    64.981    
+   11   60.716      0.57282E-01  0.62985      0.18637E-01    64.931    
+   12   60.580      0.57617E-01  0.63461      0.18633E-01    64.965    
+   13   60.464      0.58012E-01  0.64282      0.18634E-01    65.056    
+   26   59.520      0.66496E-01  0.90438      0.18489E-01    67.909    
+   27   59.469      0.67559E-01  0.94146      0.18444E-01    68.245    
+   28   59.513      0.67710E-01   1.1258      0.18431E-01    69.832    
+   29   59.378      0.67904E-01   1.1107      0.18421E-01    69.729    
+   33   59.185      0.68914E-01   1.1278      0.18422E-01    69.901    
+   34   59.168      0.69160E-01   1.1443      0.18445E-01    70.028    
+
+
+       MARANGONI INDEX   FLOW PARAM          QR          REDUCED F-FACTOR
+ STAGE    DYNE/CM                          CUFT/HR       (LB-CUFT)**.5/HR
+    1                    0.38675E-03      0.43410E+06      0.33916E+07
+    2   -.90749E-02      0.38650E-03      0.43404E+06      0.33910E+07
+    3   0.15787E-01      0.38414E-03      0.43405E+06      0.33910E+07
+    4   0.23387          0.34187E-03      0.43486E+06      0.33995E+07
+    5   -.86704          0.16232          0.45195E+06      0.35670E+07
+    6   -.82282          0.15629          0.47348E+06      0.37263E+07
+    9   -.33206          0.14370          0.51711E+06      0.40397E+07
+   10   -.17124          0.14176          0.52312E+06      0.40798E+07
+   11   -.50021E-01      0.14076          0.52602E+06      0.40968E+07
+   12   0.34293E-01      0.14042          0.52673E+06      0.40977E+07
+   13   0.90749E-01      0.14056          0.52597E+06      0.40879E+07
+   26   0.30850          0.15536          0.47363E+06      0.36519E+07
+   27   0.33567          0.15728          0.46694E+06      0.35988E+07
+   28   0.69082          0.16005          0.47316E+06      0.36481E+07
+   29   -.10321          0.15836          0.47711E+06      0.36744E+07
+   33   0.10010          0.15752          0.47663E+06      0.36647E+07
+   34   0.12731          0.15799          0.47463E+06      0.36487E+07
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 23  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+
+                    *************************************** 
+                    ***** PACKING RATING CALCULATIONS ***** 
+                    *************************************** 
+
+
+    *******************
+    *** SECTION   1 ***
+    *******************
+
+    STARTING STAGE NUMBER                                         1
+    ENDING STAGE NUMBER                                           4
+    CAPACITY CALCULATION METHOD                               SULZER  
+    PRESSURE DROP CALCULATION METHOD                          SULZER  
+    LIQUID HOLDUP CALCULATION METHOD                          STICHL  
+    PRESSURE PROFILE UPDATED                                  YES 
+
+    DESIGN PARAMETERS             
+    -----------------             
+    OVERDESIGN FACTOR                                         1.00000    
+    SYSTEM FOAMING FACTOR                                     1.00000    
+    COLUMN DIAMETER                 FT                       26.3200     
+    MAXIMUM CAPACITY FACTOR         FT/SEC                    MISSING    
+
+    PACKING SPECIFICATIONS        
+    ----------------------        
+    PACKING TYPE                                              MELLAPAKPLUS    
+    PACKING MATERIAL                                          STANDARD
+    PACKING SIZE                                              252Y    
+    VENDOR                                                    SULZER  
+    PACKING FACTOR                  1/FT                      MISSING    
+    PACKING SURFACE AREA            SQFT/CUF                 75.8961     
+    PACKING VOID FRACTION                                     0.98890    
+    FIRST STICHLMAIR CONSTANT                                 MISSING    
+    SECOND STICHLMAIR CONSTANT                                MISSING    
+    THIRD STICHLMAIR CONSTANT                                 MISSING    
+    PACKING HEIGHT PER STAGE        FT                        1.25000    
+    PACKING HEIGHT                  FT                        5.00000    
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 24  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+    RATE-BASED SPECIFICATIONS
+    -------------------------
+    FLOW MODEL                                                MIXED-MIXED 
+    INTERFACIAL AREA FACTOR                                   1.00000    
+    LIQUID FILM RESISTANCE                                    DISCRXN 
+    VAPOR FILM RESISTANCE                                     NOFILM  
+    LIQUID FILM CORRECTION                                    NO
+    VAPOR FILM CORRECTION                                     NO
+    MASS TRANSFER CORRELATION                                 BRF-85
+    HEAT TRANSFER CORRELATION                                 CHILTON-COLB
+    INTERFACIAL AREA CORRELATION                              BRF-85
+    CORRUGATION BASE WIDTH                                    CONFIDENTIAL
+    CORRUGATION SIDE DIMENSION                                CONFIDENTIAL
+    CORRUGATION HEIGHT                                        CONFIDENTIAL
+    CORRUGATION ANGLE                                        45.0000     
+    LIQUID FILM DISCRET. POINTS                                   5
+      POINT  1 FROM INTERFACE       (DEFAULT)                 0.16667    
+      POINT  2 FROM INTERFACE       (DEFAULT)                 0.33333    
+      POINT  3 FROM INTERFACE       (DEFAULT)                 0.50000    
+      POINT  4 FROM INTERFACE       (DEFAULT)                 0.66667    
+      POINT  5 FROM INTERFACE       (DEFAULT)                 0.83333    
+
+
+                          ***** RATING RESULTS *****
+
+    COLUMN DIAMETER                 FT                       26.3200     
+    MAXIMUM FRACTIONAL CAPACITY                               0.29940    
+    MAXIMUM CAPACITY FACTOR         FT/SEC                    0.22202    
+    PRESSURE DROP FOR THE SECTION   PSI                       0.019762   
+    AVERAGE PRESSURE DROP/HEIGHT    IN-WATER/FT               0.10940    
+    MAXIMUM LIQUID HOLDUP/STAGE     CUFT                      1.61245    
+    MAX LIQ SUPERFICIAL VELOCITY    FT/SEC                    0.856500-04
+
+
+                          **** RATING PROFILES ****
+
+        HEIGHT
+        FROM TOP    FRACTIONAL  PRESSURE    PRESSURE      LIQUID
+ STAGE  OF SECTION  CAPACITY    DROP        DROP/HEIGHT   HOLDUP      HETP
+        FT                      PSI         IN-WATER/FT   CUFT        FT      
+   1    0.000       0.2993     0.49405E-02 0.10940        1.612      0.2512E-02
+   2    1.250       0.2994     0.49428E-02 0.10945        1.612      0.2519E-02
+   3    2.500       0.2993     0.49412E-02 0.10942        1.602      0.2642E-02
+   4    3.750       0.2981     0.49380E-02 0.10935        1.426      0.3739E-02
+
+        LIQUID
+        SUPERFICIAL
+ STAGE  VELOCITY
+        FT/SEC  
+   1   0.8565E-04
+   2   0.8562E-04
+   3   0.8509E-04
+   4   0.7567E-04
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 25  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+ 
+
+
+    *******************
+    *** SECTION   2 ***
+    *******************
+
+    STARTING STAGE NUMBER                                         5
+    ENDING STAGE NUMBER                                          34
+    CAPACITY CALCULATION METHOD                               SULZER  
+    PRESSURE DROP CALCULATION METHOD                          SULZER  
+    LIQUID HOLDUP CALCULATION METHOD                          STICHL  
+    PRESSURE PROFILE UPDATED                                  YES 
+
+    DESIGN PARAMETERS             
+    -----------------             
+    OVERDESIGN FACTOR                                         1.00000    
+    SYSTEM FOAMING FACTOR                                     1.00000    
+    COLUMN DIAMETER                 FT                       26.3200     
+    MAXIMUM CAPACITY FACTOR         FT/SEC                    MISSING    
+
+    PACKING SPECIFICATIONS        
+    ----------------------        
+    PACKING TYPE                                              MELLAPAKPLUS    
+    PACKING MATERIAL                                          STANDARD
+    PACKING SIZE                                              252Y    
+    VENDOR                                                    SULZER  
+    PACKING FACTOR                  1/FT                      MISSING    
+    PACKING SURFACE AREA            SQFT/CUF                 75.8961     
+    PACKING VOID FRACTION                                     0.98890    
+    FIRST STICHLMAIR CONSTANT                                 MISSING    
+    SECOND STICHLMAIR CONSTANT                                MISSING    
+    THIRD STICHLMAIR CONSTANT                                 MISSING    
+    PACKING HEIGHT PER STAGE        FT                        0.42000    
+    PACKING HEIGHT                  FT                       12.6000     
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 26  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+    RATE-BASED SPECIFICATIONS
+    -------------------------
+    FLOW MODEL                                                MIXED-MIXED 
+    INTERFACIAL AREA FACTOR                                   1.00000    
+    LIQUID FILM RESISTANCE                                    DISCRXN 
+    VAPOR FILM RESISTANCE                                     FILM    
+    LIQUID FILM CORRECTION                                    NO
+    VAPOR FILM CORRECTION                                     NO
+    MASS TRANSFER CORRELATION                                 BRF-85
+    HEAT TRANSFER CORRELATION                                 CHILTON-COLB
+    INTERFACIAL AREA CORRELATION                              BRF-85
+    CORRUGATION BASE WIDTH                                    CONFIDENTIAL
+    CORRUGATION SIDE DIMENSION                                CONFIDENTIAL
+    CORRUGATION HEIGHT                                        CONFIDENTIAL
+    CORRUGATION ANGLE                                        45.0000     
+    LIQUID FILM DISCRET. POINTS                                   5
+      POINT  1 FROM INTERFACE       (DEFAULT)                 0.16667    
+      POINT  2 FROM INTERFACE       (DEFAULT)                 0.33333    
+      POINT  3 FROM INTERFACE       (DEFAULT)                 0.50000    
+      POINT  4 FROM INTERFACE       (DEFAULT)                 0.66667    
+      POINT  5 FROM INTERFACE       (DEFAULT)                 0.83333    
+
+
+                          ***** RATING RESULTS *****
+
+    COLUMN DIAMETER                 FT                       26.3200     
+    MAXIMUM FRACTIONAL CAPACITY                               0.80111    
+    MAXIMUM CAPACITY FACTOR         FT/SEC                    0.26892    
+    PRESSURE DROP FOR THE SECTION   PSI                       0.11588    
+    AVERAGE PRESSURE DROP/HEIGHT    IN-WATER/FT               0.25457    
+    MAXIMUM LIQUID HOLDUP/STAGE     CUFT                     17.3160     
+    MAX LIQ SUPERFICIAL VELOCITY    FT/SEC                    0.038440   
+
+
+                          **** RATING PROFILES ****
+
+        HEIGHT
+        FROM TOP    FRACTIONAL  PRESSURE    PRESSURE      LIQUID
+ STAGE  OF SECTION  CAPACITY    DROP        DROP/HEIGHT   HOLDUP      HETP
+        FT                      PSI         IN-WATER/FT   CUFT        FT      
+   5    0.000       0.6857     0.22055E-02 0.14535        14.98       1.112    
+   6   0.4200       0.7128     0.24480E-02 0.16133        14.81       1.125    
+   7   0.8400       0.7385     0.30480E-02 0.20088        14.73       1.138    
+   8    1.260       0.7607     0.36676E-02 0.24171        14.72       1.150    
+   9    1.680       0.7778     0.42185E-02 0.27802        14.75       1.160    
+  10    2.100       0.7895     0.46348E-02 0.30545        14.81       1.167    
+  11    2.520       0.7965     0.48993E-02 0.32288        14.88       1.172    
+  12    2.940       0.8000     0.50324E-02 0.33166        14.95       1.175    
+  13    3.360       0.8011     0.50679E-02 0.33400        15.03       1.177    
+  14    3.780       0.8006     0.50363E-02 0.33192        15.10       1.178    
+  15    4.200       0.7989     0.49607E-02 0.32693        15.18       1.178    
+  16    4.620       0.7966     0.48561E-02 0.32004        15.26       1.179    
+  17    5.040       0.7937     0.47323E-02 0.31188        15.34       1.179    
+  18    5.460       0.7903     0.45952E-02 0.30285        15.42       1.179    
+  19    5.880       0.7866     0.44486E-02 0.29318        15.50       1.179    
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 27  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  ABSORBER MODEL: RADFRAC (CONTINUED)         
+
+        HEIGHT
+        FROM TOP    FRACTIONAL  PRESSURE    PRESSURE      LIQUID
+ STAGE  OF SECTION  CAPACITY    DROP        DROP/HEIGHT   HOLDUP      HETP
+        FT                      PSI         IN-WATER/FT   CUFT        FT      
+  20    6.300       0.7827     0.42946E-02 0.28304        15.59       1.179    
+  21    6.720       0.7784     0.41347E-02 0.27250        15.68       1.180    
+  22    7.140       0.7738     0.39696E-02 0.26161        15.78       1.180    
+  23    7.560       0.7688     0.37995E-02 0.25040        15.88       1.180    
+  24    7.980       0.7635     0.36244E-02 0.23886        15.99       1.181    
+  25    8.400       0.7578     0.34439E-02 0.22697        16.10       1.181    
+  26    8.820       0.7517     0.32575E-02 0.21468        16.23       1.182    
+  27    9.240       0.7449     0.30644E-02 0.20196        16.37       1.184    
+  28    9.660       0.7407     0.29212E-02 0.19252        17.11       1.196    
+  29    10.08       0.7485     0.31282E-02 0.20616        17.13       1.200    
+  30    10.50       0.7528     0.32469E-02 0.21398        17.15       1.203    
+  31    10.92       0.7548     0.33007E-02 0.21753        17.18       1.205    
+  32    11.34       0.7552     0.33095E-02 0.21811        17.21       1.207    
+  33    11.76       0.7546     0.32878E-02 0.21668        17.26       1.208    
+  34    12.18       0.7533     0.32454E-02 0.21389        17.32       1.208    
+
+        LIQUID
+        SUPERFICIAL
+ STAGE  VELOCITY
+        FT/SEC  
+   5   0.3568E-01
+   6   0.3615E-01
+   7   0.3659E-01
+   8   0.3696E-01
+   9   0.3726E-01
+  10   0.3747E-01
+  11   0.3763E-01
+  12   0.3774E-01
+  13   0.3782E-01
+  14   0.3788E-01
+  15   0.3793E-01
+  16   0.3797E-01
+  17   0.3800E-01
+  18   0.3802E-01
+  19   0.3804E-01
+  20   0.3806E-01
+  21   0.3807E-01
+  22   0.3807E-01
+  23   0.3808E-01
+  24   0.3807E-01
+  25   0.3806E-01
+  26   0.3805E-01
+  27   0.3803E-01
+  28   0.3812E-01
+  29   0.3828E-01
+  30   0.3837E-01
+  31   0.3842E-01
+  32   0.3844E-01
+  33   0.3844E-01
+  34   0.3843E-01
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 28  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  LEANCOOL MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          LEAN-03 
+   OUTLET STREAM:         LEAN-04 
+   PROPERTY OPTION SET:   ELECNRTL  ELECTROLYTE NRTL / REDLICH-KWONG            
+   HENRY-COMPS ID:        EMEA    
+   CHEMISTRY ID:          EMEA     - TRUE SPECIES
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(LBMOL/HR)            175719.         175719.        0.360850E-06
+       MASS(LB/HR   )           0.425936E+07    0.425936E+07    0.165368E-06
+       ENTHALPY(BTU/HR  )      -0.223511E+11   -0.224084E+11    0.255775E-02
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE                F                       126.000      
+   PRESSURE DROP                        PSI                       0.0        
+   MAXIMUM NO. ITERATIONS                                       100
+   CONVERGENCE TOLERANCE                                          0.00100000 
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    F                                    126.00    
+   OUTLET PRESSURE       PSIA                                 23.141    
+   HEAT DUTY             BTU/HR                             -0.57319E+08
+   OUTLET VAPOR FRACTION                                      0.0000    
+   PRESSURE-DROP CORRELATION PARAMETER                        0.0000    
+
+
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2O              0.88511        0.88515        0.99378        0.85483E-01
+      MEA              0.55255E-01    0.55152E-01    0.45085E-03    0.62242E-03
+      CO2              0.60456E-06    0.24371E-06    0.57720E-02     1803.3    
+      HCO3-            0.44636E-03    0.34419E-03     0.0000         0.0000    
+      MEACOO-          0.28991E-01    0.29034E-01     0.0000         0.0000    
+      MEA+             0.29942E-01    0.30003E-01     0.0000         0.0000    
+      CO3-2            0.25102E-03    0.31071E-03     0.0000         0.0000    
+      H3O+             0.24584E-10    0.13642E-10     0.0000         0.0000    
+      OH-              0.31471E-05    0.32785E-05     0.0000         0.0000    
+      N2               0.24775E-10    0.24775E-10    0.16176E-06     497.13    
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 29  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  LR-HXC   MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          RICH-02 
+   OUTLET STREAM:         RICH-03 
+   OUTLET HEAT STREAM:    LR-HXQ  
+   PROPERTY OPTION SET:   ELECNRTL  ELECTROLYTE NRTL / REDLICH-KWONG            
+   HENRY-COMPS ID:        EMEA    
+   CHEMISTRY ID:          EMEA     - TRUE SPECIES
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(LBMOL/HR)            176151.         177322.       -0.660263E-02
+       MASS(LB/HR   )           0.445361E+07    0.445361E+07   -0.396086E-09
+       ENTHALPY(BTU/HR  )      -0.232728E+11   -0.232728E+11    0.396086E-09
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE                F                       214.000      
+   PRESSURE DROP                        PSI                       0.0        
+   MAXIMUM NO. ITERATIONS                                       100
+   CONVERGENCE TOLERANCE                                          0.00100000 
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    F                                    214.00    
+   OUTLET PRESSURE       PSIA                                 30.000    
+   HEAT DUTY             BTU/HR                              0.32742E+09
+   OUTLET VAPOR FRACTION                                     0.12693E-01
+   PRESSURE-DROP CORRELATION PARAMETER                        0.0000    
+
+
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2O              0.87995        0.87984        0.43832        0.49818    
+      MEA              0.11630E-01    0.25372E-01    0.21430E-03    0.84463E-02
+      CO2              0.39934E-04    0.36472E-03    0.49493         1357.1    
+      HCO3-            0.45949E-02    0.49213E-02     0.0000         0.0000    
+      MEACOO-          0.48266E-01    0.41982E-01     0.0000         0.0000    
+      MEA+             0.54011E-01    0.47254E-01     0.0000         0.0000    
+      CO3-2            0.57500E-03    0.17481E-03     0.0000         0.0000    
+      H3O+             0.25085E-09    0.10257E-08     0.0000         0.0000    
+      OH-              0.38979E-06    0.76870E-06     0.0000         0.0000    
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 30  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  LR-HXC   MODEL: HEATER (CONTINUED)          
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      N2               0.93634E-03    0.86696E-04    0.66536E-01     767.48    
+
+ BLOCK:  LR-HXH   MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          LEAN-02 
+   INLET HEAT STREAM:     LR-HXQ  
+   OUTLET STREAM:         LEAN-03 
+   PROPERTY OPTION SET:   ELECNRTL  ELECTROLYTE NRTL / REDLICH-KWONG            
+   HENRY-COMPS ID:        EMEA    
+   CHEMISTRY ID:          EMEA     - TRUE SPECIES
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(LBMOL/HR)            175729.         175719.        0.538362E-04
+       MASS(LB/HR   )           0.425936E+07    0.425936E+07     0.00000    
+       ENTHALPY(BTU/HR  )      -0.223510E+11   -0.223511E+11    0.675595E-06
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  PQ  FLASH
+   PRESSURE DROP                        PSI                       0.0        
+   DUTY FROM INLET HEAT STREAM(S)       BTU/HR                   -0.327417+09
+   MAXIMUM NO. ITERATIONS                                       100
+   CONVERGENCE TOLERANCE                                          0.00100000 
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    F                                    142.88    
+   OUTLET PRESSURE       PSIA                                 23.141    
+   OUTLET VAPOR FRACTION                                      0.0000    
+   PRESSURE-DROP CORRELATION PARAMETER                        0.0000    
+
+
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 31  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  LR-HXH   MODEL: HEATER (CONTINUED)          
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2O              0.88424        0.88511        0.98969        0.13292    
+      MEA              0.56365E-01    0.55255E-01    0.55539E-03    0.11949E-02
+      CO2              0.54441E-04    0.60456E-06    0.97559E-02     1918.3    
+      HCO3-            0.14513E-02    0.44636E-03     0.0000         0.0000    
+      MEACOO-          0.28110E-01    0.28991E-01     0.0000         0.0000    
+      MEA+             0.29707E-01    0.29942E-01     0.0000         0.0000    
+      CO3-2            0.71727E-04    0.25102E-03     0.0000         0.0000    
+      H3O+             0.36459E-09    0.24584E-10     0.0000         0.0000    
+      OH-              0.23289E-05    0.31471E-05     0.0000         0.0000    
+      N2               0.24774E-10    0.24775E-10    0.12088E-06     579.99    
+
+ BLOCK:  REGEN    MODEL: RADFRAC         
+ -------------------------------
+    INLETS   - RICH-03  STAGE   2
+    OUTLETS  - CO2      STAGE   1
+               LEAN-02  STAGE  22
+   PROPERTY OPTION SET:   ELECNRTL  ELECTROLYTE NRTL / REDLICH-KWONG            
+   HENRY-COMPS ID:        EMEA    
+   CHEMISTRY ID:          EMEA     - TRUE SPECIES
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                              IN          OUT       GENERATION   RELATIVE DIFF.
+   TOTAL BALANCE
+   MOLE(LBMOL/HR)         177322.       180357.       3036.58      0.105332E-04
+   MASS(LB/HR   )        0.445361E+07  0.445364E+07               -0.598200E-05
+   ENTHALPY(BTU/HR  )   -0.229454E+11 -0.227605E+11               -0.805787E-02
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 32  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  REGEN    MODEL: RADFRAC (CONTINUED)         
+
+
+
+                         **********************
+                         ****  INPUT DATA  ****
+                         **********************
+
+   ****   INPUT PARAMETERS   ****
+
+    CALCULATION MODE                                      RIGOROUS RATE-BASED 
+    NUMBER OF STAGES                                        22
+    TOTAL NUMBER OF RATE-BASED STAGES                       20
+    TOTAL NUMBER OF EQUILIBRIUM STAGES                       2
+    MAXIMUM NUMBER OF FLASH ITERATIONS                     100
+    FLASH TOLERANCE                                          0.00100000 
+    HYDRAULIC PARAMETER CALCULATIONS                      NO      
+    DESIGN SPECIFICATION METHOD                           NESTED  
+
+    EQUILIBRIUM (INITIALIZATION) PARAMETERS
+    ---------------------------------------
+    ALGORITHM OPTION                                      STANDARD    
+    INITIALIZATION OPTION                                 STANDARD    
+    INSIDE LOOP CONVERGENCE METHOD                        NEWTON  
+    MAXIMUM NO. OF OUTSIDE LOOP ITERATIONS                 200
+    MAXIMUM NO. OF INSIDE LOOP ITERATIONS                   10
+    OUTSIDE LOOP CONVERGENCE TOLERANCE                       0.000100000
+
+    RATE-BASED PARAMETERS
+    ---------------------
+    RATESEP CONVERGENCE TOLERANCE                            0.100000-04
+    MAXIMUM NUMBER OF RATESEP ITERATIONS                   100
+    CONTINUATION/HOMOTOPY ITERATION                          6
+    CHILTON-COLBURN AVERAGING PARAMETER                      0.000100000
+    REACTION CONDITION FACTOR                                0.90000    
+
+   ****   COL-SPECS   ****
+
+    MOLAR VAPOR DIST / TOTAL DIST                            1.00000    
+    MOLAR REFLUX RATIO                                       0.30000    
+    MASS DISTILLATE RATE           LB/HR               200,000.         
+
+   **** REAC-STAGES SPECIFICATIONS ****
+
+    STAGE  TO  STAGE            REACTIONS/CHEMISTRY ID
+      1         22                     EMEA    
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 33  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  REGEN    MODEL: RADFRAC (CONTINUED)         
+
+
+        *****  CHEMISTRY PARAGRAPH EMEA    *****
+
+
+          ****  REACTION PARAMETERS  ****
+
+   RXN NO. TYPE         PHASE      CONC.    TEMP APP TO EQUIL    CONVERSION
+                                   BASIS            F               
+      1    EQUILIBRIUM  LIQUID     MOLE-GAMMA      0.0000    
+      2    EQUILIBRIUM  LIQUID     MOLE-GAMMA      0.0000    
+      3    EQUILIBRIUM  LIQUID     MOLE-GAMMA      0.0000    
+      4    EQUILIBRIUM  LIQUID     MOLE-GAMMA      0.0000    
+      5    EQUILIBRIUM  LIQUID     MOLE-GAMMA      0.0000    
+      6    EQUILIBRIUM  LIQUID     MOLE-GAMMA      0.0000    
+      7    EQUILIBRIUM  LIQUID     MOLE-GAMMA      0.0000    
+
+        **  STOICHIOMETRIC COEFFICIENTS  **
+
+   RXN NO.    H2O          MEA          CO2          HCO3-        MEACOO- 
+      1      -1.000        1.000        0.000        0.000        0.000    
+      2       0.000        0.000       -1.000        1.000        0.000    
+      3      -1.000        0.000        0.000       -1.000        0.000    
+      4      -1.000        1.000        0.000        1.000       -1.000    
+      5      -2.000        0.000        0.000        0.000        0.000    
+      6      -1.000        0.000        0.000        0.000        0.000    
+      7      -1.000        0.000        0.000        0.000        0.000    
+
+   RXN NO.    MEA+         CO3-2        H3O+         OH-          N2      
+      1      -1.000        0.000        1.000        0.000        0.000    
+      2       0.000        0.000        0.000       -1.000        0.000    
+      3       0.000        1.000        1.000        0.000        0.000    
+      4       0.000        0.000        0.000        0.000        0.000    
+      5       0.000        0.000        1.000        1.000        0.000    
+      6       0.000        0.000        1.000        0.000        0.000    
+      7       0.000        0.000        1.000        0.000        0.000    
+
+        **  COEFFICIENTS OF EQUILIBRIUM CONSTANT EXPRESSION  **
+
+   RXN NO.     A              B              C              D
+      1    0.79960        -8094.8         0.0000       -0.74840E-02
+      2     98.566         1353.8        -14.304         0.0000    
+      3     216.05        -12432.        -35.482         0.0000    
+      4     1.2826        -3456.2         0.0000         0.0000    
+      5     132.90        -13446.        -22.477         0.0000    
+      6     214.58        -12995.        -33.547         0.0000    
+      7    -9.7420        -8585.5         0.0000         0.0000    
+
+   ****    PROFILES   ****
+
+    P-SPEC          STAGE   1  PRES, PSIA                   23.1000     
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 34  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  REGEN    MODEL: RADFRAC (CONTINUED)         
+
+                          *******************
+                          ****  RESULTS  ****
+                          *******************
+
+
+   ***   COMPONENT SPLIT FRACTIONS   ***
+
+                             OUTLET STREAMS 
+                             --------------
+                  CO2          LEAN-02 
+    COMPONENT:
+    H2O         .16712E-02   .99833    
+    MEA         .36813E-10   1.0000    
+    CO2         .99773       .22710E-02
+    HCO3-       0.0000       1.0000    
+    MEACOO-     0.0000       1.0000    
+    MEA+        0.0000       1.0000    
+    CO3-2       0.0000       1.0000    
+    H3O+        0.0000       1.0000    
+    OH-         0.0000       1.0000    
+    N2          1.0000       .26395E-07
+
+ 
+   ***    SUMMARY OF KEY RESULTS    ***
+
+    TOP STAGE LIQ. TEMPERATURE     F                       110.000      
+    TOP STAGE VAP. TEMPERATURE     F                       110.000      
+    BOTTOM STAGE LIQ. TEMPERATURE  F                       237.186      
+    BOTTOM STAGE VAP. TEMPERATURE  F                       237.186      
+    TOP STAGE LIQUID FLOW          LBMOL/HR              4,354.55       
+    BOTTOM STAGE LIQUID FLOW       LBMOL/HR            175,729.         
+    TOP STAGE VAPOR FLOW           LBMOL/HR              4,628.00       
+    BOILUP VAPOR FLOW              LBMOL/HR             12,584.5        
+    MOLAR REFLUX RATIO                                       0.94091    
+    MOLAR BOILUP RATIO                                       0.071613   
+    CONDENSER DUTY (W/O SUBCOOL)   BTU/HR                   -0.885934+08
+    REBOILER DUTY                  BTU/HR                    0.273488+09
+
+
+   ****   MANIPULATED VARIABLES   ****
+
+                                                 BOUNDS             CALCULATED
+                                          LOWER         UPPER         VALUE
+   MOLAR REFLUX RATIO                    0.10000       0.60000       0.94091    
+   MASS DISTILLATE RATE       LB/HR      0.15000E+06   0.40000E+06   0.19428E+06
+
+   ****    DESIGN SPECIFICATIONS   **** 
+
+ NO  SPEC-TYPE     QUALIFIERS              UNIT       SPECIFIED     CALCULATED
+                                                        VALUE         VALUE
+  1  TEMP          STAGE:     1            F            110.00        110.00    
+                   PHASE: L 
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 35  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  REGEN    MODEL: RADFRAC (CONTINUED)         
+
+   ****    DESIGN SPECIFICATIONS   **** 
+
+ NO  SPEC-TYPE     QUALIFIERS              UNIT       SPECIFIED     CALCULATED
+                                                        VALUE         VALUE
+  2  MOLE-RATIO    STAGE:    22                        0.26000       0.26000    
+                   PHASE: L 
+                   COMPS:   CO2          
+                            HCO3-   
+                            MEACOO- 
+                            CO3-2   
+                   BASE-COMPS:   MEA     
+                                 MEACOO- 
+                                 MEA+    
+
+   ****    PROFILES   ****
+
+   **NOTE** REPORTED VALUES FOR STAGE LIQUID AND VAPOR RATES ARE THE FLOWS
+            FROM THE STAGE INCLUDING ANY SIDE PRODUCT.
+
+ STAGE     TEMPERATURE           PRESSURE          ENTHALPY            HEAT DUTY
+                F                PSIA              BTU/LBMOL           BTU/HR  
+       LIQUID       VAPOR                     LIQUID       VAPOR
+
+   1   110.00       110.00       23.100     -0.12241E+06 -0.15921E+06 -.88593+08
+   2   207.95       208.85       23.100     -0.12919E+06 -0.13429E+06           
+   3   208.65       209.34       23.101     -0.12920E+06 -0.13405E+06           
+  20   229.23       233.51       23.131     -0.12705E+06 -0.11374E+06           
+  21   231.26       235.40       23.136     -0.12671E+06 -0.11185E+06           
+  22   237.19       237.19       23.141     -0.12533E+06 -0.11008E+06  .27349+09
+
+ STAGE     FLOW RATE                  FEED RATE               PRODUCT RATE
+            LBMOL/HR                   LBMOL/HR                 LBMOL/HR
+       LIQUID     VAPOR       LIQUID    VAPOR    MIXED      LIQUID    VAPOR
+   1  4355.      4628.                3054.4462                      4627.9978
+   2 0.1789E+06  5933.      .17447+06                                         
+   3 0.1790E+06  6114.                                                        
+  20 0.1859E+06 0.1114E+05                                                    
+  21 0.1869E+06 0.1186E+05                                                    
+  22 0.1757E+06 0.1258E+05                                 .17573+06          
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 36  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  REGEN    MODEL: RADFRAC (CONTINUED)         
+
+    ****  MASS FLOW PROFILES  ****
+
+ STAGE     FLOW RATE                  FEED RATE               PRODUCT RATE
+            LB/HR                      LB/HR                    LB/HR   
+       LIQUID     VAPOR       LIQUID    VAPOR    MIXED      LIQUID    VAPOR
+   1 0.7871E+05 0.1943E+06            .91275+05                      .19428+06
+   2 0.4446E+07 0.1818E+06  .43623+07                                         
+   3 0.4449E+07 0.1866E+06                                                    
+  20 0.4517E+07 0.2503E+06                                                    
+  21 0.4524E+07 0.2577E+06                                                    
+  22 0.4259E+07 0.2646E+06                                 .42594+07          
+
+                         ****   MOLE-X-PROFILE     ****
+   STAGE     H2O           MEA           CO2           HCO3-         MEACOO- 
+      1    0.99833       0.39725E-06   0.57179E-03   0.50556E-03   0.43914E-06
+      2    0.88309       0.25813E-01   0.24011E-03   0.43170E-02   0.40823E-01
+      3    0.88305       0.25600E-01   0.25346E-03   0.44005E-02   0.40863E-01
+     20    0.88889       0.37096E-01   0.16938E-03   0.28481E-02   0.33909E-01
+     21    0.88970       0.39181E-01   0.14786E-03   0.26041E-02   0.32727E-01
+     22    0.88424       0.56365E-01   0.54441E-04   0.14513E-02   0.28110E-01
+
+                         ****   MOLE-X-PROFILE     ****
+   STAGE     MEA+          CO3-2         H3O+          OH-           N2      
+      1    0.50614E-03   0.76728E-07   0.14611E-07   0.11157E-08   0.85960E-04
+      2    0.45505E-01   0.18196E-03   0.81143E-09   0.82275E-06   0.33210E-04
+      3    0.45627E-01   0.18110E-03   0.83767E-09   0.81404E-06   0.20418E-04
+     20    0.36976E-01   0.10832E-03   0.68609E-09   0.13242E-05   0.35640E-08
+     21    0.35534E-01   0.10070E-03   0.63849E-09   0.14397E-05   0.20374E-08
+     22    0.29707E-01   0.71727E-04   0.36459E-09   0.23289E-05   0.24774E-10
+
+                         ****   MOLE-Y-PROFILE     ****
+   STAGE     H2O           MEA           CO2           HCO3-         MEACOO- 
+      1    0.56205E-01   0.78788E-10   0.90816        0.0000        0.0000    
+      2    0.51332       0.24064E-03   0.48482        0.0000        0.0000    
+      3    0.51859       0.24692E-03   0.48019        0.0000        0.0000    
+     20    0.82946       0.10102E-02   0.16953        0.0000        0.0000    
+     21    0.85813       0.11242E-02   0.14075        0.0000        0.0000    
+     22    0.88489       0.12479E-02   0.11386        0.0000        0.0000    
+
+                         ****   MOLE-Y-PROFILE     ****
+   STAGE     MEA+          CO3-2         H3O+          OH-           N2      
+      1     0.0000        0.0000        0.0000        0.0000       0.35639E-01
+      2     0.0000        0.0000        0.0000        0.0000       0.16246E-02
+      3     0.0000        0.0000        0.0000        0.0000       0.97194E-03
+     20     0.0000        0.0000        0.0000        0.0000       0.10238E-06
+     21     0.0000        0.0000        0.0000        0.0000       0.55499E-07
+     22     0.0000        0.0000        0.0000        0.0000       0.29913E-07
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 37  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  REGEN    MODEL: RADFRAC (CONTINUED)         
+
+                         ****   K-VALUES           ****
+   STAGE     H2O           MEA           CO2           HCO3-         MEACOO- 
+      1    0.56299E-01   0.19834E-03    1588.3       0.26692-143   0.26692-143
+      2    0.57476       0.91676E-02    1796.9       0.26692-143   0.26692-143
+      3    0.58205       0.93364E-02    1800.9       0.26692-143   0.26692-143
+     20    0.87310       0.17061E-01    2023.7       0.26692-143   0.26692-143
+     21    0.90676       0.18092E-01    2063.5       0.26692-143   0.26692-143
+     22     1.0007       0.22139E-01    2091.4       0.26692-143   0.26692-143
+
+                         ****   K-VALUES           ****
+   STAGE     MEA+          CO3-2         H3O+          OH-           N2      
+      1    0.26692-143   0.26692-143   0.26692-143   0.26692-143    414.60    
+      2    0.26692-143   0.26692-143   0.26692-143   0.26692-143    954.26    
+      3    0.26692-143   0.26692-143   0.26692-143   0.26692-143    959.06    
+     20    0.26692-143   0.26692-143   0.26692-143   0.26692-143    1133.0    
+     21    0.26692-143   0.26692-143   0.26692-143   0.26692-143    1151.6    
+     22    0.26692-143   0.26692-143   0.26692-143   0.26692-143    1207.4    
+
+                         ****   MASS-X-PROFILE     ****
+   STAGE     H2O           MEA           CO2           HCO3-         MEACOO- 
+      1    0.99503       0.13425E-05   0.13922E-02   0.17067E-02   0.25287E-05
+      2    0.64031       0.63462E-01   0.42532E-03   0.10602E-01   0.17101    
+      3    0.64020       0.62930E-01   0.44889E-03   0.10805E-01   0.17116    
+     20    0.65920       0.93278E-01   0.30685E-03   0.71538E-02   0.14529    
+     21    0.66217       0.98875E-01   0.26883E-03   0.65644E-02   0.14072    
+     22    0.65722       0.14205       0.98849E-04   0.36536E-02   0.12071    
+
+                         ****   MASS-X-PROFILE     ****
+   STAGE     MEA+          CO3-2         H3O+          OH-           N2      
+      1    0.17386E-02   0.25474E-06   0.15377E-07   0.10498E-08   0.13322E-03
+      2    0.11371       0.43949E-03   0.62125E-09   0.56320E-06   0.37444E-04
+      3    0.11400       0.43734E-03   0.64125E-09   0.55716E-06   0.23018E-04
+     20    0.94504E-01   0.26759E-03   0.53725E-09   0.92708E-06   0.41099E-08
+     21    0.91145E-01   0.24965E-03   0.50177E-09   0.10116E-05   0.23580E-08
+     22    0.76096E-01   0.17758E-03   0.28614E-09   0.16342E-05   0.28633E-10
+
+                         ****   MASS-Y-PROFILE     ****
+   STAGE     H2O           MEA           CO2           HCO3-         MEACOO- 
+      1    0.24121E-01   0.11465E-09   0.95210        0.0000        0.0000    
+      2    0.30177       0.47966E-03   0.69626        0.0000        0.0000    
+      3    0.30613       0.49422E-03   0.69248        0.0000        0.0000    
+     20    0.66514       0.27466E-02   0.33211        0.0000        0.0000    
+     21    0.71169       0.31613E-02   0.28515        0.0000        0.0000    
+     22    0.75809       0.36247E-02   0.23829        0.0000        0.0000    
+
+                         ****   MASS-Y-PROFILE     ****
+   STAGE     MEA+          CO3-2         H3O+          OH-           N2      
+      1     0.0000        0.0000        0.0000        0.0000       0.23783E-01
+      2     0.0000        0.0000        0.0000        0.0000       0.14851E-02
+      3     0.0000        0.0000        0.0000        0.0000       0.89217E-03
+     20     0.0000        0.0000        0.0000        0.0000       0.12767E-06
+     21     0.0000        0.0000        0.0000        0.0000       0.71572E-07
+     22     0.0000        0.0000        0.0000        0.0000       0.39849E-07
+
+         ****   TOTAL LIQUID REACTION RATES, LBMOL/HR       ****
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 38  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  REGEN    MODEL: RADFRAC (CONTINUED)         
+
+   STAGE     H2O           MEA           CO2           HCO3-         MEACOO- 
+      1    -2.2019       -2.2059       -2.2037        2.2015       0.19123E-02
+      2    -27.182       -97.456       -61.811        26.167        34.630    
+      3    -15.149       -36.068       -25.680        15.291        10.530    
+     20     43.118        389.21        215.50       -41.770       -172.36    
+     21     44.179        422.77        232.84       -42.880       -188.64    
+     22     237.74        2597.8        1414.8       -231.66       -1176.9    
+
+   STAGE     MEA+          CO3-2         H3O+          OH-           N2      
+      1     2.2040       0.33412E-03   0.63625E-04   0.48585E-05    0.0000    
+      2     62.826        1.0136      -0.59734E-04   0.18697E-02    0.0000    
+      3     25.539      -0.13987       0.47627E-05  -0.14918E-02    0.0000    
+     20    -216.85       -1.3678      -0.72844E-05   0.19644E-01    0.0000    
+     21    -234.14       -1.3210      -0.82411E-05   0.22863E-01    0.0000    
+     22    -1420.9       -6.2161      -0.55264E-04   0.14017        0.0000    
+
+         ****   PACKING HETP, FT         ****
+
+   STAGE
+      2    0.70329    
+      3    0.71414    
+      4    0.72055    
+      5    0.72503    
+      6    0.72896    
+      7    0.73315    
+      8    0.73818    
+      9    0.74452    
+     10    0.75263    
+     11    0.76296    
+     12    0.77597    
+     13    0.79202    
+     14    0.81136    
+     15    0.83400    
+     16    0.85964    
+     17    0.88768    
+     18    0.91727    
+     19    0.94743    
+     20    0.97729    
+     21     1.0062    
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 39  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  REGEN    MODEL: RADFRAC (CONTINUED)         
+
+
+                    ********************************
+                    ***** HYDRAULIC PARAMETERS *****
+                    ********************************
+
+
+       *** DEFINITIONS ***
+
+        MARANGONI INDEX = SIGMA - SIGMATO
+        FLOW PARAM = (ML/MV)*SQRT(RHOV/RHOL)
+        QR = QV*SQRT(RHOV/(RHOL-RHOV))
+        F FACTOR = QV*SQRT(RHOV)
+          WHERE:
+          SIGMA IS THE SURFACE TENSION OF LIQUID FROM THE STAGE
+          SIGMATO IS THE SURFACE TENSION OF LIQUID TO THE STAGE
+          ML IS THE MASS FLOW OF LIQUID FROM THE STAGE
+          MV IS THE MASS FLOW OF VAPOR TO THE STAGE
+          RHOL IS THE MASS DENSITY OF LIQUID FROM THE STAGE
+          RHOV IS THE MASS DENSITY OF VAPOR TO THE STAGE
+          QV IS THE VOLUMETRIC FLOW RATE OF VAPOR TO THE STAGE
+
+
+                     TEMPERATURE
+                         F   
+ STAGE       LIQUID FROM       VAPOR TO
+    1         110.00            208.84    
+    2         207.95            209.34    
+    3         208.65            209.73    
+   20         229.23            235.40    
+   21         231.26            237.19    
+   22         237.19            237.19    
+
+
+             MASS FLOW                VOLUME FLOW         MOLECULAR WEIGHT
+              LB/HR                    CUFT/HR 
+ STAGE LIQUID FROM  VAPOR TO   LIQUID FROM  VAPOR TO   LIQUID FROM  VAPOR TO
+    1   78709.     0.27298E+06  1274.4     0.27695E+07  18.075      30.386    
+    2  0.44459E+07 0.18659E+06  75745.     0.18859E+07  24.846      30.518    
+    3  0.44486E+07 0.18923E+06  75827.     0.19198E+07  24.849      30.418    
+   20  0.45170E+07 0.25768E+06  76487.     0.37893E+07  24.292      21.722    
+   21  0.45240E+07 0.26464E+06  76458.     0.40288E+07  24.206      21.029    
+   22  0.42594E+07  0.0000      70869.      0.0000      24.238    
+
+
+               DENSITY                  VISCOSITY         SURFACE TENSION
+               LB/CUFT                   CP                  DYNE/CM 
+ STAGE LIQUID FROM  VAPOR TO     LIQUID FROM  VAPOR TO      LIQUID FROM
+    1   61.763      0.98565E-01  0.62926      0.16893E-01    69.124    
+    2   58.696      0.98941E-01  0.50734      0.16823E-01    61.838    
+    3   58.667      0.98565E-01  0.50484      0.16808E-01    61.780    
+   20   59.056      0.68002E-01  0.39172      0.14739E-01    58.886    
+   21   59.170      0.65686E-01  0.38004      0.14486E-01    58.536    
+   22   60.102                   0.34830                     57.164    
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 40  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  REGEN    MODEL: RADFRAC (CONTINUED)         
+
+
+       MARANGONI INDEX   FLOW PARAM          QR          REDUCED F-FACTOR
+ STAGE    DYNE/CM                          CUFT/HR       (LB-CUFT)**.5/HR
+    1                    0.20601E-01      0.11072E+06      0.86949E+06
+    2   -.93153E-01       1.0064           77494.          0.59321E+06
+    3   -.58168E-01      0.97907           78756.          0.60272E+06
+   20   -.35390          0.62356          0.12866E+06      0.98813E+06
+   21   -.34951          0.59519          0.13431E+06      0.10326E+07
+   22   -1.3720          0.53209           0.0000           0.0000    
+
+
+
+
+                    *************************************** 
+                    ***** PACKING RATING CALCULATIONS ***** 
+                    *************************************** 
+
+
+    *******************
+    *** SECTION   1 ***
+    *******************
+
+    STARTING STAGE NUMBER                                         2
+    ENDING STAGE NUMBER                                          21
+    CAPACITY CALCULATION METHOD                               SULZER  
+    PRESSURE DROP CALCULATION METHOD                          SULZER  
+    LIQUID HOLDUP CALCULATION METHOD                          STICHL  
+    PRESSURE PROFILE UPDATED                                  YES 
+
+    DESIGN PARAMETERS             
+    -----------------             
+    OVERDESIGN FACTOR                                         1.00000    
+    SYSTEM FOAMING FACTOR                                     1.00000    
+    COLUMN DIAMETER                 FT                       17.3700     
+    MAXIMUM CAPACITY FACTOR         FT/SEC                    MISSING    
+
+    PACKING SPECIFICATIONS        
+    ----------------------        
+    PACKING TYPE                                              MELLAPAKPLUS    
+    PACKING MATERIAL                                          STANDARD
+    PACKING SIZE                                              252Y    
+    VENDOR                                                    SULZER  
+    PACKING FACTOR                  1/FT                      MISSING    
+    PACKING SURFACE AREA            SQFT/CUF                 75.8961     
+    PACKING VOID FRACTION                                     0.98890    
+    FIRST STICHLMAIR CONSTANT                                 MISSING    
+    SECOND STICHLMAIR CONSTANT                                MISSING    
+    THIRD STICHLMAIR CONSTANT                                 MISSING    
+    PACKING HEIGHT PER STAGE        FT                        0.50000    
+    PACKING HEIGHT                  FT                       10.0000     
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 41  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  REGEN    MODEL: RADFRAC (CONTINUED)         
+
+    RATE-BASED SPECIFICATIONS
+    -------------------------
+    FLOW MODEL                                                MIXED-MIXED 
+    INTERFACIAL AREA FACTOR                                   1.00000    
+    LIQUID FILM RESISTANCE                                    DISCRXN 
+    VAPOR FILM RESISTANCE                                     FILM    
+    LIQUID FILM CORRECTION                                    NO
+    VAPOR FILM CORRECTION                                     NO
+    MASS TRANSFER CORRELATION                                 BRF-85
+    HEAT TRANSFER CORRELATION                                 CHILTON-COLB
+    INTERFACIAL AREA CORRELATION                              BRF-85
+    CORRUGATION BASE WIDTH                                    CONFIDENTIAL
+    CORRUGATION SIDE DIMENSION                                CONFIDENTIAL
+    CORRUGATION HEIGHT                                        CONFIDENTIAL
+    CORRUGATION ANGLE                                        45.0000     
+    LIQUID FILM DISCRET. POINTS                                   5
+      POINT  1 FROM INTERFACE       (DEFAULT)                 0.16667    
+      POINT  2 FROM INTERFACE       (DEFAULT)                 0.33333    
+      POINT  3 FROM INTERFACE       (DEFAULT)                 0.50000    
+      POINT  4 FROM INTERFACE       (DEFAULT)                 0.66667    
+      POINT  5 FROM INTERFACE       (DEFAULT)                 0.83333    
+
+
+                          ***** RATING RESULTS *****
+
+    COLUMN DIAMETER                 FT                       17.3700     
+    MAXIMUM FRACTIONAL CAPACITY                               0.82348    
+    MAXIMUM CAPACITY FACTOR         FT/SEC                    0.15744    
+    PRESSURE DROP FOR THE SECTION   PSI                       0.040764   
+    AVERAGE PRESSURE DROP/HEIGHT    IN-WATER/FT               0.11284    
+    MAXIMUM LIQUID HOLDUP/STAGE     CUFT                     10.7629     
+    MAX LIQ SUPERFICIAL VELOCITY    FT/SEC                    0.089659   
+
+
+                          **** RATING PROFILES ****
+
+        HEIGHT
+        FROM TOP    FRACTIONAL  PRESSURE    PRESSURE      LIQUID
+ STAGE  OF SECTION  CAPACITY    DROP        DROP/HEIGHT   HOLDUP      HETP
+        FT                      PSI         IN-WATER/FT   CUFT        FT      
+   2    0.000       0.5959     0.12908E-02 0.71460E-01    10.76      0.7033    
+   3   0.5000       0.6058     0.13468E-02 0.74560E-01    10.76      0.7141    
+   4    1.000       0.6115     0.13795E-02 0.76370E-01    10.76      0.7205    
+   5    1.500       0.6151     0.14011E-02 0.77562E-01    10.75      0.7250    
+   6    2.000       0.6181     0.14184E-02 0.78523E-01    10.75      0.7290    
+   7    2.500       0.6210     0.14358E-02 0.79486E-01    10.74      0.7332    
+   8    3.000       0.6243     0.14561E-02 0.80608E-01    10.73      0.7382    
+   9    3.500       0.6285     0.14816E-02 0.82019E-01    10.72      0.7445    
+  10    4.000       0.6339     0.15146E-02 0.83847E-01    10.70      0.7526    
+  11    4.500       0.6407     0.15576E-02 0.86230E-01    10.68      0.7630    
+  12    5.000       0.6494     0.16136E-02 0.89326E-01    10.65      0.7760    
+  13    5.500       0.6604     0.16855E-02 0.93308E-01    10.62      0.7920    
+  14    6.000       0.6738     0.17766E-02 0.98353E-01    10.58      0.8114    
+  15    6.500       0.6899     0.18898E-02 0.10462        10.53      0.8340    
+  16    7.000       0.7086     0.20269E-02 0.11221        10.48      0.8596    
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 42  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  REGEN    MODEL: RADFRAC (CONTINUED)         
+
+        HEIGHT
+        FROM TOP    FRACTIONAL  PRESSURE    PRESSURE      LIQUID
+ STAGE  OF SECTION  CAPACITY    DROP        DROP/HEIGHT   HOLDUP      HETP
+        FT                      PSI         IN-WATER/FT   CUFT        FT      
+  17    7.500       0.7296     0.21881E-02 0.12113        10.42      0.8877    
+  18    8.000       0.7523     0.25730E-02 0.14244        10.36      0.9173    
+  19    8.500       0.7761     0.32981E-02 0.18258        10.33      0.9474    
+  20    9.000       0.8000     0.41878E-02 0.23184        10.31      0.9773    
+  21    9.500       0.8235     0.52427E-02 0.29024        10.30       1.006    
+
+        LIQUID
+        SUPERFICIAL
+ STAGE  VELOCITY
+        FT/SEC  
+   2   0.8879E-01
+   3   0.8889E-01
+   4   0.8894E-01
+   5   0.8897E-01
+   6   0.8899E-01
+   7   0.8902E-01
+   8   0.8904E-01
+   9   0.8907E-01
+  10   0.8911E-01
+  11   0.8915E-01
+  12   0.8920E-01
+  13   0.8927E-01
+  14   0.8934E-01
+  15   0.8942E-01
+  16   0.8950E-01
+  17   0.8957E-01
+  18   0.8963E-01
+  19   0.8966E-01
+  20   0.8966E-01
+  21   0.8962E-01
+
+ BLOCK:  SOL-PUMP MODEL: PUMP            
+ ----------------------------
+   INLET STREAM:          RICH-01 
+   OUTLET STREAM:         RICH-02 
+   PROPERTY OPTION SET:   ELECNRTL  ELECTROLYTE NRTL / REDLICH-KWONG            
+   HENRY-COMPS ID:        EMEA    
+   CHEMISTRY ID:          EMEA     - TRUE SPECIES
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(LBMOL/HR)            176151.         176151.       -0.931197E-07
+       MASS(LB/HR   )           0.445361E+07    0.445361E+07     0.00000    
+       ENTHALPY(BTU/HR  )      -0.232730E+11   -0.232728E+11   -0.111233E-04
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 43  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  SOL-PUMP MODEL: PUMP (CONTINUED)            
+
+                          ***  INPUT DATA  ***
+    OUTLET PRESSURE  PSIA                                  30.0000     
+    PUMP EFFICIENCY                                         0.80000    
+    DRIVER EFFICIENCY                                       1.00000    
+
+    FLASH SPECIFICATIONS:
+    LIQUID PHASE CALCULATION
+    NO FLASH PERFORMED
+    MAXIMUM NUMBER OF ITERATIONS                           100
+    TOLERANCE                                               0.00100000 
+
+                           ***  RESULTS  ***
+    VOLUMETRIC FLOW RATE  CUFT/HR                      75,271.1        
+    PRESSURE CHANGE  PSI                                   14.8676     
+    NPSH AVAILABLE   FT-LBF/LB                              0.98872    
+    FLUID POWER  HP                                        81.3891     
+    BRAKE POWER  HP                                       101.736      
+    ELECTRICITY  KW                                        75.8648     
+    PUMP EFFICIENCY USED                                    0.80000    
+    NET WORK REQUIRED  HP                                 101.736      
+    HEAD DEVELOPED FT-LBF/LB                               36.1842     
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 44  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                                 STREAM SECTION                                 
+
+ CO2 FG-01 FG-02 LEAN-00A LEAN-02                
+ --------------------------------
+
+ STREAM ID               CO2        FG-01      FG-02      LEAN-00A   LEAN-02 
+ FROM :                  REGEN      ----       ABSORBER   ----       REGEN   
+ TO   :                  ----       ABSORBER   ----       ABSORBER   LR-HXH  
+
+ SUBSTREAM: MIXED   
+ PHASE:                  VAPOR      VAPOR      VAPOR      LIQUID     LIQUID 
+ COMPONENTS: LBMOL/HR        
+   H2O                  260.1168  3781.6933  7167.9150  1.5863+05  1.5539+05
+   MEA                 3.6463-07     0.0     9.5402-13  9692.1579  9904.9790
+   H2S                    0.0        0.0        0.0        0.0        0.0   
+   CO2                 4202.9443  4600.4681   397.5261  4.3124-02     9.5668
+   HCO3-                  0.0        0.0        0.0       61.4447   255.0385
+   MEACOO-                0.0        0.0        0.0     5100.0966  4939.6990
+   MEA+                   0.0        0.0        0.0     5272.7808  5220.3555
+   CO3-2                  0.0        0.0        0.0       55.3245    12.6044
+   HS-                    0.0        0.0        0.0        0.0        0.0   
+   S-2                    0.0        0.0        0.0        0.0        0.0   
+   H3O+                   0.0        0.0        0.0     2.4343-06  6.4069-05
+   OH-                    0.0        0.0        0.0        0.5904     0.4093
+   N2                   164.9368  2.4594+04  2.4429+04     0.0     4.3535-06
+ COMPONENTS: MOLE FRAC       
+   H2O                 5.6205-02     0.1147     0.2240     0.8871     0.8842
+   MEA                 7.8788-11     0.0     2.9818-17  5.4204-02  5.6365-02
+   H2S                    0.0        0.0        0.0        0.0        0.0   
+   CO2                    0.9082     0.1395  1.2425-02  2.4117-07  5.4441-05
+   HCO3-                  0.0        0.0        0.0     3.4363-04  1.4513-03
+   MEACOO-                0.0        0.0        0.0     2.8522-02  2.8110-02
+   MEA+                   0.0        0.0        0.0     2.9488-02  2.9707-02
+   CO3-2                  0.0        0.0        0.0     3.0940-04  7.1727-05
+   HS-                    0.0        0.0        0.0        0.0        0.0   
+   S-2                    0.0        0.0        0.0        0.0        0.0   
+   H3O+                   0.0        0.0        0.0     1.3614-11  3.6459-10
+   OH-                    0.0        0.0        0.0     3.3016-06  2.3289-06
+   N2                  3.5639-02     0.7458     0.7635     0.0     2.4774-11
+ COMPONENTS: LB/HR           
+   H2O                 4686.0763  6.8128+04  1.2913+05  2.8577+06  2.7993+06
+   MEA                 2.2273-05     0.0     5.8275-11  5.9203+05  6.0503+05
+   H2S                    0.0        0.0        0.0        0.0        0.0   
+   CO2                 1.8497+05  2.0247+05  1.7495+04     1.8979   421.0329
+   HCO3-                  0.0        0.0        0.0     3749.2129  1.5562+04
+   MEACOO-                0.0        0.0        0.0     5.3083+05  5.1414+05
+   MEA+                   0.0        0.0        0.0     3.2738+05  3.2412+05
+   CO3-2                  0.0        0.0        0.0     3320.0422   756.3962
+   HS-                    0.0        0.0        0.0        0.0        0.0   
+   S-2                    0.0        0.0        0.0        0.0        0.0   
+   H3O+                   0.0        0.0        0.0     4.6308-05  1.2188-03
+   OH-                    0.0        0.0        0.0       10.0409     6.9606
+   N2                  4620.4528  6.8896+05  6.8434+05     0.0     1.2196-04
+ COMPONENTS: MASS FRAC       
+   H2O                 2.4121-02  7.1000-02     0.1554     0.6623     0.6572
+   MEA                 1.1465-10     0.0     7.0129-17     0.1372     0.1420
+   H2S                    0.0        0.0        0.0        0.0        0.0   
+   CO2                    0.9521     0.2110  2.1054-02  4.3982-07  9.8849-05
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 45  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                                 STREAM SECTION                                 
+
+ CO2 FG-01 FG-02 LEAN-00A LEAN-02 (CONTINUED)        
+
+ STREAM ID               CO2        FG-01      FG-02      LEAN-00A   LEAN-02 
+
+   HCO3-                  0.0        0.0        0.0     8.6886-04  3.6536-03
+   MEACOO-                0.0        0.0        0.0        0.1230     0.1207
+   MEA+                   0.0        0.0        0.0     7.5868-02  7.6096-02
+   CO3-2                  0.0        0.0        0.0     7.6940-04  1.7758-04
+   HS-                    0.0        0.0        0.0        0.0        0.0   
+   S-2                    0.0        0.0        0.0        0.0        0.0   
+   H3O+                   0.0        0.0        0.0     1.0732-11  2.8614-10
+   OH-                    0.0        0.0        0.0     2.3269-06  1.6342-06
+   N2                  2.3783-02     0.7180     0.8235     0.0     2.8633-11
+ TOTAL FLOW:     
+   LBMOL/HR            4627.9978  3.2976+04  3.1994+04  1.7881+05  1.7573+05
+   LB/HR               1.9428+05  9.5955+05  8.3096+05  4.3151+06  4.2594+06
+   CUFT/HR             1.2165+06  1.3122+07  1.3836+07  6.8816+04  7.0869+04
+ STATE VARIABLES:
+   TEMP   F             110.0000   134.4000   145.6668   126.0000   237.1855
+   PRES   PSIA           23.1000    16.0000    15.0000    30.0000    23.1408
+   VFRAC                  1.0000     1.0000     1.0000     0.0        0.0   
+   LFRAC                  0.0        0.0        0.0        1.0000     1.0000
+   SFRAC                  0.0        0.0        0.0        0.0        0.0   
+ ENTHALPY:       
+   BTU/LBMOL          -1.5921+05 -3.5107+04 -2.4903+04 -1.2743+05 -1.2533+05
+   BTU/LB             -3792.7138 -1206.4719  -958.8306 -5280.4389 -5170.6398
+   BTU/HR             -7.3684+08 -1.1577+09 -7.9675+08 -2.2786+10 -2.2024+10
+ ENTROPY:        
+   BTU/LBMOL-R            0.3674     0.9283    -0.3594   -62.7429   -59.3959
+   BTU/LB-R            8.7520-03  3.1903-02 -1.3839-02    -2.6000    -2.4505
+ DENSITY:        
+   LBMOL/CUFT          3.8044-03  2.5130-03  2.3125-03     2.5984     2.4796
+   LB/CUFT                0.1597  7.3125-02  6.0060-02    62.7047    60.1016
+ AVG MW                  41.9787    29.0985    25.9723    24.1322    24.2383
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 46  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                                 STREAM SECTION                                 
+
+ LEAN-03 LEAN-04 RICH-01 RICH-02 RICH-03         
+ ---------------------------------------
+
+ STREAM ID               LEAN-03    LEAN-04    RICH-01    RICH-02    RICH-03 
+ FROM :                  LR-HXH     LEANCOOL   ABSORBER   SOL-PUMP   LR-HXC  
+ TO   :                  LEANCOOL   ----       SOL-PUMP   LR-HXC     REGEN   
+
+ SUBSTREAM: MIXED   
+ PHASE:                  LIQUID     LIQUID     LIQUID     LIQUID     MIXED  
+ COMPONENTS: LBMOL/HR        
+   H2O                 1.5553+05  1.5554+05  1.5500+05  1.5500+05  1.5502+05
+   MEA                 9709.3091  9691.2061  2048.2296  2048.7214  4442.4255
+   H2S                    0.0        0.0        0.0        0.0        0.0   
+   CO2                    0.1062  4.2825-02     7.0180     7.0344  1177.8274
+   HCO3-                 78.4335    60.4805   808.9347   809.3938   861.5775
+   MEACOO-             5094.2597  5101.7878  8502.5156  8502.1375  7349.8441
+   MEA+                5261.4647  5272.0396  9514.2882  9514.1745  8272.7639
+   CO3-2                 44.1092    54.5976   101.3846   101.2873    30.6039
+   HS-                    0.0        0.0        0.0        0.0        0.0   
+   S-2                    0.0        0.0        0.0        0.0        0.0   
+   H3O+                4.3200-06  2.3971-06  4.4118-05  4.4188-05  1.7956-04
+   OH-                    0.5530     0.5761  6.8671-02  6.8661-02     0.1346
+   N2                  4.3535-06  4.3535-06   164.9368   164.9368   164.9368
+ COMPONENTS: MOLE FRAC       
+   H2O                    0.8851     0.8852     0.8799     0.8799     0.8742
+   MEA                 5.5255-02  5.5152-02  1.1628-02  1.1630-02  2.5053-02
+   H2S                    0.0        0.0        0.0        0.0        0.0   
+   CO2                 6.0456-07  2.4371-07  3.9841-05  3.9934-05  6.6423-03
+   HCO3-               4.4636-04  3.4419-04  4.5923-03  4.5949-03  4.8588-03
+   MEACOO-             2.8991-02  2.9034-02  4.8268-02  4.8266-02  4.1449-02
+   MEA+                2.9942-02  3.0003-02  5.4012-02  5.4011-02  4.6654-02
+   CO3-2               2.5102-04  3.1071-04  5.7555-04  5.7500-04  1.7259-04
+   HS-                    0.0        0.0        0.0        0.0        0.0   
+   S-2                    0.0        0.0        0.0        0.0        0.0   
+   H3O+                2.4584-11  1.3642-11  2.5045-10  2.5085-10  1.0126-09
+   OH-                 3.1471-06  3.2785-06  3.8984-07  3.8979-07  7.5894-07
+   N2                  2.4775-11  2.4775-11  9.3634-04  9.3634-04  9.3015-04
+ COMPONENTS: LB/HR           
+   H2O                 2.8019+06  2.8021+06  2.7924+06  2.7924+06  2.7928+06
+   MEA                 5.9308+05  5.9197+05  1.2511+05  1.2514+05  2.7136+05
+   H2S                    0.0        0.0        0.0        0.0        0.0   
+   CO2                    4.6753     1.8847   308.8601   309.5820  5.1836+04
+   HCO3-               4785.8337  3690.3790  4.9359+04  4.9387+04  5.2571+04
+   MEACOO-             5.3022+05  5.3101+05  8.8496+05  8.8492+05  7.6499+05
+   MEA+                3.2667+05  3.2733+05  5.9072+05  5.9072+05  5.1364+05
+   CO3-2               2647.0062  3276.4208  6084.1214  6078.2818  1836.5509
+   HS-                    0.0        0.0        0.0        0.0        0.0   
+   S-2                    0.0        0.0        0.0        0.0        0.0   
+   H3O+                8.2177-05  4.5600-05  8.3923-04  8.4057-04  3.4158-03
+   OH-                    9.4054     9.7982     1.1680     1.1678     2.2889
+   N2                  1.2196-04  1.2196-04  4620.4529  4620.4529  4620.4529
+ COMPONENTS: MASS FRAC       
+   H2O                    0.6578     0.6579     0.6270     0.6270     0.6271
+   MEA                    0.1392     0.1390  2.8093-02  2.8099-02  6.0930-02
+   H2S                    0.0        0.0        0.0        0.0        0.0   
+   CO2                 1.0977-06  4.4249-07  6.9350-05  6.9513-05  1.1639-02
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 47  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                                 STREAM SECTION                                 
+
+ LEAN-03 LEAN-04 RICH-01 RICH-02 RICH-03 (CONTINUED) 
+
+ STREAM ID               LEAN-03    LEAN-04    RICH-01    RICH-02    RICH-03 
+
+   HCO3-               1.1236-03  8.6642-04  1.1083-02  1.1089-02  1.1804-02
+   MEACOO-                0.1245     0.1247     0.1987     0.1987     0.1718
+   MEA+                7.6695-02  7.6850-02     0.1326     0.1326     0.1153
+   CO3-2               6.2146-04  7.6923-04  1.3661-03  1.3648-03  4.1237-04
+   HS-                    0.0        0.0        0.0        0.0        0.0   
+   S-2                    0.0        0.0        0.0        0.0        0.0   
+   H3O+                1.9293-11  1.0706-11  1.8844-10  1.8874-10  7.6697-10
+   OH-                 2.2082-06  2.3004-06  2.6225-07  2.6221-07  5.1394-07
+   N2                  2.8633-11  2.8633-11  1.0375-03  1.0375-03  1.0375-03
+ TOTAL FLOW:     
+   LBMOL/HR            1.7572+05  1.7572+05  1.7615+05  1.7615+05  1.7732+05
+   LB/HR               4.2594+06  4.2594+06  4.4536+06  4.4536+06  4.4536+06
+   CUFT/HR             6.8277+04  6.7917+04  7.5271+04  7.5270+04  6.1289+05
+ STATE VARIABLES:
+   TEMP   F             142.8788   126.0000   133.6197   133.6677   214.0000
+   PRES   PSIA           23.1408    23.1408    15.1324    30.0000    30.0000
+   VFRAC                  0.0        0.0        0.0        0.0     1.2693-02
+   LFRAC                  1.0000     1.0000     1.0000     1.0000     0.9873
+   SFRAC                  0.0        0.0        0.0        0.0        0.0   
+ ENTHALPY:       
+   BTU/LBMOL          -1.2720+05 -1.2752+05 -1.3212+05 -1.3212+05 -1.2940+05
+   BTU/LB             -5247.5132 -5260.9703 -5225.6523 -5225.5941 -5152.0771
+   BTU/HR             -2.2351+10 -2.2408+10 -2.3273+10 -2.3273+10 -2.2945+10
+ ENTROPY:        
+   BTU/LBMOL-R          -62.6203   -63.1969   -75.3731   -75.3711   -68.3253
+   BTU/LB-R              -2.5834    -2.6072    -2.9812    -2.9811    -2.7204
+ DENSITY:        
+   LBMOL/CUFT             2.5736     2.5873     2.3402     2.3403     0.2893
+   LB/CUFT               62.3834    62.7145    59.1677    59.1687     7.2666
+ AVG MW                  24.2396    24.2396    25.2829    25.2829    25.1159
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 48  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                                 STREAM SECTION                                 
+
+ WASH-01                                         
+ -------
+
+ STREAM ID               WASH-01 
+ FROM :                  ----    
+ TO   :                  ABSORBER
+
+ SUBSTREAM: MIXED   
+ PHASE:                  LIQUID 
+ COMPONENTS: LBMOL/HR        
+   H2O                  555.0843
+   MEA                    0.0   
+   H2S                    0.0   
+   CO2                    0.0   
+   HCO3-                  0.0   
+   MEACOO-                0.0   
+   MEA+                   0.0   
+   CO3-2                  0.0   
+   HS-                    0.0   
+   S-2                    0.0   
+   H3O+                2.2456-06
+   OH-                 2.2456-06
+   N2                     0.0   
+ COMPONENTS: MOLE FRAC       
+   H2O                    1.0000
+   MEA                    0.0   
+   H2S                    0.0   
+   CO2                    0.0   
+   HCO3-                  0.0   
+   MEACOO-                0.0   
+   MEA+                   0.0   
+   CO3-2                  0.0   
+   HS-                    0.0   
+   S-2                    0.0   
+   H3O+                4.0456-09
+   OH-                 4.0456-09
+   N2                     0.0   
+ COMPONENTS: LB/HR           
+   H2O                 9999.9999
+   MEA                    0.0   
+   H2S                    0.0   
+   CO2                    0.0   
+   HCO3-                  0.0   
+   MEACOO-                0.0   
+   MEA+                   0.0   
+   CO3-2                  0.0   
+   HS-                    0.0   
+   S-2                    0.0   
+   H3O+                4.2718-05
+   OH-                 3.8193-05
+   N2                     0.0   
+ COMPONENTS: MASS FRAC       
+   H2O                    1.0000
+   MEA                    0.0   
+   H2S                    0.0   
+   CO2                    0.0   
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 49  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                                 STREAM SECTION                                 
+
+ WASH-01 (CONTINUED)                                 
+
+ STREAM ID               WASH-01 
+
+   HCO3-                  0.0   
+   MEACOO-                0.0   
+   MEA+                   0.0   
+   CO3-2                  0.0   
+   HS-                    0.0   
+   S-2                    0.0   
+   H3O+                4.2718-09
+   OH-                 3.8193-09
+   N2                     0.0   
+ TOTAL FLOW:     
+   LBMOL/HR             555.0844
+   LB/HR               1.0000+04
+   CUFT/HR              162.0274
+ STATE VARIABLES:
+   TEMP   F             120.0000
+   PRES   PSIA           30.0000
+   VFRAC                  0.0   
+   LFRAC                  1.0000
+   SFRAC                  0.0   
+ ENTHALPY:       
+   BTU/LBMOL          -1.2211+05
+   BTU/LB             -6778.0737
+   BTU/HR             -6.7781+07
+ ENTROPY:        
+   BTU/LBMOL-R          -37.5823
+   BTU/LB-R              -2.0861
+ DENSITY:        
+   LBMOL/CUFT             3.4259
+   LB/CUFT               61.7180
+ AVG MW                  18.0153
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 50  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                                 STREAM SECTION                                 
+
+ LR-HXQ                                          
+ ------
+
+ STREAM ID               LR-HXQ  
+ FROM :                  LR-HXC  
+ TO   :                  LR-HXH  
+ CLASS:                  HEAT    
+
+ STREAM ATTRIBUTES:
+ HEAT    
+ Q        BTU/HR       -3.2742+08
+ TBEG     F              133.6677
+ TEND     F              214.0000
+ ASPEN PLUS   PLAT: WIN32     VER: 24.0                   04/27/2011  PAGE 51  
+                      MEA - WATER - H2S -  CO2    INSERT                        
+                             PROBLEM STATUS SECTION                             
+
+ BLOCK STATUS                            
+ ------------
+
+ ****************************************************************************
+ *                                                                          *
+ * Calculations were completed normally                                     *
+ *                                                                          *
+ * All Unit Operation blocks were completed normally                        *
+ *                                                                          *
+ * All streams were flashed normally                                        *
+ *                                                                          *
+ ****************************************************************************

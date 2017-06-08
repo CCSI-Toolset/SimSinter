@@ -1,0 +1,26 @@
+<Calculation 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="gORUN_input.xsd"
+	jobId='XI5-332123' user='PSE' 
+    time='2013-11-08T14:24:00Z' version='2'>
+    <Model 
+       fileName='Comp' 
+       processName='CC' 
+       password='my_pass'/>
+    <Simulation robust='false'>
+        <ModelSpecification name='Pout'>
+            <RealValue>1.252e7</RealValue>
+        </ModelSpecification>
+        <ModelSpecification name='Pinter'>
+            <RealValue>3.463e6</RealValue>
+        </ModelSpecification>
+        <ModelSpecification name='Fco2'>
+            <RealValue>77.28611111</RealValue>
+        </ModelSpecification>
+        <ModelSpecification name='Pco2'>
+            <RealValue>1.62e5</RealValue>
+        </ModelSpecification>
+        <ReportVariable pathName='Flowsheet.ElectricDrive001.ElectricalPowerDemand.Phi'/>
+        <ReportVariable pathName='Flowsheet.ElectricDrive002.ElectricalPowerDemand.Phi'/>
+    </Simulation>
+</Calculation>

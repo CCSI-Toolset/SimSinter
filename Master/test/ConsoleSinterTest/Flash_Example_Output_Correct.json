@@ -1,0 +1,347 @@
+[
+  {
+    "title": "Outputs from Flash Example",
+    "description": "Outputs from Flash Example",
+    "aspenfile": "Flash_Example.acmf",
+    "author": "John Eslick",
+    "date": "2012-09-18",
+    "filetype": "sinteroutputs",
+    "version": 0.2,
+    "inputs": {
+      "feed.T": {
+        "value": 100.00000000000001,
+        "units": "degF"
+      },
+      "feed.P": {
+        "value": 50.0,
+        "units": "psi"
+      },
+      "feed.F": {
+        "value": 48.748,
+        "units": "lbmol/hr"
+      },
+      "feed.etOH.molefrac": {
+        "value": 0.08905,
+        "units": "lbmol/lbmol"
+      },
+      "feed.H2O.molefrac": {
+        "value": 0.91095,
+        "units": "lbmol/lbmol"
+      },
+      "flash.T": {
+        "value": 150.0,
+        "units": "degF"
+      },
+      "flash.P": {
+        "value": 20.0,
+        "units": "psi"
+      }
+    },
+    "outputs": {
+      "vapor.F": {
+        "value": 4.6712585401766917,
+        "units": "lbmol/hr"
+      },
+      "vapor.etOH.molefrac": {
+        "value": 0.8341796207506722,
+        "units": "lbmol/lbmol"
+      },
+      "vapor.H2O.molefrac": {
+        "value": 0.16582037924932783,
+        "units": "lbmol/lbmol"
+      },
+      "liquid.F": {
+        "value": 44.07674145982331,
+        "units": "lbmol/hr"
+      },
+      "liquid.etOH.molefrac": {
+        "value": 0.010081070142532306,
+        "units": "lbmol/lbmol"
+      },
+      "liquid.CO2.molefrac": {
+        "value": 0.98991892985746766,
+        "units": "lbmol/lbmol"
+      },
+      "status": {
+        "units": "",
+        "value": 0
+      }
+    }
+  },
+  {
+    "title": "Outputs from Flash Example",
+    "description": "Outputs from Flash Example",
+    "aspenfile": "Flash_Example.acmf",
+    "author": "John Eslick",
+    "date": "2012-09-18",
+    "filetype": "sinteroutputs",
+    "version": 0.2,
+    "inputs": {
+      "feed.T": {
+        "value": 100.00000000000001,
+        "units": "degF"
+      },
+      "feed.P": {
+        "value": 50.0,
+        "units": "psi"
+      },
+      "feed.F": {
+        "value": 48.748,
+        "units": "lbmol/hr"
+      },
+      "feed.etOH.molefrac": {
+        "value": 0.08905,
+        "units": "lbmol/lbmol"
+      },
+      "feed.H2O.molefrac": {
+        "value": 0.91095,
+        "units": "lbmol/lbmol"
+      },
+      "flash.T": {
+        "value": 180.0,
+        "units": "degF"
+      },
+      "flash.P": {
+        "value": 21.0,
+        "units": "psi"
+      }
+    },
+    "outputs": {
+      "vapor.F": {
+        "value": 6.0939181847240578,
+        "units": "lbmol/hr"
+      },
+      "vapor.etOH.molefrac": {
+        "value": 0.67251034838394841,
+        "units": "lbmol/lbmol"
+      },
+      "vapor.H2O.molefrac": {
+        "value": 0.32748965161605165,
+        "units": "lbmol/lbmol"
+      },
+      "liquid.F": {
+        "value": 42.654081815275944,
+        "units": "lbmol/hr"
+      },
+      "liquid.etOH.molefrac": {
+        "value": 0.0056919841720797625,
+        "units": "lbmol/lbmol"
+      },
+      "liquid.CO2.molefrac": {
+        "value": 0.99430801582792028,
+        "units": "lbmol/lbmol"
+      },
+      "status": {
+        "units": "",
+        "value": 0
+      }
+    }
+  },
+  {
+    "title": "Outputs from Flash Example",
+    "description": "Outputs from Flash Example",
+    "aspenfile": "Flash_Example.acmf",
+    "author": "John Eslick",
+    "date": "2012-09-18",
+    "filetype": "sinteroutputs",
+    "version": 0.2,
+    "inputs": {
+      "feed.T": {
+        "value": 100.00000000000001,
+        "units": "degF"
+      },
+      "feed.P": {
+        "value": 50.0,
+        "units": "psi"
+      },
+      "feed.F": {
+        "value": 48.748,
+        "units": "lbmol/hr"
+      },
+      "feed.etOH.molefrac": {
+        "value": 0.08905,
+        "units": "lbmol/lbmol"
+      },
+      "feed.H2O.molefrac": {
+        "value": 0.91095,
+        "units": "lbmol/lbmol"
+      },
+      "flash.T": {
+        "value": 200.0,
+        "units": "degF"
+      },
+      "flash.P": {
+        "value": 22.0,
+        "units": "psi"
+      }
+    },
+    "outputs": {
+      "vapor.F": {
+        "value": 8.1627500360331275,
+        "units": "lbmol/hr"
+      },
+      "vapor.etOH.molefrac": {
+        "value": 0.51346695621433214,
+        "units": "lbmol/lbmol"
+      },
+      "vapor.H2O.molefrac": {
+        "value": 0.48653304378566775,
+        "units": "lbmol/lbmol"
+      },
+      "liquid.F": {
+        "value": 40.585249963966874,
+        "units": "lbmol/hr"
+      },
+      "liquid.etOH.molefrac": {
+        "value": 0.0036887042604573268,
+        "units": "lbmol/lbmol"
+      },
+      "liquid.CO2.molefrac": {
+        "value": 0.99631129573954258,
+        "units": "lbmol/lbmol"
+      },
+      "status": {
+        "units": "",
+        "value": 0
+      }
+    }
+  },
+  {
+    "title": "Outputs from Flash Example",
+    "description": "Outputs from Flash Example",
+    "aspenfile": "Flash_Example.acmf",
+    "author": "John Eslick",
+    "date": "2012-09-18",
+    "filetype": "sinteroutputs",
+    "version": 0.2,
+    "inputs": {
+      "feed.T": {
+        "value": 100.00000000000001,
+        "units": "degF"
+      },
+      "feed.P": {
+        "value": 50.0,
+        "units": "psi"
+      },
+      "feed.F": {
+        "value": 48.748,
+        "units": "lbmol/hr"
+      },
+      "feed.etOH.molefrac": {
+        "value": 0.08905,
+        "units": "lbmol/lbmol"
+      },
+      "feed.H2O.molefrac": {
+        "value": 0.91095,
+        "units": "lbmol/lbmol"
+      },
+      "flash.T": {
+        "value": 200.0,
+        "units": "degF"
+      },
+      "flash.P": {
+        "value": 19.0,
+        "units": "psi"
+      }
+    },
+    "outputs": {
+      "vapor.F": {
+        "value": 9.6963024278810437,
+        "units": "lbmol/hr"
+      },
+      "vapor.etOH.molefrac": {
+        "value": 0.43705450566907372,
+        "units": "lbmol/lbmol"
+      },
+      "vapor.H2O.molefrac": {
+        "value": 0.56294549433092633,
+        "units": "lbmol/lbmol"
+      },
+      "liquid.F": {
+        "value": 39.051697572118961,
+        "units": "lbmol/hr"
+      },
+      "liquid.etOH.molefrac": {
+        "value": 0.0026425672114801443,
+        "units": "lbmol/lbmol"
+      },
+      "liquid.CO2.molefrac": {
+        "value": 0.99735743278851985,
+        "units": "lbmol/lbmol"
+      },
+      "status": {
+        "units": "",
+        "value": 0
+      }
+    }
+  },
+  {
+    "title": "Outputs from Flash Example",
+    "description": "Outputs from Flash Example",
+    "aspenfile": "Flash_Example.acmf",
+    "author": "John Eslick",
+    "date": "2012-09-18",
+    "filetype": "sinteroutputs",
+    "version": 0.2,
+    "inputs": {
+      "feed.T": {
+        "value": 100.00000000000001,
+        "units": "degF"
+      },
+      "feed.P": {
+        "value": 50.0,
+        "units": "psi"
+      },
+      "feed.F": {
+        "value": 48.748,
+        "units": "lbmol/hr"
+      },
+      "feed.etOH.molefrac": {
+        "value": 0.08905,
+        "units": "lbmol/lbmol"
+      },
+      "feed.H2O.molefrac": {
+        "value": 0.91095,
+        "units": "lbmol/lbmol"
+      },
+      "flash.T": {
+        "value": 180.0,
+        "units": "degF"
+      },
+      "flash.P": {
+        "value": 20.0,
+        "units": "psi"
+      }
+    },
+    "outputs": {
+      "vapor.F": {
+        "value": 6.2772652433969807,
+        "units": "lbmol/hr"
+      },
+      "vapor.etOH.molefrac": {
+        "value": 0.65619620504459319,
+        "units": "lbmol/lbmol"
+      },
+      "vapor.H2O.molefrac": {
+        "value": 0.34380379495540686,
+        "units": "lbmol/lbmol"
+      },
+      "liquid.F": {
+        "value": 42.470734756603022,
+        "units": "lbmol/hr"
+      },
+      "liquid.etOH.molefrac": {
+        "value": 0.0052245804198092528,
+        "units": "lbmol/lbmol"
+      },
+      "liquid.CO2.molefrac": {
+        "value": 0.99477541958019067,
+        "units": "lbmol/lbmol"
+      },
+      "status": {
+        "units": "",
+        "value": 0
+      }
+    }
+  }
+]
