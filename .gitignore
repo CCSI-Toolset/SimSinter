@@ -1,1 +1,11 @@
 *.DS_Store
+*.snk
+Debug/
+Master/UC2/UC2_i.c
+Master/UC2/UC2_i.h
+Master/UC2/UC2_p.c
+Master/UC2/dlldata.c
+Master/packages/
+Release/
+SimSinter-Build.trx
+ccsi_W7-BUILD-06-CCS 2017-07-07 12_17_10/
