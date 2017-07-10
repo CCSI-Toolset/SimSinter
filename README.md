@@ -23,6 +23,7 @@ versions at your own risk.
 + CMake 3.9
 + Microsoft Visual Studio 11.0
 + Microsoft .NET v4.0.30319
++ NuGet Package Manager
 + Wix Toolset v3.10
 
 ### Build and Test
