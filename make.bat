@@ -16,8 +16,10 @@ copy "C:\Program Files\Common files\Merge Modules\Microsoft_VC110_CRT_x86.msm" M
 copy "C:\Program Files\Common files\Merge Modules\Microsoft_VC110_ATL_x86.msm" Master\CCSIUnitsInstaller
 
 REM Compile the UC2 udunits2 library
-cmake clean Master\UC2\udunits2
-cmake --build Master\UC2\udunits2 --config Release
+cd Master\UC2\udunits2
+cmake clean .
+cmake --build . --config Release
+cd ..\..\..
 
 REM Get SimSinter dependencies
 REM    nuget.exe must be in the PATH 
@@ -32,5 +34,7 @@ REM Run the Tests
 REM    MSTest.exe must be in the PATH
 
 REM Delete the previous test results
-rm SimSinter-Build.trx 
+if EXIST SimSinter-Build.trx. (
+  del SimSinter-Build.trx 
+)
 MSTest.exe /resultsfile:SimSinter-Build.trx /test:SinterRegressionTests.SinterInputTests.ParseVariableTest /testcontainer:C:\Jenkins\workspace\SimSinter\Master\SinterRegressionTests\bin\Release\SinterRegressionTests.dll
