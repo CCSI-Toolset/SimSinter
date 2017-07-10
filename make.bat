@@ -4,7 +4,7 @@ REM This make file is a reproduction of how SimSinter was being
 REM built on Jenkins at LBNL.  It has been tested on:
 REM    - 32 bit Windows 7 installation (required)
 REM
-REM Prerequites:
+REM Pre-requisites:
 REM   - CMake 3.9
 REM   - Microsoft Vistual 11.0
 REM   - Microsoft .NET v4.030319
