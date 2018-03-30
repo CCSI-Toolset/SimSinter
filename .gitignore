@@ -1,1 +1,15 @@
 *.DS_Store
+*.msm
+*.sdf
+*.snk
+*.suo
+Debug*/
+Debug/
+Master/UC2/UC2_i.c
+Master/UC2/UC2_i.h
+Master/UC2/UC2_p.c
+Master/UC2/dlldata.c
+Master/packages/
+Release*/
+SimSinter-Build.trx
+ccsi_W7-BUILD*

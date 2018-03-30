@@ -1,11 +1,36 @@
 # SimSinter
+
 **SimSinter for Aspen 7.3.2 or greater** Simulation interface for connecting Aspen Plus or ACM simulations to FOQUS and Turbine Gateway. Includes SinterConfigGUI.
 
 Note: This product is also part of the [FOQUS Bundle](../../../FOQUS_bundle)
 
 ## Getting Started
+This software has been compiled and tested on Windows 7 professional
 
-See installation and user guide documents in the [documentation](./docs) subdirectory.
+### Pre-requisites
+Your environment must have the following tools installed.
+The build has be tested with the following versions. Use other
+versions at your own risk.
+
++ Git Bash for windows
++ CMake 3.9
++ Microsoft Visual Studio 11.0
++ Microsoft .NET v4.0.30319
++ NuGet Package Manager
++ Wix Toolset v3.10
+
+### Build and Test
+After installing the tools above run the Git Bash program.
+Executing the commands below with compile the source and 
+run the tests.
+
+
+```
+git clone https://github.com/CCSI-Toolset/SimSinter.git
+cd SimSinter
+start make.bat
+
+```
 
 ## Authors
 

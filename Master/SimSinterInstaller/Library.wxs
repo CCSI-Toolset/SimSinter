@@ -840,7 +840,7 @@
       <Merge Id="ALTRedist" SourceFile="..\CCSIUnitsInstaller\Microsoft_VC110_ATL_x86.msm" DiskId="1" Language="0"/>
 
       <Component Id="CMP.EXPAT.DLL" Guid="*">
-        <File Id="FILE.EXPAT.DLL" Source="..\UC2\expat.dll" KeyPath="yes"/>
+        <File Id="FILE.EXPAT.DLL" Source="..\UC2\udunits2\expat\Release\expat.dll" KeyPath="yes"/>
       </Component>
       <!--      <Component Id="CMP.UC2.DLL" Guid="*">
         <File Id="FILE.UC2.DLL" Source="..\packages\CCSIUnits\UC2.dll" KeyPath="yes"/>
@@ -850,7 +850,7 @@
         <File Id="FILE.UC2PS.DLL" Source="..\UC2\$(var.Configuration)PS\UC2PS.dll" KeyPath="yes"/>
       </Component>
       <Component Id="CMP.UDUNITS2.DLL" Guid="*">
-        <File Id="FILE.UDUNITS2.DLL" Source="..\UC2\udunits2.dll" KeyPath="yes"/>
+        <File Id="FILE.UDUNITS2.DLL" Source="..\UC2\udunits2\lib\Release\udunits2.dll" KeyPath="yes"/>
       </Component>
       <Component Id="CMP.UDUNITS.CONVERTER" Guid="*">
         <File Id="FILE.UDUNITS.CONVERTER" Source="..\UC2\UnitConverterTest.xlsm" KeyPath="yes"/>
