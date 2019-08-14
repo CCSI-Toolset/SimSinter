@@ -2,8 +2,6 @@
 
 **SimSinter for Aspen 7.3.2 or greater** Simulation interface for connecting Aspen Plus or ACM simulations to FOQUS and Turbine Gateway. Includes SinterConfigGUI.
 
-Note: This product is also part of the [FOQUS Bundle](../../../FOQUS_bundle)
-
 ## Getting Started
 This software has been compiled and tested on Windows 7 professional
 
