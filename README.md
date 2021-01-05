@@ -15,7 +15,7 @@ versions at your own risk.
 + Microsoft Visual Studio 11.0
 + Microsoft .NET v4.0.30319
 + NuGet Package Manager
-+ Wix Toolset v3.10
++ [Wix Toolset v3.10] (https://wixtoolset.org/downloads/v3.10.4.4718/wix310.exe)
 
 ### Build and Test
 After installing the tools above run the Git Bash program.
