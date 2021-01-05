@@ -11,7 +11,7 @@ The build has be tested with the following versions. Use other
 versions at your own risk.
 
 + Git Bash for windows
-+ CMake 3.9
++ [CMake 3.9](https://github.com/Kitware/CMake/releases/download/v3.19.2/cmake-3.19.2-win64-x64.msi)
 + Microsoft Visual Studio 11.0
 + Microsoft .NET v4.0.30319
 + NuGet Package Manager
