@@ -59,7 +59,7 @@
     <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
     <UIRef Id="WixUI_Mondo" />
     <UIRef Id="WixUI_ErrorProgressText" />
-    <WixVariable Id="WixUILicenseRtf" Value="..\CCSI_TE_LICENSEandUC2.rtf" />
+    <WixVariable Id="WixUILicenseRtf" Value="..\LICENSE.rtf" />
 
   </Product>
 
