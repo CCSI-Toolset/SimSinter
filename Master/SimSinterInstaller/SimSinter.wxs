@@ -7,7 +7,7 @@
 	<Product Id="FE0D0DCA-BCD7-4242-8647-35D2E4779588" 
            Name="SimSinter" 
            Language="1033" 
-           Version="1.6.0.0" 
+           Version="2.1.0.0" 
            Manufacturer="CCSI" 
            UpgradeCode="a9491f5b-eb5c-4fd4-8551-d7cf7992872c">
     
@@ -59,7 +59,8 @@
     <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
     <UIRef Id="WixUI_Mondo" />
     <UIRef Id="WixUI_ErrorProgressText" />
-    <WixVariable Id="WixUILicenseRtf" Value="..\LICENSE.rtf" />
+    <WixVariable Id="WixUILicenseRtf" Value="..\UC2\LICENSE.rtf" />
+
 
   </Product>
 

@@ -170,7 +170,9 @@
     <None Include="udunits2\lib\udunits2-common.xml" />
     <None Include="udunits2\lib\udunits2-derived.xml" />
     <None Include="udunits2\lib\udunits2-prefixes.xml" />
-    <None Include="udunits2\lib\udunits2.xml" />
+    <None Include="udunits2\lib\udunits2.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="UnitCon.rgs" />
     <None Include="ReadMe.txt" />
   </ItemGroup>
