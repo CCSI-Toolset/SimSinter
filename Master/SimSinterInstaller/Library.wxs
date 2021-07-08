@@ -392,259 +392,259 @@
         </Class>
         <File Id="fil134F96608A310523C0D45CDD744920E9" KeyPath="yes" Source="..\Sinter\bin\$(var.Configuration)\Sinter.dll" />
         <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.sinter_JsonSetupFile" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.sinter_JsonSetupFile" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Name="Class" Value="sinter.sinter_JsonSetupFile" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.sinter_SimACM" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.sinter_SimACM" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32" Name="Class" Value="sinter.sinter_SimACM" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{1725FDFC-55AD-3F2C-B1D0-52CD953CA3B8}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{1725FDFC-55AD-3F2C-B1D0-52CD953CA3B8}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.PSE.Scanner" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{1725FDFC-55AD-3F2C-B1D0-52CD953CA3B8}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{1725FDFC-55AD-3F2C-B1D0-52CD953CA3B8}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{1725FDFC-55AD-3F2C-B1D0-52CD953CA3B8}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{1725FDFC-55AD-3F2C-B1D0-52CD953CA3B8}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.PSE.Scanner" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{1725FDFC-55AD-3F2C-B1D0-52CD953CA3B8}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{1725FDFC-55AD-3F2C-B1D0-52CD953CA3B8}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{1725FDFC-55AD-3F2C-B1D0-52CD953CA3B8}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{1725FDFC-55AD-3F2C-B1D0-52CD953CA3B8}\InprocServer32" Name="Class" Value="sinter.PSE.Scanner" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{1725FDFC-55AD-3F2C-B1D0-52CD953CA3B8}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{1725FDFC-55AD-3F2C-B1D0-52CD953CA3B8}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{1725FDFC-55AD-3F2C-B1D0-52CD953CA3B8}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{1725FDFC-55AD-3F2C-B1D0-52CD953CA3B8}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{1D110FEF-DB3F-34B8-8C62-70C8487DF201}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{1D110FEF-DB3F-34B8-8C62-70C8487DF201}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.PSE.ParseError" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{1D110FEF-DB3F-34B8-8C62-70C8487DF201}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{1D110FEF-DB3F-34B8-8C62-70C8487DF201}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{1D110FEF-DB3F-34B8-8C62-70C8487DF201}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{1D110FEF-DB3F-34B8-8C62-70C8487DF201}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.PSE.ParseError" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{1D110FEF-DB3F-34B8-8C62-70C8487DF201}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{1D110FEF-DB3F-34B8-8C62-70C8487DF201}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{1D110FEF-DB3F-34B8-8C62-70C8487DF201}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{1D110FEF-DB3F-34B8-8C62-70C8487DF201}\InprocServer32" Name="Class" Value="sinter.PSE.ParseError" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{1D110FEF-DB3F-34B8-8C62-70C8487DF201}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{1D110FEF-DB3F-34B8-8C62-70C8487DF201}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{1D110FEF-DB3F-34B8-8C62-70C8487DF201}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{1D110FEF-DB3F-34B8-8C62-70C8487DF201}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{2D93A586-B1EC-3CCC-BB26-C7D6531C7968}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{2D93A586-B1EC-3CCC-BB26-C7D6531C7968}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.PSE.ParseErrors" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{2D93A586-B1EC-3CCC-BB26-C7D6531C7968}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{2D93A586-B1EC-3CCC-BB26-C7D6531C7968}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{2D93A586-B1EC-3CCC-BB26-C7D6531C7968}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{2D93A586-B1EC-3CCC-BB26-C7D6531C7968}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.PSE.ParseErrors" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{2D93A586-B1EC-3CCC-BB26-C7D6531C7968}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{2D93A586-B1EC-3CCC-BB26-C7D6531C7968}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{2D93A586-B1EC-3CCC-BB26-C7D6531C7968}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{2D93A586-B1EC-3CCC-BB26-C7D6531C7968}\InprocServer32" Name="Class" Value="sinter.PSE.ParseErrors" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{2D93A586-B1EC-3CCC-BB26-C7D6531C7968}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{2D93A586-B1EC-3CCC-BB26-C7D6531C7968}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{2D93A586-B1EC-3CCC-BB26-C7D6531C7968}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{2D93A586-B1EC-3CCC-BB26-C7D6531C7968}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{35B373B8-51D3-381B-96ED-997BCE346588}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{35B373B8-51D3-381B-96ED-997BCE346588}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.PSE.Token" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{35B373B8-51D3-381B-96ED-997BCE346588}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{35B373B8-51D3-381B-96ED-997BCE346588}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{35B373B8-51D3-381B-96ED-997BCE346588}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{35B373B8-51D3-381B-96ED-997BCE346588}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.PSE.Token" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{35B373B8-51D3-381B-96ED-997BCE346588}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{35B373B8-51D3-381B-96ED-997BCE346588}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{35B373B8-51D3-381B-96ED-997BCE346588}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{35B373B8-51D3-381B-96ED-997BCE346588}\InprocServer32" Name="Class" Value="sinter.PSE.Token" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{35B373B8-51D3-381B-96ED-997BCE346588}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{35B373B8-51D3-381B-96ED-997BCE346588}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{35B373B8-51D3-381B-96ED-997BCE346588}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{35B373B8-51D3-381B-96ED-997BCE346588}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.sinter_Vector" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.sinter_Vector" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32" Name="Class" Value="sinter.sinter_Vector" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.PSE.sinter_simGPROMS" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.PSE.sinter_simGPROMS" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32" Name="Class" Value="sinter.PSE.sinter_simGPROMS" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.sinter_TextSetupFile" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.sinter_TextSetupFile" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32" Name="Class" Value="sinter.sinter_TextSetupFile" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{5943BE17-3EB0-3483-89CD-94B662A33699}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.sinter_SimAspen" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.sinter_SimAspen" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32" Name="Class" Value="sinter.sinter_SimAspen" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.sinter_DynamicVector" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.sinter_DynamicVector" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Name="Class" Value="sinter.sinter_DynamicVector" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.sinter_Factory" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.sinter_Factory" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32" Name="Class" Value="sinter.sinter_Factory" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.SinterProcess" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.SinterProcess" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32" Name="Class" Value="sinter.SinterProcess" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.sinter_Variable" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.sinter_Variable" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32" Name="Class" Value="sinter.sinter_Variable" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.sinter_HelperFunctions" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.sinter_HelperFunctions" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Name="Class" Value="sinter.sinter_HelperFunctions" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.sinter_SimExcel" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.sinter_SimExcel" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32" Name="Class" Value="sinter.sinter_SimExcel" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.PSE.sinter_simGPROMSconfig" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.PSE.sinter_simGPROMSconfig" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32" Name="Class" Value="sinter.PSE.sinter_simGPROMSconfig" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{9ABFBF64-33B3-3A9C-A979-FA8BD6E21A7C}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{9ABFBF64-33B3-3A9C-A979-FA8BD6E21A7C}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.PSE.ParseTree" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{9ABFBF64-33B3-3A9C-A979-FA8BD6E21A7C}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{9ABFBF64-33B3-3A9C-A979-FA8BD6E21A7C}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{9ABFBF64-33B3-3A9C-A979-FA8BD6E21A7C}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{9ABFBF64-33B3-3A9C-A979-FA8BD6E21A7C}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.PSE.ParseTree" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{9ABFBF64-33B3-3A9C-A979-FA8BD6E21A7C}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{9ABFBF64-33B3-3A9C-A979-FA8BD6E21A7C}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{9ABFBF64-33B3-3A9C-A979-FA8BD6E21A7C}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{9ABFBF64-33B3-3A9C-A979-FA8BD6E21A7C}\InprocServer32" Name="Class" Value="sinter.PSE.ParseTree" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{9ABFBF64-33B3-3A9C-A979-FA8BD6E21A7C}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{9ABFBF64-33B3-3A9C-A979-FA8BD6E21A7C}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{9ABFBF64-33B3-3A9C-A979-FA8BD6E21A7C}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{9ABFBF64-33B3-3A9C-A979-FA8BD6E21A7C}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.sinter_DynamicScalar" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.sinter_DynamicScalar" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32" Name="Class" Value="sinter.sinter_DynamicScalar" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.sinter_stringLabel" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.sinter_stringLabel" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32" Name="Class" Value="sinter.sinter_stringLabel" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.sinter_StaticCOMWrapper" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.sinter_StaticCOMWrapper" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32" Name="Class" Value="sinter.sinter_StaticCOMWrapper" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{F6D0A871-275B-3627-BE31-BF5A9894C118}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\1.6.0.0" Name="Class" Value="sinter.sinter_Table" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\2.1.0.0" Name="Class" Value="sinter.sinter_Table" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32" Name="Class" Value="sinter.sinter_Table" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="CLSID\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{18687207-BF19-36B1-AFE0-DE35E608548A}\1.6.0.0" Name="Class" Value="AspenTech.AspenPlus.Happ.HAPAttributeNumber" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{18687207-BF19-36B1-AFE0-DE35E608548A}\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{18687207-BF19-36B1-AFE0-DE35E608548A}\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{18687207-BF19-36B1-AFE0-DE35E608548A}\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{2CF79B49-E1EF-39B2-9E71-4E8205F8420A}\1.6.0.0" Name="Class" Value="sinter.PSE.TokenType" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{2CF79B49-E1EF-39B2-9E71-4E8205F8420A}\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{2CF79B49-E1EF-39B2-9E71-4E8205F8420A}\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{2CF79B49-E1EF-39B2-9E71-4E8205F8420A}\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{6269283A-5A39-38C7-8695-1025FA8FC408}\1.6.0.0" Name="Class" Value="sinter.sinter_AppError" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{6269283A-5A39-38C7-8695-1025FA8FC408}\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{6269283A-5A39-38C7-8695-1025FA8FC408}\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{6269283A-5A39-38C7-8695-1025FA8FC408}\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{7CBD36DF-5438-3BB4-914B-A28E4F8644C6}\1.6.0.0" Name="Class" Value="AspenTech.AspenPlus.Happ.IAP_REINIT_TYPE" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{7CBD36DF-5438-3BB4-914B-A28E4F8644C6}\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{7CBD36DF-5438-3BB4-914B-A28E4F8644C6}\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{7CBD36DF-5438-3BB4-914B-A28E4F8644C6}\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{A3E190EA-DA7E-3A89-85A2-30F8EB96690C}\1.6.0.0" Name="Class" Value="sinter.sinter_Variable+sinter_IOMode" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{A3E190EA-DA7E-3A89-85A2-30F8EB96690C}\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{A3E190EA-DA7E-3A89-85A2-30F8EB96690C}\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{A3E190EA-DA7E-3A89-85A2-30F8EB96690C}\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{A7B6A094-D242-372D-92C0-36001AA0A0E7}\1.6.0.0" Name="Class" Value="sinter.PSE.IOMode" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{A7B6A094-D242-372D-92C0-36001AA0A0E7}\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{A7B6A094-D242-372D-92C0-36001AA0A0E7}\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{A7B6A094-D242-372D-92C0-36001AA0A0E7}\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{B44D57EE-4FE5-3A08-8E12-FCB66F3E97B1}\1.6.0.0" Name="Class" Value="sinter.sinter_Variable+sinter_IOType" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{B44D57EE-4FE5-3A08-8E12-FCB66F3E97B1}\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{B44D57EE-4FE5-3A08-8E12-FCB66F3E97B1}\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{B44D57EE-4FE5-3A08-8E12-FCB66F3E97B1}\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{B7C7FB81-2B87-3101-BD54-182271EA5673}\1.6.0.0" Name="Class" Value="sinter.sinter_versionConstraint" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{B7C7FB81-2B87-3101-BD54-182271EA5673}\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{B7C7FB81-2B87-3101-BD54-182271EA5673}\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{B7C7FB81-2B87-3101-BD54-182271EA5673}\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{B94A27F1-72BF-3B73-A72F-FAB68671394E}\1.6.0.0" Name="Class" Value="sinter.sinter_Variable+sinter_IOError" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{B94A27F1-72BF-3B73-A72F-FAB68671394E}\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{B94A27F1-72BF-3B73-A72F-FAB68671394E}\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{B94A27F1-72BF-3B73-A72F-FAB68671394E}\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{C7D6DFA5-608B-3529-B933-8BCFF3BF1BC2}\1.6.0.0" Name="Class" Value="Microsoft.Office.Interop.Excel.XlRangeValueDataType" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{C7D6DFA5-608B-3529-B933-8BCFF3BF1BC2}\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{C7D6DFA5-608B-3529-B933-8BCFF3BF1BC2}\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{C7D6DFA5-608B-3529-B933-8BCFF3BF1BC2}\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{CB7472D8-AB4D-3DC1-BCBD-3EC9A6F02CC3}\1.6.0.0" Name="Class" Value="sinter.sinter_simulatorStatus" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{CB7472D8-AB4D-3DC1-BCBD-3EC9A6F02CC3}\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{CB7472D8-AB4D-3DC1-BCBD-3EC9A6F02CC3}\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{CB7472D8-AB4D-3DC1-BCBD-3EC9A6F02CC3}\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{E9F172FD-F8A6-32D0-87FC-FC7255AAE219}\1.6.0.0" Name="Class" Value="AspenTech.AspenPlus.Happ.HAPCompStatusCode" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{E9F172FD-F8A6-32D0-87FC-FC7255AAE219}\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{E9F172FD-F8A6-32D0-87FC-FC7255AAE219}\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{E9F172FD-F8A6-32D0-87FC-FC7255AAE219}\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{F362E76E-220B-3B6C-AFB8-FB0ECAF43F67}\1.6.0.0" Name="Class" Value="AspenTech.AspenPlus.Happ.HAPEXPType" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{F362E76E-220B-3B6C-AFB8-FB0ECAF43F67}\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{F362E76E-220B-3B6C-AFB8-FB0ECAF43F67}\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{F362E76E-220B-3B6C-AFB8-FB0ECAF43F67}\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{FD02086D-4FBE-3CF0-89C0-FA08EAC1E7F3}\1.6.0.0" Name="Class" Value="Microsoft.Office.Interop.Excel.XlReferenceStyle" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{FD02086D-4FBE-3CF0-89C0-FA08EAC1E7F3}\1.6.0.0" Name="Assembly" Value="Sinter, Version=1.6.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{FD02086D-4FBE-3CF0-89C0-FA08EAC1E7F3}\1.6.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="Record\{FD02086D-4FBE-3CF0-89C0-FA08EAC1E7F3}\1.6.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{18687207-BF19-36B1-AFE0-DE35E608548A}\2.1.0.0" Name="Class" Value="AspenTech.AspenPlus.Happ.HAPAttributeNumber" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{18687207-BF19-36B1-AFE0-DE35E608548A}\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{18687207-BF19-36B1-AFE0-DE35E608548A}\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{18687207-BF19-36B1-AFE0-DE35E608548A}\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{2CF79B49-E1EF-39B2-9E71-4E8205F8420A}\2.1.0.0" Name="Class" Value="sinter.PSE.TokenType" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{2CF79B49-E1EF-39B2-9E71-4E8205F8420A}\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{2CF79B49-E1EF-39B2-9E71-4E8205F8420A}\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{2CF79B49-E1EF-39B2-9E71-4E8205F8420A}\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{6269283A-5A39-38C7-8695-1025FA8FC408}\2.1.0.0" Name="Class" Value="sinter.sinter_AppError" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{6269283A-5A39-38C7-8695-1025FA8FC408}\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{6269283A-5A39-38C7-8695-1025FA8FC408}\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{6269283A-5A39-38C7-8695-1025FA8FC408}\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{7CBD36DF-5438-3BB4-914B-A28E4F8644C6}\2.1.0.0" Name="Class" Value="AspenTech.AspenPlus.Happ.IAP_REINIT_TYPE" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{7CBD36DF-5438-3BB4-914B-A28E4F8644C6}\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{7CBD36DF-5438-3BB4-914B-A28E4F8644C6}\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{7CBD36DF-5438-3BB4-914B-A28E4F8644C6}\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{A3E190EA-DA7E-3A89-85A2-30F8EB96690C}\2.1.0.0" Name="Class" Value="sinter.sinter_Variable+sinter_IOMode" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{A3E190EA-DA7E-3A89-85A2-30F8EB96690C}\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{A3E190EA-DA7E-3A89-85A2-30F8EB96690C}\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{A3E190EA-DA7E-3A89-85A2-30F8EB96690C}\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{A7B6A094-D242-372D-92C0-36001AA0A0E7}\2.1.0.0" Name="Class" Value="sinter.PSE.IOMode" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{A7B6A094-D242-372D-92C0-36001AA0A0E7}\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{A7B6A094-D242-372D-92C0-36001AA0A0E7}\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{A7B6A094-D242-372D-92C0-36001AA0A0E7}\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{B44D57EE-4FE5-3A08-8E12-FCB66F3E97B1}\2.1.0.0" Name="Class" Value="sinter.sinter_Variable+sinter_IOType" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{B44D57EE-4FE5-3A08-8E12-FCB66F3E97B1}\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{B44D57EE-4FE5-3A08-8E12-FCB66F3E97B1}\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{B44D57EE-4FE5-3A08-8E12-FCB66F3E97B1}\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{B7C7FB81-2B87-3101-BD54-182271EA5673}\2.1.0.0" Name="Class" Value="sinter.sinter_versionConstraint" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{B7C7FB81-2B87-3101-BD54-182271EA5673}\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{B7C7FB81-2B87-3101-BD54-182271EA5673}\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{B7C7FB81-2B87-3101-BD54-182271EA5673}\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{B94A27F1-72BF-3B73-A72F-FAB68671394E}\2.1.0.0" Name="Class" Value="sinter.sinter_Variable+sinter_IOError" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{B94A27F1-72BF-3B73-A72F-FAB68671394E}\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{B94A27F1-72BF-3B73-A72F-FAB68671394E}\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{B94A27F1-72BF-3B73-A72F-FAB68671394E}\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{C7D6DFA5-608B-3529-B933-8BCFF3BF1BC2}\2.1.0.0" Name="Class" Value="Microsoft.Office.Interop.Excel.XlRangeValueDataType" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{C7D6DFA5-608B-3529-B933-8BCFF3BF1BC2}\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{C7D6DFA5-608B-3529-B933-8BCFF3BF1BC2}\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{C7D6DFA5-608B-3529-B933-8BCFF3BF1BC2}\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{CB7472D8-AB4D-3DC1-BCBD-3EC9A6F02CC3}\2.1.0.0" Name="Class" Value="sinter.sinter_simulatorStatus" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{CB7472D8-AB4D-3DC1-BCBD-3EC9A6F02CC3}\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{CB7472D8-AB4D-3DC1-BCBD-3EC9A6F02CC3}\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{CB7472D8-AB4D-3DC1-BCBD-3EC9A6F02CC3}\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{E9F172FD-F8A6-32D0-87FC-FC7255AAE219}\2.1.0.0" Name="Class" Value="AspenTech.AspenPlus.Happ.HAPCompStatusCode" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{E9F172FD-F8A6-32D0-87FC-FC7255AAE219}\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{E9F172FD-F8A6-32D0-87FC-FC7255AAE219}\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{E9F172FD-F8A6-32D0-87FC-FC7255AAE219}\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{F362E76E-220B-3B6C-AFB8-FB0ECAF43F67}\2.1.0.0" Name="Class" Value="AspenTech.AspenPlus.Happ.HAPEXPType" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{F362E76E-220B-3B6C-AFB8-FB0ECAF43F67}\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{F362E76E-220B-3B6C-AFB8-FB0ECAF43F67}\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{F362E76E-220B-3B6C-AFB8-FB0ECAF43F67}\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{FD02086D-4FBE-3CF0-89C0-FA08EAC1E7F3}\2.1.0.0" Name="Class" Value="Microsoft.Office.Interop.Excel.XlReferenceStyle" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{FD02086D-4FBE-3CF0-89C0-FA08EAC1E7F3}\2.1.0.0" Name="Assembly" Value="Sinter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=28ab44ce8d2de9de" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{FD02086D-4FBE-3CF0-89C0-FA08EAC1E7F3}\2.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+        <RegistryValue Root="HKCR" Key="Record\{FD02086D-4FBE-3CF0-89C0-FA08EAC1E7F3}\2.1.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
       </Component>
 
       <Component Id="CMP.SINTER.COM.TLB" Directory="DIR.BIN.SINTER" Guid="B3DA5D10-863F-48E0-8356-4EE2591C85C9">
