@@ -31,7 +31,7 @@
         <RichTextBox  MouseLeftButtonDown="Grid_close" Background="White" HorizontalAlignment="Stretch" Margin="0,0,0,0" Name="Instructions" VerticalAlignment="Stretch" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="2" Grid.RowSpan="3" FontSize="12" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
             <FlowDocument>
                 <Paragraph>
-                    This Material was produced under the DOE Carbon Capture Simulation Initiative (CCSI), and copyright is held by the software owners: ORISE, LANS, LLNS, LBL, PNNL, CMU, WVU, et al. The software owners and/or the U.S. Government retain ownership of all rights in the CCSI software and the copyright and patents subsisting therein. Any distribution or dissemination is governed under the terms and conditions of the CCSI Test and Evaluation License, CCSI Master Non-Disclosure Agreement, and the CCSI Intellectual Property Management Plan. No rights are granted except as expressly recited in one of the aforementioned agreements.
+                    SimSinter was produced under the DOE Carbon Capture Simulation Initiative (CCSI), and is copyright (c) 2012 - 2021 by the software owners: Oak Ridge Institute for Science and Education (ORISE), TRIAD National Security, LLC., Lawrence Livermore National Security, LLC., The Regents of the University of California, through Lawrence Berkeley National Laboratory, Battelle Memorial Institute, Pacific Northwest Division through Pacific Northwest National Laboratory, Carnegie Mellon University, West Virginia University, Boston University, the Trustees of Princeton University, The University of Texas at Austin, URS Energy and Construction, Inc., et al..  All rights reserved.
                 </Paragraph>
 
                 <Table>
@@ -60,7 +60,7 @@
                             </TableCell>
                             <TableCell>
                                 <Paragraph>
-                                    CCSI Testing and Evaluation License
+                                    See LICENSE.md for license and copyright details.
                                 </Paragraph>
                             </TableCell>
                         </TableRow>
@@ -72,7 +72,7 @@
                             </TableCell>
                             <TableCell>
                                 <Paragraph>
-                                    https://www.acceleratecarboncapture.org/drupal
+                                    https://www.acceleratecarboncapture.org/
                                 </Paragraph>
                             </TableCell>
                         </TableRow>
