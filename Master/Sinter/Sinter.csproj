@@ -37,10 +37,10 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>Sinter.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>ccsi2_strong_name.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Interop.Happ">
@@ -116,8 +116,10 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="Sinter.snk" />
+    <None Include="ccsi2_strong_name.snk" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VariableTree\VariableTree.csproj">
@@ -136,5 +138,24 @@
   </Target>
   <Target Name="AfterBuild">
   </Target>
-  -->
+
+  <PropertyGroup>
+    <SNExePath>NotSet</SNExePath>
+  </PropertyGroup>
+  <Target Name="GetSNPath" BeforeTargets="AfterBuild">
+    <GetFrameworkSdkPath>
+      <Output TaskParameter="Path" PropertyName="WindowsSdkPath" />
+    </GetFrameworkSdkPath>
+    <PropertyGroup>
+      <SignatureFile>..\ccsi2_strong_name.snk</SignatureFile>
+      <TargetPath>$(TargetDir)Sinter.dll</TargetPath>
+      <FrameworkVersion>$([System.Text.RegularExpressions.Regex]::Replace('$(TargetFrameworkVersilon)', 'v', ''))</FrameworkVersion>
+      <NETFXVersion>NETFX 4.0 Tools</NETFXVersion>
+      <SNExePath Condition="!Exists($(SNExePath))">$(WindowsSdkPath)bin\NETFX 4.0 Tools\sn.exe</SNExePath>
+    </PropertyGroup>
+  </Target>
+  <Target Name="AfterBuild">
+    <Exec Command="&quot;$(SNExePath)&quot; -R &quot;$(TargetPath)&quot; &quot;$(SignatureFile)&quot;" />
+  </Target>
+-->
 </Project>
