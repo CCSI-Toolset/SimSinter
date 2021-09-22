@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CCSI")]
 [assembly: AssemblyProduct("SinterConfigGUI")]
-[assembly: AssemblyCopyright("Copyright © Lawrence Livermore Laboratory 2021")]
+[assembly: AssemblyCopyright("Copyright © CCSI 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

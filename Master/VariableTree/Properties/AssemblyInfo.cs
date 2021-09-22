@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CCSI")]
 [assembly: AssemblyProduct("VariableTree")]
-[assembly: AssemblyCopyright("Copyright © Lawrence Livermore Laboratory 2021")]
+[assembly: AssemblyCopyright("Copyright © CCSI 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
