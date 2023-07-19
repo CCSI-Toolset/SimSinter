@@ -1,0 +1,214 @@
+{
+  "version": 3,
+  "targets": {
+    "native,Version=v0.0": {
+      "Newtonsoft.Json/8.0.3": {
+        "type": "package"
+      },
+      "WixToolset.UI.wixext/4.0.1": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.UI.wixext.targets": {}
+        }
+      }
+    },
+    "native,Version=v0.0/win": {
+      "Newtonsoft.Json/8.0.3": {
+        "type": "package"
+      },
+      "WixToolset.UI.wixext/4.0.1": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.UI.wixext.targets": {}
+        }
+      }
+    },
+    "native,Version=v0.0/win-arm64": {
+      "Newtonsoft.Json/8.0.3": {
+        "type": "package"
+      },
+      "WixToolset.UI.wixext/4.0.1": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.UI.wixext.targets": {}
+        }
+      }
+    },
+    "native,Version=v0.0/win-x64": {
+      "Newtonsoft.Json/8.0.3": {
+        "type": "package"
+      },
+      "WixToolset.UI.wixext/4.0.1": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.UI.wixext.targets": {}
+        }
+      }
+    },
+    "native,Version=v0.0/win-x86": {
+      "Newtonsoft.Json/8.0.3": {
+        "type": "package"
+      },
+      "WixToolset.UI.wixext/4.0.1": {
+        "type": "package",
+        "build": {
+          "build/WixToolset.UI.wixext.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Newtonsoft.Json/8.0.3": {
+      "sha512": "KGsYQdS2zLH+H8x2cZaSI7e+YZ4SFIbyy1YJQYl6GYBWjf5o4H1A68nxyq+WTyVSOJQ4GqS/DiPE+UseUizgMg==",
+      "type": "package",
+      "path": "newtonsoft.json/8.0.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
+        "newtonsoft.json.8.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "WixToolset.UI.wixext/4.0.1": {
+      "sha512": "6gaClEIItYlULf4l6GPgFaQsiTVkez9GI8el9W//bGBgEsHU7HzUzyiroFQ/yjSWMx9x5eIvSzaK0Qh7Kyw59Q==",
+      "type": "package",
+      "path": "wixtoolset.ui.wixext/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/WixToolset.UI.wixext.targets",
+        "wix.png",
+        "wixext4/WixToolset.UI.wixext.dll",
+        "wixtoolset.ui.wixext.4.0.1.nupkg.sha512",
+        "wixtoolset.ui.wixext.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "native,Version=v0.0": [
+      "Newtonsoft.Json >= 8.0.3",
+      "WixToolset.UI.wixext >= 4.0.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\kberket\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\kberket\\source\\repos\\kbuma\\SimSinter\\Master\\CCSIUnitsInstaller\\CCSIUnitsInstaller.wixproj",
+      "projectName": "CCSIUnitsInstaller",
+      "projectPath": "C:\\Users\\kberket\\source\\repos\\kbuma\\SimSinter\\Master\\CCSIUnitsInstaller\\CCSIUnitsInstaller.wixproj",
+      "packagesPath": "C:\\Users\\kberket\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kberket\\source\\repos\\kbuma\\SimSinter\\Master\\CCSIUnitsInstaller\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\kberket\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "native"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "native": {
+          "targetAlias": "native",
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "native": {
+        "targetAlias": "native",
+        "dependencies": {
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[8.0.3, )"
+          },
+          "WixToolset.UI.wixext": {
+            "target": "Package",
+            "version": "[4.0.1, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-arm64": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Newtonsoft.Json 8.0.3 is not compatible with native (native,Version=v0.0). Package Newtonsoft.Json 8.0.3 supports:\r\n  - net20 (.NETFramework,Version=v2.0)\r\n  - net35 (.NETFramework,Version=v3.5)\r\n  - net40 (.NETFramework,Version=v4.0)\r\n  - net45 (.NETFramework,Version=v4.5)\r\n  - portable-dnxcore50+net45+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=net45+wp80+win8+wpa81+dnxcore50)\r\n  - portable-net40+sl5+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=Profile328)",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "native,Version=v0.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Newtonsoft.Json 8.0.3 is not compatible with native (native,Version=v0.0) / win. Package Newtonsoft.Json 8.0.3 supports:\r\n  - net20 (.NETFramework,Version=v2.0)\r\n  - net35 (.NETFramework,Version=v3.5)\r\n  - net40 (.NETFramework,Version=v4.0)\r\n  - net45 (.NETFramework,Version=v4.5)\r\n  - portable-dnxcore50+net45+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=net45+wp80+win8+wpa81+dnxcore50)\r\n  - portable-net40+sl5+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=Profile328)",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "native,Version=v0.0/win"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Newtonsoft.Json 8.0.3 is not compatible with native (native,Version=v0.0) / win-arm64. Package Newtonsoft.Json 8.0.3 supports:\r\n  - net20 (.NETFramework,Version=v2.0)\r\n  - net35 (.NETFramework,Version=v3.5)\r\n  - net40 (.NETFramework,Version=v4.0)\r\n  - net45 (.NETFramework,Version=v4.5)\r\n  - portable-dnxcore50+net45+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=net45+wp80+win8+wpa81+dnxcore50)\r\n  - portable-net40+sl5+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=Profile328)",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "native,Version=v0.0/win-arm64"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Newtonsoft.Json 8.0.3 is not compatible with native (native,Version=v0.0) / win-x64. Package Newtonsoft.Json 8.0.3 supports:\r\n  - net20 (.NETFramework,Version=v2.0)\r\n  - net35 (.NETFramework,Version=v3.5)\r\n  - net40 (.NETFramework,Version=v4.0)\r\n  - net45 (.NETFramework,Version=v4.5)\r\n  - portable-dnxcore50+net45+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=net45+wp80+win8+wpa81+dnxcore50)\r\n  - portable-net40+sl5+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=Profile328)",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "native,Version=v0.0/win-x64"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Newtonsoft.Json 8.0.3 is not compatible with native (native,Version=v0.0) / win-x86. Package Newtonsoft.Json 8.0.3 supports:\r\n  - net20 (.NETFramework,Version=v2.0)\r\n  - net35 (.NETFramework,Version=v3.5)\r\n  - net40 (.NETFramework,Version=v4.0)\r\n  - net45 (.NETFramework,Version=v4.5)\r\n  - portable-dnxcore50+net45+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=net45+wp80+win8+wpa81+dnxcore50)\r\n  - portable-net40+sl5+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=Profile328)",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "native,Version=v0.0/win-x86"
+      ]
+    }
+  ]
+}

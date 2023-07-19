@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\kberket\\source\\repos\\kbuma\\SimSinter\\Master\\SimSinterInstaller\\SimSinterInstaller.wixproj": {}
+  },
+  "projects": {
+    "C:\\Users\\kberket\\source\\repos\\kbuma\\SimSinter\\Master\\SimSinterInstaller\\SimSinterInstaller.wixproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kberket\\source\\repos\\kbuma\\SimSinter\\Master\\SimSinterInstaller\\SimSinterInstaller.wixproj",
+        "projectName": "SimSinterInstaller",
+        "projectPath": "C:\\Users\\kberket\\source\\repos\\kbuma\\SimSinter\\Master\\SimSinterInstaller\\SimSinterInstaller.wixproj",
+        "packagesPath": "C:\\Users\\kberket\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kberket\\source\\repos\\kbuma\\SimSinter\\Master\\SimSinterInstaller\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kberket\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "native"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "native": {
+            "targetAlias": "native",
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "native": {
+          "targetAlias": "native",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "WixToolset.UI.wixext": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "WixToolset.Util.wixext": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
