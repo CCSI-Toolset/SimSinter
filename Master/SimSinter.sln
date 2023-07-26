@@ -34,19 +34,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariableTree", "VariableTree\VariableTree.csproj", "{91A832D4-F4D3-463A-AE9B-86EA66A7E94A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sinter", "Sinter\Sinter.csproj", "{7AA14B52-B1B5-4B84-A884-48F0E6710AC4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9C401C39-FE2D-4D9F-B085-24591DEFE125} = {9C401C39-FE2D-4D9F-B085-24591DEFE125}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UC2", "UC2\UC2.vcxproj", "{9C401C39-FE2D-4D9F-B085-24591DEFE125}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UC2PS", "UC2\UC2PS.vcxproj", "{0E8BE5CE-936E-4EF5-AE48-26CAFB2858B7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultBuilder", "DefaultBuilder\DefaultBuilder.csproj", "{5D744A9E-5ACD-4FCC-910A-7E3D5640F284}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1E46E861-5105-4388-B2D0-F182634A14E3}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGrid2DLibrary", "DataGrid2DLibrary\DataGrid2DLibrary.csproj", "{7D76D9E7-AF25-4AA5-995B-E1A526F192EA}"
 EndProject

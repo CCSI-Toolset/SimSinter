@@ -136,6 +136,12 @@
       <AddModuleNamesToAssembly>
       </AddModuleNamesToAssembly>
     </Link>
+    <PostBuildEvent>
+      <Command>"C:\Windows\System32\regsvr32.exe" /s "$(TargetPath)"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Register UC2Lib COM</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
