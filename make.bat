@@ -11,19 +11,13 @@ REM   - Microsoft .NET v4.030319
 REM   - NuGet Package Manager
 REM   - Wix Toolset v3.10
 
-REM Copy installer files to local directory
-REM - this didn't work - copy "C:\Program Files\Common files\Merge Modules\Microsoft_VC110_CRT_x86.msm" Master\CCSIUnitsInstaller
-REM - this didn't work - copy "C:\Program Files\Common files\Merge Modules\Microsoft_VC110_ATL_x86.msm" Master\CCSIUnitsInstaller
-copy "C:\Program Files (x86)\Common Files\Merge Modules\Microsoft_VC110_CRT_x86.msm" Master\CCSIUnitsInstaller
-copy "C:\Program Files (x86)\Common Files\Merge Modules\Microsoft_VC110_ATL_x86.msm" Master\CCSIUnitsInstaller
-
 REM Compile the UC2 udunits2 library
 cd Master\UC2\udunits2
-cmake clean .
-cmake --build . --config Release
-copy expat\Release\expat.dll C:\Windows\expat.dll
-copy lib\Release\udunits2.dll C:\Windows\udunits2.dll
-cd ..\..\..
+mkdir build
+cd build
+cmake ..
+MSBuild.exe /t:Clean /p:Configuration=Release UDUnits.sln
+MSBuild.exe /p:Configuration=Release UDUnits.sln
 
 REM Get SimSinter dependencies
 REM    nuget.exe must be in the PATH 
