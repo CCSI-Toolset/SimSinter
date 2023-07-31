@@ -1,5 +1,5 @@
 ﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
-  
+
 	<Package Name="CCSIUnits" Language="1033" Version="1.1.0.0" Manufacturer="Lawrence Livermore Laboratory" UpgradeCode="a2da4772-e988-4fa4-bc87-5f15d5c43961" InstallerVersion="405">
 		
 
@@ -7,15 +7,13 @@
 		<MediaTemplate EmbedCab="yes" />
 
     <Feature Id="CCSIUnits" Title="CCSIUnits 1.0" Description="Unit Conversion Library for the Carbon Capture Simulation Initiative." Display="expand" Level="1" ConfigurableDirectory="DIR.BIN.CCSIUNITS" AllowAdvertise="no" InstallDefault="local">
-      <MergeRef Id="VCRedist" />
-      <MergeRef Id="ALTRedist" />
       <ComponentGroupRef Id="CG.CCSIUnits" />
       <ComponentGroupRef Id="CG.CCSIUnitsCOM" />
     </Feature>
 
     <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
-    <ui:WixUI Id="WixUI_Mondo" />
-    <UIRef Id="WixUI_ErrorProgressText" />
+	<ui:WixUI Id="WixUI_Mondo" />
+	<UIRef Id="WixUI_ErrorProgressText" />
     <WixVariable Id="WixUILicenseRtf" Value="..\UC2\LICENSE.rtf" />
 
   </Package>
@@ -24,7 +22,7 @@
         <Directory Id="DIR.CCSI" Name="CCSI">
           <Directory Id="DIR.CCSIUnits" Name="CCSIUnits">
             <Directory Id="DIR.BIN.CCSIUNITS" />
-          </Directory>
+		  </Directory>
         </Directory>
       </StandardDirectory>
     </Fragment>

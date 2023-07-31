@@ -1,5 +1,8 @@
 <Project Sdk="WixToolset.Sdk/4.0.1">
   <PropertyGroup>
+    <TargetFrameworkMoniker>.NETFramework,Version=v4.0</TargetFrameworkMoniker>
+  </PropertyGroup>
+  <PropertyGroup>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
   <PropertyGroup>
@@ -22,6 +25,7 @@
     <Content Include="CCSIunits256.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="vc143.wixproj.redist" Version="0.1.0" />
     <PackageReference Include="WixToolset.UI.wixext" Version="4.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="8.0.3" />
   </ItemGroup>

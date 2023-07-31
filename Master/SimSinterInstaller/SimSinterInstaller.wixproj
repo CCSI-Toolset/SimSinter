@@ -1,6 +1,9 @@
 <Project>
   <Import Project="Sdk.props" Sdk="WixToolset.Sdk" Version="4.0.1" />
   <PropertyGroup>
+    <TargetFrameworkMoniker>.NETFramework,Version=v4.0</TargetFrameworkMoniker>
+  </PropertyGroup>
+  <PropertyGroup>
     <ProductVersion>3.7</ProductVersion>
     <SuppressIces>ICE82</SuppressIces>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -10,6 +13,7 @@
     <DefineConstants>Debug</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="vc143.wixproj.redist" Version="0.1.0" />
     <PackageReference Include="WixToolset.Util.wixext" Version="4.0.1" />
     <PackageReference Include="WixToolset.UI.wixext" Version="4.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="8.0.3" />

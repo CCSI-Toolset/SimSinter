@@ -29,8 +29,6 @@
     <Feature Id="CCSIUnits" Title="CCSIUnits 1.0" Description="Unit Conversion Library for the Carbon Capture Simulation Initiative." Display="expand" Level="1" ConfigurableDirectory="DIR.BIN.CCSIUNITS" AllowAdvertise="no" InstallDefault="local">
       <ComponentGroupRef Id="CG.CCSIUnits" />
       <ComponentGroupRef Id="CG.CCSIUnitsCOM" />
-      <MergeRef Id="VCRedist" />
-      <MergeRef Id="ALTRedist" />
     </Feature>
 
     <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
@@ -47,9 +45,9 @@
         <Directory Id="DIR.CCSI" Name="CCSI">
           <Directory Id="DIR.SimSinter" Name="SimSinter">
             <Directory Id="DIR.BIN.SINTER" />
-          </Directory>
+		  </Directory>
           <Directory Id="DIR.CCSIUnits" Name="CCSIUnits">
-            <Directory Id="DIR.BIN.CCSIUNITS" />
+			  <Directory Id="DIR.BIN.CCSIUNITS" />
           </Directory>
         </Directory>
       </StandardDirectory>

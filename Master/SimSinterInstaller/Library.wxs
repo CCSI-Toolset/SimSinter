@@ -776,7 +776,7 @@
   <Fragment>
     <ComponentGroup Id="CG.CCSIUnitsCOM">
       <Component Id="CMP.UC2.DLL" Directory="DIR.BIN.CCSIUNITS" Guid="304CF9C6-2E38-4BBC-8C47-AB6DA6B42193">
-        <File Id="fil1EE76BFFF7121A17201D940C63144D8E" KeyPath="yes" Source="..\UC2\$(var.Configuration)\UC2.dll">
+        <File Id="fil1EE76BFFF7121A17201D940C63144D8E" KeyPath="yes" Source="..\$(var.Platform)\$(var.Configuration)\UC2.dll">
           <TypeLib Id="{C4F6DD36-142F-4150-BE99-D03A157E4CF7}" Description="UC2 0.2 Type Library" HelpDirectory="DIR.BIN.CCSIUNITS" Language="0" MajorVersion="1" MinorVersion="0">
             <AppId Description="UC2" Id="{759B5C3F-05EB-4A21-A064-715AB1254C9F}">
               <Class Id="{A1B6EBC0-FEB9-43C4-B006-06598D449DFD}" Context="InprocServer32" Description="UnitCon Class" ThreadingModel="both" Programmable="yes">
@@ -834,21 +834,19 @@
     
     
     <DirectoryRef Id="DIR.BIN.CCSIUNITS">
-      <Merge Id="VCRedist" SourceFile="..\CCSIUnitsInstaller\Microsoft_VC110_CRT_x86.msm" DiskId="1" Language="0" />
-      <Merge Id="ALTRedist" SourceFile="..\CCSIUnitsInstaller\Microsoft_VC110_ATL_x86.msm" DiskId="1" Language="0" />
 
       <Component Id="CMP.EXPAT.DLL">
-        <File Id="FILE.EXPAT.DLL" Source="..\UC2\udunits2\expat\Release\expat.dll" KeyPath="yes" />
+        <File Id="FILE.EXPAT.DLL" Source="..\UC2\udunits2\build\expat\$(var.Configuration)\expat.dll" KeyPath="yes" />
       </Component>
       <!--      <Component Id="CMP.UC2.DLL" Guid="*">
         <File Id="FILE.UC2.DLL" Source="..\packages\CCSIUnits\UC2.dll" KeyPath="yes"/>
       </Component>
       -->
       <Component Id="CMP.UC2PS.DLL">
-        <File Id="FILE.UC2PS.DLL" Source="..\UC2\$(var.Configuration)PS\UC2PS.dll" KeyPath="yes" />
+        <File Id="FILE.UC2PS.DLL" Source="..\$(var.Platform)\$(var.Configuration)\UC2PS.dll" KeyPath="yes" />
       </Component>
       <Component Id="CMP.UDUNITS2.DLL">
-        <File Id="FILE.UDUNITS2.DLL" Source="..\UC2\udunits2\lib\Release\udunits2.dll" KeyPath="yes" />
+        <File Id="FILE.UDUNITS2.DLL" Source="..\UC2\udunits2\build\lib\$(var.Configuration)\udunits2.dll" KeyPath="yes" />
       </Component>
       <Component Id="CMP.UDUNITS.CONVERTER">
         <File Id="FILE.UDUNITS.CONVERTER" Source="..\UC2\UnitConverterTest.xlsm" KeyPath="yes" />
