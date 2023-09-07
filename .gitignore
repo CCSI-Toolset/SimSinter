@@ -1,4 +1,5 @@
 *.DS_Store
+*.exe
 *.log
 *.msm
 *.opensdf

@@ -27,3 +27,4 @@ prog/INSTALL.vcxproj.filters
 prog/cmake_install.cmake
 prog/udunits2p.vcxproj
 prog/udunits2p.vcxproj.filters
+build/
