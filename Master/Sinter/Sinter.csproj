@@ -103,7 +103,7 @@
     </COMReference>
     <COMReference Include="Happ">
       <Guid>{8E567520-F9BA-11CF-90B2-0000C0A810C4}</Guid>
-      <VersionMajor>19</VersionMajor>
+      <VersionMajor>21</VersionMajor>
       <VersionMinor>0</VersionMinor>
       <Lcid>1033</Lcid>
       <WrapperTool>tlbimp</WrapperTool>
