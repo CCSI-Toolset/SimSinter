@@ -41,17 +41,27 @@
   <Fragment><SetDirectory Id="DIR.WINDOWSVOLUME" Value="[WindowsVolume]" /> 
 
   
-      <StandardDirectory Id="ProgramFilesFolder">
-        <Directory Id="DIR.CCSI" Name="CCSI">
-          <Directory Id="DIR.SimSinter" Name="SimSinter">
-            <Directory Id="DIR.BIN.SINTER" />
+      <StandardDirectory Id="ProgramFiles64Folder">
+        <Directory Id="DIR.CCSI64" Name="CCSI">
+          <Directory Id="DIR.SimSinter64" Name="SimSinter">
+            <Directory Id="DIR.BIN.SINTER64" />
 		  </Directory>
-          <Directory Id="DIR.CCSIUnits" Name="CCSIUnits">
-			  <Directory Id="DIR.BIN.CCSIUNITS" />
+          <Directory Id="DIR.CCSIUnits64" Name="CCSIUnits">
+			  <Directory Id="DIR.BIN.CCSIUNITS64" />
           </Directory>
         </Directory>
       </StandardDirectory>
-      <StandardDirectory Id="ProgramMenuFolder">
+	  <StandardDirectory Id="ProgramFilesFolder">
+		  <Directory Id="DIR.CCSI" Name="CCSI">
+			  <Directory Id="DIR.SimSinter" Name="SimSinter">
+				  <Directory Id="DIR.BIN.SINTER" />
+			  </Directory>
+			  <Directory Id="DIR.CCSIUnits" Name="CCSIUnits">
+				  <Directory Id="DIR.BIN.CCSIUNITS" />
+			  </Directory>
+		  </Directory>
+	  </StandardDirectory>
+	  <StandardDirectory Id="ProgramMenuFolder">
         <Directory Id="ProgramMenuDirCCSI" Name="CCSI Tools">
           <Component Id="ProgramMenuDirCCSI" Guid="85642969-CF86-4AFF-A8A4-065EEEAE14F1">
             <RemoveFolder Id="ProgramMenuDirCCSI" On="uninstall" />

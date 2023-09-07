@@ -278,7 +278,7 @@
       <?endif?>
     </ComponentGroup>
 
-    <DirectoryRef Id="DIR.BIN.SINTER">
+    <DirectoryRef Id="DIR.BIN.SINTER64">
       <Component Id="CMP.CSVFILERW.DLL">
         <File Id="FILE.CSVFILERW.DLL" Source="..\CSVFileRW\bin\$(var.Configuration)\CSVFileRW.dll" KeyPath="yes" />
       </Component>
@@ -322,7 +322,7 @@
   </Fragment>-->
   <Fragment>
     <ComponentGroup Id="CG.SimSinterCOM">
-      <Component Id="cmpA4A25BFE485D5B72985490D00EBD6A87" Directory="DIR.BIN.SINTER" Guid="0970CF74-8B32-453B-9D0F-84027BF7062E">
+      <Component Id="cmpA4A25BFE485D5B72985490D00EBD6A87" Directory="DIR.BIN.SINTER64" Guid="0970CF74-8B32-453B-9D0F-84027BF7062E">
         <Class Id="{0E5F46D4-A821-3E63-A688-B9F5292F94AE}" Context="InprocServer32" Description="sinter.sinter_JsonSetupFile" ThreadingModel="both" ForeignServer="mscoree.dll">
           <ProgId Id="sinter.sinter_JsonSetupFile" Description="sinter.sinter_JsonSetupFile" />
         </Class>
@@ -646,7 +646,7 @@
         <RegistryValue Root="HKCR" Key="Record\{FD02086D-4FBE-3CF0-89C0-FA08EAC1E7F3}\2.1.0.1" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
       </Component>
 
-      <Component Id="CMP.SINTER.COM.TLB" Directory="DIR.BIN.SINTER" Guid="B3DA5D10-863F-48E0-8356-4EE2591C85C9">
+      <Component Id="CMP.SINTER.COM.TLB" Directory="DIR.BIN.SINTER64" Guid="B3DA5D10-863F-48E0-8356-4EE2591C85C9">
         <File Id="FILE.SINTER.COM.TLB" KeyPath="yes" Source="..\Sinter\bin\$(var.Configuration)\Sinter.tlb">
           <TypeLib Id="{8CC87042-4B1B-4FE4-86D5-A12C1A55C8CE}" Description="SimSinter" HelpDirectory="DIR.BIN.SINTER" Language="0" MajorVersion="1" MinorVersion="6">
             <Interface Id="{01C5B3E7-F958-3EAF-8485-C4BC403AC060}" Name="_Parser" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
@@ -710,7 +710,7 @@
 
     <Icon Id="ICON.SCGUI.ico" SourceFile="..\AspenSinterGUI\bin\$(var.Configuration)\SinterConfigGUI.exe" />
 
-    <DirectoryRef Id="DIR.BIN.SINTER">
+    <DirectoryRef Id="DIR.BIN.SINTER64">
       <Component Id="CMP.SinterConfigGUI.EXE">
         <File Id="FILE.SinterConfigGUI.EXE" Source="..\AspenSinterGUI\bin\$(var.Configuration)\SinterConfigGUI.exe" KeyPath="yes" />
         <Shortcut Id="START.SinterConfigGUI.EXE" Directory="ProgramMenuDirFOQUS" Name="SinterConfigGUI" Icon="ICON.SCGUI.ico" IconIndex="0" Advertise="yes" />
@@ -745,7 +745,7 @@
       <?endif?>
     </ComponentGroup>
 
-    <DirectoryRef Id="DIR.BIN.SINTER">
+    <DirectoryRef Id="DIR.BIN.SINTER64">
       <Component Id="CMP.CONSOLESINTER.EXE">
         <File Id="FILE.CONSOLESINTER.EXE" Source="..\ConsoleSinter\bin\$(var.Configuration)\ConsoleSinter.exe" KeyPath="yes" />
       </Component>
@@ -775,9 +775,9 @@
 
   <Fragment>
     <ComponentGroup Id="CG.CCSIUnitsCOM">
-      <Component Id="CMP.UC2.DLL" Directory="DIR.BIN.CCSIUNITS" Guid="304CF9C6-2E38-4BBC-8C47-AB6DA6B42193">
+      <Component Id="CMP.UC2.DLL" Directory="DIR.BIN.CCSIUNITS64" Guid="304CF9C6-2E38-4BBC-8C47-AB6DA6B42193">
         <File Id="fil1EE76BFFF7121A17201D940C63144D8E" KeyPath="yes" Source="..\$(var.Platform)\$(var.Configuration)\UC2.dll">
-          <TypeLib Id="{C4F6DD36-142F-4150-BE99-D03A157E4CF7}" Description="UC2 0.2 Type Library" HelpDirectory="DIR.BIN.CCSIUNITS" Language="0" MajorVersion="1" MinorVersion="0">
+          <TypeLib Id="{C4F6DD36-142F-4150-BE99-D03A157E4CF7}" Description="UC2 0.2 Type Library" HelpDirectory="DIR.BIN.CCSIUNITS64" Language="0" MajorVersion="1" MinorVersion="0">
             <AppId Description="UC2" Id="{759B5C3F-05EB-4A21-A064-715AB1254C9F}">
               <Class Id="{A1B6EBC0-FEB9-43C4-B006-06598D449DFD}" Context="InprocServer32" Description="UnitCon Class" ThreadingModel="both" Programmable="yes">
                 <ProgId Id="UC2.UnitCon.0.2" Description="UnitCon Class">
@@ -833,7 +833,7 @@
 
     
     
-    <DirectoryRef Id="DIR.BIN.CCSIUNITS">
+    <DirectoryRef Id="DIR.BIN.CCSIUNITS64">
 
       <Component Id="CMP.EXPAT.DLL">
         <File Id="FILE.EXPAT.DLL" Source="..\UC2\udunits2\build\expat\$(var.Configuration)\expat.dll" KeyPath="yes" />

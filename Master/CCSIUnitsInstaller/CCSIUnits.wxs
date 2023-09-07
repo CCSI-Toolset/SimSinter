@@ -6,7 +6,7 @@
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
 		<MediaTemplate EmbedCab="yes" />
 
-    <Feature Id="CCSIUnits" Title="CCSIUnits 1.0" Description="Unit Conversion Library for the Carbon Capture Simulation Initiative." Display="expand" Level="1" ConfigurableDirectory="DIR.BIN.CCSIUNITS" AllowAdvertise="no" InstallDefault="local">
+    <Feature Id="CCSIUnits" Title="CCSIUnits 1.0" Description="Unit Conversion Library for the Carbon Capture Simulation Initiative." Display="expand" Level="1" ConfigurableDirectory="DIR.BIN.CCSIUNITS64" AllowAdvertise="no" InstallDefault="local">
       <ComponentGroupRef Id="CG.CCSIUnits" />
       <ComponentGroupRef Id="CG.CCSIUnitsCOM" />
     </Feature>
@@ -25,7 +25,14 @@
 		  </Directory>
         </Directory>
       </StandardDirectory>
-    </Fragment>
+	  <StandardDirectory Id="ProgramFiles64Folder">
+		  <Directory Id="DIR.CCSI64" Name="CCSI">
+			  <Directory Id="DIR.CCSIUnits64" Name="CCSIUnits">
+				  <Directory Id="DIR.BIN.CCSIUNITS64" />
+			  </Directory>
+		  </Directory>
+	  </StandardDirectory>
+  </Fragment>
 
   
 </Wix>
