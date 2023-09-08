@@ -27,7 +27,7 @@
   <ItemGroup>
     <PackageReference Include="vc143.wixproj.redist" Version="0.1.0" />
     <PackageReference Include="WixToolset.UI.wixext" Version="4.0.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="8.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
 </Project>

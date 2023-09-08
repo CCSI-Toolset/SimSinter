@@ -1,15 +1,8 @@
 REM SimSinter make.bat
 REM
-REM This make file is a reproduction of how SimSinter was being
-REM built on Jenkins at LBNL.  It has been tested on:
-REM    - 32 bit Windows 7 installation (required)
+REM The entirety of this is not verified to work.
+REM This is the recommended/easiest way to build the udunits2 library that is required by the main SimSinter solution.
 REM
-REM Pre-requisites:
-REM   - CMake 3.9
-REM   - Microsoft Vistual 11.0
-REM   - Microsoft .NET v4.030319
-REM   - NuGet Package Manager
-REM   - Wix Toolset v3.10
 
 REM Compile the UC2 udunits2 library
 cd Master\UC2\udunits2
@@ -18,6 +11,9 @@ cd build
 cmake ..
 MSBuild.exe /t:Clean /p:Configuration=Release UDUnits.sln
 MSBuild.exe /p:Configuration=Release UDUnits.sln
+
+REM back to top of code base
+cd ..\..\..\..
 
 REM Get SimSinter dependencies
 REM    nuget.exe must be in the PATH 
@@ -30,6 +26,7 @@ MSBuild.exe /p:Configuration=Release Master\SimSinter.sln
 
 REM Run the Tests
 REM    MSTest.exe must be in the PATH
+REM    udunits2.dll and expat.dll created by the udunits build need to be in the PATH for the tests to run
 
 REM Delete the previous test results
 if EXIST SimSinter-Build.trx. (

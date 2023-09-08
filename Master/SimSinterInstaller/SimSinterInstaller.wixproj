@@ -1,4 +1,4 @@
-<Project>
+﻿<Project>
   <Import Project="Sdk.props" Sdk="WixToolset.Sdk" Version="4.0.1" />
   <PropertyGroup>
     <TargetFrameworkMoniker>.NETFramework,Version=v4.0</TargetFrameworkMoniker>
@@ -16,7 +16,7 @@
     <PackageReference Include="vc143.wixproj.redist" Version="0.1.0" />
     <PackageReference Include="WixToolset.Util.wixext" Version="4.0.1" />
     <PackageReference Include="WixToolset.UI.wixext" Version="4.0.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="8.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Import Project="Sdk.targets" Sdk="WixToolset.Sdk" Version="4.0.1" />
