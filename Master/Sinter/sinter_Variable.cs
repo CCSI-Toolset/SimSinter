@@ -1032,14 +1032,10 @@ namespace sinter
                 }
                 else
                 {
-                    if (!sourceUnits.Equals(targetUnits, StringComparison.Ordinal))  //Ok, if both unit strings are set, and they are different, convert from units -> defaultUnits
+                    if (!sourceUnits.Equals(targetUnits, StringComparison.Ordinal)) 
                     {
-                        if (!sinter_Sim.ccsiUnits.CheckUnits(sourceUnits, targetUnits))
-                        {
-                            throw new System.IO.IOException(
-                              String.Format("ERROR: Input file defined units {0} and Sinter Config file defined unit {1} are not compatiable!", sourceUnits, targetUnits));
-                        }
-                        t_value = sinter_Sim.ccsiUnits.ConvertUnits(i_val, sourceUnits, targetUnits);
+                        throw new System.IO.IOException(
+                            String.Format("ERROR: Input file defined units {0} and Sinter Config file defined unit {1} are not compatiable!", sourceUnits, targetUnits));
                     }
                 }
             }
@@ -1058,18 +1054,10 @@ namespace sinter
                 }
                 else
                 {
-                    if (!sourceUnits.Equals(targetUnits, StringComparison.Ordinal))  //Ok, if both unit strings are set, and they are different, convert from units -> defaultUnits
+                    if (!sourceUnits.Equals(targetUnits, StringComparison.Ordinal)) 
                     {
-                        if (!sinter_Sim.ccsiUnits.CheckUnits(sourceUnits, targetUnits))
-                        {
-                            throw new System.IO.IOException(
-                              String.Format("ERROR: Input file defined units {0} and Sinter Config file defined unit {1} are not compatiable!", sourceUnits, targetUnits));
-                        }
-
-                        for (int ii = 0; ii < i_val.Length; ++ii)
-                        {
-                            t_value[ii] = sinter_Sim.ccsiUnits.ConvertUnits(i_val[ii], sourceUnits, targetUnits);
-                        }
+                        throw new System.IO.IOException(
+                            String.Format("ERROR: Input file defined units {0} and Sinter Config file defined unit {1} are not compatiable!", sourceUnits, targetUnits));
                     }
                 }
             }

@@ -9,7 +9,6 @@ using Newtonsoft.Json.Linq;
 using System.Diagnostics;
 using sinter;
 using Marshal = System.Runtime.InteropServices.Marshal;
-using UC2Lib; 
 
 namespace sinter
 {
@@ -17,14 +16,6 @@ namespace sinter
     public abstract class sinter_Sim : ISimulation
     {
         #region data
-        static protected UC2Lib.IUnitCon s_ccsiUnits = null;
-        public static UC2Lib.IUnitCon ccsiUnits
-        {
-            get
-            {
-                return s_ccsiUnits;
-            }
-        }
 
 
         protected int processID = -1;
@@ -54,12 +45,6 @@ namespace sinter
         public sinter_Sim()
             : base()
         {
-            //Theoretically we could have multiple simulations, we shouldn't need multiple static 
-            //unit conversion libraries.  
-            if (s_ccsiUnits == null)
-            {
-                s_ccsiUnits = new UC2Lib.UnitCon();
-            }
         }
         #endregion constructor
 

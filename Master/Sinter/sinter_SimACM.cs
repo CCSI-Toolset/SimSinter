@@ -544,10 +544,6 @@ namespace sinter
                 {
                     result = aspenUnitString;
                 }
-                if (!s_ccsiUnits.CheckUnits(result, result))
-                {
-                    Console.WriteLine(String.Format("Unknown Unit String {0}", result));
-                }
                 return result;
             }
             return aspenUnitString;
