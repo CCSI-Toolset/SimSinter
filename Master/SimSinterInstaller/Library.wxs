@@ -280,35 +280,35 @@
 
     <DirectoryRef Id="DIR.BIN.SINTER64">
       <Component Id="CMP.CSVFILERW.DLL">
-        <File Id="FILE.CSVFILERW.DLL" Source="..\CSVFileRW\bin\$(var.Configuration)\CSVFileRW.dll" KeyPath="yes" />
+        <File Id="FILE.CSVFILERW.DLL" Source="..\CSVFileRW\$(var.OutDir)\CSVFileRW.dll" KeyPath="yes" />
       </Component>
       <Component Id="CMP.Newtonsoft.Json.DLL">
-        <File Id="FILE.Newtonsoft.Json.DLL" Source="..\Sinter\bin\$(var.Configuration)\Newtonsoft.Json.dll" KeyPath="yes" />
+        <File Id="FILE.Newtonsoft.Json.DLL" Source="..\Sinter\$(var.OutDir)\Newtonsoft.Json.dll" KeyPath="yes" />
       </Component>
       <Component Id="CMP.CLParser.DLL">
-        <File Id="FILE.CLParser.DLL" Source="..\ConsoleSinter\bin\$(var.Configuration)\CommandLine.dll" KeyPath="yes" />
+        <File Id="FILE.CLParser.DLL" Source="..\ConsoleSinter\$(var.OutDir)\CommandLine.dll" KeyPath="yes" />
       </Component>
 
       <!--      <Component Id="CMP.Sinter.DLL" Guid="*">
-        <File Id="FILE.SINTER.DLL" Source="..\Sinter\bin\$(var.Configuration)\Sinter.dll" KeyPath="yes"/>
+        <File Id="FILE.SINTER.DLL" Source="..\Sinter\$(var.OutDir)\Sinter.dll" KeyPath="yes"/>
       </Component>
       <Component Id="CMP.Sinter.TLB" Guid="*">
-        <File Id="FILE.SINTER.TLB" Source="..\Sinter\bin\$(var.Configuration)\Sinter.tlb" KeyPath="yes"/>
+        <File Id="FILE.SINTER.TLB" Source="..\Sinter\$(var.OutDir)\Sinter.tlb" KeyPath="yes"/>
       </Component> -->
       <Component Id="CMP.VariableTree.DLL">
-        <File Id="FILE.VariableTree.DLL" Source="..\VariableTree\bin\$(var.Configuration)\VariableTree.dll" KeyPath="yes" />
+        <File Id="FILE.VariableTree.DLL" Source="..\VariableTree\$(var.OutDir)\VariableTree.dll" KeyPath="yes" />
       </Component>
 
       <!-- DEBUG SECTION -->
       <?ifdef Debug ?>
       <Component Id="CMP.CSVFILERW.PDB">
-        <File Id="FILE.CSVFILERW.PDB" Source="..\CSVFileRW\bin\$(var.Configuration)\CSVFileRW.pdb" KeyPath="yes" />
+        <File Id="FILE.CSVFILERW.PDB" Source="..\CSVFileRW\$(var.OutDir)\CSVFileRW.pdb" KeyPath="yes" />
       </Component>
       <Component Id="CMP.Sinter.PDB">
-        <File Id="SinterPdbId" Source="bin\$(var.Configuration)\application\$(var.Configuration)\Sinter.pdb" KeyPath="yes" />
+        <File Id="SinterPdbId" Source="$(var.OutDir)\application\$(var.Configuration)\Sinter.pdb" KeyPath="yes" />
       </Component>
       <Component Id="CMP.VariableTree.PDB">
-        <File Id="FILE.VariableTreePDB" Source="..\VariableTree\bin\$(var.Configuration)\VariableTree.pdb" KeyPath="yes" />
+        <File Id="FILE.VariableTreePDB" Source="..\VariableTree\$(var.OutDir)\VariableTree.pdb" KeyPath="yes" />
       </Component>
       <?endif?>
     </DirectoryRef>
@@ -389,7 +389,7 @@
         <Class Id="{F6D0A871-275B-3627-BE31-BF5A9894C118}" Context="InprocServer32" Description="sinter.sinter_Table" ThreadingModel="both" ForeignServer="mscoree.dll">
           <ProgId Id="sinter.sinter_Table" Description="sinter.sinter_Table" />
         </Class>
-        <File Id="fil134F96608A310523C0D45CDD744920E9" KeyPath="yes" Source="..\Sinter\bin\$(var.Configuration)\Sinter.dll" />
+        <File Id="fil134F96608A310523C0D45CDD744920E9" KeyPath="yes" Source="..\Sinter\$(var.OutDir)\Sinter.dll" />
         <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\2.1.0.1" Name="Class" Value="sinter.sinter_JsonSetupFile" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\2.1.0.1" Name="Assembly" Value="Sinter, Version=2.1.0.1, Culture=neutral, PublicKeyToken=4be585aca2084488" Type="string" Action="write" />
@@ -647,7 +647,7 @@
       </Component>
 
       <Component Id="CMP.SINTER.COM.TLB" Directory="DIR.BIN.SINTER64" Guid="B3DA5D10-863F-48E0-8356-4EE2591C85C9">
-        <File Id="FILE.SINTER.COM.TLB" KeyPath="yes" Source="..\Sinter\bin\$(var.Configuration)\Sinter.tlb">
+        <File Id="FILE.SINTER.COM.TLB" KeyPath="yes" Source="..\Sinter\$(var.OutDir)\Sinter.tlb">
           <TypeLib Id="{8CC87042-4B1B-4FE4-86D5-A12C1A55C8CE}" Description="SimSinter" HelpDirectory="DIR.BIN.SINTER" Language="0" MajorVersion="1" MinorVersion="6">
             <Interface Id="{01C5B3E7-F958-3EAF-8485-C4BC403AC060}" Name="_Parser" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
             <Interface Id="{06F52CE6-284B-3750-99FD-10AAF682564A}" Name="_ExcelSetupFile" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
@@ -708,24 +708,24 @@
       <?endif?>
     </ComponentGroup>
 
-    <Icon Id="ICON.SCGUI.ico" SourceFile="..\AspenSinterGUI\bin\$(var.Configuration)\SinterConfigGUI.exe" />
+    <Icon Id="ICON.SCGUI.ico" SourceFile="..\AspenSinterGUI\$(var.OutDir)\SinterConfigGUI.exe" />
 
     <DirectoryRef Id="DIR.BIN.SINTER64">
       <Component Id="CMP.SinterConfigGUI.EXE">
-        <File Id="FILE.SinterConfigGUI.EXE" Source="..\AspenSinterGUI\bin\$(var.Configuration)\SinterConfigGUI.exe" KeyPath="yes" />
+        <File Id="FILE.SinterConfigGUI.EXE" Source="..\AspenSinterGUI\$(var.OutDir)\SinterConfigGUI.exe" KeyPath="yes" />
         <Shortcut Id="START.SinterConfigGUI.EXE" Directory="ProgramMenuDirFOQUS" Name="SinterConfigGUI" Icon="ICON.SCGUI.ico" IconIndex="0" Advertise="yes" />
       </Component>
       <Component Id="CMP.DataGrid2D.DLL">
-        <File Id="FILE.DataGrid2D.DLL" Source="..\DataGrid2DLibrary\bin\$(var.Configuration)\DataGrid2DLibrary.dll" KeyPath="yes" />
+        <File Id="FILE.DataGrid2D.DLL" Source="..\DataGrid2DLibrary\$(var.OutDir)\DataGrid2DLibrary.dll" KeyPath="yes" />
       </Component>
         <!-- DEBUG SECTION 
       -->
       <?ifdef Debug ?>
       <Component Id="CMP.SinterConfigGUI.PDB">
-        <File Id="FILE.SinterConfigGUI.PDB" Source="..\AspenSinterGUI\bin\$(var.Configuration)\SinterConfigGUI.pdb" KeyPath="yes" />
+        <File Id="FILE.SinterConfigGUI.PDB" Source="..\AspenSinterGUI\$(var.OutDir)\SinterConfigGUI.pdb" KeyPath="yes" />
       </Component>
       <Component Id="CMP.DataGrid2D.PDB">
-        <File Id="FILE.DataGrid2D.PDB" Source="..\DataGrid2DLibrary\bin\$(var.Configuration)\DataGrid2DLibrary.pdb" KeyPath="yes" />
+        <File Id="FILE.DataGrid2D.PDB" Source="..\DataGrid2DLibrary\$(var.OutDir)\DataGrid2DLibrary.pdb" KeyPath="yes" />
       </Component>
       <?endif?>
     </DirectoryRef>
@@ -747,137 +747,31 @@
 
     <DirectoryRef Id="DIR.BIN.SINTER64">
       <Component Id="CMP.CONSOLESINTER.EXE">
-        <File Id="FILE.CONSOLESINTER.EXE" Source="..\ConsoleSinter\bin\$(var.Configuration)\ConsoleSinter.exe" KeyPath="yes" />
+        <File Id="FILE.CONSOLESINTER.EXE" Source="..\ConsoleSinter\$(var.OutDir)\ConsoleSinter.exe" KeyPath="yes" />
       </Component>
       <Component Id="CMP.CSVCONSOLESINTER.EXE">
-        <File Id="FILE.CSVCONSOLESINTER.EXE" Source="..\CSVConsoleSinter\bin\$(var.Configuration)\CSVConsoleSinter.exe" KeyPath="yes" />
+        <File Id="FILE.CSVCONSOLESINTER.EXE" Source="..\CSVConsoleSinter\$(var.OutDir)\CSVConsoleSinter.exe" KeyPath="yes" />
       </Component>
       <Component Id="CMP.DEFAULTBUILDER.EXE">
-        <File Id="FILE.DEFAULTBUILDER.EXE" Source="..\DefaultBuilder\bin\$(var.Configuration)\DefaultBuilder.exe" KeyPath="yes" />
+        <File Id="FILE.DEFAULTBUILDER.EXE" Source="..\DefaultBuilder\$(var.OutDir)\DefaultBuilder.exe" KeyPath="yes" />
       </Component>
 
       <!-- DEBUG SECTION 
       -->
       <?ifdef Debug ?>
       <Component Id="CMP.CONSOLESINTER.PDB">
-        <File Id="FILE.CONSOLESINTER.PDB" Source="..\ConsoleSinter\bin\$(var.Configuration)\ConsoleSinter.pdb" KeyPath="yes" />
+        <File Id="FILE.CONSOLESINTER.PDB" Source="..\ConsoleSinter\$(var.OutDir)\ConsoleSinter.pdb" KeyPath="yes" />
       </Component>
       <Component Id="CMP.CSVCONSOLESINTER.PDB">
-        <File Id="FILE.CSVCONSOLESINTER.PDB" Source="..\CSVConsoleSinter\bin\$(var.Configuration)\CSVConsoleSinter.pdb" KeyPath="yes" />
+        <File Id="FILE.CSVCONSOLESINTER.PDB" Source="..\CSVConsoleSinter\$(var.OutDir)\CSVConsoleSinter.pdb" KeyPath="yes" />
       </Component>
       <Component Id="CMP.DEFAULTBUILDER.PDB">
-        <File Id="FILE.DEFAULTBUILDER.PDB" Source="..\DefaultBuilder\bin\$(var.Configuration)\DefaultBuilder.pdb" KeyPath="yes" />
+        <File Id="FILE.DEFAULTBUILDER.PDB" Source="..\DefaultBuilder\$(var.OutDir)\DefaultBuilder.pdb" KeyPath="yes" />
       </Component>
       <?endif?>
     </DirectoryRef>
 
   </Fragment>
 
-  <Fragment>
-    <ComponentGroup Id="CG.CCSIUnitsCOM">
-      <Component Id="CMP.UC2.DLL" Directory="DIR.BIN.CCSIUNITS64" Guid="304CF9C6-2E38-4BBC-8C47-AB6DA6B42193">
-        <File Id="fil1EE76BFFF7121A17201D940C63144D8E" KeyPath="yes" Source="..\$(var.Platform)\$(var.Configuration)\UC2.dll">
-          <TypeLib Id="{C4F6DD36-142F-4150-BE99-D03A157E4CF7}" Description="UC2 0.2 Type Library" HelpDirectory="DIR.BIN.CCSIUNITS64" Language="0" MajorVersion="1" MinorVersion="0">
-            <AppId Description="UC2" Id="{759B5C3F-05EB-4A21-A064-715AB1254C9F}">
-              <Class Id="{A1B6EBC0-FEB9-43C4-B006-06598D449DFD}" Context="InprocServer32" Description="UnitCon Class" ThreadingModel="both" Programmable="yes">
-                <ProgId Id="UC2.UnitCon.0.2" Description="UnitCon Class">
-                  <ProgId Id="UC2.UnitCon" Description="UnitCon Class" />
-                </ProgId>
-              </Class>
-            </AppId>
-            <Interface Id="{49271528-FA0A-43EB-B417-FAE48F4454B4}" Name="IUnitCon" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
-          </TypeLib>
-        </File>
-        <RegistryValue Root="HKCR" Key="AppID\UC2.DLL" Name="AppID" Value="{759B5C3F-05EB-4A21-A064-715AB1254C9F}" Type="string" Action="write" />
-      </Component>
-    </ComponentGroup>
-  </Fragment>
-
-  <!--<Fragment>
-    <ComponentGroup Id="CG.CCSIUnitsCOM">
-      <Component Id="CMP.UC2.TLB" Directory="DIR.BIN.CCSIUNITS" Guid="304CF9C6-2E38-4BBC-8C47-AB6DA6B42193">
-        <File Id="FILE.UC2.TLB" KeyPath="yes" Source="..\UC2\Release\UC2.tlb">
-          <TypeLib Id="{C4F6DD36-142F-4150-BE99-D03A157E4CF7}" Description="UC2 0.2 Type Library" HelpDirectory="DIR.SIMSINTER.TLB" Language="0" MajorVersion="1" MinorVersion="0">
-            <Interface Id="{49271528-FA0A-43EB-B417-FAE48F4454B4}" Name="IUnitCon" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
-          </TypeLib>
-        </File>
-        <Class Id="{A1B6EBC0-FEB9-43C4-B006-06598D449DFD}" Context="InprocServer32" Description="UC2.UnitCon.0.2" ThreadingModel="both" ForeignServer="mscoree.dll">
-          <ProgId Id="UC2.UnitCon.0.2" Description="UC2.UnitCon.0.2"/>
-        </Class>
-        <RegistryValue Root="HKCR" Key="CLSID\{A1B6EBC0-FEB9-43C4-B006-06598D449DFD}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{A1B6EBC0-FEB9-43C4-B006-06598D449DFD}\InprocServer32\1.0.0.0" Name="Class" Value="UC2.UnitCon" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{A1B6EBC0-FEB9-43C4-B006-06598D449DFD}\InprocServer32" Name="Class" Value="UC2.UnitCon" Type="string" Action="write" />
-      </Component>
-    </ComponentGroup>
-  </Fragment>
-  -->
-  <Fragment>
-    
-    <ComponentGroup Id="CG.CCSIUnits">
-      <ComponentRef Id="CMP.EXPAT.DLL" />
-      <ComponentRef Id="CMP.UC2.DLL" />
-      <ComponentRef Id="CMP.UC2PS.DLL" />
-      <ComponentRef Id="CMP.UDUNITS2.DLL" />
-      <ComponentRef Id="CMP.UDUNITS.CONVERTER" />
-      <ComponentRef Id="CMP.UDUNITS.COPYRIGHT" />
-      <ComponentRef Id="CMP.UDUNITS.LICENSE" />
-      <ComponentRef Id="CMP.UDUNITS2.XML" />
-      <ComponentRef Id="CMP.UDUNITS2.ACCEPTED.XML" />
-      <ComponentRef Id="CMP.UDUNITS2.BASE.XML" />
-      <ComponentRef Id="CMP.UDUNITS2.COMMON.XML" />
-      <ComponentRef Id="CMP.UDUNITS2.DERIVED.XML" />
-      <ComponentRef Id="CMP.UDUNITS2.PREFIXES.XML" />
-      <?ifdef Debug ?>
-      <?endif?>
-    </ComponentGroup>
-
-    
-    
-    <DirectoryRef Id="DIR.BIN.CCSIUNITS64">
-
-      <Component Id="CMP.EXPAT.DLL">
-        <File Id="FILE.EXPAT.DLL" Source="..\UC2\udunits2\build\expat\$(var.Configuration)\expat.dll" KeyPath="yes" />
-      </Component>
-      <!--      <Component Id="CMP.UC2.DLL" Guid="*">
-        <File Id="FILE.UC2.DLL" Source="..\packages\CCSIUnits\UC2.dll" KeyPath="yes"/>
-      </Component>
-      -->
-      <Component Id="CMP.UC2PS.DLL">
-        <File Id="FILE.UC2PS.DLL" Source="..\$(var.Platform)\$(var.Configuration)\UC2PS.dll" KeyPath="yes" />
-      </Component>
-      <Component Id="CMP.UDUNITS2.DLL">
-        <File Id="FILE.UDUNITS2.DLL" Source="..\UC2\udunits2\build\lib\$(var.Configuration)\udunits2.dll" KeyPath="yes" />
-      </Component>
-      <Component Id="CMP.UDUNITS.CONVERTER">
-        <File Id="FILE.UDUNITS.CONVERTER" Source="..\UC2\UnitConverterTest.xlsm" KeyPath="yes" />
-      </Component>
-      <Component Id="CMP.UDUNITS.COPYRIGHT">
-        <File Id="FILE.UDUNITS.COPYRIGHT" Source="..\UC2\COPYRIGHT_LLNL.txt" KeyPath="yes" />
-      </Component>
-      <Component Id="CMP.UDUNITS.LICENSE">
-        <File Id="FILE.UDUNITS.LICENSE" Source="..\UC2\UDUNITS2-LICENSE" KeyPath="yes" />
-      </Component>
-      <Component Id="CMP.UDUNITS2.XML">
-        <File Id="FILE.UDUNITS2.XML" Source="..\UC2\udunits2.XML" KeyPath="yes" />
-      </Component>
-      <Component Id="CMP.UDUNITS2.ACCEPTED.XML">
-        <File Id="FILE.UDUNITS2.ACCEPTED.XML" Source="..\UC2\udunits2-accepted.XML" KeyPath="yes" />
-      </Component>
-      <Component Id="CMP.UDUNITS2.BASE.XML">
-        <File Id="FILE.UDUNITS2.BASE.XML" Source="..\UC2\udunits2-base.XML" KeyPath="yes" />
-      </Component>
-      <Component Id="CMP.UDUNITS2.COMMON.XML">
-        <File Id="FILE.UDUNITS2.COMMON.XML" Source="..\UC2\udunits2-common.XML" KeyPath="yes" />
-      </Component>
-      <Component Id="CMP.UDUNITS2.DERIVED.XML">
-        <File Id="FILE.UDUNITS2.DERIVED.XML" Source="..\UC2\udunits2-derived.XML" KeyPath="yes" />
-      </Component>
-      <Component Id="CMP.UDUNITS2.PREFIXES.XML">
-        <File Id="FILE.UDUNITS2.PREFIXES.XML" Source="..\UC2\udunits2-prefixes.XML" KeyPath="yes" />
-      </Component>
-
-    </DirectoryRef>
-
-  </Fragment>
 
 </Wix>

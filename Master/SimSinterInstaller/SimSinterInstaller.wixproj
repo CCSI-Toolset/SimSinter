@@ -24,6 +24,6 @@
     <PreBuildEvent>rmdir /S /Q  "$(TargetDir)application"
 mkdir "$(TargetDir)application"
 mkdir "$(TargetDir)application\$(Configuration)"
-xcopy /E "$(SolutionDir)..\Master\Sinter\bin\$(Configuration)"  "$(TargetDir)application\$(Configuration)"</PreBuildEvent>
+xcopy /E "$(SolutionDir)Sinter\$(OutDir)"  "$(TargetDir)application\$(Configuration)"</PreBuildEvent>
   </PropertyGroup>
 </Project>
