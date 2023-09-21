@@ -12,18 +12,15 @@
 .vs/
 Debug*/
 Debug/
-Master/ipch/
-Master/UC2/UC2_i.c
-Master/UC2/UC2_i.h
-Master/UC2/UC2_p.c
-Master/UC2/dlldata.c
 Master/packages/
-Master/test/Flash_Example/trunk/ACM/AM_Flash_Example/
-Master/test/LongRun/ACM/AM_long
-Master/test/gPROMStest/input/
-Master/test/gPROMStest/sinterInput.xml
-Master/test/models/SimpleExcelTest/test-ouputs.json
+obj/
 Release*/
-SimSinter-Build.trx
-ccsi_W7-BUILD*
 Administrator_WIN-*/
+# regression test artifacts
+/Master/test/Flash_Example/trunk/ACM/Flash_Example.json
+/Master/test/Flash_Example/trunk/Aspen_Plus/_1241kfg.def
+/Master/test/gPROMStest/input/BufferTank_FO.gENCRYPT
+/Master/test/gPROMStest/sinterInput.xml
+/Master/test/LongRun/ACM/AM_long/commonshellsettings.xml
+/Master/test/LongRun/AP/_5512yju.def
+/Master/test/models/SimpleExcelTest/test-ouputs.json
