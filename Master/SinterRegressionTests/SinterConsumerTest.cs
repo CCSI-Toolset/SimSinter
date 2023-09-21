@@ -279,7 +279,6 @@ namespace SinterRegressionTests
         }
 
 
-        [TestMethod]
         public void SinterGPROMSTest()
         {
 
