@@ -12,8 +12,7 @@ using System.Text.RegularExpressions;
 using System.Runtime.InteropServices;
 using Marshal = System.Runtime.InteropServices.Marshal;
 using VariableTree;
-using AspenTech;
-using AspenTech.AspenPlus;
+using Happ;
 using System.Threading;
 using System.Timers;
 
@@ -22,8 +21,8 @@ namespace sinter
 
     public class sinter_SimAspen : sinter_InteractiveSim
     {
-        private AspenTech.AspenPlus.Happ.HappLS oaspen = null;
-        private AspenTech.AspenPlus.Happ.IHNode otree = null;
+        private Happ.HappLS oaspen = null;
+        private Happ.IHNode otree = null;
 
         //Syncronization of running and stopping the simulation.  
         //o_terminateMonitor is a condition variable that is signaled when either the simulation
@@ -121,35 +120,35 @@ namespace sinter
             //To save a little time and trouble, we make the Data node the root node.  We don't need anything
             //from the other 2 branches.
             o_dataTree = new VariableTree.VariableTree(parsePath, pathSeperator);
-            AspenTech.AspenPlus.Happ.IHNodeCol rootChildren = otree.Elements;
-            AspenTech.AspenPlus.Happ.IHNode dataNode = rootChildren["Data"];
+            Happ.IHNodeCol rootChildren = otree.Elements;
+            Happ.IHNode dataNode = rootChildren["Data"];
             VariableTreeNode v_dataNode = new VariableTreeNode("Data", "", pathSeperator);
 
-            AspenTech.AspenPlus.Happ.IHNodeCol dataChildren = dataNode.Elements;
+            Happ.IHNodeCol dataChildren = dataNode.Elements;
 
-            AspenTech.AspenPlus.Happ.IHNode optionsNode = dataChildren["Flowsheeting Options"];
+            Happ.IHNode optionsNode = dataChildren["Flowsheeting Options"];
             VariableTreeNode v_optionsNode = new VariableTreeNode("Flowsheeting Options", "Data.Flowsheeting Options", pathSeperator);
             v_dataNode.addChild(v_optionsNode);
-            AspenTech.AspenPlus.Happ.IHNodeCol optionsChildren = optionsNode.Elements;
+            Happ.IHNodeCol optionsChildren = optionsNode.Elements;
 
-            AspenTech.AspenPlus.Happ.IHNode designSpecNode = optionsChildren["Design-Spec"];
+            Happ.IHNode designSpecNode = optionsChildren["Design-Spec"];
             VariableTreeNode v_designSpecNode = new VariableTreeNode("Design-Spec", "Data.Flowsheeting Options.Design-Spec", pathSeperator);
             v_optionsNode.addChild(v_designSpecNode);
             addBlocksOrStreamsNodes(designSpecNode, v_designSpecNode);
 
-            AspenTech.AspenPlus.Happ.IHNode CalculatorNode = optionsChildren["Calculator"];
+            Happ.IHNode CalculatorNode = optionsChildren["Calculator"];
             VariableTreeNode v_CalculatorNode = new VariableTreeNode("Calculator", "Data.Flowsheeting Options.Calculator", pathSeperator);
             v_optionsNode.addChild(v_CalculatorNode);
             addBlocksOrStreamsNodes(CalculatorNode, v_CalculatorNode);
 
 
-            AspenTech.AspenPlus.Happ.IHNode streamsNode = dataChildren["Streams"];
+            Happ.IHNode streamsNode = dataChildren["Streams"];
             VariableTreeNode v_streamsNode = new VariableTreeNode("Streams", "Data.Streams", pathSeperator);
             v_dataNode.addChild(v_streamsNode);
             addBlocksOrStreamsNodes(streamsNode, v_streamsNode);
 
 
-            AspenTech.AspenPlus.Happ.IHNode blocksNode = dataChildren["Blocks"];
+            Happ.IHNode blocksNode = dataChildren["Blocks"];
             VariableTreeNode v_blocksNode = new VariableTreeNode("Blocks", "Data.Blocks", pathSeperator);
             v_dataNode.addChild(v_blocksNode);
             addBlocksOrStreamsNodes(blocksNode, v_blocksNode);
@@ -158,10 +157,10 @@ namespace sinter
         }
 
         //This is a specialized function for screening out the stuff we don't need from Streams and Blocks
-        public void addBlocksOrStreamsNodes(AspenTech.AspenPlus.Happ.IHNode bsNode, VariableTreeNode v_bsNode)
+        public void addBlocksOrStreamsNodes(Happ.IHNode bsNode, VariableTreeNode v_bsNode)
         {
-            AspenTech.AspenPlus.Happ.IHNodeCol children = bsNode.Elements;
-            foreach (AspenTech.AspenPlus.Happ.IHNode child in children)
+            Happ.IHNodeCol children = bsNode.Elements;
+            foreach (Happ.IHNode child in children)
             {
                 String name = child.Name;
                 VariableTreeNode v_childNode = new VariableTreeNode(name, v_bsNode.path + pathSeperator + name, pathSeperator);
@@ -170,13 +169,13 @@ namespace sinter
             }
         }
 
-        public void addBlocksOrStreamsChild(AspenTech.AspenPlus.Happ.IHNode bsNode, VariableTreeNode v_bsNode)
+        public void addBlocksOrStreamsChild(Happ.IHNode bsNode, VariableTreeNode v_bsNode)
         {
-            AspenTech.AspenPlus.Happ.IHNodeCol children = bsNode.Elements;
-            AspenTech.AspenPlus.Happ.IHNode inputs = children["Input"];
+            Happ.IHNodeCol children = bsNode.Elements;
+            Happ.IHNode inputs = children["Input"];
             v_bsNode.addChild(makeDataTreeNode(inputs, v_bsNode));
 
-            AspenTech.AspenPlus.Happ.IHNode outputs = children["Output"];
+            Happ.IHNode outputs = children["Output"];
             v_bsNode.addChild(makeDataTreeNode(outputs, v_bsNode));
         }
 
@@ -191,8 +190,8 @@ namespace sinter
             //To save a little time and trouble, we make the Data node the root node.  We don't need anything
             //from the other 2 branches.
             o_dataTree = new VariableTree.VariableTree(parsePath, pathSeperator);
-            AspenTech.AspenPlus.Happ.IHNodeCol rootChildren = otree.Elements;
-            AspenTech.AspenPlus.Happ.IHNode dataNode = rootChildren["Data"];
+            Happ.IHNodeCol rootChildren = otree.Elements;
+            Happ.IHNode dataNode = rootChildren["Data"];
             VariableTreeNode v_dataNode = new VariableTreeNode("", "", pathSeperator);
 
             o_dataTree.rootNode = v_dataNode;
@@ -212,12 +211,12 @@ namespace sinter
             if (thisNode.o_children.ContainsKey("DummyChild"))
             {
                 thisNode.o_children.Remove("DummyChild");
-                AspenTech.AspenPlus.Happ.IHNode thisAspenNode = oaspen.Tree.FindNode(thisNode.path);
+                Happ.IHNode thisAspenNode = oaspen.Tree.FindNode(thisNode.path);
                 if (thisAspenNode.Dimension == 1)
                 {
-                    AspenTech.AspenPlus.Happ.IHNodeCol thisAspenNodeChildren = thisAspenNode.Elements;
+                    Happ.IHNodeCol thisAspenNodeChildren = thisAspenNode.Elements;
 
-                    foreach (AspenTech.AspenPlus.Happ.IHNode child in thisAspenNodeChildren)
+                    foreach (Happ.IHNode child in thisAspenNodeChildren)
                     {
                         String name = child.Name;
                         VariableTreeNode v_childNode = new VariableTreeNode(name, thisNode.path + pathSeperator + name, pathSeperator);
@@ -226,13 +225,13 @@ namespace sinter
                 }
                 else if (thisAspenNode.Dimension == 2)
                 {
-                    AspenTech.AspenPlus.Happ.IHNodeCol thisAspenNodeChildren = thisAspenNode.Elements;
+                    Happ.IHNodeCol thisAspenNodeChildren = thisAspenNode.Elements;
                     int OneDCount = 0;
                     int rowCount = thisAspenNodeChildren.get_RowCount(0);
                     int colCount = thisAspenNodeChildren.get_RowCount(1);
-                    int firstIndex = thisAspenNode.get_AttributeValue((short)AspenTech.AspenPlus.Happ.HAPAttributeNumber.HAP_FIRSTPAIR);
-                    //get_AttributeValue((short)AspenTech.AspenPlus.Happ.HAPAttributeNumber.HAP_FIRSTPAIR);
-                    foreach (AspenTech.AspenPlus.Happ.IHNode child in thisAspenNodeChildren)
+                    int firstIndex = thisAspenNode.get_AttributeValue((short)Happ.HAPAttributeNumber.HAP_FIRSTPAIR);
+                    //get_AttributeValue((short)Happ.HAPAttributeNumber.HAP_FIRSTPAIR);
+                    foreach (Happ.IHNode child in thisAspenNodeChildren)
                     {
                         try
                         {
@@ -264,7 +263,7 @@ namespace sinter
             }
         }
 
-        public VariableTreeNode makeDataTreeNode(AspenTech.AspenPlus.Happ.IHNode aspenNode, VariableTreeNode parent)
+        public VariableTreeNode makeDataTreeNode(Happ.IHNode aspenNode, VariableTreeNode parent)
         {
             String name = aspenNode.Name;
             VariableTreeNode thisNode = new VariableTreeNode(name, String.Format("{0}{1}{2}", parent.path, pathSeperator, name), pathSeperator);
@@ -273,8 +272,8 @@ namespace sinter
             {
                 try
                 {
-                    AspenTech.AspenPlus.Happ.IHNodeCol children = aspenNode.Elements;
-                    foreach (AspenTech.AspenPlus.Happ.IHNode child in children)
+                    Happ.IHNodeCol children = aspenNode.Elements;
+                    foreach (Happ.IHNode child in children)
                     {
 
                         thisNode.addChild(makeDataTreeNode(child, thisNode));
@@ -290,8 +289,8 @@ namespace sinter
             {
                 try
                 {
-                    AspenTech.AspenPlus.Happ.IHNodeCol children = aspenNode.Elements;
-                    foreach (AspenTech.AspenPlus.Happ.IHNode child in children)
+                    Happ.IHNodeCol children = aspenNode.Elements;
+                    foreach (Happ.IHNode child in children)
                     {
 
                         thisNode.addChild(makeDataTreeNode(child, thisNode));
@@ -419,7 +418,7 @@ namespace sinter
 
                     }
                     Object app = Activator.CreateInstance(appType);
-                    oaspen = (AspenTech.AspenPlus.Happ.HappLS)app;
+                    oaspen = (Happ.HappLS)app;
                 }
                 processID = oaspen.ProcessId;
                 Debug.WriteLine(workingDir + "\\" + simFile);
@@ -571,7 +570,7 @@ namespace sinter
         {
             lock (this)
             {
-                AspenTech.AspenPlus.Happ.IHNode node = oaspen.Tree.FindNode(node_path);
+                Happ.IHNode node = oaspen.Tree.FindNode(node_path);
 
                 if ((node == null))
                 {
@@ -583,12 +582,12 @@ namespace sinter
             }
         }
 
-        private void PrettyPrintToFile(ref AspenTech.AspenPlus.Happ.IHNode node, ref TextWriter sw, string indent = "")
+        private void PrettyPrintToFile(ref Happ.IHNode node, ref TextWriter sw, string indent = "")
         {
             PrettyPrintToFile(node, sw, indent, true);
         }
 
-        private void PrettyPrintToFile(AspenTech.AspenPlus.Happ.IHNode node, TextWriter sw, string indent, bool last)
+        private void PrettyPrintToFile(Happ.IHNode node, TextWriter sw, string indent, bool last)
         {
             int it = 0;
             if ((node == null | object.ReferenceEquals(node, oaspen.Tree)))
@@ -596,7 +595,7 @@ namespace sinter
                 node = oaspen.Tree;
                 sw.WriteLine(indent + "{");
                 it = 0;
-                foreach (AspenTech.AspenPlus.Happ.IHNode n in node.Elements)
+                foreach (Happ.IHNode n in node.Elements)
                 {
                     it = it + 1;
                     if ((n.Name == "Comments"))
@@ -635,7 +634,7 @@ namespace sinter
                 StringWriter swbuff = new StringWriter(buff);
                 bool cc = false;
                 int count = node.Elements.Count;
-                foreach (AspenTech.AspenPlus.Happ.IHNode ihnode in node.Elements)
+                foreach (Happ.IHNode ihnode in node.Elements)
                 {
                     it = it + 1;
                     cc = it == count;
@@ -681,10 +680,10 @@ namespace sinter
         }
 
 
-        private int addErrors(ref List<string> errorlist, AspenTech.AspenPlus.Happ.IHNode objWithErrors)
+        private int addErrors(ref List<string> errorlist, Happ.IHNode objWithErrors)
         {
-            AspenTech.AspenPlus.Happ.IHNode output = objWithErrors.FindNode("Output/PER_ERROR");
-            AspenTech.AspenPlus.Happ.IHNodeCol myerrs = output.Elements;
+            Happ.IHNode output = objWithErrors.FindNode("Output/PER_ERROR");
+            Happ.IHNodeCol myerrs = output.Elements;
             string currentError = "";
             //Aspen seperates errors by empty string
             foreach (dynamic myerr in myerrs)
@@ -713,16 +712,16 @@ namespace sinter
 
             o_convergenceError.Clear();
 
-            AspenTech.AspenPlus.Happ.IHNodeCol convNodes = oaspen.Tree.FindNode("Data\\Convergence\\Convergence").Elements;
-            foreach (AspenTech.AspenPlus.Happ.IHNode convNode in convNodes)
+            Happ.IHNodeCol convNodes = oaspen.Tree.FindNode("Data\\Convergence\\Convergence").Elements;
+            foreach (Happ.IHNode convNode in convNodes)
             {
                 //Use bitwise and to check the success flag
-                if ((convNode.get_AttributeValue((short)AspenTech.AspenPlus.Happ.HAPAttributeNumber.HAP_COMPSTATUS, Type.Missing) & (short)AspenTech.AspenPlus.Happ.HAPCompStatusCode.HAP_RESULTS_SUCCESS) > 0)
+                if ((convNode.get_AttributeValue((short)Happ.HAPAttributeNumber.HAP_COMPSTATUS, Type.Missing) & (short)Happ.HAPCompStatusCode.HAP_RESULTS_SUCCESS) > 0)
                 {
                     continue;
                     //if not success, Use bitwise and to check the warning flag
                 }
-                else if ((convNode.get_AttributeValue((short)AspenTech.AspenPlus.Happ.HAPAttributeNumber.HAP_COMPSTATUS) & (short)AspenTech.AspenPlus.Happ.HAPCompStatusCode.HAP_RESULTS_WARNINGS) > 0)
+                else if ((convNode.get_AttributeValue((short)Happ.HAPAttributeNumber.HAP_COMPSTATUS) & (short)Happ.HAPCompStatusCode.HAP_RESULTS_WARNINGS) > 0)
                 {
                     if ((!o_convergenceError.ContainsKey(convNode.Name)))
                     {
@@ -769,16 +768,16 @@ namespace sinter
             int n_err = 0;
             int n_war = 0;
 
-            AspenTech.AspenPlus.Happ.IHNodeCol blockNodes = oaspen.Tree.FindNode("Data\\Blocks").Elements;
-            foreach (AspenTech.AspenPlus.Happ.IHNode blockNode in blockNodes)
+            Happ.IHNodeCol blockNodes = oaspen.Tree.FindNode("Data\\Blocks").Elements;
+            foreach (Happ.IHNode blockNode in blockNodes)
             {
                 //Use bitwise and to check the success flag
-                if ((blockNode.get_AttributeValue((short)AspenTech.AspenPlus.Happ.HAPAttributeNumber.HAP_COMPSTATUS) & (short)AspenTech.AspenPlus.Happ.HAPCompStatusCode.HAP_RESULTS_SUCCESS) > 0)
+                if ((blockNode.get_AttributeValue((short)Happ.HAPAttributeNumber.HAP_COMPSTATUS) & (short)Happ.HAPCompStatusCode.HAP_RESULTS_SUCCESS) > 0)
                 {
                     continue;
                 }
                 //if not success, Use bitwise and to check the warning flag
-                else if ((blockNode.get_AttributeValue((short)AspenTech.AspenPlus.Happ.HAPAttributeNumber.HAP_COMPSTATUS) & (short)AspenTech.AspenPlus.Happ.HAPCompStatusCode.HAP_RESULTS_WARNINGS) > 0)
+                else if ((blockNode.get_AttributeValue((short)Happ.HAPAttributeNumber.HAP_COMPSTATUS) & (short)Happ.HAPCompStatusCode.HAP_RESULTS_WARNINGS) > 0)
                 {
                     if ((!o_blockWarn.ContainsKey(blockNode.Name)))
                     {
@@ -823,16 +822,16 @@ namespace sinter
             // look through the convergnce node and check for errors or warnings.
             int n_err = 0;
             int n_war = 0;
-            AspenTech.AspenPlus.Happ.IHNodeCol streamNodes = oaspen.Tree.FindNode("Data\\Streams").Elements;
-            foreach (AspenTech.AspenPlus.Happ.IHNode streamNode in streamNodes)
+            Happ.IHNodeCol streamNodes = oaspen.Tree.FindNode("Data\\Streams").Elements;
+            foreach (Happ.IHNode streamNode in streamNodes)
             {
                 //Use bitwise and to check the success flag
-                if ((streamNode.get_AttributeValue((short)AspenTech.AspenPlus.Happ.HAPAttributeNumber.HAP_COMPSTATUS) & (short)AspenTech.AspenPlus.Happ.HAPCompStatusCode.HAP_RESULTS_SUCCESS) > 0)
+                if ((streamNode.get_AttributeValue((short)Happ.HAPAttributeNumber.HAP_COMPSTATUS) & (short)Happ.HAPCompStatusCode.HAP_RESULTS_SUCCESS) > 0)
                 {
                     continue;
                 }
                 //if not success, Use bitwise and to check the warning flag
-                else if ((streamNode.get_AttributeValue((short)AspenTech.AspenPlus.Happ.HAPAttributeNumber.HAP_COMPSTATUS) & (short)AspenTech.AspenPlus.Happ.HAPCompStatusCode.HAP_RESULTS_WARNINGS) > 0)
+                else if ((streamNode.get_AttributeValue((short)Happ.HAPAttributeNumber.HAP_COMPSTATUS) & (short)Happ.HAPCompStatusCode.HAP_RESULTS_WARNINGS) > 0)
                 {
                     if ((!o_streamWarn.ContainsKey(streamNode.Name)))
                     {
@@ -935,11 +934,11 @@ namespace sinter
 
         public bool getHideDS(string dsName)
         {
-            return Convert.ToBoolean(oaspen.Tree.FindNode("Data\\Design-Spec\\" + dsName).get_AttributeValue((short)AspenTech.AspenPlus.Happ.HAPAttributeNumber.HAP_ISHIDDEN));
+            return Convert.ToBoolean(oaspen.Tree.FindNode("Data\\Design-Spec\\" + dsName).get_AttributeValue((short)Happ.HAPAttributeNumber.HAP_ISHIDDEN));
         }
         public void setHideDS(string dsName, bool value)
         {
-            oaspen.Tree.FindNode("Data\\Design-Spec\\" + dsName).set_AttributeValue((short)AspenTech.AspenPlus.Happ.HAPAttributeNumber.HAP_ISHIDDEN, Type.Missing, Convert.ToInt16(value));
+            oaspen.Tree.FindNode("Data\\Design-Spec\\" + dsName).set_AttributeValue((short)Happ.HAPAttributeNumber.HAP_ISHIDDEN, Type.Missing, Convert.ToInt16(value));
         }
 
 
@@ -1070,9 +1069,9 @@ namespace sinter
 
                 if ((exp_report == true))
                 {
-                    oaspen.Export(AspenTech.AspenPlus.Happ.HAPEXPType.HAPEXP_REPORT, "report-" + runName);
-                    oaspen.Export(AspenTech.AspenPlus.Happ.HAPEXPType.HAPEXP_RUNMSG, "runmsg-" + runName);
-                    oaspen.Export(AspenTech.AspenPlus.Happ.HAPEXPType.HAPEXP_BACKUP, "bkp-file-" + runName); //This line causes another Calculation Completed event
+                    oaspen.Export(Happ.HAPEXPType.HAPEXP_REPORT, "report-" + runName);
+                    oaspen.Export(Happ.HAPEXPType.HAPEXP_RUNMSG, "runmsg-" + runName);
+                    oaspen.Export(Happ.HAPEXPType.HAPEXP_BACKUP, "bkp-file-" + runName); //This line causes another Calculation Completed event
                 }
 
 
@@ -1095,15 +1094,15 @@ namespace sinter
 
         public override sinter.sinter_AppError resetSim()
         {
-            oaspen.Engine.Reinit(AspenTech.AspenPlus.Happ.IAP_REINIT_TYPE.IAP_REINIT_SIMULATION);
+            oaspen.Engine.Reinit(Happ.IAP_REINIT_TYPE.IAP_REINIT_SIMULATION);
             return sinter.sinter_AppError.si_OKAY;
         }
 
-        public AspenTech.AspenPlus.Happ.IHapp Aspen
+        public Happ.IHapp Aspen
         {
             get { return oaspen; }
         }
-        public AspenTech.AspenPlus.Happ.IHNode Tree
+        public Happ.IHNode Tree
         {
             get { return otree; }
         }
@@ -1257,10 +1256,7 @@ namespace sinter
                 {
                     result = aspenUnitString;
                 }
-                if (!s_ccsiUnits.CheckUnits(result, result))
-                {
-                    Console.WriteLine(String.Format("Unknown Unit String {0}", result));
-                }
+ 
                 return result;
             }
             return aspenUnitString;
@@ -1288,7 +1284,7 @@ namespace sinter
             string retVal;
             try
             {
-                retVal = this.Aspen.Tree.FindNode(path).get_AttributeValue((short)AspenTech.AspenPlus.Happ.HAPAttributeNumber.HAP_PROMPT);
+                retVal = this.Aspen.Tree.FindNode(path).get_AttributeValue((short)Happ.HAPAttributeNumber.HAP_PROMPT);
                 return retVal;
             }
             //Ignore Null Reference Exceptions, just pass back the default value
@@ -1333,10 +1329,10 @@ namespace sinter
         public void getStreamNames()
         {
 
-            AspenTech.AspenPlus.Happ.IHNode parent = oaspen.Tree.Elements["Data"].Elements["Streams"];
-            AspenTech.AspenPlus.Happ.IHNodeCol children = parent.Elements;
+            Happ.IHNode parent = oaspen.Tree.Elements["Data"].Elements["Streams"];
+            Happ.IHNodeCol children = parent.Elements;
             o_streamNames.Clear();
-            foreach (AspenTech.AspenPlus.Happ.IHNode child in children)
+            foreach (Happ.IHNode child in children)
             {
                 o_streamNames.Add(child.Name);
             }
@@ -1355,10 +1351,10 @@ namespace sinter
         public void getBlockNames()
         {
 
-            AspenTech.AspenPlus.Happ.IHNode parent = oaspen.Tree.Elements["Data"].Elements["Blocks"];
-            AspenTech.AspenPlus.Happ.IHNodeCol children = parent.Elements;
+            Happ.IHNode parent = oaspen.Tree.Elements["Data"].Elements["Blocks"];
+            Happ.IHNodeCol children = parent.Elements;
             o_blockNames.Clear();
-            foreach (AspenTech.AspenPlus.Happ.IHNode child in children)
+            foreach (Happ.IHNode child in children)
             {
                 o_blockNames.Add(child.Name);
             }

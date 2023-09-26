@@ -2,47 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SinterRegressionTests.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="ExcelSinterJson" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\models\SimpleExcelTest\exceltest-sinter.json</Value>
-    </Setting>
-    <Setting Name="ExcelSinterDefaults" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\models\SimpleExcelTest\exceltest-defaults.json</Value>
-    </Setting>
-    <Setting Name="ExcelSinterInputs" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\models\SimpleExcelTest\exceltest-inputs.json</Value>
-    </Setting>
-    <Setting Name="ExcelSinterOutputs" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\models\SimpleExcelTest\test-ouputs.json</Value>
-    </Setting>
-    <Setting Name="ExcelSinterCanonicalOutputs" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\models\SimpleExcelTest\outputs-canonical.json</Value>
-    </Setting>
-    <Setting Name="UnitsTestSinter" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\UnitsTest\unitstest-sinter.json</Value>
-    </Setting>
-    <Setting Name="UnitsTestInputs" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\UnitsTest\unitstest-inputs.json</Value>
-    </Setting>
     <Setting Name="UnitsWorkingDir" Type="System.String" Scope="User">
       <Value Profile="(Default)">..\..\UnitsTest\</Value>
-    </Setting>
-    <Setting Name="FlashACMConfig" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\Flash_Example\trunk\ACM\Flash_Example_ACM.json</Value>
-    </Setting>
-    <Setting Name="FlashAPConfig" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\Flash_Example\trunk\Aspen_Plus\Flash_Example_AP.json</Value>
-    </Setting>
-    <Setting Name="sinterConfiguration" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\Flash_Example\trunk\Aspen_Plus\Flash_Example_AP.json</Value>
-    </Setting>
-    <Setting Name="simulationBackup" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\Flash_Example\trunk\Aspen_Plus\Flash_Example.bkp</Value>
-    </Setting>
-    <Setting Name="jsonConfiguration" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\Flash_Example\trunk\Aspen_Plus\Flash_Example_AP.json</Value>
-    </Setting>
-    <Setting Name="ACMConfiguration" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\Flash_Example\trunk\ACM\Flash_Example_ACM.json</Value>
     </Setting>
     <Setting Name="ACMFilename" Type="System.String" Scope="User">
       <Value Profile="(Default)">Flash_Example_ACM.json</Value>
@@ -50,35 +11,11 @@
     <Setting Name="APFilename" Type="System.String" Scope="User">
       <Value Profile="(Default)">Flash_Example_AP.json</Value>
     </Setting>
-    <Setting Name="ACMDir" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\Flash_Example\trunk\ACM</Value>
-    </Setting>
-    <Setting Name="APDir" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\Flash_Example\trunk\Aspen_Plus\</Value>
-    </Setting>
-    <Setting Name="ExcelWorksheet" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\SinterExcelTest\models\SimpleExcelTest\exceltest.xlsm</Value>
-    </Setting>
-    <Setting Name="LongACMConfig" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\LongRun\ACM\long.json</Value>
-    </Setting>
     <Setting Name="LongACMFilename" Type="System.String" Scope="User">
       <Value Profile="(Default)">long.json</Value>
     </Setting>
-    <Setting Name="LongACMDir" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\LongRun\ACM\</Value>
-    </Setting>
-    <Setting Name="LongAPConfig" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\LongRun\AP\long.json</Value>
-    </Setting>
     <Setting Name="LongAPFilename" Type="System.String" Scope="User">
       <Value Profile="(Default)">long.json</Value>
-    </Setting>
-    <Setting Name="LongAPDir" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\LongRun\AP</Value>
-    </Setting>
-    <Setting Name="DynamicACMDir" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\DynamicTest</Value>
     </Setting>
     <Setting Name="DynamicACMFilename" Type="System.String" Scope="User">
       <Value Profile="(Default)">BFB.json</Value>
@@ -89,14 +26,77 @@
     <Setting Name="DynamicACMInputs_2" Type="System.String" Scope="User">
       <Value Profile="(Default)">Inputs_2.json</Value>
     </Setting>
-    <Setting Name="gPROMSConfig" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\gPROMStest\BufferTank_FO.json</Value>
-    </Setting>
     <Setting Name="gPROMSFilename" Type="System.String" Scope="User">
       <Value Profile="(Default)">BufferTank_FO.json</Value>
     </Setting>
+    <Setting Name="ExcelSinterJson" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\models\SimpleExcelTest\exceltest-sinter.json</Value>
+    </Setting>
+    <Setting Name="ExcelSinterDefaults" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\models\SimpleExcelTest\exceltest-defaults.json</Value>
+    </Setting>
+    <Setting Name="ExcelSinterInputs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\models\SimpleExcelTest\exceltest-inputs.json</Value>
+    </Setting>
+    <Setting Name="ExcelSinterOutputs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\models\SimpleExcelTest\test-ouputs.json</Value>
+    </Setting>
+    <Setting Name="ExcelSinterCanonicalOutputs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\models\SimpleExcelTest\outputs-canonical.json</Value>
+    </Setting>
+    <Setting Name="UnitsTestSinter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\UnitsTest\unitstest-sinter.json</Value>
+    </Setting>
+    <Setting Name="UnitsTestInputs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\UnitsTest\unitstest-inputs.json</Value>
+    </Setting>
+    <Setting Name="FlashACMConfig" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\Flash_Example\trunk\ACM\Flash_Example_ACM.json</Value>
+    </Setting>
+    <Setting Name="FlashAPConfig" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\Flash_Example\trunk\Aspen_Plus\Flash_Example_AP.json</Value>
+    </Setting>
+    <Setting Name="sinterConfiguration" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\Flash_Example\trunk\Aspen_Plus\Flash_Example_AP.json</Value>
+    </Setting>
+    <Setting Name="simulationBackup" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\Flash_Example\trunk\Aspen_Plus\Flash_Example.bkp</Value>
+    </Setting>
+    <Setting Name="jsonConfiguration" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\Flash_Example\trunk\Aspen_Plus\Flash_Example_AP.json</Value>
+    </Setting>
+    <Setting Name="ACMConfiguration" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\Flash_Example\trunk\ACM\Flash_Example_ACM.json</Value>
+    </Setting>
+    <Setting Name="ACMDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\Flash_Example\trunk\ACM</Value>
+    </Setting>
+    <Setting Name="APDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\Flash_Example\trunk\Aspen_Plus\</Value>
+    </Setting>
+    <Setting Name="ExcelWorksheet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\SinterExcelTest\models\SimpleExcelTest\exceltest.xlsm</Value>
+    </Setting>
+    <Setting Name="LongACMConfig" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\LongRun\ACM\long.json</Value>
+    </Setting>
+    <Setting Name="LongACMDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\SimSinter\Master\test\LongRun\ACM\</Value>
+    </Setting>
+    <Setting Name="LongAPConfig" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\LongRun\AP\long.json</Value>
+    </Setting>
+    <Setting Name="LongAPDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\LongRun\AP</Value>
+    </Setting>
+    <Setting Name="DynamicACMDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\DynamicTest</Value>
+    </Setting>
+    <Setting Name="gPROMSConfig" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\test\gPROMStest\BufferTank_FO.json</Value>
+    </Setting>
     <Setting Name="gPROMSDir" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\test\gPROMStest</Value>
+      <Value Profile="(Default)">..\..\..\..\test\gPROMStest</Value>
     </Setting>
   </Settings>
 </SettingsFile>

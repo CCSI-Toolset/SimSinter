@@ -16,4 +16,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <StartArguments>C:\SimSinterFiles\ACM_Install_Test\Flash_Example_ACM.json C:\SimSinterFiles\CSVConsoleSinter_Tutorial\Flash_Example_Input.csv C:\SimSinterFiles\CSVConsoleSinter_Tutorial\Flash_Example_Output.csv N</StartArguments>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <StartArguments>C:\SimSinterFiles\ACM_Install_Test\Flash_Example_ACM.json C:\SimSinterFiles\CSVConsoleSinter_Tutorial\Flash_Example_Input.csv C:\SimSinterFiles\CSVConsoleSinter_Tutorial\Flash_Example_Output.csv N</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <StartArguments>C:\SimSinterFiles\Aspen_Plus_Install_Test\Flash_Example_AP.json C:\SimSinterFiles\CSVConsoleSinter_Tutorial\Flash_Example_Input.csv C:\SimSinterFiles\CSVConsoleSinter_Tutorial\Flash_Example_Output.csv</StartArguments>
+  </PropertyGroup>
 </Project>

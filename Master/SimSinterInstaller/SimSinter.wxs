@@ -1,114 +1,85 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
-     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
-     xmlns:sql="http://schemas.microsoft.com/wix/SqlExtension"
-     xmlns:iis="http://schemas.microsoft.com/wix/IIsExtension">
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
   
-	<Product Id="FE0D0DCA-BCD7-4242-8647-35D2E4779588" 
-           Name="SimSinter" 
-           Language="1033" 
-           Version="2.1.0.1" 
-           Manufacturer="CCSI" 
-           UpgradeCode="a9491f5b-eb5c-4fd4-8551-d7cf7992872c">
+	<Package Name="SimSinter" Language="1033" Version="2.1.0.1" Manufacturer="CCSI" UpgradeCode="a9491f5b-eb5c-4fd4-8551-d7cf7992872c" InstallerVersion="405" ProductCode="FE0D0DCA-BCD7-4242-8647-35D2E4779588">
     
-		<Package InstallerVersion="405" Compressed="yes" InstallScope="perMachine" />
+		
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
-		<MediaTemplate EmbedCab="yes"/>
+		<MediaTemplate EmbedCab="yes" />
 
-    <Feature Id="SimSinter"
-         Title="SimSinter Libraries"
-         Description="The main libraries for using SimSinter, without this nothing else will work."
-         Display="expand" Level="1" ConfigurableDirectory="DIR.BIN.SINTER" AllowAdvertise='no' InstallDefault='local'>
-      <ComponentGroupRef Id="CG.SimSinter"/>
-      <ComponentGroupRef Id="CG.SimSinterCOM"/>
+    <Feature Id="SimSinter" Title="SimSinter Libraries" Description="The main libraries for using SimSinter, without this nothing else will work." Display="expand" Level="1" ConfigurableDirectory="DIR.BIN.SINTER" AllowAdvertise="no" InstallDefault="local">
+      <ComponentGroupRef Id="CG.SimSinter" />
+      <ComponentGroupRef Id="CG.SimSinterCOM" />
     </Feature>
 
-    <Feature Id="SinterConfigGUI"
-     Title="SinterConfigGUI Application"
-     Description="The GUI used for generating and editing SimSinter files. Requires SimSinter and at least one simulator."
-     Display="expand" Level="1" ConfigurableDirectory="DIR.BIN.SINTER" AllowAdvertise='no' InstallDefault='local'>
-      <ComponentGroupRef Id="CG.SinterConfigGUI"/>
+    <Feature Id="SinterConfigGUI" Title="SinterConfigGUI Application" Description="The GUI used for generating and editing SimSinter files. Requires SimSinter and at least one simulator." Display="expand" Level="1" ConfigurableDirectory="DIR.BIN.SINTER" AllowAdvertise="no" InstallDefault="local">
+      <ComponentGroupRef Id="CG.SinterConfigGUI" />
     </Feature>
 
 
-    <Feature Id="SimSinter.ConsoleApps"
-         Title="SimSinter Console Applications"
-         Description="Applications that allow running SimSinter from the command line."
-         Display="expand" Level="1" ConfigurableDirectory="DIR.BIN.SINTER" AllowAdvertise='no' InstallDefault='local'>
-      <ComponentGroupRef Id="CG.SimSinter.ConsoleApps"/>
+    <Feature Id="SimSinter.ConsoleApps" Title="SimSinter Console Applications" Description="Applications that allow running SimSinter from the command line." Display="expand" Level="1" ConfigurableDirectory="DIR.BIN.SINTER" AllowAdvertise="no" InstallDefault="local">
+      <ComponentGroupRef Id="CG.SimSinter.ConsoleApps" />
     </Feature>
 
-    <Feature Id="SimSinter.TestFiles"
-         Title="SimSinter Example Files"
-         Description="A set of files used as Examples and for testing SimSinter."
-         Display="expand" Level="1" ConfigurableDirectory="DIR.SIMSINTERFILES" AllowAdvertise='no' InstallDefault='local'>
-      <ComponentGroupRef Id="CG.SinterTestFiles"/>
+    <Feature Id="SimSinter.TestFiles" Title="SimSinter Example Files" Description="A set of files used as Examples and for testing SimSinter." Display="expand" Level="1" ConfigurableDirectory="DIR.SIMSINTERFILES" AllowAdvertise="no" InstallDefault="local">
+      <ComponentGroupRef Id="CG.SinterTestFiles" />
     </Feature>
 
-
-    <Feature Id="CCSIUnits"
-        Title="CCSIUnits 1.0" Description="Unit Conversion Library for the Carbon Capture Simulation Initiative."
-        Display="expand" Level="1" ConfigurableDirectory="DIR.BIN.CCSIUNITS" AllowAdvertise='no' InstallDefault='local'>
-      <ComponentGroupRef Id="CG.CCSIUnits"/>
-      <ComponentGroupRef Id="CG.CCSIUnitsCOM"/>
-      <MergeRef Id="VCRedist"/>
-      <MergeRef Id="ALTRedist"/>
-    </Feature>
 
     <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
-    <UIRef Id="WixUI_Mondo" />
+    <ui:WixUI Id="WixUI_Mondo" />
     <UIRef Id="WixUI_ErrorProgressText" />
     <WixVariable Id="WixUILicenseRtf" Value="..\..\LICENSE.rtf" />
 
-  </Product>
+  </Package>
 
-  <Fragment>    
-    <Directory Id="TARGETDIR" Name="SourceDir">
-      <Directory Id="ProgramFilesFolder">
-        <Directory Id="DIR.CCSI" Name="CCSI">
-          <Directory Id="DIR.SimSinter" Name="SimSinter">
-            <Directory Id="DIR.BIN.SINTER"/>
-          </Directory>
-          <Directory Id="DIR.CCSIUnits" Name="CCSIUnits">
-            <Directory Id="DIR.BIN.CCSIUNITS"/>
-          </Directory>
+  <Fragment><SetDirectory Id="DIR.WINDOWSVOLUME" Value="[WindowsVolume]" /> 
+
+  
+      <StandardDirectory Id="ProgramFiles64Folder">
+        <Directory Id="DIR.CCSI64" Name="CCSI">
+          <Directory Id="DIR.SimSinter64" Name="SimSinter">
+            <Directory Id="DIR.BIN.SINTER64" />
+		  </Directory>
         </Directory>
-      </Directory>
-      <Directory Id="ProgramMenuFolder" Name="Programs">
+      </StandardDirectory>
+	  <StandardDirectory Id="ProgramFilesFolder">
+		  <Directory Id="DIR.CCSI" Name="CCSI">
+			  <Directory Id="DIR.SimSinter" Name="SimSinter">
+				  <Directory Id="DIR.BIN.SINTER" />
+			  </Directory>
+		  </Directory>
+	  </StandardDirectory>
+	  <StandardDirectory Id="ProgramMenuFolder">
         <Directory Id="ProgramMenuDirCCSI" Name="CCSI Tools">
           <Component Id="ProgramMenuDirCCSI" Guid="85642969-CF86-4AFF-A8A4-065EEEAE14F1">
-            <RemoveFolder Id='ProgramMenuDirCCSI' On='uninstall' />
-            <RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]' Type='string' Value='' KeyPath='yes' />
+            <RemoveFolder Id="ProgramMenuDirCCSI" On="uninstall" />
+            <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Type="string" Value="" KeyPath="yes" />
           </Component>
           <Directory Id="ProgramMenuDirFOQUS" Name="FOQUS">
             <Component Id="ProgramMenuDirFOQUS" Guid="B8201467-B081-4825-99A6-ECFC5903BEB2">
-              <RemoveFolder Id='ProgramMenuDirFOQUS' On='uninstall' />
-              <RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]' Type='string' Value='' KeyPath='yes' />
+              <RemoveFolder Id="ProgramMenuDirFOQUS" On="uninstall" />
+              <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Type="string" Value="" KeyPath="yes" />
             </Component>
           </Directory>
         </Directory>
-      </Directory>
-            <Directory Id="DIR.SIMSINTERFILES"     Name ="SimSinterFiles">
-              <Directory Id="DIR.ACMINSTALLTEST"   Name ="ACM_Install_Test"/>
-              <Directory Id="DIR.APINSTALLTEST"    Name ="Aspen_Plus_Install_Test"/>
-              <Directory Id="DIR.ACMDYNAMICTEST"   Name ="ACM_Dynamic_Test">
-                <Directory Id="DIR.ACMDYNAMICTEST.SUB"   Name ="AM_BFB"/>
+      </StandardDirectory>
+            <Directory Id="DIR.SIMSINTERFILES" Name="SimSinterFiles">
+              <Directory Id="DIR.ACMINSTALLTEST" Name="ACM_Install_Test" />
+              <Directory Id="DIR.APINSTALLTEST" Name="Aspen_Plus_Install_Test" />
+              <Directory Id="DIR.ACMDYNAMICTEST" Name="ACM_Dynamic_Test">
+                <Directory Id="DIR.ACMDYNAMICTEST.SUB" Name="AM_BFB" />
               </Directory>
-              <Directory Id="DIR.gPINSTALLTEST"    Name ="gPROMS_Test"/>
-              <Directory Id="DIR.CONSOLESINTER"    Name ="ConsoleSinter_Tutorial"/>
-              <Directory Id="DIR.CSVCONSOLESINTER" Name ="CSVConsoleSinter_Tutorial"/>
-              <Directory Id="DIR.EXCELINSTALLTEST" Name ="Excel_Install_Test"/>
-              <Directory Id="DIR.EXCELTEMPLATE"    Name ="Sinter_Excel_Template"/>
-              <Directory Id="DIR.UNITSTEST"        Name ="Units_Test"/>
+              <Directory Id="DIR.gPINSTALLTEST" Name="gPROMS_Test" />
+              <Directory Id="DIR.CONSOLESINTER" Name="ConsoleSinter_Tutorial" />
+              <Directory Id="DIR.CSVCONSOLESINTER" Name="CSVConsoleSinter_Tutorial" />
+              <Directory Id="DIR.EXCELINSTALLTEST" Name="Excel_Install_Test" />
+              <Directory Id="DIR.EXCELTEMPLATE" Name="Sinter_Excel_Template" />
+              <Directory Id="DIR.UNITSTEST" Name="Units_Test" />
             </Directory>
 
-      <Directory Id="DIR.WINDOWSVOLUME" >
+      <Directory Id="DIR.WINDOWSVOLUME">
       </Directory>
-    </Directory>
-
-    <SetDirectory Id="DIR.WINDOWSVOLUME" Value="[WindowsVolume]"/> 
-
-  </Fragment>
+    </Fragment>
 
 </Wix>
