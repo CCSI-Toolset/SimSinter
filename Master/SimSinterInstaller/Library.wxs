@@ -648,7 +648,7 @@
 
       <Component Id="CMP.SINTER.COM.TLB" Directory="DIR.BIN.SINTER64" Guid="B3DA5D10-863F-48E0-8356-4EE2591C85C9">
         <File Id="FILE.SINTER.COM.TLB" KeyPath="yes" Source="..\Sinter\$(var.OutDir)\Sinter.tlb">
-          <TypeLib Id="{8CC87042-4B1B-4FE4-86D5-A12C1A55C8CE}" Description="SimSinter" HelpDirectory="DIR.BIN.SINTER" Language="0" MajorVersion="1" MinorVersion="6">
+          <TypeLib Id="{8CC87042-4B1B-4FE4-86D5-A12C1A55C8CE}" Description="SimSinter" HelpDirectory="DIR.BIN.SINTER" Language="0" MajorVersion="3" MinorVersion="0">
             <Interface Id="{01C5B3E7-F958-3EAF-8485-C4BC403AC060}" Name="_Parser" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
             <Interface Id="{06F52CE6-284B-3750-99FD-10AAF682564A}" Name="_ExcelSetupFile" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
             <Interface Id="{0F3F165A-C5EB-3BF1-A144-5CCD1A57F24D}" Name="_GProcess" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
