@@ -27,6 +27,9 @@ extensions = [
     "sphinx.ext.githubpages",
     "sphinx.ext.napoleon",
     "sphinx.ext.autosectionlabel",
+    # sphinxcontrib.jquery needed for search to work on some versions of RTD theme
+    # see https://github.com/readthedocs/sphinx_rtd_theme/issues/1452
+    "sphinxcontrib.jquery",
     #    'sphinxarg.ext',
     #    'sphinx-jsonschema'
 ]
@@ -49,7 +52,7 @@ html_logo = "_static/big_ccsi.png"
 # the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
 #
-html_favicon = "_static/foqus.ico"
+# html_favicon = "_static/foqus.ico"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
