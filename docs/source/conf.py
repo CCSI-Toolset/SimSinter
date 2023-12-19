@@ -62,4 +62,4 @@ html_static_path = ["_static"]
 html_style = "theme_and_schema.css"
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "FOQUSdoc"
+htmlhelp_basename = "SimSinterdoc"
