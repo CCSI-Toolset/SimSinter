@@ -27,11 +27,6 @@ extensions = [
     "sphinx.ext.githubpages",
     "sphinx.ext.napoleon",
     "sphinx.ext.autosectionlabel",
-    # sphinxcontrib.jquery needed for search to work on some versions of RTD theme
-    # see https://github.com/readthedocs/sphinx_rtd_theme/issues/1452
-    "sphinxcontrib.jquery",
-    #    'sphinxarg.ext',
-    #    'sphinx-jsonschema'
 ]
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
