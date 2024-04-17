@@ -49,9 +49,7 @@ SimSinter can interface to the following simulators:
 
 2. ACM (Steady State, Dynamic, and Optimization run modes)
 
-3. PSE gPROMS
-
-4. Microsoft Excel
+3. Microsoft Excel
 
 SimSinter can be called from the following interfaces:
 
@@ -86,11 +84,6 @@ SimSinter also installs the following helper tools:
 
 Overview: What a User Needs to Know About SimSinter and this Manual
 -------------------------------------------------------------------
-
-If SimSinter is to be used with gPROMS, another manual is required.
-gPROMS is so different from the Aspen and Excel simulators, that it
-could not be well integrated with this document. Please see the
-SimSinter gPROMS Technical Manual.
 
 SimSinter itself must be run on a machine that has the simulator and all
 of the necessary licenses installed. For example, SimSinter could run

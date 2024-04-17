@@ -6,9 +6,6 @@ perform the most common tasks with SimSinter. These tutorials focus on
 running SimSinter locally, as there are separate tutorials for running
 Aspen with the Gateway available in the FOQUS User Manual.
 
-This manual also does not cover running gPROMS with SimSinter. Please
-see the SimSinter gPROMS Technical Manual.
-
 Writing SimSinter Configuration Files
 -------------------------------------
 

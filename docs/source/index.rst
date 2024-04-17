@@ -6,7 +6,6 @@ Contents
 
    install/index
    manual/index
-   gproms/index
 
 SimSinter
 =========
@@ -16,7 +15,7 @@ Overview
 
 SimSinter is a standard interface library for driving single-process
 Windows\ :sup:`®`-based simulation software. SimSinter supports Aspen
-Plus\ :sup:`®`, Aspen Custom Modeler\ :sup:`®` (ACM), PSE gPROMS, and
+Plus\ :sup:`®`, Aspen Custom Modeler\ :sup:`®` (ACM), and
 Microsoft\ :sup:`®` Excel\ :sup:`®`. Additional simulators are planned
 for future releases. When called, SimSinter can open the simulator,
 initialize the simulation, set variables in the simulation, run the
