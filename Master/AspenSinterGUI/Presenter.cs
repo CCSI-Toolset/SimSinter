@@ -46,7 +46,6 @@ namespace SinterConfigGUI
         public sinter.sinter_SimACM o_acm = null; //Only set if sim is an ACM
         public sinter.sinter_SimAspen o_aspenplus = null; //Only set if sim is an aspenplus
         public sinter.sinter_SimExcel o_excel = null; //Only set if sim is a excel
-        public sinter.PSE.sinter_simGPROMSconfig o_gproms = null;  //Only set if sim is gPROMS
 
         private bool o_saveable = true;         //Should we try to save?  Occasionally we want to turn off saving
         public BackgroundWorker worker;          //our bg worker for doing long tasks
@@ -579,28 +578,18 @@ namespace SinterConfigGUI
                     o_acm = (sinter.sinter_SimACM)o_sim;
                     o_aspenplus = null;
                     o_excel = null;
-                    o_gproms = null;
                 }
                 else if (o_sim is sinter.sinter_SimAspen)
                 {
                     o_aspenplus = (sinter.sinter_SimAspen)o_sim;
                     o_acm = null;
                     o_excel = null;
-                    o_gproms = null;
                 }
                 else if (o_sim is sinter.sinter_SimExcel)
                 {
                     o_excel = (sinter.sinter_SimExcel)o_sim;
                     o_acm = null;
                     o_aspenplus = null;
-                    o_gproms = null;
-                }
-                else if (o_sim is sinter.PSE.sinter_simGPROMSconfig)
-                {
-                    o_gproms = (sinter.PSE.sinter_simGPROMSconfig)o_sim;
-                    o_acm = null;
-                    o_aspenplus = null;
-                    o_excel = null;
                 }
                 else
                 {
@@ -981,20 +970,6 @@ namespace SinterConfigGUI
 
             }
             return null;
-        }
-
-        public string checkgPROMSErrors()
-        {
-            String error = null;
-            foreach (VariableViewModel vv in allVariables)
-            {
-                if (vv.path.Contains("__"))
-                {
-                    error = String.Format("WARNING: Variable path {0} contains double underscores.  This could indicate a bug in your gPROMS file.\n If your Foriegn Object reference looks like this VAR = FO.<Type>__VAR; gPROMS and SimSinter will not interpret it correctly.\n  You must have parenthesis '()' at the end of the reference.\n  See the SimSinter gPROMS Technical Manual Section 5.3.\n", vv.path);
-                    break;
-                }
-            }
-            return error;
         }
 
         #endregion errors
@@ -1436,7 +1411,7 @@ namespace SinterConfigGUI
 
         public void PreviewToInput_CanExecute(object sender, CanExecuteRoutedEventArgs args)
         {
-            args.CanExecute = (previewVariable.Count > 0 && o_gproms == null); //Can't make inputs in gproms
+            args.CanExecute = (previewVariable.Count > 0);
         }
 
         public void PreviewToInput_Executed(object sender, ExecutedRoutedEventArgs args)
@@ -1996,10 +1971,6 @@ namespace SinterConfigGUI
             String errorStr = null;
             if(o_acm != null) {
                 errorStr = checkACMSettings();
-            }
-            if (o_gproms != null)
-            {
-                errorStr = checkgPROMSErrors();
             }
             if (errorStr != null)
             {

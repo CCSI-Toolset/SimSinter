@@ -103,41 +103,6 @@ namespace SinterConfigGUI
             {
                 presenter.selectedInputVars.Add(item);
             }
-
-            //gPROMS: Crazy hack to get input variables to all change if the user changes the procesName
-            if (presenter.o_gproms != null)
-            {
-                //First find the processname
-                VariableViewModel processNameVM = null;
-                foreach (VariableViewModel item in InputVariables.Items)
-                {
-                    if (item.name == "ProcessName")
-                    {
-                        processNameVM = item;
-                        break;
-                    }
-                }
-
-                //If the changed, update everything 
-                if (processNameVM != null && ((String)processNameVM.value) != ((String)presenter.o_gproms.processName))
-                {
-                    if (presenter.o_gproms.gProcesses.ContainsKey((String)processNameVM.value))  //Check to make sure it's a really process name (if it isn't throw an error)
-                    {
-                        presenter.o_gproms.processName = (string) processNameVM.value;
-                        presenter.o_gproms.resetInputVariables();
-                        presenter.inputVariables.Clear(); //This causes the input varialbes selection to change, and processNameVM comes up null.
-                        presenter.outputVariables.Clear();
-                        presenter.allVariables.Clear();
-                        presenter.buildVariableGrids();
-                    }
-                    else
-                    {
-                        presenter.displayError(String.Format("Invalid ProcessName: {0}", processNameVM.value));
-                    }
-                }
-
-            }
-
         }
 
         void OutputVariables_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
