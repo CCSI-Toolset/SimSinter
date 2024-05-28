@@ -984,7 +984,7 @@ namespace SinterConfigGUI
         public void OpenFileBrowserCommand_Executed(object sender, ExecutedRoutedEventArgs args)
         {
             Microsoft.Win32.OpenFileDialog _fd = new Microsoft.Win32.OpenFileDialog();
-            _fd.Filter = "All SimSinter Files (*.json,*.txt,*.bkp,*.apw,*.acmf,*.xlsm,*.gPJ)|*.json;*.txt;*.bkp;*.apw;*.acmf;*.xlsm;*.xls;*.xlsx;*.gPJ|AspenSinter Configs(*.json,*.txt)|*.json;*.txt|Aspen Plus Files(*.bkp,*.apw)|*.bkp;*.apw|Aspen Custom Modeler|*.acmf|gPROMS|*.gPJ|Excel Files|*.xlsm;*.xls;*.xlsx|All Files(*.*)|*.*"; // Filter files by extension
+            _fd.Filter = "All SimSinter Files (*.json,*.txt,*.bkp,*.apw,*.acmf,*.xlsm)|*.json;*.txt;*.bkp;*.apw;*.acmf;*.xlsm;*.xls;*.xlsx|AspenSinter Configs(*.json,*.txt)|*.json;*.txt|Aspen Plus Files(*.bkp,*.apw)|*.bkp;*.apw|Aspen Custom Modeler|*.acmf|Excel Files|*.xlsm;*.xls;*.xlsx|All Files(*.*)|*.*"; // Filter files by extension
 
             // Show open file dialog box
             Nullable<bool> result = _fd.ShowDialog();
@@ -1067,22 +1067,6 @@ namespace SinterConfigGUI
 
                         //Auto Bump the config file version here is a little odd, but it's the only place I could find that will only happen once per file configuration an nowhere else
                         sim.configFileVersion = new Version(sim.configFileVersion.Major, sim.configFileVersion.Minor + 1);  
-
-
-                    }
-                    else if (extension == ".gencrypt")
-                    {
-                        displayError("gPROMS .gencrypt files cannot be read by SinterConfigGUI.  Please supply a .gPJ file.");
-                    }
-                    else if (extension == ".gpj" || extension == ".gPJ")
-                    {
-                        sinter.PSE.sinter_simGPROMSconfig thisGPROMS = new sinter.PSE.sinter_simGPROMSconfig();
-                        thisGPROMS.setupFile = new sinter.sinter_JsonSetupFile();
-                        thisGPROMS.setupFile.aspenFilename = System.IO.Path.GetFileName(filename);
-                        thisGPROMS.setupFile.simDescFile = System.IO.Path.GetFileName(filename);
-                        sim = thisGPROMS;
-                        sim.workingDir = System.IO.Path.GetDirectoryName(filename);
-                        metaDataStatusText = openedSimFile;
 
 
                     }
