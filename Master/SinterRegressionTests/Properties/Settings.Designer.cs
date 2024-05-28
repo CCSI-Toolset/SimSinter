@@ -12,7 +12,7 @@ namespace SinterRegressionTests.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -116,18 +116,6 @@ namespace SinterRegressionTests.Properties {
             }
             set {
                 this["DynamicACMInputs_2"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("BufferTank_FO.json")]
-        public string gPROMSFilename {
-            get {
-                return ((string)(this["gPROMSFilename"]));
-            }
-            set {
-                this["gPROMSFilename"] = value;
             }
         }
         
@@ -380,30 +368,6 @@ namespace SinterRegressionTests.Properties {
             }
             set {
                 this["DynamicACMDir"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("..\\..\\..\\..\\test\\gPROMStest\\BufferTank_FO.json")]
-        public string gPROMSConfig {
-            get {
-                return ((string)(this["gPROMSConfig"]));
-            }
-            set {
-                this["gPROMSConfig"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("..\\..\\..\\..\\test\\gPROMStest")]
-        public string gPROMSDir {
-            get {
-                return ((string)(this["gPROMSDir"]));
-            }
-            set {
-                this["gPROMSDir"] = value;
             }
         }
     }

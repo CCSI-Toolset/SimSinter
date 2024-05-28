@@ -277,52 +277,6 @@ namespace SinterRegressionTests
             Debug.WriteLine(myDict);
         }
 
-
-        public void SinterGPROMSTest()
-        {
-
-            var path = Properties.Settings.Default.gPROMSConfig;
-            byte[] buffer = File.ReadAllBytes(path);
-            var configuration = Encoding.UTF8.GetString(buffer);
-
-            ISimulation sim = sinter_Factory.createSinter(configuration);
-            sim.workingDir = System.IO.Path.GetDirectoryName(Properties.Settings.Default.gPROMSConfig);
-            Assert.IsInstanceOfType(sim, typeof(sinter.PSE.sinter_simGPROMS), "Expecing gPROMS sinter");
-
-            IDictionary<string, Object> myDict = null;
-
-            JObject outputDict;
-            try
-            {
-                sim.openSim();
-                JObject defaultsDict = new JObject();
-                sim.sendInputs(defaultsDict);
-                sim.sendInputsToSim();
-                sim.runSim();
-                sim.recvOutputsFromSim();
-                JObject superDict = sim.getOutputs();
-                outputDict = (JObject)superDict["outputs"];
-                // HACK: Inefficient Just making it work w/o covariance issues
-                string data = outputDict.ToString(Newtonsoft.Json.Formatting.None);
-                myDict = JsonConvert.DeserializeObject<IDictionary<string, Object>>(data);
-            }
-            finally
-            {
-                sim.closeSim();
-            }
-            Assert.AreEqual(sinter.sinter_AppError.si_OKAY, sim.runStatus);
-
-            //Verify the outputs
-            Assert.IsTrue(sinter_HelperFunctions.fuzzyEquals(14.3181, (double)outputDict["Height"]["value"], .001));
-            Assert.IsTrue(sinter_HelperFunctions.fuzzyEquals(14318.1, (double)outputDict["HoldUp"]["value"], .001));
-            Assert.IsTrue(sinter_HelperFunctions.fuzzyEquals(11, (double)outputDict["OutSingleInt"]["value"], .001));
-            Assert.IsTrue(sinter_HelperFunctions.fuzzyEquals(12, (double)outputDict["OutArrayInt"]["value"][0], .001));
-            Assert.IsTrue(sinter_HelperFunctions.fuzzyEquals(1, (double)outputDict["OutSingleSel"]["value"], .001));
-            Assert.IsTrue(sinter_HelperFunctions.fuzzyEquals(1, (double)outputDict["OutArraySel"]["value"][1], .001));
-
-            Debug.WriteLine(myDict);
-        }
-
         [TestMethod]
         public void SinterAspenPlusTest()
         {
