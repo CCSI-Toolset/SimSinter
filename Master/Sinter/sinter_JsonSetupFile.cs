@@ -86,12 +86,6 @@ namespace sinter
              **/
             jsonDict.Add("input-files", getInputFilesArray(sim));
 
-            //Only write the simulationDescriptionFile out if it isn't the same as the simFile
-            if (setup.simDescFile != null && setup.simDescFile != "" && setup.simDescFile != setup.aspenFilename)
-            {
-                jsonDict.Add("simulationDescriptionFile", AddFilenameAndSHA1toJObject(sim, setup.simDescFile, setup.simDescFileHash, setup.simDescFileHashAlgo));
-            }
-
             jsonDict.Add("author", setup.author);
             jsonDict.Add("date", setup.dateString);
             jsonDict.Add("filetype", "sinterconfig");
@@ -428,30 +422,6 @@ namespace sinter
                 }
             }
 
-            //The simulationDescriptionFile is optional.  It only exists for simulations where the simulation file and the file SimSinter uses
-            //are not the same.  ie, it currently is only used by gPROMS.  Otherwise it just matches the modle file.
-            {
-                JToken desc_token = null;
-                if (!setupObject.TryGetValue("simulationDescriptionFile", out desc_token)) //, out desc_token))
-                { //Try to get the input files array (which has a pretty unique format)
-                    simDescFile = aspenFilename;
-                    simDescFileHash = aspenFileHash;
-                    simDescFileHashAlgo = aspenFileHashAlgo;
-                }
-                else
-                {
-                    JObject desc_object = (JObject)desc_token;
-                    simDescFile = parseString(desc_object, "Simulation Description File", "file");
-                    //JToken token = null;
-                    if (keyExists(desc_object, "SignatureMethodAlgorithm")) //, out token))  //The hash is optional, sometimes it can't be generated, so these entries won't always exist
-                    {
-                        simDescFileHash = parseString(desc_object, "Simulation Description file Hash", "DigestValue");
-                        simDescFileHashAlgo = parseString(desc_object, "Simulation Description Hash Algo", "SignatureMethodAlgorithm");
-                    }
-                }
-            }
-
-
             JToken inputfiles_token = null;
             if (!setupObject.TryGetValue("input-files", out inputfiles_token))
             { //Try to get the input files array (which has a pretty unique format)
@@ -515,17 +485,13 @@ namespace sinter
             {
                 o_aspenFilename = parseString(setupObject, "Config File Root", "aspenfile");
             }
-            else if (setupdict.ContainsKey("model"))
-            {
-                o_aspenFilename = parseString(setupObject, "Config File Root", "model");
-            }
             else if (setupdict.ContainsKey("spreadsheet"))
             {
                 o_aspenFilename = parseString(setupObject, "Config File Root", "spreadsheet");
             }
             else
             {
-                throw new Sinter.SinterFormatException(String.Format("ERROR: Sinter Config File Parse Failed.\n The Config File Root must contain a simulation file under one of the following keys:\n gPROMS: \"model\", Aspen Plus or ACM: \"aspenfile\", Excel: \"spreadsheet\"."));
+                throw new Sinter.SinterFormatException(String.Format("ERROR: Sinter Config File Parse Failed.\n The Config File Root must contain a simulation file under one of the following keys:\n Aspen Plus or ACM: \"aspenfile\", Excel: \"spreadsheet\"."));
             }
 
             //check that some meta-data is correct
@@ -537,17 +503,6 @@ namespace sinter
             if (version != 0.2)
             {
                 throw new System.IO.IOException(String.Format("Only sinterconfig version 0.2 is supported by this parser, this file appears to be version {0}.", version));
-            }
-
-
-            //This is only optional.
-            if (setupdict.ContainsKey("simulationDescriptionFile"))
-            {
-                simDescFile = parseString(setupObject, "Config File Root", "simulationDescriptionFile");
-            }
-            else
-            {
-                simDescFile = o_aspenFilename;
             }
 
             return parseFileShared(setupObject);

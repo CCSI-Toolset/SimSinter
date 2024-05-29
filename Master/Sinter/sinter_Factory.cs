@@ -35,21 +35,11 @@ namespace sinter
                 thisAspen = new sinter_SimExcel();
                 thisAspen.setupFile = thisSetupFile;
             }
-            else if (extension != null && extension.ToLower() == ".gencrypt")
-            {
-                thisAspen = new sinter.PSE.sinter_simGPROMS();
-                thisAspen.setupFile = thisSetupFile;
-            }
-            else if (extension != null && extension.ToLower() == ".gPJ")
-            {
-                throw new System.IO.IOException(String.Format(
-                    "gPJ is not an allowed extension for sinter simulation run.  SimSinter requires a .gENCRYPT file.  filename: {1}.", setupFileString));
-            }
 
             else
             {
                 throw new System.IO.IOException(String.Format(
-                    "Unknown Aspen File extension {0} on filename: {1}.  Expecting either .bkp or .apw for Aspen+, .acmf for ACM, .xlsm .xls .xlsx for Excel, or .gencrypt for GPROMS", extension, setupFileString));
+                    "Unknown Aspen File extension {0} on filename: {1}.  Expecting either .bkp or .apw for Aspen+, .acmf for ACM, or .xlsm .xls .xlsx for Excel", extension, setupFileString));
             }
             if (thisAspen == null)
             {
@@ -69,7 +59,7 @@ namespace sinter
 
             sinter_SetupFile thisSetupFile = sinter_SetupFile.determineFileTypeAndParse(setupFileString);
 
-            string extension = System.IO.Path.GetExtension(thisSetupFile.simDescFile);
+            string extension = System.IO.Path.GetExtension(thisSetupFile.aspenFilename);
             sinter_Sim thisAspen = null;
 
             if (extension == ".bkp" || extension == ".apw")
@@ -87,20 +77,10 @@ namespace sinter
                 thisAspen = new sinter_SimExcel();
                 thisAspen.setupFile = thisSetupFile;
             }
-            else if (extension != null && extension.ToLower() == ".gpj")
-            {
-                thisAspen = new sinter.PSE.sinter_simGPROMSconfig();
-                thisAspen.setupFile = thisSetupFile;
-            }
-            else if (extension != null && extension.ToLower() == ".gencrypt")
-            {
-                throw new System.IO.IOException(String.Format(
-                    "gENCRYPT is not an allowed extension for sinter configuration.  SinterConfigGUI requires a .gPJ file.  filename: {1}.", setupFileString));
-            }
             else
             {
                 throw new System.IO.IOException(String.Format(
-                    "Unknown Aspen File extension {0} on filename: {1}.  Expecting either .bkp or .apw for Aspen+, .acmf for ACM, .xlsm .xls .xlsx for Excel, or .gencrypt for GPROMS", extension, setupFileString));
+                    "Unknown Aspen File extension {0} on filename: {1}.  Expecting either .bkp or .apw for Aspen+, .acmf for ACM, or .xlsm .xls .xlsx for Excel", extension, setupFileString));
             }
             if (thisAspen == null)
             {

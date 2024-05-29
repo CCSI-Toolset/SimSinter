@@ -29,12 +29,6 @@ namespace sinter
         //The collection of _all_ the IVariable objects in the setupFile, settings, tables, and variables
         private Microsoft.VisualBasic.Collection o_AllIVariable = new Microsoft.VisualBasic.Collection();
 
-        //A mapping of path to variables, if the variable is a vector or table, any indexing is ignored
-        //and you just get the whole table or vector.  Tables and vectors have other ways of handling pathing.
-        // This is used by simGPROMS when it reads the output variables back from the XML file
-        // It also has a bug in that multiple old style tables could nominally have the same path. /Data/Streams/%r/Foo/%c
-        private Dictionary<string, sinter_IVariable> o_pathToVariable = new Dictionary<string, sinter_IVariable>();
-
         //setup file version string
         protected Version o_configFileVersion = new Version(0, 0);  //Start out with version 0.0, just as a sentinal value
 
@@ -42,11 +36,6 @@ namespace sinter
         protected string o_aspenFilename;
         protected string o_aspenFileHash; //The SHA1 for the simulation.
         protected string o_aspenFileHashAlgo; //The SHA1 for the simulation.
-
-        //gPROMS uses a different file for running .gENCRPT than it does for configuration .gPJ, for all other simulators this will match simFile
-        protected string o_simDescFile;
-        protected string o_simDescFileHash;
-        protected string o_simDescFileHashAlgo;
 
         //Required input files other than the simulation file.  (DLLs, snapshots, etc.)
         protected List<String> o_additionalFiles = new List<String>();
@@ -77,7 +66,6 @@ namespace sinter
             }
 
             sinter_Variable vVar = (sinter_Variable) var;            
-            addVariablePath(vVar);
             o_VariablesAndSettings.Add(vVar, var.name);
 
             if (vVar.isDynamicVariable)
@@ -102,7 +90,6 @@ namespace sinter
             o_Variables.Add(var, var.name);
             o_VariablesAndSettings.Add(var, var.name);
             o_DynamicVariables.Add(var, var.name);
-            addVariablePath(var);
         }
 
 
@@ -111,7 +98,6 @@ namespace sinter
             o_AllIVariable.Add(var, var.name);
             o_Settings.Add(var, var.name);
             o_VariablesAndSettings.Add(var, var.name);
-            addVariablePath(var);
         }
 
         public void addTable(sinter_Table var)
@@ -216,27 +202,6 @@ namespace sinter
                 return null;
             }
         }
-
-
-        private void addVariablePath(sinter_Variable thisVar)
-        {
-            foreach(string path in thisVar.addressStrings) {
-               o_pathToVariable[path] = thisVar;
-            }
-        }
-
-        public sinter_IVariable getIOByPath(string path)
-        {
-            try
-            {
-                return (sinter_IVariable)o_pathToVariable[path];
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
 
         public sinter_IVariable getIOByName(string name)
         {
@@ -390,24 +355,6 @@ namespace sinter
         {
             get { return o_simVersionConstraint; }
             set { o_simVersionConstraint = value; }
-        }
-
-        public string simDescFile
-        {
-            get { return o_simDescFile; }
-            set { o_simDescFile = value; }
-        }
-
-        public string simDescFileHash
-        {
-            get { return o_simDescFileHash; }
-            set { o_simDescFileHash = value; }
-        }
-
-        public string simDescFileHashAlgo
-        {
-            get { return o_simDescFileHashAlgo; }
-            set { o_simDescFileHashAlgo = value; }
         }
 
         public Version configFileVersion {

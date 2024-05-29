@@ -395,7 +395,7 @@ namespace sinter
         }
 
         //A string giving the type of simulation file in this setupfile.  This is used in the jsonconfig
-        //as the key for the simulation file.  Could be aspenfile, spreadsheet, or model (gPROMS)
+        //as the key for the simulation file.  Could be aspenfile or spreadsheet
         public abstract string setupfileKey { get; }
 
         public int countIO
@@ -577,7 +577,6 @@ namespace sinter
         public abstract sinter_AppError runSim();
         public abstract sinter_AppError resetSim();
         public abstract bool terminate();
-        //This one is impossible for gPROMS.  It will always fail in gPROMS, prompting a terminate.
         public abstract void stopSim();
 
         public abstract bool dialogSuppress

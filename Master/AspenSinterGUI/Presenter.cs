@@ -1075,7 +1075,6 @@ namespace SinterConfigGUI
                         sinter.sinter_SimAspen thisAspen = new sinter.sinter_SimAspen();
                         thisAspen.setupFile = new sinter.sinter_JsonSetupFile();
                         thisAspen.setupFile.aspenFilename = System.IO.Path.GetFileName(filename);
-                        thisAspen.setupFile.simDescFile = System.IO.Path.GetFileName(filename);
                         sim = thisAspen;
                         sim.workingDir = System.IO.Path.GetDirectoryName(filename);
                         metaDataStatusText = openedSimFile;
@@ -1087,7 +1086,6 @@ namespace SinterConfigGUI
                         sinter.sinter_SimACM thisAspen = new sinter.sinter_SimACM();
                         thisAspen.setupFile = new sinter.sinter_JsonSetupFile();
                         thisAspen.setupFile.aspenFilename = System.IO.Path.GetFileName(filename);
-                        thisAspen.setupFile.simDescFile = System.IO.Path.GetFileName(filename);
                         sim = thisAspen;
                         sim.workingDir = System.IO.Path.GetDirectoryName(filename);
                         metaDataStatusText = openedSimFile;
@@ -1098,7 +1096,6 @@ namespace SinterConfigGUI
                         sinter.sinter_SimExcel thisAspen = new sinter.sinter_SimExcel();
                         thisAspen.setupFile = new sinter.sinter_JsonSetupFile();
                         thisAspen.setupFile.aspenFilename = System.IO.Path.GetFileName(filename);
-                        thisAspen.setupFile.simDescFile = System.IO.Path.GetFileName(filename);
                         sim = thisAspen;
                         sim.workingDir = System.IO.Path.GetDirectoryName(filename);
                         metaDataStatusText = openedSimFile;

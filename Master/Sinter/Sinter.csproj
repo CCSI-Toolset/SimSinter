@@ -78,11 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SinterConstraintException.cs" />
-    <Compile Include="Parser.cs" />
-    <Compile Include="ParseTree.cs" />
-    <Compile Include="Scanner.cs" />
     <Compile Include="SinterFormatException.cs" />
-    <Compile Include="sinter_simGPROMSconfig.cs" />
     <Compile Include="sinter_DynamicVector.cs" />
     <Compile Include="sinter_DynamicScalar.cs" />
     <Compile Include="sinter_IDynamicVariable.cs" />
@@ -99,7 +95,6 @@
     <Compile Include="sinter_SimACM.cs" />
     <Compile Include="sinter_SimAspen.cs" />
     <Compile Include="sinter_SimExcel.cs" />
-    <Compile Include="sinter_simGPROMS.cs" />
     <Compile Include="sinter_SimulationException.cs" />
     <Compile Include="sinter_StaticCOMWrapper.cs" />
     <Compile Include="sinter_stringLabel.cs" />
