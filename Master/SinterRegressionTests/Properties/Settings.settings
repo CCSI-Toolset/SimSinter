@@ -26,9 +26,6 @@
     <Setting Name="DynamicACMInputs_2" Type="System.String" Scope="User">
       <Value Profile="(Default)">Inputs_2.json</Value>
     </Setting>
-    <Setting Name="gPROMSFilename" Type="System.String" Scope="User">
-      <Value Profile="(Default)">BufferTank_FO.json</Value>
-    </Setting>
     <Setting Name="ExcelSinterJson" Type="System.String" Scope="User">
       <Value Profile="(Default)">..\..\..\..\test\models\SimpleExcelTest\exceltest-sinter.json</Value>
     </Setting>
@@ -91,12 +88,6 @@
     </Setting>
     <Setting Name="DynamicACMDir" Type="System.String" Scope="User">
       <Value Profile="(Default)">..\..\..\..\test\DynamicTest</Value>
-    </Setting>
-    <Setting Name="gPROMSConfig" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\..\test\gPROMStest\BufferTank_FO.json</Value>
-    </Setting>
-    <Setting Name="gPROMSDir" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\..\..\..\test\gPROMStest</Value>
     </Setting>
   </Settings>
 </SettingsFile>

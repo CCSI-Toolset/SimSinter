@@ -15,7 +15,6 @@
       <ComponentGroupRef Id="CG.ACMDyTestFiles" />
       <ComponentGroupRef Id="CG.ACMDyTestFilesSub" />
       <ComponentGroupRef Id="CG.EXTestFiles" />
-      <ComponentGroupRef Id="CG.gPTestFiles" />
       <ComponentGroupRef Id="CG.SINTER.EX.TEMP" />
       <ComponentGroupRef Id="CG.CONSOLESINTER" />
       <ComponentGroupRef Id="CG.CSVCONSOLESINTER" />
@@ -54,13 +53,6 @@
       <ComponentRef Id="CMP.EX.INS" />
       <ComponentRef Id="CMP.EX.DEF" />
       <ComponentRef Id="CMP.EX.DRIVER.XLSM" />
-    </ComponentGroup>
-
-    <ComponentGroup Id="CG.gPTestFiles">
-      <ComponentRef Id="CMP.gP.gENCRYPT" />
-      <ComponentRef Id="CMP.gP.gPJ" />
-      <ComponentRef Id="CMP.gP.JSON" />
-      <ComponentRef Id="CMP.gP.DEF" />
     </ComponentGroup>
 
     <ComponentGroup Id="CG.SINTER.EX.TEMP">
@@ -177,25 +169,6 @@
       <Component Id="CMP.ACM.DY.TASK" Guid="06BA20C9-A5E5-48FC-B0FD-BC6698D2AAAC">
         <RemoveFile Id="REM.FILE.ACM.DY.TASK" Name="tasksnap.bak" On="install" />
         <File Id="FILE.ACM.DY.TASK" Source="..\test\DynamicTest\AM_BFB\tasksnap.bak" KeyPath="yes" />
-      </Component>
-    </DirectoryRef>
-
-    <DirectoryRef Id="DIR.gPINSTALLTEST">
-      <Component Id="CMP.gP.gENCRYPT" Guid="">
-        <RemoveFile Id="REM.FILE.gP.gENCRYPT" Name="BufferTank_FO.gENCRYPT" On="install" />
-        <File Id="FILE.gP.gENCRYPT" Source="..\test\gPROMStest\BufferTank_FO.gENCRYPT" KeyPath="yes" />
-      </Component>
-      <Component Id="CMP.gP.gPJ" Guid="">
-        <RemoveFile Id="REM.FILE.gP.gPJ" Name="BufferTank_FO.gPJ" On="install" />
-        <File Id="FILE.gP.gPJ" Source="..\test\gPROMStest\BufferTank_FO.gPJ" KeyPath="yes" />
-      </Component>
-      <Component Id="CMP.gP.JSON" Guid="">
-        <RemoveFile Id="REM.FILE.gP.JSON" Name="BufferTank_FO.json" On="install" />
-        <File Id="FILE.gP.JSON" Source="..\test\gPROMStest\BufferTank_FO.json" KeyPath="yes" />
-      </Component>
-      <Component Id="CMP.gP.DEF" Guid="">
-        <RemoveFile Id="REM.FILE.gP.DEF" Name="BufferTank_inputs.json" On="install" />
-        <File Id="FILE.gP.DEF" Source="..\test\gPROMStest\BufferTank_inputs.json" KeyPath="yes" />
       </Component>
     </DirectoryRef>
 
@@ -344,9 +317,6 @@
         <Class Id="{424AB864-CC26-3518-8EAB-3450CF1DC779}" Context="InprocServer32" Description="sinter.sinter_Vector" ThreadingModel="both" ForeignServer="mscoree.dll">
           <ProgId Id="sinter.sinter_Vector" Description="sinter.sinter_Vector" />
         </Class>
-        <Class Id="{43FDB015-8258-37BD-94E0-5978EDE9D6C9}" Context="InprocServer32" Description="sinter.PSE.sinter_simGPROMS" ThreadingModel="both" ForeignServer="mscoree.dll">
-          <ProgId Id="sinter.PSE.sinter_simGPROMS" Description="sinter.PSE.sinter_simGPROMS" />
-        </Class>
         <Class Id="{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}" Context="InprocServer32" Description="sinter.sinter_TextSetupFile" ThreadingModel="both" ForeignServer="mscoree.dll">
           <ProgId Id="sinter.sinter_TextSetupFile" Description="sinter.sinter_TextSetupFile" />
         </Class>
@@ -370,9 +340,6 @@
         </Class>
         <Class Id="{86652E72-84B5-32EC-850A-373DE54DFB7E}" Context="InprocServer32" Description="sinter.sinter_SimExcel" ThreadingModel="both" ForeignServer="mscoree.dll">
           <ProgId Id="sinter.sinter_SimExcel" Description="sinter.sinter_SimExcel" />
-        </Class>
-        <Class Id="{8BB61260-06FE-3D99-8158-9C556BCF07CC}" Context="InprocServer32" Description="sinter.PSE.sinter_simGPROMSconfig" ThreadingModel="both" ForeignServer="mscoree.dll">
-          <ProgId Id="sinter.PSE.sinter_simGPROMSconfig" Description="sinter.PSE.sinter_simGPROMSconfig" />
         </Class>
         <Class Id="{9ABFBF64-33B3-3A9C-A979-FA8BD6E21A7C}" Context="InprocServer32" Description="sinter.PSE.ParseTree" ThreadingModel="both" ForeignServer="mscoree.dll">
           <ProgId Id="sinter.PSE.ParseTree" Description="sinter.PSE.ParseTree" />
@@ -454,11 +421,9 @@
         <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32\3.0.0.0" Name="Class" Value="sinter.PSE.sinter_simGPROMS" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32\3.0.0.0" Name="Assembly" Value="Sinter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=4be585aca2084488" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32\3.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32\3.0.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32" Name="Class" Value="sinter.PSE.sinter_simGPROMS" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=4be585aca2084488" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{43FDB015-8258-37BD-94E0-5978EDE9D6C9}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
@@ -535,11 +500,9 @@
         <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32\3.0.0.0" Name="Class" Value="sinter.PSE.sinter_simGPROMSconfig" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32\3.0.0.0" Name="Assembly" Value="Sinter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=4be585aca2084488" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32\3.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32\3.0.0.0" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
-        <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32" Name="Class" Value="sinter.PSE.sinter_simGPROMSconfig" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=4be585aca2084488" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
         <RegistryValue Root="HKCR" Key="CLSID\{8BB61260-06FE-3D99-8158-9C556BCF07CC}\InprocServer32" Name="CodeBase" Value="file:///[#fil134F96608A310523C0D45CDD744920E9]" Type="string" Action="write" />
@@ -671,7 +634,6 @@
             <Interface Id="{78924F8B-2350-3EC9-8B75-0C361D77BAA3}" Name="_sinter_Variable" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
             <Interface Id="{78E7DA42-9C33-3C18-B9FD-A9A5FF25A6C8}" Name="_sinter_TextSetupFile" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
             <Interface Id="{7A161F2F-0BA0-3865-A09B-60BE31BFAE49}" Name="_SinterFormatException" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
-            <Interface Id="{7E165CC6-8B2E-3011-9700-83467CF743B6}" Name="_sinter_simGPROMS" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
             <Interface Id="{834BAC1D-4553-31E9-81B8-2B8D9924A1A0}" Name="_IAPHappEvents_OnCalculationCompletedEventHandler" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
             <Interface Id="{90F9716F-85D1-3D18-A05A-3A96D903F25E}" Name="_sinter_Table" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
             <Interface Id="{9EB38CDF-3405-3CEB-9FE5-DD41CA992653}" Name="_sinter_SimulationException" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
@@ -680,7 +642,6 @@
             <Interface Id="{C0CF4D65-5E6F-33B0-AF1B-FB6CD016CCC4}" Name="_variableAssignment" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
             <Interface Id="{C204CC98-59C7-323C-A38E-1B5588A31ECF}" Name="_ParseError" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
             <Interface Id="{C5EE0572-A6DF-39DD-A23C-AB8ADAC86B25}" Name="_sinter_JsonSetupFile" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
-            <Interface Id="{D248C2E1-D817-3092-A23E-8CE6931E8670}" Name="_sinter_simGPROMSconfig" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
             <Interface Id="{D35CCE7A-E3D7-3838-AE15-E250ADAA06C3}" Name="_sinter_Vector" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
             <Interface Id="{EA9565A8-7DB5-3FFE-B57C-95BA68029800}" Name="_sinter_SimAspen" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
             <Interface Id="{EB42C32F-8A56-33BD-99F8-1730BA186F06}" Name="_sinter_StaticCOMWrapper" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />

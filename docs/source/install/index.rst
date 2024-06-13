@@ -22,7 +22,7 @@ Basic Installation
 **Third Party Software Installation**
 
 In order to run a simulation, the correct simulator is also required.
-SimSinter may use Aspen Plus, Aspen Custom Modeler, GPROMS, or Microsoft
+SimSinter may use Aspen Plus, Aspen Custom Modeler, or Microsoft
 Excel. Please install the appropriate simulator by following the
 simulator vendor provided documentation.
 

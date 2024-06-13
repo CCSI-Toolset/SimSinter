@@ -9,9 +9,7 @@ simulations. Steady State simulations do not have a time component. They
 simply simulate the simple ideal case of the reactor running at
 equilibrium according to the provided constants and input variables.
 Aspen Plus and Excel can only do Steady State simulation. ACM supports
-both Steady State and Dynamic simulation. gPROMS supports both Steady
-State and Dynamic simulation, but SimSinter can currently only perform
-Steady State simulations with gPROMS.
+both Steady State and Dynamic simulation. 
 
 Steady State simulations have a single set of inputs and outputs.
 SimSinter sets the inputs before the simulation starts, and collects the

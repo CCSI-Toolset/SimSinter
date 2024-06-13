@@ -46,7 +46,6 @@ namespace SinterConfigGUI
         public sinter.sinter_SimACM o_acm = null; //Only set if sim is an ACM
         public sinter.sinter_SimAspen o_aspenplus = null; //Only set if sim is an aspenplus
         public sinter.sinter_SimExcel o_excel = null; //Only set if sim is a excel
-        public sinter.PSE.sinter_simGPROMSconfig o_gproms = null;  //Only set if sim is gPROMS
 
         private bool o_saveable = true;         //Should we try to save?  Occasionally we want to turn off saving
         public BackgroundWorker worker;          //our bg worker for doing long tasks
@@ -579,28 +578,18 @@ namespace SinterConfigGUI
                     o_acm = (sinter.sinter_SimACM)o_sim;
                     o_aspenplus = null;
                     o_excel = null;
-                    o_gproms = null;
                 }
                 else if (o_sim is sinter.sinter_SimAspen)
                 {
                     o_aspenplus = (sinter.sinter_SimAspen)o_sim;
                     o_acm = null;
                     o_excel = null;
-                    o_gproms = null;
                 }
                 else if (o_sim is sinter.sinter_SimExcel)
                 {
                     o_excel = (sinter.sinter_SimExcel)o_sim;
                     o_acm = null;
                     o_aspenplus = null;
-                    o_gproms = null;
-                }
-                else if (o_sim is sinter.PSE.sinter_simGPROMSconfig)
-                {
-                    o_gproms = (sinter.PSE.sinter_simGPROMSconfig)o_sim;
-                    o_acm = null;
-                    o_aspenplus = null;
-                    o_excel = null;
                 }
                 else
                 {
@@ -983,20 +972,6 @@ namespace SinterConfigGUI
             return null;
         }
 
-        public string checkgPROMSErrors()
-        {
-            String error = null;
-            foreach (VariableViewModel vv in allVariables)
-            {
-                if (vv.path.Contains("__"))
-                {
-                    error = String.Format("WARNING: Variable path {0} contains double underscores.  This could indicate a bug in your gPROMS file.\n If your Foriegn Object reference looks like this VAR = FO.<Type>__VAR; gPROMS and SimSinter will not interpret it correctly.\n  You must have parenthesis '()' at the end of the reference.\n  See the SimSinter gPROMS Technical Manual Section 5.3.\n", vv.path);
-                    break;
-                }
-            }
-            return error;
-        }
-
         #endregion errors
 
         #region commands
@@ -1009,7 +984,7 @@ namespace SinterConfigGUI
         public void OpenFileBrowserCommand_Executed(object sender, ExecutedRoutedEventArgs args)
         {
             Microsoft.Win32.OpenFileDialog _fd = new Microsoft.Win32.OpenFileDialog();
-            _fd.Filter = "All SimSinter Files (*.json,*.txt,*.bkp,*.apw,*.acmf,*.xlsm,*.gPJ)|*.json;*.txt;*.bkp;*.apw;*.acmf;*.xlsm;*.xls;*.xlsx;*.gPJ|AspenSinter Configs(*.json,*.txt)|*.json;*.txt|Aspen Plus Files(*.bkp,*.apw)|*.bkp;*.apw|Aspen Custom Modeler|*.acmf|gPROMS|*.gPJ|Excel Files|*.xlsm;*.xls;*.xlsx|All Files(*.*)|*.*"; // Filter files by extension
+            _fd.Filter = "All SimSinter Files (*.json,*.txt,*.bkp,*.apw,*.acmf,*.xlsm)|*.json;*.txt;*.bkp;*.apw;*.acmf;*.xlsm;*.xls;*.xlsx|AspenSinter Configs(*.json,*.txt)|*.json;*.txt|Aspen Plus Files(*.bkp,*.apw)|*.bkp;*.apw|Aspen Custom Modeler|*.acmf|Excel Files|*.xlsm;*.xls;*.xlsx|All Files(*.*)|*.*"; // Filter files by extension
 
             // Show open file dialog box
             Nullable<bool> result = _fd.ShowDialog();
@@ -1095,28 +1070,11 @@ namespace SinterConfigGUI
 
 
                     }
-                    else if (extension == ".gencrypt")
-                    {
-                        displayError("gPROMS .gencrypt files cannot be read by SinterConfigGUI.  Please supply a .gPJ file.");
-                    }
-                    else if (extension == ".gpj" || extension == ".gPJ")
-                    {
-                        sinter.PSE.sinter_simGPROMSconfig thisGPROMS = new sinter.PSE.sinter_simGPROMSconfig();
-                        thisGPROMS.setupFile = new sinter.sinter_JsonSetupFile();
-                        thisGPROMS.setupFile.aspenFilename = System.IO.Path.GetFileName(filename);
-                        thisGPROMS.setupFile.simDescFile = System.IO.Path.GetFileName(filename);
-                        sim = thisGPROMS;
-                        sim.workingDir = System.IO.Path.GetDirectoryName(filename);
-                        metaDataStatusText = openedSimFile;
-
-
-                    }
                     else if (extension == ".bkp" || extension == ".apw")
                     {
                         sinter.sinter_SimAspen thisAspen = new sinter.sinter_SimAspen();
                         thisAspen.setupFile = new sinter.sinter_JsonSetupFile();
                         thisAspen.setupFile.aspenFilename = System.IO.Path.GetFileName(filename);
-                        thisAspen.setupFile.simDescFile = System.IO.Path.GetFileName(filename);
                         sim = thisAspen;
                         sim.workingDir = System.IO.Path.GetDirectoryName(filename);
                         metaDataStatusText = openedSimFile;
@@ -1128,7 +1086,6 @@ namespace SinterConfigGUI
                         sinter.sinter_SimACM thisAspen = new sinter.sinter_SimACM();
                         thisAspen.setupFile = new sinter.sinter_JsonSetupFile();
                         thisAspen.setupFile.aspenFilename = System.IO.Path.GetFileName(filename);
-                        thisAspen.setupFile.simDescFile = System.IO.Path.GetFileName(filename);
                         sim = thisAspen;
                         sim.workingDir = System.IO.Path.GetDirectoryName(filename);
                         metaDataStatusText = openedSimFile;
@@ -1139,7 +1096,6 @@ namespace SinterConfigGUI
                         sinter.sinter_SimExcel thisAspen = new sinter.sinter_SimExcel();
                         thisAspen.setupFile = new sinter.sinter_JsonSetupFile();
                         thisAspen.setupFile.aspenFilename = System.IO.Path.GetFileName(filename);
-                        thisAspen.setupFile.simDescFile = System.IO.Path.GetFileName(filename);
                         sim = thisAspen;
                         sim.workingDir = System.IO.Path.GetDirectoryName(filename);
                         metaDataStatusText = openedSimFile;
@@ -1436,7 +1392,7 @@ namespace SinterConfigGUI
 
         public void PreviewToInput_CanExecute(object sender, CanExecuteRoutedEventArgs args)
         {
-            args.CanExecute = (previewVariable.Count > 0 && o_gproms == null); //Can't make inputs in gproms
+            args.CanExecute = (previewVariable.Count > 0);
         }
 
         public void PreviewToInput_Executed(object sender, ExecutedRoutedEventArgs args)
@@ -1996,10 +1952,6 @@ namespace SinterConfigGUI
             String errorStr = null;
             if(o_acm != null) {
                 errorStr = checkACMSettings();
-            }
-            if (o_gproms != null)
-            {
-                errorStr = checkgPROMSErrors();
             }
             if (errorStr != null)
             {

@@ -6,9 +6,6 @@ perform the most common tasks with SimSinter. These tutorials focus on
 running SimSinter locally, as there are separate tutorials for running
 Aspen with the Gateway available in the FOQUS User Manual.
 
-This manual also does not cover running gPROMS with SimSinter. Please
-see the SimSinter gPROMS Technical Manual.
-
 Writing SimSinter Configuration Files
 -------------------------------------
 
@@ -22,13 +19,11 @@ interest.
 The JSON format is difficult to write. A Graphical User Interface (GUI)
 has been developed that makes this task much simpler.
 
-The following sections contain demonstrations on writing files for three
-of the supported simulators, Aspen Plus, ACM, and Microsoft Excel. For a
-tutorial on using SimSinter with gPROMS, see the SimSinter gPROMS
-Technical Manual. Before reading these sections, read
-`Overview`_, which provides and overview of the components of a Sinter
-configuration file. This section assumes the user has read 
-`Steady State Simulation`_.
+The following sections contain demonstrations on writing files for the three
+supported simulators, Aspen Plus, ACM, and Microsoft Excel. Before reading 
+these sections, read `Overview`_, which provides and overview of the 
+components of a Sinter configuration file. This section assumes the user 
+has read `Steady State Simulation`_.
 
 Creating a Steady State Aspen Custom Modeler Sinter Configuration File
 ----------------------------------------------------------------------

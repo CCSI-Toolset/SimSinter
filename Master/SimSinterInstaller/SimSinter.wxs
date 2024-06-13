@@ -70,7 +70,6 @@
               <Directory Id="DIR.ACMDYNAMICTEST" Name="ACM_Dynamic_Test">
                 <Directory Id="DIR.ACMDYNAMICTEST.SUB" Name="AM_BFB" />
               </Directory>
-              <Directory Id="DIR.gPINSTALLTEST" Name="gPROMS_Test" />
               <Directory Id="DIR.CONSOLESINTER" Name="ConsoleSinter_Tutorial" />
               <Directory Id="DIR.CSVCONSOLESINTER" Name="CSVConsoleSinter_Tutorial" />
               <Directory Id="DIR.EXCELINSTALLTEST" Name="Excel_Install_Test" />

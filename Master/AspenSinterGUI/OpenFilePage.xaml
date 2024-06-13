@@ -73,11 +73,6 @@
                     </ListItem>
                     <ListItem>
                         <Paragraph>
-                            an PSE gPROMS file (.gPJ)
-                        </Paragraph>
-                    </ListItem>
-                    <ListItem>
-                        <Paragraph>
                             a Microsoft Excel file (.xlsm, .xls, or .xlsx)
                         </Paragraph>
                     </ListItem>
