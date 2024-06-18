@@ -11,7 +11,7 @@ import sphinx_rtd_theme
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "SimSinter"
-copyright = "2012 - 2023 by CCSI Team All rights reserved."
+copyright = "2012 - 2024 by CCSI Team All rights reserved."
 author = "CCSI Team"
 
 # -- General configuration ---------------------------------------------------

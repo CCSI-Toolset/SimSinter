@@ -1,6 +1,6 @@
 ﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
   
-	<Package Name="SimSinter" Language="1033" Version="3.0.0.0" Manufacturer="CCSI" UpgradeCode="a9491f5b-eb5c-4fd4-8551-d7cf7992872c" InstallerVersion="405" ProductCode="FE0D0DCA-BCD7-4242-8647-35D2E4779588">
+	<Package Name="SimSinter" Language="1033" Version="3.1.0.0" Manufacturer="CCSI" UpgradeCode="a9491f5b-eb5c-4fd4-8551-d7cf7992872c" InstallerVersion="405" ProductCode="FE0D0DCA-BCD7-4242-8647-35D2E4779588">
     
 		
 
