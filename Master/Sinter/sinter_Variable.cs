@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Runtime.InteropServices;
 
 namespace sinter
 {
@@ -13,6 +14,7 @@ namespace sinter
     // for simulations.  It can be inherited to create
     // IO object classes for specific simulation types.
     //
+    [Guid("82FF17B2-1846-3ED9-93BC-62B0EE0352F4")]
     public class sinter_Variable : sinter_IVariable
     {
         #region enums

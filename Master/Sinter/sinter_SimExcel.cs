@@ -15,18 +15,19 @@ namespace sinter
     /// <summary>
     /// ExcelSetupFile just a hack to get around calling everything aspenfile
     /// </summary>
- //   public class ExcelSetupFile : sinter.sinter_JsonSetupFile
-//    {
-//        override public int parseFile(JObject setupObject)
-//        {
- //           String spreadsheet = (String)setupObject["spreadsheet"];
-//            Debug.WriteLine(String.Format("Parse Model: {0}", spreadsheet), this.GetType().Name);
-//            int val = base.parseFile(setupObject);
-//            o_aspenFilename = spreadsheet;
- //           return val;
- //       }
- //   }
+    //   public class ExcelSetupFile : sinter.sinter_JsonSetupFile
+    //    {
+    //        override public int parseFile(JObject setupObject)
+    //        {
+    //           String spreadsheet = (String)setupObject["spreadsheet"];
+    //            Debug.WriteLine(String.Format("Parse Model: {0}", spreadsheet), this.GetType().Name);
+    //            int val = base.parseFile(setupObject);
+    //            o_aspenFilename = spreadsheet;
+    //           return val;
+    //       }
+    //   }
 
+    [Guid("86652E72-84B5-32EC-850A-373DE54DFB7E")]
     public class sinter_SimExcel  : sinter_InteractiveSim
     {
         Excel.Application o_xlApp = null;

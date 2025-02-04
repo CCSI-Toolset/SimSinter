@@ -5,12 +5,14 @@ using System.Text;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Runtime.InteropServices;
 
 namespace sinter
 {
     //
     // This class holds scalar variables used for dynamic simulations.
     //
+    [Guid("ABBA937B-A12B-3A9C-A306-B0002C1DFA35")]
     public class sinter_DynamicScalar : sinter_Variable, sinter_IDynamicVariable 
     {
  

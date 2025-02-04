@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace sinter
 {
+    [Guid("B1E53950-9AC1-3C16-A4ED-261F58FC2574")]
     public class sinter_stringLabel
     {
 

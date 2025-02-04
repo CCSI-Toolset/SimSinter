@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace sinter
 {
+    [Guid("6854CCB9-4FB2-31A6-8F47-EBD3A345529D")]
     public interface sinter_IVariable
     {
         bool isTable

@@ -8,9 +8,11 @@ using System.Threading;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Runtime.InteropServices;
 
 namespace sinter
 {
+    [Guid("80FBFC70-E203-3A5B-8C81-46DDF9594251")]
     public class SinterProcess
     {
 

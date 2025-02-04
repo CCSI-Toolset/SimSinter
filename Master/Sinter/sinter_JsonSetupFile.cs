@@ -7,9 +7,11 @@ using System.Security.Cryptography;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using sinter;
+using System.Runtime.InteropServices;
 
 namespace sinter
 {
+    [Guid("0E5F46D4-A821-3E63-A688-B9F5292F94AE")]
     public class sinter_JsonSetupFile : sinter_SetupFile
     {
 

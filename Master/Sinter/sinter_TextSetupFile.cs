@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace sinter
 {
+    [Guid("531A9E31-EA48-3FEC-AC3E-E8D35592AB6A")]
     public class sinter_TextSetupFile : sinter_SetupFile
     {
 

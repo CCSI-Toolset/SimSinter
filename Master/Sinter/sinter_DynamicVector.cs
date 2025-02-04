@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -9,7 +10,7 @@ namespace sinter
 {
     // This is used when a dynamic (usually ACM) simulation has vector input and outputs.
     // Has to reimplement the stuff in sinter_DynamicScalar so it can inherit code from sinter_Vector instead.
-
+    [Guid("6103F522-F3E3-3F60-A688-9E98F032EAF1")]
     public class sinter_DynamicVector : sinter_Vector, sinter_IDynamicVariable
 
     {

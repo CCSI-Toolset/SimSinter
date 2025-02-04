@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace sinter
 {
+    [Guid("2DF3826D-5C13-3036-8D87-D4223DB10D76")]
     public interface sinter_IDynamicVariable
     {
         //When the input file is read, the TimeSeries may be a different size than the one in the configuration file.
