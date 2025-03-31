@@ -16,25 +16,13 @@
     <LoadFromTemplate>
     </LoadFromTemplate>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'DefaultBuild' " />
+  <PropertyGroup Condition=" '$(Configuration)' == 'Build64bit' " />
+  <PropertyGroup Condition=" '$(Configuration)' == 'Build32bit' " />
+  <PropertyGroup Condition=" '$(Configuration)' == 'All' " />
   <ItemGroup>
     <Compile Include="SinterInstaller.aip">
       <SubType>Code</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AspenSinterGUI\SinterConfigGUI.csproj">
-      <Name>SinterConfigGUI</Name>
-      <Project>{13f22696-ed37-4498-9c69-c6a13aa1f8cb}</Project>
-      <Private>True</Private>
-      <OutputsToImport>PrimaryOutput</OutputsToImport>
-    </ProjectReference>
-    <ProjectReference Include="..\Sinter\Sinter.csproj">
-      <Name>Sinter</Name>
-      <Project>{7aa14b52-b1b5-4b84-a884-48f0e6710ac4}</Project>
-      <Private>True</Private>
-      <OutputsToImport>PrimaryOutput;ComTypeLibraryOutput</OutputsToImport>
-    </ProjectReference>
   </ItemGroup>
   <Target Name="Build">
     <Error Text="This project requires Advanced Installer tool. Please download it from https://www.advancedinstaller.com/download.html" />
