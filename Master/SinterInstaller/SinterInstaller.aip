@@ -84,6 +84,7 @@
     <ROW Component="Flash_Example.bkp" ComponentId="{E4E9176E-F091-499D-8569-51A37AF9C35A}" Directory_="Aspen_Plus_Install_Test_Dir" Attributes="0" KeyPath="Flash_Example.bkp" Type="0"/>
     <ROW Component="Flash_Example_Input.csv" ComponentId="{ECED9C99-FC9E-4592-AC07-C4A66F791890}" Directory_="CSVConsoleSinter_Tutorial_Dir" Attributes="0" KeyPath="Flash_Example_Input.csv" Type="0"/>
     <ROW Component="Flash_Example_Input.json" ComponentId="{E1497359-3A53-4EBF-9233-7DEF75588686}" Directory_="ConsoleSinter_Tutorial_Dir" Attributes="0" KeyPath="Flash_Example_Input.json" Type="0"/>
+    <ROW Component="Newtonsoft.Json.dll" ComponentId="{AB308F28-557F-48D8-83FF-A8AC1BE1C164}" Directory_="APPDIR" Attributes="0" KeyPath="Newtonsoft.Json.dll"/>
     <ROW Component="ProductInformation" ComponentId="{A8EB9FE8-8DD1-4896-9149-148C30D2F971}" Directory_="APPDIR" Attributes="260" KeyPath="Version"/>
     <ROW Component="SHORTCUTDIR" ComponentId="{413703B9-0284-4BA0-B9DA-29E1991AF1AC}" Directory_="SHORTCUTDIR" Attributes="0"/>
     <ROW Component="Sinter.tlb" ComponentId="{4667D468-FF5A-40FA-99E5-2B2109A128D7}" Directory_="APPDIR" Attributes="260" KeyPath="RuntimeVersion_40" Type="0"/>
@@ -131,6 +132,7 @@
     <ROW File="Flash_Example_Output.csv" Component_="Flash_Example_Input.csv" FileName="FLASH_~2.CSV|Flash_Example_Output.csv" Attributes="0" SourcePath="..\test\CSVConsoleSinterTest\Flash_Example_Output.csv" SelfReg="false"/>
     <ROW File="Flash_Example_Output_Correct.csv" Component_="Flash_Example_Input.csv" FileName="FLASH_~3.CSV|Flash_Example_Output_Correct.csv" Attributes="0" SourcePath="..\test\CSVConsoleSinterTest\Flash_Example_Output_Correct.csv" SelfReg="false"/>
     <ROW File="Sinter.tlb" Component_="DefaultBuilder_PrimaryOutput" FileName="Sinter.tlb" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Sinter.tlb&gt;" SelfReg="safe"/>
+    <ROW File="Newtonsoft.Json.dll" Component_="Newtonsoft.Json.dll" FileName="NEWTON~2.DLL|Newtonsoft.Json.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\Sinter\bin\x64\Release\Newtonsoft.Json.dll" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
     <ROW Name="AI_APPPATH_PERBUILD_BMITestDriver.xlsm" Path="[|AI_PROPPATH_PERBUILD_BMITestDriver.xlsm]" Type="2" Content="0"/>
@@ -163,8 +165,11 @@
   <COMPONENT cid="caphyon.advinst.msicomp.DigCertStoreComponent">
     <ROW TimeStampUrl="http://timestamp.digicert.com" SignerDescription="[|ProductName]" SignOptions="0" SignTool="5" UseSha256="1" KVTenantId="576663c2-ba6e-447f-8b2f-9699f07a15a4" KVAppId="a9fecda1-916a-4947-be37-c9806fcc8692" KVName="wincodesigncert" KVCertName="LBL-WindowsCertificate"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FileDependencyComponent">
+    <ROW FilePath="APPDIR\[|AI_PROPPATH_FILENAME_PERBUILD_Sinter.dll]" File="Sinter.dll" FileDependency="Newtonsoft.Json.dll"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.FileDependencyOptionComponent">
-    <ROW File="Sinter.dll" Exclude="mscorlib.dll|System.Numerics.dll|System.dll|System.Xml.dll|System.Xml.Linq.dll|System.Core.dll|System.Runtime.Serialization.dll|System.Data.dll|Microsoft.VisualBasic.dll|Microsoft.CSharp.dll" Sha1="2de1c76cc836bd6e53f4d0d87698b457267ad540"/>
+    <ROW File="Sinter.dll" Exclude="mscorlib.dll|System.Numerics.dll|System.dll|System.Xml.dll|System.Xml.Linq.dll|System.Core.dll|System.Runtime.Serialization.dll|System.Data.dll|Microsoft.VisualBasic.dll|Microsoft.CSharp.dll" Sha1="7c2073db6c485193ffae3bda7b1d9b1117ae61be"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
     <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
@@ -285,6 +290,7 @@
     <ROW Feature_="MainFeature" Component_="AspenSinter_Excel_Template.xlsm"/>
     <ROW Feature_="MainFeature" Component_="Flash_Example_Input.json"/>
     <ROW Feature_="MainFeature" Component_="Flash_Example_Input.csv"/>
+    <ROW Feature_="MainFeature" Component_="Newtonsoft.Json.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
@@ -331,13 +337,13 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
     <ROW Registry="A1C5A0A93756AD8C731EAE884E08" Root="0" Key="Record\{2470A1C5-A0A9-3756-AD8C-731EAE884E08}" Name="\"/>
     <ROW Registry="A1C5A0A93756AD8C731EAE884E08_1" Root="0" Key="Record[COM_PROP1]\{2470A1C5-A0A9-3756-AD8C-731EAE884E08}" Name="\"/>
-    <ROW Registry="A1C5A0A93756AD8C731EAE884E08_2" Root="0" Key="Record[COM_PROP2]\{2470A1C5-A0A9-3756-AD8C-731EAE884E08}" Name="\"/>
     <ROW Registry="A43CA24B0439ED8730E2FADD4372A8" Root="0" Key="Record\{99A43CA2-4B04-39ED-8730-E2FADD4372A8}" Name="\"/>
     <ROW Registry="A43CA24B0439ED8730E2FADD4372A8_1" Root="0" Key="Record[COM_PROP1]\{99A43CA2-4B04-39ED-8730-E2FADD4372A8}" Name="\"/>
-    <ROW Registry="A43CA24B0439ED8730E2FADD4372A8_2" Root="0" Key="Record[COM_PROP2]\{99A43CA2-4B04-39ED-8730-E2FADD4372A8}" Name="\"/>
+    <ROW Registry="A579E8E92E3FE1BAC3BDB8F8B97066" Root="0" Key="Record\{61A579E8-E92E-3FE1-BAC3-BDB8F8B97066}" Name="\"/>
     <ROW Registry="A9E31EA483FECAC3EE8D35592AB6A" Root="0" Key="CLSID\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}" Name="\"/>
     <ROW Registry="A9E31EA483FECAC3EE8D35592AB6A_1" Root="0" Key="CLSID[COM_PROP1]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}" Name="\"/>
     <ROW Registry="A9E31EA483FECAC3EE8D35592AB6A_2" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}" Name="\"/>
+    <ROW Registry="AB6576058A53E369C59A98AB93F0C98" Root="0" Key="Record\{5AB65760-58A5-3E36-9C59-A98AB93F0C98}" Name="\"/>
     <ROW Registry="AB864CC2635188EAB3450CF1DC779" Root="0" Key="CLSID\{424AB864-CC26-3518-8EAB-3450CF1DC779}" Name="\"/>
     <ROW Registry="AB864CC2635188EAB3450CF1DC779_1" Root="0" Key="CLSID[COM_PROP1]\{424AB864-CC26-3518-8EAB-3450CF1DC779}" Name="\"/>
     <ROW Registry="AB864CC2635188EAB3450CF1DC779_2" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}" Name="\"/>
@@ -347,32 +353,33 @@
     <ROW Registry="AC3F5DB8393E428B7FB363A0BE88E8" Root="0" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}" Name="\"/>
     <ROW Registry="AC3F5DB8393E428B7FB363A0BE88E8_1" Root="0" Key="CLSID[COM_PROP1]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}" Name="\"/>
     <ROW Registry="AC3F5DB8393E428B7FB363A0BE88E8_2" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}" Name="\"/>
+    <ROW Registry="ACF9E671D133F14A3D68388E74F6E86" Root="0" Key="Record\{6ACF9E67-1D13-3F14-A3D6-8388E74F6E86}" Name="\"/>
     <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
     <ROW Registry="AdvancedInstaller" Root="-1" Key="Software\Caphyon\Advanced Installer" Name="\"/>
     <ROW Registry="Assembly" Root="0" Key="Record\{26E1D09E-2099-3AFE-880B-5386DD06EFDE}\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="Assembly_1" Root="0" Key="Record\{DAD4BD56-DD25-37B6-B887-BA2827036FA1}\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="Assembly_10" Root="0" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="Sinter_PrimaryOutput"/>
-    <ROW Registry="Assembly_100" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_101" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_102" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_103" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_104" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_105" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_106" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_107" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_108" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_109" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_100" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_101" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_102" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_103" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_104" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_105" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_106" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_107" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_108" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_109" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Assembly_11" Root="0" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="Sinter_PrimaryOutput"/>
-    <ROW Registry="Assembly_110" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_111" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_112" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_113" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_114" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_115" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_116" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_117" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_118" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_119" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_110" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_111" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_112" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_113" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_114" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_115" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_116" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_117" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_118" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_119" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Assembly_12" Root="0" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="Assembly_13" Root="0" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="Assembly_14" Root="0" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="Sinter_PrimaryOutput"/>
@@ -448,42 +455,42 @@
     <ROW Registry="Assembly_78" Root="0" Key="CLSID[COM_PROP1]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="Sinter.tlb"/>
     <ROW Registry="Assembly_79" Root="0" Key="CLSID[COM_PROP1]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="Sinter.tlb"/>
     <ROW Registry="Assembly_8" Root="0" Key="Record\{F53672CF-2D1D-3917-A786-3A34E5F77466}\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="Sinter_PrimaryOutput"/>
-    <ROW Registry="Assembly_80" Root="0" Key="Record[COM_PROP2]\{26E1D09E-2099-3AFE-880B-5386DD06EFDE}\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_81" Root="0" Key="Record[COM_PROP2]\{DAD4BD56-DD25-37B6-B887-BA2827036FA1}\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_82" Root="0" Key="Record[COM_PROP2]\{5798FE95-760D-3465-9014-925BC069534E}\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_83" Root="0" Key="Record[COM_PROP2]\{F78A176E-0A21-3C4A-BF68-6D4D20A38EA2}\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_84" Root="0" Key="Record[COM_PROP2]\{0B515CEF-D4A7-34DD-BC29-93E22A8A5688}\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_85" Root="0" Key="Record[COM_PROP2]\{99A43CA2-4B04-39ED-8730-E2FADD4372A8}\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_86" Root="0" Key="Record[COM_PROP2]\{BE0140B8-309A-3751-9D23-A16560586BB1}\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_87" Root="0" Key="Record[COM_PROP2]\{2470A1C5-A0A9-3756-AD8C-731EAE884E08}\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_88" Root="0" Key="Record[COM_PROP2]\{F53672CF-2D1D-3917-A786-3A34E5F77466}\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_89" Root="0" Key="Record[COM_PROP2]\{5ED08D62-6C28-3696-949C-ECAE6E7645B6}\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_80" Root="0" Key="Record\{6ACF9E67-1D13-3F14-A3D6-8388E74F6E86}\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_81" Root="0" Key="Record\{3C98D5D0-F157-3A3E-8005-5B1050EA9CBA}\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_82" Root="0" Key="Record\{9DE1C2C5-A181-3D5F-BF36-2C370FD0A045}\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_83" Root="0" Key="Record\{2C3CAA56-B655-31CF-8A26-A107573E0E5B}\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_84" Root="0" Key="Record\{5AB65760-58A5-3E36-9C59-A98AB93F0C98}\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_85" Root="0" Key="Record\{61A579E8-E92E-3FE1-BAC3-BDB8F8B97066}\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_86" Root="0" Key="Record\{D0659C99-5476-37B4-9CC5-2D7C48C595EF}\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_87" Root="0" Key="Record\{BBF388C0-1098-3F30-919E-07A52521FB5F}\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_88" Root="0" Key="Record\{5160DC35-2270-3D95-8031-F0C3E002F4FF}\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_89" Root="0" Key="Record\{E5E8B964-04D4-3ED6-90DC-E80737340064}\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Assembly_9" Root="0" Key="Record\{5ED08D62-6C28-3696-949C-ECAE6E7645B6}\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="Sinter_PrimaryOutput"/>
-    <ROW Registry="Assembly_90" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_91" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_92" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_93" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_94" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_95" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_96" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_97" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_98" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Assembly_99" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\3.1.0.0" Name="Assembly" Value="Sinter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_90" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_91" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_92" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_93" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_94" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_95" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_96" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_97" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_98" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Assembly_99" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\3.2.0.0" Name="Assembly" Value="Sinter, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="B1E539509AC13C16A4ED261F58FC2574" Root="0" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}" Name="\"/>
     <ROW Registry="B1E539509AC13C16A4ED261F58FC2574_1" Root="0" Key="CLSID[COM_PROP1]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}" Name="\"/>
     <ROW Registry="B1E539509AC13C16A4ED261F58FC2574_2" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}" Name="\"/>
     <ROW Registry="B515CEFD4A734DDBC2993E22A8A5688" Root="0" Key="Record\{0B515CEF-D4A7-34DD-BC29-93E22A8A5688}" Name="\"/>
     <ROW Registry="B515CEFD4A734DDBC2993E22A8A5688_1" Root="0" Key="Record[COM_PROP1]\{0B515CEF-D4A7-34DD-BC29-93E22A8A5688}" Name="\"/>
-    <ROW Registry="B515CEFD4A734DDBC2993E22A8A5688_2" Root="0" Key="Record[COM_PROP2]\{0B515CEF-D4A7-34DD-BC29-93E22A8A5688}" Name="\"/>
     <ROW Registry="B75CCB5475463BDF95A88CA2FAA638B3" Root="0" Key="CLSID\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}" Name="\"/>
     <ROW Registry="B75CCB5475463BDF95A88CA2FAA638B3_1" Root="0" Key="CLSID[COM_PROP1]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}" Name="\"/>
     <ROW Registry="B75CCB5475463BDF95A88CA2FAA638B3_2" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}" Name="\"/>
+    <ROW Registry="BBF388C010983F30919E07A52521FB5F" Root="0" Key="Record\{BBF388C0-1098-3F30-919E-07A52521FB5F}" Name="\"/>
     <ROW Registry="BE0140B8309A37519D23A16560586BB1" Root="0" Key="Record\{BE0140B8-309A-3751-9D23-A16560586BB1}" Name="\"/>
     <ROW Registry="BE0140B8309A37519D23A16560586BB1_1" Root="0" Key="Record[COM_PROP1]\{BE0140B8-309A-3751-9D23-A16560586BB1}" Name="\"/>
-    <ROW Registry="BE0140B8309A37519D23A16560586BB1_2" Root="0" Key="Record[COM_PROP2]\{BE0140B8-309A-3751-9D23-A16560586BB1}" Name="\"/>
     <ROW Registry="BE173EB0348389CD94B662A33699" Root="0" Key="CLSID\{5943BE17-3EB0-3483-89CD-94B662A33699}" Name="\"/>
     <ROW Registry="BE173EB0348389CD94B662A33699_1" Root="0" Key="CLSID[COM_PROP1]\{5943BE17-3EB0-3483-89CD-94B662A33699}" Name="\"/>
     <ROW Registry="BE173EB0348389CD94B662A33699_2" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}" Name="\"/>
+    <ROW Registry="C3CAA56B65531CF8A26A107573E0E5B" Root="0" Key="Record\{2C3CAA56-B655-31CF-8A26-A107573E0E5B}" Name="\"/>
     <ROW Registry="C8FE654EBB45E7B4406E39B2CDBF29" Root="0" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}" Name="+" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="C8FE654EBB45E7B4406E39B2CDBF29_1" Root="0" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}" Name="+" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="C8FE654EBB45E7B4406E39B2CDBF29_10" Root="0" Key="CLSID\{86652E72-84B5-32EC-850A-373DE54DFB7E}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}" Name="+" Component_="Sinter_PrimaryOutput"/>
@@ -529,6 +536,7 @@
     <ROW Registry="C8FE654EBB45E7B4406E39B2CDBF29_7" Root="0" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}" Name="+" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="C8FE654EBB45E7B4406E39B2CDBF29_8" Root="0" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}" Name="+" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="C8FE654EBB45E7B4406E39B2CDBF29_9" Root="0" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}" Name="+" Component_="Sinter_PrimaryOutput"/>
+    <ROW Registry="C98D5D0F1573A3E80055B1050EA9CBA" Root="0" Key="Record\{3C98D5D0-F157-3A3E-8005-5B1050EA9CBA}" Name="\"/>
     <ROW Registry="CLSID" Root="0" Key="sinter.sinter_Factory\CLSID" Name="\"/>
     <ROW Registry="CLSIDCOM_PROP1" Root="0" Key="CLSID[COM_PROP1]" Name="\"/>
     <ROW Registry="CLSIDCOM_PROP2" Root="0" Key="CLSID[COM_PROP2]" Name="\"/>
@@ -556,14 +564,14 @@
     <ROW Registry="CLSID_29" Root="0" Key="sinter.sinter_Variable[COM_PROP1]\CLSID" Name="\"/>
     <ROW Registry="CLSID_3" Root="0" Key="CLSID" Name="\"/>
     <ROW Registry="CLSID_30" Root="0" Key="sinter.sinter_Vector[COM_PROP1]\CLSID" Name="\"/>
-    <ROW Registry="CLSID_31" Root="0" Key="sinter.sinter_HelperFunctions[COM_PROP2]\CLSID" Name="\"/>
-    <ROW Registry="CLSID_32" Root="0" Key="sinter.sinter_Factory[COM_PROP2]\CLSID" Name="\"/>
-    <ROW Registry="CLSID_33" Root="0" Key="sinter.sinter_JsonSetupFile[COM_PROP2]\CLSID" Name="\"/>
-    <ROW Registry="CLSID_34" Root="0" Key="sinter.sinter_stringLabel[COM_PROP2]\CLSID" Name="\"/>
-    <ROW Registry="CLSID_35" Root="0" Key="sinter.SinterProcess[COM_PROP2]\CLSID" Name="\"/>
-    <ROW Registry="CLSID_36" Root="0" Key="sinter.sinter_DynamicVector[COM_PROP2]\CLSID" Name="\"/>
+    <ROW Registry="CLSID_31" Root="0" Key="sinter.sinter_Factory[COM_PROP2]\CLSID" Name="\"/>
+    <ROW Registry="CLSID_32" Root="0" Key="sinter.sinter_JsonSetupFile[COM_PROP2]\CLSID" Name="\"/>
+    <ROW Registry="CLSID_33" Root="0" Key="sinter.sinter_stringLabel[COM_PROP2]\CLSID" Name="\"/>
+    <ROW Registry="CLSID_34" Root="0" Key="sinter.SinterProcess[COM_PROP2]\CLSID" Name="\"/>
+    <ROW Registry="CLSID_35" Root="0" Key="sinter.sinter_DynamicVector[COM_PROP2]\CLSID" Name="\"/>
+    <ROW Registry="CLSID_36" Root="0" Key="sinter.sinter_SimACM[COM_PROP2]\CLSID" Name="\"/>
     <ROW Registry="CLSID_37" Root="0" Key="sinter.sinter_DynamicScalar[COM_PROP2]\CLSID" Name="\"/>
-    <ROW Registry="CLSID_38" Root="0" Key="sinter.sinter_SimACM[COM_PROP2]\CLSID" Name="\"/>
+    <ROW Registry="CLSID_38" Root="0" Key="sinter.sinter_HelperFunctions[COM_PROP2]\CLSID" Name="\"/>
     <ROW Registry="CLSID_39" Root="0" Key="sinter.sinter_SimAspen[COM_PROP2]\CLSID" Name="\"/>
     <ROW Registry="CLSID_4" Root="0" Key="sinter.sinter_DynamicScalar\CLSID" Name="\"/>
     <ROW Registry="CLSID_40" Root="0" Key="sinter.sinter_SimExcel[COM_PROP2]\CLSID" Name="\"/>
@@ -582,26 +590,26 @@
     <ROW Registry="Class_1" Root="0" Key="Record\{DAD4BD56-DD25-37B6-B887-BA2827036FA1}\3.1.0.0" Name="Class" Value="Happ.IAP_REINIT_TYPE" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="Class_10" Root="0" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Name="Class" Value="sinter.sinter_HelperFunctions" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="Class_100" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32" Name="Class" Value="sinter.sinter_SimAspen" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_101" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_SimAspen" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_101" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\3.2.0.0" Name="Class" Value="sinter.sinter_SimAspen" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Class_102" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32" Name="Class" Value="sinter.SinterProcess" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_103" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.SinterProcess" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_103" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\3.2.0.0" Name="Class" Value="sinter.SinterProcess" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Class_104" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32" Name="Class" Value="sinter.sinter_Factory" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_105" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_Factory" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_105" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\3.2.0.0" Name="Class" Value="sinter.sinter_Factory" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Class_106" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32" Name="Class" Value="sinter.sinter_SimACM" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_107" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_SimACM" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_107" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\3.2.0.0" Name="Class" Value="sinter.sinter_SimACM" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Class_108" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32" Name="Class" Value="sinter.sinter_stringLabel" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_109" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_stringLabel" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_109" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\3.2.0.0" Name="Class" Value="sinter.sinter_stringLabel" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Class_11" Root="0" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_HelperFunctions" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="Class_110" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32" Name="Class" Value="sinter.sinter_SimExcel" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_111" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_SimExcel" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_111" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\3.2.0.0" Name="Class" Value="sinter.sinter_SimExcel" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Class_112" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32" Name="Class" Value="sinter.sinter_StaticCOMWrapper" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_113" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_StaticCOMWrapper" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_113" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\3.2.0.0" Name="Class" Value="sinter.sinter_StaticCOMWrapper" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Class_114" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32" Name="Class" Value="sinter.sinter_Table" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_115" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_Table" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_115" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\3.2.0.0" Name="Class" Value="sinter.sinter_Table" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Class_116" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32" Name="Class" Value="sinter.sinter_TextSetupFile" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_117" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_TextSetupFile" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_117" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\3.2.0.0" Name="Class" Value="sinter.sinter_TextSetupFile" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Class_118" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32" Name="Class" Value="sinter.sinter_Variable" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_119" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_Variable" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_119" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\3.2.0.0" Name="Class" Value="sinter.sinter_Variable" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Class_12" Root="0" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Name="Class" Value="sinter.sinter_DynamicVector" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="Class_13" Root="0" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_DynamicVector" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="Class_14" Root="0" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Name="Class" Value="sinter.sinter_JsonSetupFile" Component_="Sinter_PrimaryOutput"/>
@@ -677,51 +685,51 @@
     <ROW Registry="Class_78" Root="0" Key="CLSID[COM_PROP1]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32" Name="Class" Value="sinter.sinter_Variable" Component_="Sinter.tlb"/>
     <ROW Registry="Class_79" Root="0" Key="CLSID[COM_PROP1]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_Variable" Component_="Sinter.tlb"/>
     <ROW Registry="Class_8" Root="0" Key="Record\{F53672CF-2D1D-3917-A786-3A34E5F77466}\3.1.0.0" Name="Class" Value="sinter.sinter_Variable+sinter_IOMode" Component_="Sinter_PrimaryOutput"/>
-    <ROW Registry="Class_80" Root="0" Key="Record[COM_PROP2]\{26E1D09E-2099-3AFE-880B-5386DD06EFDE}\3.1.0.0" Name="Class" Value="sinter.sinter_AppError" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_81" Root="0" Key="Record[COM_PROP2]\{DAD4BD56-DD25-37B6-B887-BA2827036FA1}\3.1.0.0" Name="Class" Value="Happ.IAP_REINIT_TYPE" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_82" Root="0" Key="Record[COM_PROP2]\{5798FE95-760D-3465-9014-925BC069534E}\3.1.0.0" Name="Class" Value="sinter.sinter_simulatorStatus" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_83" Root="0" Key="Record[COM_PROP2]\{F78A176E-0A21-3C4A-BF68-6D4D20A38EA2}\3.1.0.0" Name="Class" Value="Microsoft.Office.Interop.Excel.XlRangeValueDataType" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_84" Root="0" Key="Record[COM_PROP2]\{0B515CEF-D4A7-34DD-BC29-93E22A8A5688}\3.1.0.0" Name="Class" Value="sinter.sinter_versionConstraint" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_85" Root="0" Key="Record[COM_PROP2]\{99A43CA2-4B04-39ED-8730-E2FADD4372A8}\3.1.0.0" Name="Class" Value="Microsoft.Office.Interop.Excel.XlReferenceStyle" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_86" Root="0" Key="Record[COM_PROP2]\{BE0140B8-309A-3751-9D23-A16560586BB1}\3.1.0.0" Name="Class" Value="Happ.HAPEXPType" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_87" Root="0" Key="Record[COM_PROP2]\{2470A1C5-A0A9-3756-AD8C-731EAE884E08}\3.1.0.0" Name="Class" Value="sinter.sinter_Variable+sinter_IOType" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_88" Root="0" Key="Record[COM_PROP2]\{F53672CF-2D1D-3917-A786-3A34E5F77466}\3.1.0.0" Name="Class" Value="sinter.sinter_Variable+sinter_IOMode" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_89" Root="0" Key="Record[COM_PROP2]\{5ED08D62-6C28-3696-949C-ECAE6E7645B6}\3.1.0.0" Name="Class" Value="sinter.sinter_Variable+sinter_IOError" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_80" Root="0" Key="Record\{6ACF9E67-1D13-3F14-A3D6-8388E74F6E86}\3.2.0.0" Name="Class" Value="Microsoft.Office.Interop.Excel.XlRangeValueDataType" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_81" Root="0" Key="Record\{3C98D5D0-F157-3A3E-8005-5B1050EA9CBA}\3.2.0.0" Name="Class" Value="sinter.sinter_AppError" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_82" Root="0" Key="Record\{9DE1C2C5-A181-3D5F-BF36-2C370FD0A045}\3.2.0.0" Name="Class" Value="Microsoft.Office.Interop.Excel.XlReferenceStyle" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_83" Root="0" Key="Record\{2C3CAA56-B655-31CF-8A26-A107573E0E5B}\3.2.0.0" Name="Class" Value="Happ.IAP_REINIT_TYPE" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_84" Root="0" Key="Record\{5AB65760-58A5-3E36-9C59-A98AB93F0C98}\3.2.0.0" Name="Class" Value="sinter.sinter_simulatorStatus" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_85" Root="0" Key="Record\{61A579E8-E92E-3FE1-BAC3-BDB8F8B97066}\3.2.0.0" Name="Class" Value="sinter.sinter_versionConstraint" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_86" Root="0" Key="Record\{D0659C99-5476-37B4-9CC5-2D7C48C595EF}\3.2.0.0" Name="Class" Value="sinter.sinter_Variable+sinter_IOType" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_87" Root="0" Key="Record\{BBF388C0-1098-3F30-919E-07A52521FB5F}\3.2.0.0" Name="Class" Value="Happ.HAPEXPType" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_88" Root="0" Key="Record\{5160DC35-2270-3D95-8031-F0C3E002F4FF}\3.2.0.0" Name="Class" Value="sinter.sinter_Variable+sinter_IOMode" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_89" Root="0" Key="Record\{E5E8B964-04D4-3ED6-90DC-E80737340064}\3.2.0.0" Name="Class" Value="sinter.sinter_Variable+sinter_IOError" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Class_9" Root="0" Key="Record\{5ED08D62-6C28-3696-949C-ECAE6E7645B6}\3.1.0.0" Name="Class" Value="sinter.sinter_Variable+sinter_IOError" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="Class_90" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Name="Class" Value="sinter.sinter_HelperFunctions" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_91" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_HelperFunctions" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_91" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\3.2.0.0" Name="Class" Value="sinter.sinter_HelperFunctions" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Class_92" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Name="Class" Value="sinter.sinter_DynamicVector" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_93" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_DynamicVector" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_93" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\3.2.0.0" Name="Class" Value="sinter.sinter_DynamicVector" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Class_94" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Name="Class" Value="sinter.sinter_JsonSetupFile" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_95" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_JsonSetupFile" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_95" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\3.2.0.0" Name="Class" Value="sinter.sinter_JsonSetupFile" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Class_96" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32" Name="Class" Value="sinter.sinter_DynamicScalar" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_97" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_DynamicScalar" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_97" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\3.2.0.0" Name="Class" Value="sinter.sinter_DynamicScalar" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Class_98" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32" Name="Class" Value="sinter.sinter_Vector" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="Class_99" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\3.1.0.0" Name="Class" Value="sinter.sinter_Vector" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="Class_99" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\3.2.0.0" Name="Class" Value="sinter.sinter_Vector" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase" Root="0" Key="Record\{26E1D09E-2099-3AFE-880B-5386DD06EFDE}\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="CodeBase_1" Root="0" Key="Record\{DAD4BD56-DD25-37B6-B887-BA2827036FA1}\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="CodeBase_10" Root="0" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="CodeBase_100" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_101" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_101" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase_102" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_103" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_103" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase_104" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_105" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_105" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase_106" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_107" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_107" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase_108" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_109" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_109" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase_11" Root="0" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="CodeBase_110" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_111" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_111" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase_112" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_113" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_113" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase_114" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_115" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_115" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase_116" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_117" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_117" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase_118" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_119" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_119" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase_12" Root="0" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="CodeBase_13" Root="0" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="CodeBase_14" Root="0" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="Sinter_PrimaryOutput"/>
@@ -797,39 +805,41 @@
     <ROW Registry="CodeBase_78" Root="0" Key="CLSID[COM_PROP1]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="Sinter.tlb"/>
     <ROW Registry="CodeBase_79" Root="0" Key="CLSID[COM_PROP1]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="Sinter.tlb"/>
     <ROW Registry="CodeBase_8" Root="0" Key="Record\{F53672CF-2D1D-3917-A786-3A34E5F77466}\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="Sinter_PrimaryOutput"/>
-    <ROW Registry="CodeBase_80" Root="0" Key="Record[COM_PROP2]\{26E1D09E-2099-3AFE-880B-5386DD06EFDE}\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_81" Root="0" Key="Record[COM_PROP2]\{DAD4BD56-DD25-37B6-B887-BA2827036FA1}\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_82" Root="0" Key="Record[COM_PROP2]\{5798FE95-760D-3465-9014-925BC069534E}\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_83" Root="0" Key="Record[COM_PROP2]\{F78A176E-0A21-3C4A-BF68-6D4D20A38EA2}\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_84" Root="0" Key="Record[COM_PROP2]\{0B515CEF-D4A7-34DD-BC29-93E22A8A5688}\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_85" Root="0" Key="Record[COM_PROP2]\{99A43CA2-4B04-39ED-8730-E2FADD4372A8}\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_86" Root="0" Key="Record[COM_PROP2]\{BE0140B8-309A-3751-9D23-A16560586BB1}\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_87" Root="0" Key="Record[COM_PROP2]\{2470A1C5-A0A9-3756-AD8C-731EAE884E08}\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_88" Root="0" Key="Record[COM_PROP2]\{F53672CF-2D1D-3917-A786-3A34E5F77466}\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_89" Root="0" Key="Record[COM_PROP2]\{5ED08D62-6C28-3696-949C-ECAE6E7645B6}\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_80" Root="0" Key="Record\{6ACF9E67-1D13-3F14-A3D6-8388E74F6E86}\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_81" Root="0" Key="Record\{3C98D5D0-F157-3A3E-8005-5B1050EA9CBA}\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_82" Root="0" Key="Record\{9DE1C2C5-A181-3D5F-BF36-2C370FD0A045}\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_83" Root="0" Key="Record\{2C3CAA56-B655-31CF-8A26-A107573E0E5B}\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_84" Root="0" Key="Record\{5AB65760-58A5-3E36-9C59-A98AB93F0C98}\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_85" Root="0" Key="Record\{61A579E8-E92E-3FE1-BAC3-BDB8F8B97066}\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_86" Root="0" Key="Record\{D0659C99-5476-37B4-9CC5-2D7C48C595EF}\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_87" Root="0" Key="Record\{BBF388C0-1098-3F30-919E-07A52521FB5F}\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_88" Root="0" Key="Record\{5160DC35-2270-3D95-8031-F0C3E002F4FF}\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_89" Root="0" Key="Record\{E5E8B964-04D4-3ED6-90DC-E80737340064}\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase_9" Root="0" Key="Record\{5ED08D62-6C28-3696-949C-ECAE6E7645B6}\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="CodeBase_90" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_91" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_91" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase_92" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_93" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_93" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase_94" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_95" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_95" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase_96" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_97" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_97" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="CodeBase_98" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="CodeBase_99" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\3.1.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="CodeBase_99" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\3.2.0.0" Name="CodeBase" Value="file:///[#Sinter.dll]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="D0659C99547637B49CC52D7C48C595EF" Root="0" Key="Record\{D0659C99-5476-37B4-9CC5-2D7C48C595EF}" Name="\"/>
     <ROW Registry="D493BBE853FAE4A00FF7BFA" Root="0" Key="CLSID\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}" Name="\"/>
     <ROW Registry="D493BBE853FAE4A00FF7BFA_1" Root="0" Key="CLSID[COM_PROP1]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}" Name="\"/>
     <ROW Registry="D493BBE853FAE4A00FF7BFA_2" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}" Name="\"/>
     <ROW Registry="DAD4BD56DD2537B6B887BA2827036FA1" Root="0" Key="Record\{DAD4BD56-DD25-37B6-B887-BA2827036FA1}" Name="\"/>
     <ROW Registry="DAD4BD56DD2537B6B887BA2827036FA1_1" Root="0" Key="Record[COM_PROP1]\{DAD4BD56-DD25-37B6-B887-BA2827036FA1}" Name="\"/>
-    <ROW Registry="DAD4BD56DD2537B6B887BA2827036FA1_2" Root="0" Key="Record[COM_PROP2]\{DAD4BD56-DD25-37B6-B887-BA2827036FA1}" Name="\"/>
     <ROW Registry="DB87723D33C609A4E65EB04C07649" Root="0" Key="CLSID\{165DB877-23D3-3C60-9A4E-65EB04C07649}" Name="\"/>
     <ROW Registry="DB87723D33C609A4E65EB04C07649_1" Root="0" Key="CLSID[COM_PROP1]\{165DB877-23D3-3C60-9A4E-65EB04C07649}" Name="\"/>
     <ROW Registry="DB87723D33C609A4E65EB04C07649_2" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}" Name="\"/>
+    <ROW Registry="DC3522703D958031F0C3E002F4FF" Root="0" Key="Record\{5160DC35-2270-3D95-8031-F0C3E002F4FF}" Name="\"/>
+    <ROW Registry="DE1C2C5A1813D5FBF362C370FD0A045" Root="0" Key="Record\{9DE1C2C5-A181-3D5F-BF36-2C370FD0A045}" Name="\"/>
     <ROW Registry="E1D09E20993AFE880B5386DD06EFDE" Root="0" Key="Record\{26E1D09E-2099-3AFE-880B-5386DD06EFDE}" Name="\"/>
     <ROW Registry="E1D09E20993AFE880B5386DD06EFDE_1" Root="0" Key="Record[COM_PROP1]\{26E1D09E-2099-3AFE-880B-5386DD06EFDE}" Name="\"/>
-    <ROW Registry="E1D09E20993AFE880B5386DD06EFDE_2" Root="0" Key="Record[COM_PROP2]\{26E1D09E-2099-3AFE-880B-5386DD06EFDE}" Name="\"/>
+    <ROW Registry="E5E8B96404D43ED690DCE80737340064" Root="0" Key="Record\{E5E8B964-04D4-3ED6-90DC-E80737340064}" Name="\"/>
     <ROW Registry="E5F46D4A8213E63A688B9F5292F94AE" Root="0" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}" Name="\"/>
     <ROW Registry="E5F46D4A8213E63A688B9F5292F94AE_1" Root="0" Key="CLSID[COM_PROP1]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}" Name="\"/>
     <ROW Registry="E5F46D4A8213E63A688B9F5292F94AE_2" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}" Name="\"/>
@@ -838,25 +848,21 @@
     <ROW Registry="E7284B532EC850A373DE54DFB7E_2" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}" Name="\"/>
     <ROW Registry="ED08D626C283696949CECAE6E7645B6" Root="0" Key="Record\{5ED08D62-6C28-3696-949C-ECAE6E7645B6}" Name="\"/>
     <ROW Registry="ED08D626C283696949CECAE6E7645B6_1" Root="0" Key="Record[COM_PROP1]\{5ED08D62-6C28-3696-949C-ECAE6E7645B6}" Name="\"/>
-    <ROW Registry="ED08D626C283696949CECAE6E7645B6_2" Root="0" Key="Record[COM_PROP2]\{5ED08D62-6C28-3696-949C-ECAE6E7645B6}" Name="\"/>
     <ROW Registry="F522F3E33F60A6889E98F032EAF1" Root="0" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}" Name="\"/>
     <ROW Registry="F522F3E33F60A6889E98F032EAF1_1" Root="0" Key="CLSID[COM_PROP1]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}" Name="\"/>
     <ROW Registry="F522F3E33F60A6889E98F032EAF1_2" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}" Name="\"/>
     <ROW Registry="F53672CF2D1D3917A7863A34E5F77466" Root="0" Key="Record\{F53672CF-2D1D-3917-A786-3A34E5F77466}" Name="\"/>
     <ROW Registry="F53672CF2D1D3917A7863A34E5F77466_1" Root="0" Key="Record[COM_PROP1]\{F53672CF-2D1D-3917-A786-3A34E5F77466}" Name="\"/>
-    <ROW Registry="F53672CF2D1D3917A7863A34E5F77466_2" Root="0" Key="Record[COM_PROP2]\{F53672CF-2D1D-3917-A786-3A34E5F77466}" Name="\"/>
     <ROW Registry="F6D0A871275B3627BE31BF5A9894C118" Root="0" Key="CLSID\{F6D0A871-275B-3627-BE31-BF5A9894C118}" Name="\"/>
     <ROW Registry="F6D0A871275B3627BE31BF5A9894C118_1" Root="0" Key="CLSID[COM_PROP1]\{F6D0A871-275B-3627-BE31-BF5A9894C118}" Name="\"/>
     <ROW Registry="F6D0A871275B3627BE31BF5A9894C118_2" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}" Name="\"/>
     <ROW Registry="F78A176E0A213C4ABF686D4D20A38EA2" Root="0" Key="Record\{F78A176E-0A21-3C4A-BF68-6D4D20A38EA2}" Name="\"/>
     <ROW Registry="F78A176E0A213C4ABF686D4D20A38EA2_1" Root="0" Key="Record[COM_PROP1]\{F78A176E-0A21-3C4A-BF68-6D4D20A38EA2}" Name="\"/>
-    <ROW Registry="F78A176E0A213C4ABF686D4D20A38EA2_2" Root="0" Key="Record[COM_PROP2]\{F78A176E-0A21-3C4A-BF68-6D4D20A38EA2}" Name="\"/>
     <ROW Registry="FBFC70E2033A5B8C8146DDF9594251" Root="0" Key="CLSID\{80FBFC70-E203-3A5B-8C81-46DDF9594251}" Name="\"/>
     <ROW Registry="FBFC70E2033A5B8C8146DDF9594251_1" Root="0" Key="CLSID[COM_PROP1]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}" Name="\"/>
     <ROW Registry="FBFC70E2033A5B8C8146DDF9594251_2" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}" Name="\"/>
     <ROW Registry="FE95760D34659014925BC069534E" Root="0" Key="Record\{5798FE95-760D-3465-9014-925BC069534E}" Name="\"/>
     <ROW Registry="FE95760D34659014925BC069534E_1" Root="0" Key="Record[COM_PROP1]\{5798FE95-760D-3465-9014-925BC069534E}" Name="\"/>
-    <ROW Registry="FE95760D34659014925BC069534E_2" Root="0" Key="Record[COM_PROP2]\{5798FE95-760D-3465-9014-925BC069534E}" Name="\"/>
     <ROW Registry="FF17B218463ED993BC62B0EE0352F4" Root="0" Key="CLSID\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}" Name="\"/>
     <ROW Registry="FF17B218463ED993BC62B0EE0352F4_1" Root="0" Key="CLSID[COM_PROP1]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}" Name="\"/>
     <ROW Registry="FF17B218463ED993BC62B0EE0352F4_2" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}" Name="\"/>
@@ -1003,31 +1009,30 @@
     <ROW Registry="ProgId_9" Root="0" Key="CLSID\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\ProgId" Name="\"/>
     <ROW Registry="Record" Root="0" Key="Record" Name="\"/>
     <ROW Registry="RecordCOM_PROP1" Root="0" Key="Record[COM_PROP1]" Name="\"/>
-    <ROW Registry="RecordCOM_PROP2" Root="0" Key="Record[COM_PROP2]" Name="\"/>
     <ROW Registry="RuntimeVersion" Root="0" Key="Record\{26E1D09E-2099-3AFE-880B-5386DD06EFDE}\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_1" Root="0" Key="Record\{DAD4BD56-DD25-37B6-B887-BA2827036FA1}\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_10" Root="0" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_100" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_101" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_101" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_102" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_103" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_103" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_104" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_105" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_105" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_106" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_107" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_107" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_108" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_109" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_109" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_11" Root="0" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_110" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_111" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_111" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_112" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_113" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_113" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_114" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_115" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_115" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_116" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_117" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_117" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_118" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_119" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_119" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_12" Root="0" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_13" Root="0" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_14" Root="0" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="Sinter_PrimaryOutput"/>
@@ -1103,27 +1108,27 @@
     <ROW Registry="RuntimeVersion_78" Root="0" Key="CLSID[COM_PROP1]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="Sinter.tlb"/>
     <ROW Registry="RuntimeVersion_79" Root="0" Key="CLSID[COM_PROP1]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="Sinter.tlb"/>
     <ROW Registry="RuntimeVersion_8" Root="0" Key="Record\{F53672CF-2D1D-3917-A786-3A34E5F77466}\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="Sinter_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_80" Root="0" Key="Record[COM_PROP2]\{26E1D09E-2099-3AFE-880B-5386DD06EFDE}\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_81" Root="0" Key="Record[COM_PROP2]\{DAD4BD56-DD25-37B6-B887-BA2827036FA1}\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_82" Root="0" Key="Record[COM_PROP2]\{5798FE95-760D-3465-9014-925BC069534E}\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_83" Root="0" Key="Record[COM_PROP2]\{F78A176E-0A21-3C4A-BF68-6D4D20A38EA2}\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_84" Root="0" Key="Record[COM_PROP2]\{0B515CEF-D4A7-34DD-BC29-93E22A8A5688}\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_85" Root="0" Key="Record[COM_PROP2]\{99A43CA2-4B04-39ED-8730-E2FADD4372A8}\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_86" Root="0" Key="Record[COM_PROP2]\{BE0140B8-309A-3751-9D23-A16560586BB1}\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_87" Root="0" Key="Record[COM_PROP2]\{2470A1C5-A0A9-3756-AD8C-731EAE884E08}\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_88" Root="0" Key="Record[COM_PROP2]\{F53672CF-2D1D-3917-A786-3A34E5F77466}\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_89" Root="0" Key="Record[COM_PROP2]\{5ED08D62-6C28-3696-949C-ECAE6E7645B6}\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_80" Root="0" Key="Record\{6ACF9E67-1D13-3F14-A3D6-8388E74F6E86}\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_81" Root="0" Key="Record\{3C98D5D0-F157-3A3E-8005-5B1050EA9CBA}\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_82" Root="0" Key="Record\{9DE1C2C5-A181-3D5F-BF36-2C370FD0A045}\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_83" Root="0" Key="Record\{2C3CAA56-B655-31CF-8A26-A107573E0E5B}\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_84" Root="0" Key="Record\{5AB65760-58A5-3E36-9C59-A98AB93F0C98}\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_85" Root="0" Key="Record\{61A579E8-E92E-3FE1-BAC3-BDB8F8B97066}\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_86" Root="0" Key="Record\{D0659C99-5476-37B4-9CC5-2D7C48C595EF}\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_87" Root="0" Key="Record\{BBF388C0-1098-3F30-919E-07A52521FB5F}\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_88" Root="0" Key="Record\{5160DC35-2270-3D95-8031-F0C3E002F4FF}\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_89" Root="0" Key="Record\{E5E8B964-04D4-3ED6-90DC-E80737340064}\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_9" Root="0" Key="Record\{5ED08D62-6C28-3696-949C-ECAE6E7645B6}\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_90" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_91" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_91" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_92" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_93" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_93" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_94" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_95" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_95" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_96" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_97" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_97" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="RuntimeVersion_98" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="RuntimeVersion_99" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\3.1.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="RuntimeVersion_99" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\3.2.0.0" Name="RuntimeVersion" Value="v4.0.30319" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="Software" Root="-1" Key="Software" Name="\"/>
     <ROW Registry="ThreadingModel" Root="0" Key="CLSID\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Name="ThreadingModel" Value="Both" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="ThreadingModel_1" Root="0" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Name="ThreadingModel" Value="Both" Component_="Sinter_PrimaryOutput"/>
@@ -1285,100 +1290,100 @@
     <ROW Registry="__199" Root="0" Key="sinter.sinter_Vector[COM_PROP1]\CLSID" Value="[\{]424AB864-CC26-3518-8EAB-3450CF1DC779[\}]" Component_="Sinter.tlb"/>
     <ROW Registry="__2" Root="0" Key="Record\{5798FE95-760D-3465-9014-925BC069534E}\3.1.0.0" Name="\"/>
     <ROW Registry="__20" Root="0" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}" Value="sinter.sinter_DynamicVector" Component_="Sinter_PrimaryOutput"/>
-    <ROW Registry="__200" Root="0" Key="sinter.sinter_HelperFunctions[COM_PROP2]" Value="sinter.sinter_HelperFunctions" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__201" Root="0" Key="sinter.sinter_HelperFunctions[COM_PROP2]\CLSID" Value="[\{]83AC3F5D-B839-3E42-8B7F-B363A0BE88E8[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__202" Root="0" Key="sinter.sinter_Factory[COM_PROP2]" Value="sinter.sinter_Factory" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__203" Root="0" Key="sinter.sinter_Factory[COM_PROP2]\CLSID" Value="[\{]67776158-8D49-3BBE-853F-AE4A00FF7BFA[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__204" Root="0" Key="sinter.sinter_JsonSetupFile[COM_PROP2]" Value="sinter.sinter_JsonSetupFile" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__205" Root="0" Key="sinter.sinter_JsonSetupFile[COM_PROP2]\CLSID" Value="[\{]0E5F46D4-A821-3E63-A688-B9F5292F94AE[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__206" Root="0" Key="sinter.sinter_stringLabel[COM_PROP2]" Value="sinter.sinter_stringLabel" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__207" Root="0" Key="sinter.sinter_stringLabel[COM_PROP2]\CLSID" Value="[\{]B1E53950-9AC1-3C16-A4ED-261F58FC2574[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__208" Root="0" Key="sinter.SinterProcess[COM_PROP2]" Value="sinter.SinterProcess" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__209" Root="0" Key="sinter.SinterProcess[COM_PROP2]\CLSID" Value="[\{]80FBFC70-E203-3A5B-8C81-46DDF9594251[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="__200" Root="0" Key="Record\{6ACF9E67-1D13-3F14-A3D6-8388E74F6E86}\3.2.0.0" Name="\"/>
+    <ROW Registry="__201" Root="0" Key="Record\{3C98D5D0-F157-3A3E-8005-5B1050EA9CBA}\3.2.0.0" Name="\"/>
+    <ROW Registry="__202" Root="0" Key="Record\{9DE1C2C5-A181-3D5F-BF36-2C370FD0A045}\3.2.0.0" Name="\"/>
+    <ROW Registry="__203" Root="0" Key="Record\{2C3CAA56-B655-31CF-8A26-A107573E0E5B}\3.2.0.0" Name="\"/>
+    <ROW Registry="__204" Root="0" Key="Record\{5AB65760-58A5-3E36-9C59-A98AB93F0C98}\3.2.0.0" Name="\"/>
+    <ROW Registry="__205" Root="0" Key="Record\{61A579E8-E92E-3FE1-BAC3-BDB8F8B97066}\3.2.0.0" Name="\"/>
+    <ROW Registry="__206" Root="0" Key="Record\{D0659C99-5476-37B4-9CC5-2D7C48C595EF}\3.2.0.0" Name="\"/>
+    <ROW Registry="__207" Root="0" Key="Record\{BBF388C0-1098-3F30-919E-07A52521FB5F}\3.2.0.0" Name="\"/>
+    <ROW Registry="__208" Root="0" Key="Record\{5160DC35-2270-3D95-8031-F0C3E002F4FF}\3.2.0.0" Name="\"/>
+    <ROW Registry="__209" Root="0" Key="Record\{E5E8B964-04D4-3ED6-90DC-E80737340064}\3.2.0.0" Name="\"/>
     <ROW Registry="__21" Root="0" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Value="mscoree.dll" Component_="Sinter_PrimaryOutput"/>
-    <ROW Registry="__210" Root="0" Key="sinter.sinter_DynamicVector[COM_PROP2]" Value="sinter.sinter_DynamicVector" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__211" Root="0" Key="sinter.sinter_DynamicVector[COM_PROP2]\CLSID" Value="[\{]6103F522-F3E3-3F60-A688-9E98F032EAF1[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__212" Root="0" Key="Record[COM_PROP2]\{26E1D09E-2099-3AFE-880B-5386DD06EFDE}\3.1.0.0" Name="\"/>
-    <ROW Registry="__213" Root="0" Key="Record[COM_PROP2]\{DAD4BD56-DD25-37B6-B887-BA2827036FA1}\3.1.0.0" Name="\"/>
-    <ROW Registry="__214" Root="0" Key="Record[COM_PROP2]\{5798FE95-760D-3465-9014-925BC069534E}\3.1.0.0" Name="\"/>
-    <ROW Registry="__215" Root="0" Key="Record[COM_PROP2]\{F78A176E-0A21-3C4A-BF68-6D4D20A38EA2}\3.1.0.0" Name="\"/>
-    <ROW Registry="__216" Root="0" Key="Record[COM_PROP2]\{0B515CEF-D4A7-34DD-BC29-93E22A8A5688}\3.1.0.0" Name="\"/>
-    <ROW Registry="__217" Root="0" Key="Record[COM_PROP2]\{99A43CA2-4B04-39ED-8730-E2FADD4372A8}\3.1.0.0" Name="\"/>
-    <ROW Registry="__218" Root="0" Key="Record[COM_PROP2]\{BE0140B8-309A-3751-9D23-A16560586BB1}\3.1.0.0" Name="\"/>
-    <ROW Registry="__219" Root="0" Key="Record[COM_PROP2]\{2470A1C5-A0A9-3756-AD8C-731EAE884E08}\3.1.0.0" Name="\"/>
+    <ROW Registry="__210" Root="0" Key="sinter.sinter_Factory[COM_PROP2]" Value="sinter.sinter_Factory" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="__211" Root="0" Key="sinter.sinter_Factory[COM_PROP2]\CLSID" Value="[\{]67776158-8D49-3BBE-853F-AE4A00FF7BFA[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="__212" Root="0" Key="sinter.sinter_JsonSetupFile[COM_PROP2]" Value="sinter.sinter_JsonSetupFile" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="__213" Root="0" Key="sinter.sinter_JsonSetupFile[COM_PROP2]\CLSID" Value="[\{]0E5F46D4-A821-3E63-A688-B9F5292F94AE[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="__214" Root="0" Key="sinter.sinter_stringLabel[COM_PROP2]" Value="sinter.sinter_stringLabel" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="__215" Root="0" Key="sinter.sinter_stringLabel[COM_PROP2]\CLSID" Value="[\{]B1E53950-9AC1-3C16-A4ED-261F58FC2574[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="__216" Root="0" Key="sinter.SinterProcess[COM_PROP2]" Value="sinter.SinterProcess" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="__217" Root="0" Key="sinter.SinterProcess[COM_PROP2]\CLSID" Value="[\{]80FBFC70-E203-3A5B-8C81-46DDF9594251[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="__218" Root="0" Key="sinter.sinter_DynamicVector[COM_PROP2]" Value="sinter.sinter_DynamicVector" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="__219" Root="0" Key="sinter.sinter_DynamicVector[COM_PROP2]\CLSID" Value="[\{]6103F522-F3E3-3F60-A688-9E98F032EAF1[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__22" Root="0" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\3.1.0.0" Name="\"/>
-    <ROW Registry="__220" Root="0" Key="Record[COM_PROP2]\{F53672CF-2D1D-3917-A786-3A34E5F77466}\3.1.0.0" Name="\"/>
-    <ROW Registry="__221" Root="0" Key="Record[COM_PROP2]\{5ED08D62-6C28-3696-949C-ECAE6E7645B6}\3.1.0.0" Name="\"/>
+    <ROW Registry="__220" Root="0" Key="sinter.sinter_SimACM[COM_PROP2]" Value="sinter.sinter_SimACM" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="__221" Root="0" Key="sinter.sinter_SimACM[COM_PROP2]\CLSID" Value="[\{]165DB877-23D3-3C60-9A4E-65EB04C07649[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__222" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}" Value="sinter.sinter_HelperFunctions" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__223" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32" Value="mscoree.dll" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__224" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\3.1.0.0" Name="\"/>
+    <ROW Registry="__224" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\InprocServer32\3.2.0.0" Name="\"/>
     <ROW Registry="__225" Root="0" Key="CLSID[COM_PROP2]\{83AC3F5D-B839-3E42-8B7F-B363A0BE88E8}\ProgId" Value="sinter.sinter_HelperFunctions" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__226" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}" Value="sinter.sinter_DynamicVector" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__227" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32" Value="mscoree.dll" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__228" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\3.1.0.0" Name="\"/>
+    <ROW Registry="__228" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\InprocServer32\3.2.0.0" Name="\"/>
     <ROW Registry="__229" Root="0" Key="CLSID[COM_PROP2]\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\ProgId" Value="sinter.sinter_DynamicVector" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__23" Root="0" Key="CLSID\{6103F522-F3E3-3F60-A688-9E98F032EAF1}\ProgId" Value="sinter.sinter_DynamicVector" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="__230" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}" Value="sinter.sinter_JsonSetupFile" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__231" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Value="mscoree.dll" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__232" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\3.1.0.0" Name="\"/>
+    <ROW Registry="__232" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\3.2.0.0" Name="\"/>
     <ROW Registry="__233" Root="0" Key="CLSID[COM_PROP2]\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\ProgId" Value="sinter.sinter_JsonSetupFile" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__234" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}" Value="sinter.sinter_DynamicScalar" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__235" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32" Value="mscoree.dll" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__236" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\3.1.0.0" Name="\"/>
+    <ROW Registry="__236" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\InprocServer32\3.2.0.0" Name="\"/>
     <ROW Registry="__237" Root="0" Key="CLSID[COM_PROP2]\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}\ProgId" Value="sinter.sinter_DynamicScalar" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__238" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}" Value="sinter.sinter_Vector" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__239" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32" Value="mscoree.dll" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__24" Root="0" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}" Value="sinter.sinter_JsonSetupFile" Component_="Sinter_PrimaryOutput"/>
-    <ROW Registry="__240" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\3.1.0.0" Name="\"/>
+    <ROW Registry="__240" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\InprocServer32\3.2.0.0" Name="\"/>
     <ROW Registry="__241" Root="0" Key="CLSID[COM_PROP2]\{424AB864-CC26-3518-8EAB-3450CF1DC779}\ProgId" Value="sinter.sinter_Vector" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__242" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}" Value="sinter.sinter_SimAspen" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__243" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32" Value="mscoree.dll" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__244" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\3.1.0.0" Name="\"/>
+    <ROW Registry="__244" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\InprocServer32\3.2.0.0" Name="\"/>
     <ROW Registry="__245" Root="0" Key="CLSID[COM_PROP2]\{5943BE17-3EB0-3483-89CD-94B662A33699}\ProgId" Value="sinter.sinter_SimAspen" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__246" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}" Value="sinter.SinterProcess" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__247" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32" Value="mscoree.dll" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__248" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\3.1.0.0" Name="\"/>
+    <ROW Registry="__248" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\InprocServer32\3.2.0.0" Name="\"/>
     <ROW Registry="__249" Root="0" Key="CLSID[COM_PROP2]\{80FBFC70-E203-3A5B-8C81-46DDF9594251}\ProgId" Value="sinter.SinterProcess" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__25" Root="0" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32" Value="mscoree.dll" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="__250" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}" Value="sinter.sinter_Factory" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__251" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32" Value="mscoree.dll" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__252" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\3.1.0.0" Name="\"/>
+    <ROW Registry="__252" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\InprocServer32\3.2.0.0" Name="\"/>
     <ROW Registry="__253" Root="0" Key="CLSID[COM_PROP2]\{67776158-8D49-3BBE-853F-AE4A00FF7BFA}\ProgId" Value="sinter.sinter_Factory" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__254" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}" Value="sinter.sinter_SimACM" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__255" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32" Value="mscoree.dll" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__256" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\3.1.0.0" Name="\"/>
+    <ROW Registry="__256" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\InprocServer32\3.2.0.0" Name="\"/>
     <ROW Registry="__257" Root="0" Key="CLSID[COM_PROP2]\{165DB877-23D3-3C60-9A4E-65EB04C07649}\ProgId" Value="sinter.sinter_SimACM" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__258" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}" Value="sinter.sinter_stringLabel" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__259" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32" Value="mscoree.dll" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__26" Root="0" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\InprocServer32\3.1.0.0" Name="\"/>
-    <ROW Registry="__260" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\3.1.0.0" Name="\"/>
+    <ROW Registry="__260" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\InprocServer32\3.2.0.0" Name="\"/>
     <ROW Registry="__261" Root="0" Key="CLSID[COM_PROP2]\{B1E53950-9AC1-3C16-A4ED-261F58FC2574}\ProgId" Value="sinter.sinter_stringLabel" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__262" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}" Value="sinter.sinter_SimExcel" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__263" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32" Value="mscoree.dll" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__264" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\3.1.0.0" Name="\"/>
+    <ROW Registry="__264" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\InprocServer32\3.2.0.0" Name="\"/>
     <ROW Registry="__265" Root="0" Key="CLSID[COM_PROP2]\{86652E72-84B5-32EC-850A-373DE54DFB7E}\ProgId" Value="sinter.sinter_SimExcel" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__266" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}" Value="sinter.sinter_StaticCOMWrapper" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__267" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32" Value="mscoree.dll" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__268" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\3.1.0.0" Name="\"/>
+    <ROW Registry="__268" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\InprocServer32\3.2.0.0" Name="\"/>
     <ROW Registry="__269" Root="0" Key="CLSID[COM_PROP2]\{B75CCB54-7546-3BDF-95A8-8CA2FAA638B3}\ProgId" Value="sinter.sinter_StaticCOMWrapper" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__27" Root="0" Key="CLSID\{0E5F46D4-A821-3E63-A688-B9F5292F94AE}\ProgId" Value="sinter.sinter_JsonSetupFile" Component_="Sinter_PrimaryOutput"/>
     <ROW Registry="__270" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}" Value="sinter.sinter_Table" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__271" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32" Value="mscoree.dll" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__272" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\3.1.0.0" Name="\"/>
+    <ROW Registry="__272" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\InprocServer32\3.2.0.0" Name="\"/>
     <ROW Registry="__273" Root="0" Key="CLSID[COM_PROP2]\{F6D0A871-275B-3627-BE31-BF5A9894C118}\ProgId" Value="sinter.sinter_Table" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__274" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}" Value="sinter.sinter_TextSetupFile" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__275" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32" Value="mscoree.dll" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__276" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\3.1.0.0" Name="\"/>
+    <ROW Registry="__276" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\InprocServer32\3.2.0.0" Name="\"/>
     <ROW Registry="__277" Root="0" Key="CLSID[COM_PROP2]\{531A9E31-EA48-3FEC-AC3E-E8D35592AB6A}\ProgId" Value="sinter.sinter_TextSetupFile" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__278" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}" Value="sinter.sinter_Variable" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__279" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32" Value="mscoree.dll" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__28" Root="0" Key="CLSID\{ABBA937B-A12B-3A9C-A306-B0002C1DFA35}" Value="sinter.sinter_DynamicScalar" Component_="Sinter_PrimaryOutput"/>
-    <ROW Registry="__280" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\3.1.0.0" Name="\"/>
+    <ROW Registry="__280" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\InprocServer32\3.2.0.0" Name="\"/>
     <ROW Registry="__281" Root="0" Key="CLSID[COM_PROP2]\{82FF17B2-1846-3ED9-93BC-62B0EE0352F4}\ProgId" Value="sinter.sinter_Variable" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__282" Root="0" Key="sinter.sinter_DynamicScalar[COM_PROP2]" Value="sinter.sinter_DynamicScalar" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__283" Root="0" Key="sinter.sinter_DynamicScalar[COM_PROP2]\CLSID" Value="[\{]ABBA937B-A12B-3A9C-A306-B0002C1DFA35[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__284" Root="0" Key="sinter.sinter_SimACM[COM_PROP2]" Value="sinter.sinter_SimACM" Component_="DefaultBuilder_PrimaryOutput"/>
-    <ROW Registry="__285" Root="0" Key="sinter.sinter_SimACM[COM_PROP2]\CLSID" Value="[\{]165DB877-23D3-3C60-9A4E-65EB04C07649[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="__284" Root="0" Key="sinter.sinter_HelperFunctions[COM_PROP2]" Value="sinter.sinter_HelperFunctions" Component_="DefaultBuilder_PrimaryOutput"/>
+    <ROW Registry="__285" Root="0" Key="sinter.sinter_HelperFunctions[COM_PROP2]\CLSID" Value="[\{]83AC3F5D-B839-3E42-8B7F-B363A0BE88E8[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__286" Root="0" Key="sinter.sinter_SimAspen[COM_PROP2]" Value="sinter.sinter_SimAspen" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__287" Root="0" Key="sinter.sinter_SimAspen[COM_PROP2]\CLSID" Value="[\{]5943BE17-3EB0-3483-89CD-94B662A33699[\}]" Component_="DefaultBuilder_PrimaryOutput"/>
     <ROW Registry="__288" Root="0" Key="sinter.sinter_SimExcel[COM_PROP2]" Value="sinter.sinter_SimExcel" Component_="DefaultBuilder_PrimaryOutput"/>
