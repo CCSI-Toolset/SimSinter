@@ -7,9 +7,11 @@ using System.Diagnostics;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Runtime.InteropServices;
 
 namespace sinter
 {
+    [Guid("83AC3F5D-B839-3E42-8B7F-B363A0BE88E8")]
     public class sinter_HelperFunctions
     {
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -11,6 +12,7 @@ namespace sinter
     // This class represents a 2D array of IOObjects.  It's mostly used for formatting purposes, 
     // but used to be an IOObject in it's own right.
     //
+    [Guid("F6D0A871-275B-3627-BE31-BF5A9894C118")]
 
     public class sinter_Table : sinter_IVariable
     {

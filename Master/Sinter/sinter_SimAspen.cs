@@ -18,7 +18,7 @@ using System.Timers;
 
 namespace sinter
 {
-
+    [Guid("5943BE17-3EB0-3483-89CD-94B662A33699")]
     public class sinter_SimAspen : sinter_InteractiveSim
     {
         private Happ.HappLS oaspen = null;

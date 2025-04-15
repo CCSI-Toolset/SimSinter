@@ -9,9 +9,11 @@ using System.Timers;
 using System.ComponentModel;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Runtime.InteropServices;
 
 namespace sinter
 {
+    [Guid("165DB877-23D3-3C60-9A4E-65EB04C07649")]
     public class sinter_SimACM : sinter_InteractiveSim, AspenCustomModelerLibrary.IAspenModelerEvents 
     {
         #region data

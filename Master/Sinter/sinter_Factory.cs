@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace sinter
 {
+    [Guid("67776158-8D49-3BBE-853F-AE4A00FF7BFA")]
     public class sinter_Factory
     {
         /** 

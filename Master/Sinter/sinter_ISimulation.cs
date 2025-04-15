@@ -2,6 +2,7 @@ using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System;
 using VariableTree;
+using System.Runtime.InteropServices;
 
 namespace sinter
 {
@@ -46,13 +47,14 @@ namespace sinter
         version_RECOMMENDED = 3  //This simulation is RECOMMENDED to run on a particular version, but if that isn't availible, use the newest availible, as long as it's newer 
     }
 
-    
+
     /// <summary>
     ///    The ISimulation is meant to be a common interface for a number
     ///    of numerical simulations. In particular, we are interested in
     ///    numerical simulations of carbon capture processes; however,
     ///    the interface could apply to a wider range of chemical processes.
     /// </summary>
+    [Guid("F7B5401D-1680-3618-BEE6-9879FC7D197C")]
     public interface ISimulation
     {
 

@@ -10,6 +10,7 @@ namespace sinter
 
     // This class is just a quick, dumb, way to give COM access to static functions in the sinter library.
     // COM does not allow statics
+    [Guid("B75CCB54-7546-3BDF-95A8-8CA2FAA638B3")]
     public class sinter_StaticCOMWrapper
     {
 

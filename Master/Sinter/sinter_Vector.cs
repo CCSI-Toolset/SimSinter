@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -12,7 +13,7 @@ namespace sinter
     // for simulations.  It can be inherited to create
     // IO object classes for specific simulation types.
     //
-
+    [Guid("424AB864-CC26-3518-8EAB-3450CF1DC779")]
     public class sinter_Vector : sinter_Variable
     {
         #region data
