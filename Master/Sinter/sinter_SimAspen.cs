@@ -1049,11 +1049,14 @@ namespace sinter
 
                 if (runStatus == sinter_AppError.si_SIMULATION_NOT_RUN)
                 {
-                    if ((cCheck == sinter_AppError.si_SIMULATION_ERROR |
-                        bCheck == sinter_AppError.si_SIMULATION_ERROR |
-                        sCheck == sinter_AppError.si_SIMULATION_ERROR))
+                    if (cCheck == sinter_AppError.si_SIMULATION_ERROR)
                     {
                         runStatus = sinter_AppError.si_SIMULATION_ERROR;
+                    }
+                    else if ((bCheck == sinter_AppError.si_SIMULATION_ERROR |
+                        sCheck == sinter_AppError.si_SIMULATION_ERROR))
+                    {
+                        runStatus = sinter_AppError.si_NONCONVERGENCE_ERROR;
                     }
                     else if ((cCheck == sinter_AppError.si_SIMULATION_WARNING |
                          bCheck == sinter_AppError.si_SIMULATION_WARNING |
