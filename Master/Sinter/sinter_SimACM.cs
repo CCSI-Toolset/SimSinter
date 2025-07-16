@@ -10,6 +10,8 @@ using System.ComponentModel;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Runtime.InteropServices;
+using Serilog;
+
 
 namespace sinter
 {
@@ -106,6 +108,8 @@ namespace sinter
             o_stopSim = false;
 
             simName = "Aspen Custom Modeler";
+
+            Log.Information("sinter.sinter_ACM");
 
         } 
 

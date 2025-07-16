@@ -10,6 +10,10 @@ using System.Diagnostics;
 using CSVFileRW;
 using CommandLine;
 using CommandLine.Text;
+using Serilog;
+using Microsoft.Extensions.Configuration;
+using Serilog.Extensions.Logging;
+using Sinter;
 
 namespace ConsoleSinter
 {
@@ -89,6 +93,66 @@ namespace ConsoleSinter
         /// <returns></returns>
         static int Main(string[] args)
         {
+            // Build the configuration from appsettings.json
+            Console.WriteLine("ConsolSinter Starting!");
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "CCSI", "SimSinter", "appsettings.json");
+            Console.WriteLine("Combine:  " + path);
+            ConfigurationBuilder configuration = new ConfigurationBuilder();
+            Console.WriteLine("ConfigurationBuilder");
+            configuration.SetBasePath(Directory.GetCurrentDirectory());  // Set base path for config files
+            Console.WriteLine("AddJsonFile");
+            configuration.AddJsonFile(path, optional: false, reloadOnChange: true);  // Read appsettings.json
+            Console.WriteLine("build");
+            IConfigurationRoot confRoot;
+
+            try
+            {
+                confRoot = configuration.Build();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Logger confRoot failed!");
+                Console.WriteLine(ex.GetType().FullName);
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine("Inner:");
+                    Console.WriteLine(ex.InnerException.GetType().FullName);
+                    Console.WriteLine(ex.InnerException.Message);
+                    Console.WriteLine(ex.InnerException.StackTrace);
+                }
+                throw;
+            }
+            Console.WriteLine("LoggerConfiguration");
+            try {
+                Log.Logger = new LoggerConfiguration()
+                    .ReadFrom.Configuration(confRoot)
+                    .CreateLogger();
+                // Bridge Serilog to Microsoft.Extensions.Logging ILogger
+                var loggerFactory = new SerilogLoggerFactory(Log.Logger, dispose: false);
+                SinterLogger.Logger = loggerFactory.CreateLogger("SinterLogger");
+                Log.Information("ConsoleSinter:  Starting");
+            } catch (Exception ex)
+            {
+                Console.WriteLine("Logger setup failed!");
+                Console.WriteLine(ex.GetType().FullName);
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine("Inner:");
+                    Console.WriteLine(ex.InnerException.GetType().FullName);
+                    Console.WriteLine(ex.InnerException.Message);
+                    Console.WriteLine(ex.InnerException.StackTrace);
+                }
+                throw;
+            }
+
+            // Create and configure the logger using the configuration
+            //Log.Logger = new LoggerConfiguration()
+            //    .ReadFrom.Configuration(configuration)  // Correct method: Read from IConfiguration
+            //    .CreateLogger();
 
             var options = new Options();
             if (!CommandLine.Parser.Default.ParseArguments(args, options))
@@ -173,6 +237,8 @@ namespace ConsoleSinter
 
             Console.WriteLine("FINISHED. PRESS ENTER KEY TO EXIT PROGRAM.");
             Console.ReadLine();
+            Log.CloseAndFlush();
+
             return 0;
         }
     }
