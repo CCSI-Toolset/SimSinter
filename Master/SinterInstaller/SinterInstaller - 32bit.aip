@@ -83,11 +83,21 @@
     <ROW Component="Flash_Example.bkp" ComponentId="{E4E9176E-F091-499D-8569-51A37AF9C35A}" Directory_="Aspen_Plus_Install_Test_Dir" Attributes="0" KeyPath="Flash_Example.bkp" Type="0"/>
     <ROW Component="Flash_Example_Input.csv" ComponentId="{ECED9C99-FC9E-4592-AC07-C4A66F791890}" Directory_="CSVConsoleSinter_Tutorial_Dir" Attributes="0" KeyPath="Flash_Example_Input.csv" Type="0"/>
     <ROW Component="Flash_Example_Input.json" ComponentId="{E1497359-3A53-4EBF-9233-7DEF75588686}" Directory_="ConsoleSinter_Tutorial_Dir" Attributes="0" KeyPath="Flash_Example_Input.json" Type="0"/>
+    <ROW Component="Microsoft.Bcl.AsyncInterfaces.dll" ComponentId="{6594B375-3B9B-4520-8182-E0844A15B011}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Bcl.AsyncInterfaces.dll"/>
+    <ROW Component="Microsoft.Extensions.DependencyInjection.Abstractions.dll" ComponentId="{6E1AB10B-088E-4257-87C5-CEA682B3BE60}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Extensions.DependencyInjection.Abstractions.dll"/>
+    <ROW Component="Microsoft.Extensions.Logging.Abstractions.dll" ComponentId="{CFE694B8-7C05-497E-A79E-D6AF74464B6E}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Extensions.Logging.Abstractions.dll"/>
     <ROW Component="Newtonsoft.Json.dll" ComponentId="{D9A625F9-FFBA-4005-A1CC-60FE6314ABE9}" Directory_="APPDIR" Attributes="0" KeyPath="Newtonsoft.Json.dll"/>
     <ROW Component="ProductInformation" ComponentId="{A8EB9FE8-8DD1-4896-9149-148C30D2F971}" Directory_="APPDIR" Attributes="260" KeyPath="Version"/>
     <ROW Component="SHORTCUTDIR" ComponentId="{413703B9-0284-4BA0-B9DA-29E1991AF1AC}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="Serilog.dll" ComponentId="{E240C703-0ADC-4A2D-96C3-C01DC1518B26}" Directory_="APPDIR" Attributes="0" KeyPath="Serilog.dll"/>
     <ROW Component="Sinter.tlb" ComponentId="{4667D468-FF5A-40FA-99E5-2B2109A128D7}" Directory_="APPDIR" Attributes="260" KeyPath="RuntimeVersion_40" Type="0"/>
     <ROW Component="Sinter_PrimaryOutput" ComponentId="{DB8805EB-566C-413C-B8AA-7F0936A3EA11}" Directory_="APPDIR" Attributes="260" KeyPath="RuntimeVersion"/>
+    <ROW Component="System.Buffers.dll" ComponentId="{DCB09912-5731-4C9B-9D6B-9678A278CD16}" Directory_="APPDIR" Attributes="0" KeyPath="System.Buffers.dll"/>
+    <ROW Component="System.Diagnostics.DiagnosticSource.dll" ComponentId="{DF1B879B-C23C-44B8-8B11-E2614EDC8B5F}" Directory_="APPDIR" Attributes="0" KeyPath="System.Diagnostics.DiagnosticSource.dll"/>
+    <ROW Component="System.Memory.dll" ComponentId="{48A8DA64-B7C1-4043-A4AB-81280359787B}" Directory_="APPDIR" Attributes="0" KeyPath="System.Memory.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Unsafe.dll" ComponentId="{B4B8CB5F-5840-4CFA-A420-8085650DEB86}" Directory_="APPDIR" Attributes="0" KeyPath="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW Component="System.Threading.Channels.dll" ComponentId="{67B0BC53-49E2-400B-9FA6-B07ADEA922A5}" Directory_="APPDIR" Attributes="0" KeyPath="System.Threading.Channels.dll"/>
+    <ROW Component="System.Threading.Tasks.Extensions.dll" ComponentId="{C8B6FA8A-FB70-4B07-91E5-69FBE45A9E31}" Directory_="APPDIR" Attributes="0" KeyPath="System.Threading.Tasks.Extensions.dll"/>
     <ROW Component="snapshot.bak" ComponentId="{46E783AD-A0D3-46E9-9C3A-8F7216079CFC}" Directory_="AM_BFB_Dir" Attributes="0" KeyPath="snapshot.bak" Type="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
@@ -132,6 +142,16 @@
     <ROW File="Flash_Example_Output_Correct.csv" Component_="Flash_Example_Input.csv" FileName="FLASH_~3.CSV|Flash_Example_Output_Correct.csv" Attributes="0" SourcePath="..\test\CSVConsoleSinterTest\Flash_Example_Output_Correct.csv" SelfReg="false"/>
     <ROW File="Sinter.tlb" Component_="DefaultBuilder_PrimaryOutput" FileName="Sinter.tlb" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Sinter.tlb&gt;" SelfReg="regRedirTrace"/>
     <ROW File="Newtonsoft.Json.dll" Component_="Newtonsoft.Json.dll" FileName="NEWTON~2.DLL|Newtonsoft.Json.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\Sinter\bin\x64\Release\Newtonsoft.Json.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Logging.Abstractions.dll" Component_="Microsoft.Extensions.Logging.Abstractions.dll" FileName="MICROS~1.DLL|Microsoft.Extensions.Logging.Abstractions.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\Sinter\bin\x64\Release\Microsoft.Extensions.Logging.Abstractions.dll" SelfReg="false"/>
+    <ROW File="System.Memory.dll" Component_="System.Memory.dll" FileName="SYSTEM~1.DLL|System.Memory.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\Sinter\bin\x64\Release\System.Memory.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Unsafe.dll" Component_="System.Runtime.CompilerServices.Unsafe.dll" FileName="SYSTEM~2.DLL|System.Runtime.CompilerServices.Unsafe.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\Sinter\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false"/>
+    <ROW File="System.Buffers.dll" Component_="System.Buffers.dll" FileName="SYSTEM~3.DLL|System.Buffers.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\Sinter\bin\x64\Release\System.Buffers.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.DependencyInjection.Abstractions.dll" Component_="Microsoft.Extensions.DependencyInjection.Abstractions.dll" FileName="MICROS~2.DLL|Microsoft.Extensions.DependencyInjection.Abstractions.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\Sinter\bin\x64\Release\Microsoft.Extensions.DependencyInjection.Abstractions.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Bcl.AsyncInterfaces.dll" Component_="Microsoft.Bcl.AsyncInterfaces.dll" FileName="MICROS~3.DLL|Microsoft.Bcl.AsyncInterfaces.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\Sinter\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.dll" SelfReg="false"/>
+    <ROW File="System.Threading.Tasks.Extensions.dll" Component_="System.Threading.Tasks.Extensions.dll" FileName="SYSTEM~4.DLL|System.Threading.Tasks.Extensions.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\Sinter\bin\x64\Release\System.Threading.Tasks.Extensions.dll" SelfReg="false"/>
+    <ROW File="System.Diagnostics.DiagnosticSource.dll" Component_="System.Diagnostics.DiagnosticSource.dll" FileName="SYSTEM~5.DLL|System.Diagnostics.DiagnosticSource.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\Sinter\bin\x64\Release\System.Diagnostics.DiagnosticSource.dll" SelfReg="false"/>
+    <ROW File="Serilog.dll" Component_="Serilog.dll" FileName="Serilog.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\Sinter\bin\x64\Release\Serilog.dll" SelfReg="false"/>
+    <ROW File="System.Threading.Channels.dll" Component_="System.Threading.Channels.dll" FileName="SYSTEM~6.DLL|System.Threading.Channels.dll" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\Sinter\bin\x64\Release\System.Threading.Channels.dll" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
     <ROW Name="AI_APPPATH_PERBUILD_CSVConsoleSinter.exe" Path="[|AI_PROPPATH_PERBUILD_CSVConsoleSinter.exe]" Type="2" Content="0"/>
@@ -164,9 +184,19 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.FileDependencyComponent">
     <ROW FilePath="APPDIR\[|AI_PROPPATH_FILENAME_PERBUILD_Sinter.dll]" File="Sinter.dll" FileDependency="Newtonsoft.Json.dll"/>
+    <ROW FilePath="APPDIR\[|AI_PROPPATH_FILENAME_PERBUILD_Sinter.dll]" File="Sinter.dll" FileDependency="Microsoft.Extensions.Logging.Abstractions.dll"/>
+    <ROW FilePath="APPDIR\[|AI_PROPPATH_FILENAME_PERBUILD_Sinter.dll]" File="Sinter.dll" FileDependency="System.Memory.dll"/>
+    <ROW FilePath="APPDIR\[|AI_PROPPATH_FILENAME_PERBUILD_Sinter.dll]" File="Sinter.dll" FileDependency="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW FilePath="APPDIR\[|AI_PROPPATH_FILENAME_PERBUILD_Sinter.dll]" File="Sinter.dll" FileDependency="System.Buffers.dll"/>
+    <ROW FilePath="APPDIR\[|AI_PROPPATH_FILENAME_PERBUILD_Sinter.dll]" File="Sinter.dll" FileDependency="Microsoft.Extensions.DependencyInjection.Abstractions.dll"/>
+    <ROW FilePath="APPDIR\[|AI_PROPPATH_FILENAME_PERBUILD_Sinter.dll]" File="Sinter.dll" FileDependency="Microsoft.Bcl.AsyncInterfaces.dll"/>
+    <ROW FilePath="APPDIR\[|AI_PROPPATH_FILENAME_PERBUILD_Sinter.dll]" File="Sinter.dll" FileDependency="System.Threading.Tasks.Extensions.dll"/>
+    <ROW FilePath="APPDIR\[|AI_PROPPATH_FILENAME_PERBUILD_Sinter.dll]" File="Sinter.dll" FileDependency="System.Diagnostics.DiagnosticSource.dll"/>
+    <ROW FilePath="APPDIR\[|AI_PROPPATH_FILENAME_PERBUILD_Sinter.dll]" File="Sinter.dll" FileDependency="Serilog.dll"/>
+    <ROW FilePath="APPDIR\[|AI_PROPPATH_FILENAME_PERBUILD_Sinter.dll]" File="Sinter.dll" FileDependency="System.Threading.Channels.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.FileDependencyOptionComponent">
-    <ROW File="Sinter.dll" Exclude="mscorlib.dll|System.Numerics.dll|System.dll|System.Xml.dll|System.Xml.Linq.dll|System.Core.dll|System.Runtime.Serialization.dll|System.Data.dll|Microsoft.VisualBasic.dll|Microsoft.CSharp.dll" Sha1="449f37fc835ea47a4462699b68b3848ce305e791"/>
+    <ROW File="Sinter.dll" Exclude="mscorlib.dll|System.Numerics.dll|System.dll|System.Xml.dll|System.Xml.Linq.dll|System.Core.dll|System.Runtime.Serialization.dll|System.Data.dll|Microsoft.VisualBasic.dll|Microsoft.CSharp.dll|System.Numerics.Vectors.dll" Sha1="9c680f3b9d9006fd143cf938758cadd6cef88dd5"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
     <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
@@ -288,6 +318,16 @@
     <ROW Feature_="MainFeature" Component_="Flash_Example_Input.json"/>
     <ROW Feature_="MainFeature" Component_="Flash_Example_Input.csv"/>
     <ROW Feature_="MainFeature" Component_="Newtonsoft.Json.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Logging.Abstractions.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Memory.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Buffers.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.DependencyInjection.Abstractions.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Bcl.AsyncInterfaces.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Threading.Tasks.Extensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Diagnostics.DiagnosticSource.dll"/>
+    <ROW Feature_="MainFeature" Component_="Serilog.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Threading.Channels.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>

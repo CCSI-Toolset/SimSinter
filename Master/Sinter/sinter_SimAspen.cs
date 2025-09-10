@@ -1001,10 +1001,11 @@ namespace sinter
             Log.Information("sinter.sinter_SimAspen.runSim:  Starting");
             if (simulatorStatus != sinter_simulatorStatus.si_OPEN)
             {
+                Log.Information("sinter.sinter_SimAspen.runSim:  Simulator is not in Open status");
                 throw new ArgumentException("Simulator is not in Open status, cannon run!");
             }
 
-
+            Log.Information("sinter.sinter_SimAspen.runSim:  Simulator is in Open status");
             bool exp_report = false;
             sinter_AppError sCheck = sinter_AppError.si_OKAY;
             sinter_AppError bCheck = sinter_AppError.si_OKAY;
@@ -1012,6 +1013,7 @@ namespace sinter
 
             try
             {
+                Log.Information("sinter.sinter_SimAspen: runSim check si_RUNNING ");
                 simulatorStatus = sinter_simulatorStatus.si_RUNNING;
                 Log.Information("sinter.sinter_SimAspen: runSim sendInputsToSim");
                 sendInputsToSim();

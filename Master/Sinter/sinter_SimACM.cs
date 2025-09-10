@@ -1439,7 +1439,7 @@ namespace sinter
         {
 
             initializeMessageLogging();
-
+            Log.Information("sinter.sinter_SimACM: runSim_SteadyState");
 
             // this ACM module is for steady state, and steady state
             // optimization runs
@@ -1597,7 +1597,7 @@ namespace sinter
             // this ACM module is for steady state runs
             o_acm.Simulation.RunMode = "Dynamic";
             o_acm.Simulation.Termination = "AtTime";
-
+            Log.Information("sinter.sinter_SimACM: runSim_Dynamic");
             //If the sim has already been canceled, don't run it.
             lock ((this))
             {
@@ -1762,6 +1762,7 @@ namespace sinter
 
         public override sinter.sinter_AppError runSim()
         {
+            Log.Information("sinter.sinter_SimACM: runSim");
             if (simulatorStatus != sinter_simulatorStatus.si_OPEN)
             {
                 throw new ArgumentException("Simulator is not in Open status, cannon run!");
@@ -1916,6 +1917,7 @@ namespace sinter
 
         public override void openSim()
         {
+            Log.Information("sinter.sinter_SimACM: openSim");
             if (simulatorStatus != sinter_simulatorStatus.si_CLOSED)
             {
                 return; //Nothing to do.
@@ -2004,6 +2006,7 @@ namespace sinter
 
         public override void closeSim()
         {
+            Log.Information("sinter.sinter_SimACM: closeSim");
             if (simulatorStatus == sinter_simulatorStatus.si_OPEN)
             {
                 try
@@ -2029,6 +2032,7 @@ namespace sinter
 
         public override void stopSim()
         {
+            Log.Information("sinter.sinter_SimACM: stopSim");
             lock ((this))
             {
                 if (simulatorStatus == sinter_simulatorStatus.si_INITIALIZING)
@@ -2047,6 +2051,7 @@ namespace sinter
         public override bool terminate()
         {
             Debug.WriteLine(String.Format("Terminate ProcessId '{0}'", processID), GetType().Name);
+            Log.Information(String.Format("sinter.sinter_SimACM: terminate ProcessId='{0}'", processID));
             lock (this)
             {
                 if (processID > 0)
