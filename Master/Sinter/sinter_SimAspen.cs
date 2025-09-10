@@ -15,6 +15,7 @@ using VariableTree;
 using Happ;
 using System.Threading;
 using System.Timers;
+using Serilog;
 
 namespace sinter
 {
@@ -77,10 +78,23 @@ namespace sinter
             //Set to true if the stop timeout time goes off
             o_stopTimedOut = false;
             simName = "Aspen Plus";
+
+            Log.Information("sinter.sinter_SimAspen");
+
         }
 
         void HandleOnCalculationCompleted()
         {
+            Log.Information("sinter.sinter_SimAspen: HandleOnCalculationCompleted");
+            lock (o_terminateMonitor)
+            {
+                o_simPaused = true;
+                o_terminateMonitor.Set();
+            }
+        }
+        void HandleOnCalculationStopped()
+        {
+            Log.Information("sinter.sinter_SimAspen: HandleOnCalculationStopped");
             lock (o_terminateMonitor)
             {
                 o_simPaused = true;
@@ -90,6 +104,7 @@ namespace sinter
 
         void HandleStopTimerElapsed(Object source, System.Timers.ElapsedEventArgs e)
         {
+            Log.Information("sinter.sinter_SimAspen: HandleStopTimerElapsed");
             lock (o_terminateMonitor)
             {
                 o_stopTimedOut = true;
@@ -381,6 +396,7 @@ namespace sinter
             {
                 if ((oaspen == null))
                 {
+                    Log.Information("sinter.sinter_SimAspen:  openSim initialize");
                     simulatorStatus = sinter_simulatorStatus.si_INITIALIZING;
                     Type appType = null;
                     //First, if we have a constraint that requires us to try to launch a specific version, do that.  
@@ -427,7 +443,7 @@ namespace sinter
                 string absBackupFilename = System.IO.Path.GetFullPath(backupFilename);
 
                 initVersionNumber();
-
+                Log.Information("sinter.sinter_SimAspen:  openSim init from archive");
                 try
                 {
                     oaspen.InitFromArchive2(absBackupFilename);
@@ -534,7 +550,7 @@ namespace sinter
             {
                 if (simulatorStatus == sinter_simulatorStatus.si_OPEN)
                 {
-
+                    Log.Information("sinter.sinter_SimAspen:  closeSim stop engine");
                     try
                     {
                         oaspen.Engine.Stop();
@@ -682,7 +698,42 @@ namespace sinter
 
         private int addErrors(ref List<string> errorlist, Happ.IHNode objWithErrors)
         {
-            Happ.IHNode output = objWithErrors.FindNode("Output/PER_ERROR");
+            Happ.IHNode output = null;
+            Log.Information("sinter.sinter_SimAspen: addErrors");
+            if (objWithErrors == null)
+            {
+                errorlist.Add("sinter.sinter_SimAspen internal error: objWithErrors is null");
+                Log.Information("sinter.sinter_SimAspen: Internal error objWithErrors is null");
+                return 0;
+            }
+
+            Log.Information("sinter.sinter_SimAspen: addErrors objWithErrors");
+            output = objWithErrors.FindNode("Output");
+            Log.Information("XNode={Name} {Output}", output.Name, output.ToString());
+
+            foreach (Happ.IHNode element in output.Elements)
+            {
+                Log.Information("Element={Name} {Output}", element.Name, element.ToString());
+            }
+
+            try
+            {
+                output = objWithErrors.FindNode("Output/PER_ERROR");
+            } 
+            catch(System.NullReferenceException ex)
+            {
+                errorlist.Add("sinter.sinter_SimAspen internal error: NullReferenceException Output/PER_ERROR");
+                Log.Error(ex, "sinter.sinter_SimAspen: addErrors exception caught, Simulation runStatus moved to Error");
+                return 0;
+            }
+
+            if (output == null)
+            {
+                errorlist.Add("sinter.sinter_SimAspen internal error: Output/PER_ERROR is null");
+                Log.Information("sinter.sinter_SimAspen: Output/PER_ERROR is null");
+                return 0;
+            }
+
             Happ.IHNodeCol myerrs = output.Elements;
             string currentError = "";
             //Aspen seperates errors by empty string
@@ -701,7 +752,6 @@ namespace sinter
 
             return 0;
         }
-
 
         private sinter_AppError convCheck()
         {
@@ -741,7 +791,7 @@ namespace sinter
                 List<string> convErrTmp = o_convergenceError[convNode.Name];
                 addErrors(ref convErrTmp, convNode);
                 o_convergenceError[convNode.Name] = convErrTmp;
-
+                Debug.WriteLine(String.Format("Convergence Error={0}", convNode.Name), "sinter.sinter_SimAspen.convCheck");
                 n_err = n_err + 1;
             }
             if (n_err > 0)
@@ -774,11 +824,13 @@ namespace sinter
                 //Use bitwise and to check the success flag
                 if ((blockNode.get_AttributeValue((short)Happ.HAPAttributeNumber.HAP_COMPSTATUS) & (short)Happ.HAPCompStatusCode.HAP_RESULTS_SUCCESS) > 0)
                 {
+                    Log.Information("sinter.sinter_SimAspen.blockCheck: Success {BlockNode}", blockNode.Name);
                     continue;
                 }
                 //if not success, Use bitwise and to check the warning flag
                 else if ((blockNode.get_AttributeValue((short)Happ.HAPAttributeNumber.HAP_COMPSTATUS) & (short)Happ.HAPCompStatusCode.HAP_RESULTS_WARNINGS) > 0)
                 {
+                    Log.Information("sinter.sinter_SimAspen.blockCheck: Warning {BlockNode}", blockNode.Name);
                     if ((!o_blockWarn.ContainsKey(blockNode.Name)))
                     {
                         o_blockWarn.Add(blockNode.Name, new List<string>());
@@ -790,6 +842,7 @@ namespace sinter
                     continue;
                 }
                 //If its not success or a warning its an error
+                Log.Information("sinter.sinter_SimAspen.blockCheck: Error {BlockNode}", blockNode.Name);
                 if ((!o_blockError.ContainsKey(blockNode.Name)))
                 {
                     o_blockError.Add(blockNode.Name, new List<string>());
@@ -945,12 +998,14 @@ namespace sinter
 
         public override sinter.sinter_AppError runSim()
         {
+            Log.Information("sinter.sinter_SimAspen.runSim:  Starting");
             if (simulatorStatus != sinter_simulatorStatus.si_OPEN)
             {
+                Log.Information("sinter.sinter_SimAspen.runSim:  Simulator is not in Open status");
                 throw new ArgumentException("Simulator is not in Open status, cannon run!");
             }
 
-
+            Log.Information("sinter.sinter_SimAspen.runSim:  Simulator is in Open status");
             bool exp_report = false;
             sinter_AppError sCheck = sinter_AppError.si_OKAY;
             sinter_AppError bCheck = sinter_AppError.si_OKAY;
@@ -958,7 +1013,9 @@ namespace sinter
 
             try
             {
+                Log.Information("sinter.sinter_SimAspen: runSim check si_RUNNING ");
                 simulatorStatus = sinter_simulatorStatus.si_RUNNING;
+                Log.Information("sinter.sinter_SimAspen: runSim sendInputsToSim");
                 sendInputsToSim();
 
                 runStatus = sinter_AppError.si_SIMULATION_NOT_RUN;
@@ -990,6 +1047,7 @@ namespace sinter
                 oaspen.OnCalculationStopped += HandleOnCalculationCompleted;
                 o_stopTimer.Elapsed += HandleStopTimerElapsed;
 
+                Log.Information("sinter.sinter_SimAspen: runSim Engine Run async");
                 oaspen.Engine.Run2(true);  //Run asyncronously
                 bool ended = false;
                 while (!ended)
@@ -998,6 +1056,7 @@ namespace sinter
                     {
                         if (o_stopSim)
                         { //Checking this first should allow success to win a race between the two
+                            Log.Information("sinter.sinter_SimAspen: runSim Engine stop");
                             o_stopTimer.Interval = 120000; //60 seconds
                             o_stopTimer.Start();
 
@@ -1010,6 +1069,7 @@ namespace sinter
                         }
                         else if (o_simPaused)
                         {
+                            Log.Information("sinter.sinter_SimAspen: runSim paused");
                             o_simPaused = false;
                             o_stopSim = false;
                             ended = true;
@@ -1017,9 +1077,11 @@ namespace sinter
                         }
                         else if (o_stopTimedOut)
                         {
+                            Log.Information("sinter.sinter_SimAspen: runSim stop timed out");
                             o_stopTimedOut = false;
                             if (runStatus == sinter_AppError.si_SIMULATION_STOPPED)
                             { //Check that signal was valid before proceeding
+                                Log.Information("sinter.sinter_SimAspen: runSim stop timed out and failed");
                                 o_simPaused = false;
                                 o_stopSim = false;
                                 ended = true;
@@ -1034,7 +1096,7 @@ namespace sinter
                     o_terminateMonitor.WaitOne();  //Check status flags before waiting
                 }
 
-
+                Log.Information("sinter.sinter_SimAspen: runSim stopping");
                 o_terminateMonitor.Reset();
                 o_stopTimer.Stop();
 
@@ -1043,17 +1105,27 @@ namespace sinter
                 oaspen.OnCalculationStopped -= HandleOnCalculationCompleted;
                 o_stopTimer.Elapsed -= HandleStopTimerElapsed;
 
+                Log.Information("sinter.sinter_SimAspen: runSim Checking");
+
                 cCheck = convCheck();
                 bCheck = blockCheck();
                 sCheck = streamCheck();
 
+                Log.Information("sinter.sinter_SimAspen: runSim Checking runstatus={RunStatus}", runStatus);
+                Log.Information("sinter.sinter_SimAspen: runSim Checking convCheck={ConvCheck}", cCheck);
+                Log.Information("sinter.sinter_SimAspen: runSim Checking blockCheck={BlockCheck}", bCheck);
+                Log.Information("sinter.sinter_SimAspen: runSim Checking streamCheck={StreamCheck}", sCheck);
+                
                 if (runStatus == sinter_AppError.si_SIMULATION_NOT_RUN)
                 {
-                    if ((cCheck == sinter_AppError.si_SIMULATION_ERROR |
-                        bCheck == sinter_AppError.si_SIMULATION_ERROR |
-                        sCheck == sinter_AppError.si_SIMULATION_ERROR))
+                    if (cCheck == sinter_AppError.si_SIMULATION_ERROR)
                     {
                         runStatus = sinter_AppError.si_SIMULATION_ERROR;
+                    }
+                    else if ((bCheck == sinter_AppError.si_SIMULATION_ERROR |
+                        sCheck == sinter_AppError.si_SIMULATION_ERROR))
+                    {
+                        runStatus = sinter_AppError.si_NONCONVERGENCE_ERROR;
                     }
                     else if ((cCheck == sinter_AppError.si_SIMULATION_WARNING |
                          bCheck == sinter_AppError.si_SIMULATION_WARNING |
@@ -1081,6 +1153,7 @@ namespace sinter
                 Debug.WriteLine("Exception Caught: ");
                 Debug.WriteLine(ex.ToString());
                 Debug.WriteLine(ex.Message);
+                Log.Error(ex, "sinter.sinter_SimAspen: runSim exception caught, Simulation runStatus moved to Error");
                 runStatus = sinter_AppError.si_SIMULATION_ERROR;
                 o_stopTimer.Stop();
                 return runStatus;

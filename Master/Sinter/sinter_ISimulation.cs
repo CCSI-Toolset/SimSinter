@@ -20,6 +20,7 @@ namespace sinter
         si_SIMULATION_NOT_RUN = 6,
         si_SIMULATION_STOPPED = 7,  //The user stopped the simulation
         si_STOP_FAILED = 8,         //The user tried to stop the sim, but the stop timed out.  Terminate should probably be called.
+        si_NONCONVERGENCE_ERROR = 9,         //The user tried to stop the sim, but the stop timed out.  Terminate should probably be called.
         si_COM_EXCEPTION = 100
 
     }
